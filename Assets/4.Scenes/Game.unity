@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104232185}
   - component: {fileID: 104232186}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square - Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,8 @@ GameObject:
   m_Component:
   - component: {fileID: 166559135}
   - component: {fileID: 166559134}
-  m_Layer: 0
+  - component: {fileID: 166559136}
+  m_Layer: 6
   m_Name: Cave - Platforms_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,6 +292,32 @@ Transform:
   m_Father: {fileID: 1765698486}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &166559136
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166559133}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.67, y: 1.58}
+    newSize: {x: 2.67, y: 1.58}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.67, y: 1.58}
+  m_EdgeRadius: 0
 --- !u!1 &199876851
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +328,8 @@ GameObject:
   m_Component:
   - component: {fileID: 199876852}
   - component: {fileID: 199876853}
-  m_Layer: 0
+  - component: {fileID: 199876854}
+  m_Layer: 6
   m_Name: Cave - Platforms_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,6 +403,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &199876854
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199876851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.89, y: 3.64}
+    newSize: {x: 3.89, y: 3.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.89, y: 3.64}
+  m_EdgeRadius: 0
 --- !u!1 &228500144
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +441,7 @@ GameObject:
   - component: {fileID: 228500146}
   - component: {fileID: 228500147}
   - component: {fileID: 228500148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_4 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +572,8 @@ GameObject:
   m_Component:
   - component: {fileID: 411535078}
   - component: {fileID: 411535079}
-  m_Layer: 0
+  - component: {fileID: 411535080}
+  m_Layer: 6
   m_Name: Cave - Floor_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411535077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.76, y: -1.31, z: 0}
+  m_LocalPosition: {x: 1.76, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -592,6 +647,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &411535080
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411535077}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.46, y: 0.6}
+    newSize: {x: 1.46, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.46, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!1 &718223483
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +769,7 @@ GameObject:
   - component: {fileID: 820320484}
   - component: {fileID: 820320486}
   - component: {fileID: 820320487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +902,7 @@ GameObject:
   - component: {fileID: 860719519}
   - component: {fileID: 860719520}
   - component: {fileID: 860719521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -954,7 +1035,7 @@ GameObject:
   - component: {fileID: 904312513}
   - component: {fileID: 904312514}
   - component: {fileID: 904312515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_4 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1028594728}
   - component: {fileID: 1028594729}
-  m_Layer: 0
+  - component: {fileID: 1028594730}
+  m_Layer: 6
   m_Name: Cave - Platforms_6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1159,6 +1241,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1028594730
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028594727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.89, y: 3.64}
+    newSize: {x: 3.89, y: 3.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.89, y: 3.64}
+  m_EdgeRadius: 0
 --- !u!1 &1201902734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1363,7 @@ GameObject:
   - component: {fileID: 1238217568}
   - component: {fileID: 1238217570}
   - component: {fileID: 1238217571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1496,7 @@ GameObject:
   - component: {fileID: 1390417289}
   - component: {fileID: 1390417291}
   - component: {fileID: 1390417292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1521,7 +1629,7 @@ GameObject:
   - component: {fileID: 1523680884}
   - component: {fileID: 1523680885}
   - component: {fileID: 1523680886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1654,7 +1762,7 @@ GameObject:
   - component: {fileID: 1563505810}
   - component: {fileID: 1563505811}
   - component: {fileID: 1563505812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1785,7 +1893,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1567363063}
   - component: {fileID: 1567363064}
-  m_Layer: 0
+  - component: {fileID: 1567363065}
+  m_Layer: 6
   m_Name: Cave - Floor_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,6 +1968,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1567363065
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567363062}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.76, y: 0.73}
+    newSize: {x: 3.76, y: 0.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.76, y: 0.73}
+  m_EdgeRadius: 0
 --- !u!1 &1765698485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,8 +2117,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.3125}
-  m_Size: {x: 0.6, y: 1.125}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.64, y: 1.125}
   m_Direction: 0
 --- !u!212 &1814927765
 SpriteRenderer:
@@ -2026,7 +2161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 6632365949522066143, guid: c8028fe63444663438426fe3fae2fcd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a234cb2b64b6ae4b82664615f47c391, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2045,7 +2180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814927761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.6, y: -11.2, z: 0}
+  m_LocalPosition: {x: -24.58, y: -9.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2076,7 +2211,7 @@ GameObject:
   - component: {fileID: 1847697132}
   - component: {fileID: 1847697133}
   - component: {fileID: 1847697134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cave - Floor_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2291,7 +2426,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2061770162}
   - component: {fileID: 2061770163}
-  m_Layer: 0
+  - component: {fileID: 2061770164}
+  m_Layer: 6
   m_Name: Cave - Floor_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2365,6 +2501,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2061770164
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061770161}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.46, y: 0.6}
+    newSize: {x: 1.46, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.46, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!1 &2124128512
 GameObject:
   m_ObjectHideFlags: 0

@@ -93,7 +93,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638457787115724917
+  platformSettingsDirtyTick: 638457867607796073
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,8 +119,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: All Animations in Aseprite_Frame_156
     originalName: 
-    pivot: {x: 0.48913044, y: 0}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -139,8 +139,8 @@ ScriptedImporter:
     uvTransform: {x: 172, y: 61}
   - name: All Animations in Aseprite_Frame_157
     originalName: 
-    pivot: {x: 0.5119048, y: -0.047619052}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -159,8 +159,8 @@ ScriptedImporter:
     uvTransform: {x: 216, y: 59}
   - name: All Animations in Aseprite_Frame_158
     originalName: 
-    pivot: {x: 0.5212766, y: -0.06818182}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -179,8 +179,8 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 58}
   - name: All Animations in Aseprite_Frame_159
     originalName: 
-    pivot: {x: 0.52040815, y: -0.09090909}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -199,8 +199,8 @@ ScriptedImporter:
     uvTransform: {x: 372, y: 0}
   - name: All Animations in Aseprite_Frame_160
     originalName: 
-    pivot: {x: 0.52040815, y: -0.11363637}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -219,8 +219,8 @@ ScriptedImporter:
     uvTransform: {x: 429, y: -1}
   - name: All Animations in Aseprite_Frame_161
     originalName: 
-    pivot: {x: 0.49999997, y: -0.11111111}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -239,8 +239,8 @@ ScriptedImporter:
     uvTransform: {x: 250, y: -1}
   - name: All Animations in Aseprite_Frame_162
     originalName: 
-    pivot: {x: 0.45348835, y: -0.24390246}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -259,8 +259,8 @@ ScriptedImporter:
     uvTransform: {x: 264, y: 51}
   - name: All Animations in Aseprite_Frame_163
     originalName: 
-    pivot: {x: 0.45348835, y: -0.275}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -279,8 +279,8 @@ ScriptedImporter:
     uvTransform: {x: 315, y: 50}
   - name: All Animations in Aseprite_Frame_164
     originalName: 
-    pivot: {x: 0.48749998, y: -0.275}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -299,8 +299,8 @@ ScriptedImporter:
     uvTransform: {x: 366, y: 50}
   - name: All Animations in Aseprite_Frame_165
     originalName: 
-    pivot: {x: 0.48749998, y: -0.3}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -319,8 +319,8 @@ ScriptedImporter:
     uvTransform: {x: 414, y: 49}
   - name: All Animations in Aseprite_Frame_166
     originalName: 
-    pivot: {x: 0.65, y: -0.3529412}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -339,8 +339,8 @@ ScriptedImporter:
     uvTransform: {x: 42, y: 136}
   - name: All Animations in Aseprite_Frame_167
     originalName: 
-    pivot: {x: 0.49999994, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -359,8 +359,8 @@ ScriptedImporter:
     uvTransform: {x: 369, y: 187}
   - name: All Animations in Aseprite_Frame_168
     originalName: 
-    pivot: {x: 0.5227273, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -379,8 +379,8 @@ ScriptedImporter:
     uvTransform: {x: 340, y: 187}
   - name: All Animations in Aseprite_Frame_0
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -399,8 +399,8 @@ ScriptedImporter:
     uvTransform: {x: 358, y: 297}
   - name: All Animations in Aseprite_Frame_1
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -419,8 +419,8 @@ ScriptedImporter:
     uvTransform: {x: 381, y: 297}
   - name: All Animations in Aseprite_Frame_2
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -439,8 +439,8 @@ ScriptedImporter:
     uvTransform: {x: 404, y: 297}
   - name: All Animations in Aseprite_Frame_6
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -459,8 +459,8 @@ ScriptedImporter:
     uvTransform: {x: 427, y: 297}
   - name: All Animations in Aseprite_Frame_7
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -479,8 +479,8 @@ ScriptedImporter:
     uvTransform: {x: 450, y: 297}
   - name: All Animations in Aseprite_Frame_8
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -499,8 +499,8 @@ ScriptedImporter:
     uvTransform: {x: 473, y: 297}
   - name: All Animations in Aseprite_Frame_9
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -519,8 +519,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 378}
   - name: All Animations in Aseprite_Frame_10
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -539,8 +539,8 @@ ScriptedImporter:
     uvTransform: {x: 166, y: 378}
   - name: All Animations in Aseprite_Frame_11
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -559,8 +559,8 @@ ScriptedImporter:
     uvTransform: {x: 189, y: 378}
   - name: All Animations in Aseprite_Frame_12
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -579,8 +579,8 @@ ScriptedImporter:
     uvTransform: {x: 212, y: 378}
   - name: All Animations in Aseprite_Frame_13
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -599,8 +599,8 @@ ScriptedImporter:
     uvTransform: {x: 235, y: 378}
   - name: All Animations in Aseprite_Frame_16
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -619,8 +619,8 @@ ScriptedImporter:
     uvTransform: {x: 258, y: 378}
   - name: All Animations in Aseprite_Frame_17
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -639,8 +639,8 @@ ScriptedImporter:
     uvTransform: {x: 281, y: 378}
   - name: All Animations in Aseprite_Frame_18
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -659,8 +659,8 @@ ScriptedImporter:
     uvTransform: {x: 304, y: 378}
   - name: All Animations in Aseprite_Frame_19
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -679,8 +679,8 @@ ScriptedImporter:
     uvTransform: {x: 327, y: 378}
   - name: All Animations in Aseprite_Frame_20
     originalName: 
-    pivot: {x: 0.38235298, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -699,8 +699,8 @@ ScriptedImporter:
     uvTransform: {x: 491, y: 240}
   - name: All Animations in Aseprite_Frame_21
     originalName: 
-    pivot: {x: 0.28125, y: -0.6}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -719,8 +719,8 @@ ScriptedImporter:
     uvTransform: {x: 281, y: 240}
   - name: All Animations in Aseprite_Frame_22
     originalName: 
-    pivot: {x: 0.16666666, y: -0.65}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -739,8 +739,8 @@ ScriptedImporter:
     uvTransform: {x: 78, y: 349}
   - name: All Animations in Aseprite_Frame_23
     originalName: 
-    pivot: {x: 0.21874993, y: -0.65}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -759,8 +759,8 @@ ScriptedImporter:
     uvTransform: {x: 304, y: 239}
   - name: All Animations in Aseprite_Frame_24
     originalName: 
-    pivot: {x: 0.32352936, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -779,8 +779,8 @@ ScriptedImporter:
     uvTransform: {x: 207, y: 240}
   - name: All Animations in Aseprite_Frame_25
     originalName: 
-    pivot: {x: 0.38235298, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -799,8 +799,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: 297}
   - name: All Animations in Aseprite_Frame_26
     originalName: 
-    pivot: {x: 0.28125, y: -0.6}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -819,8 +819,8 @@ ScriptedImporter:
     uvTransform: {x: 329, y: 240}
   - name: All Animations in Aseprite_Frame_27
     originalName: 
-    pivot: {x: 0.16666666, y: -0.65}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -839,8 +839,8 @@ ScriptedImporter:
     uvTransform: {x: 101, y: 349}
   - name: All Animations in Aseprite_Frame_28
     originalName: 
-    pivot: {x: 0.21874993, y: -0.65}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -859,8 +859,8 @@ ScriptedImporter:
     uvTransform: {x: 352, y: 239}
   - name: All Animations in Aseprite_Frame_29
     originalName: 
-    pivot: {x: 0.32352936, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -879,8 +879,8 @@ ScriptedImporter:
     uvTransform: {x: 232, y: 240}
   - name: All Animations in Aseprite_Frame_30
     originalName: 
-    pivot: {x: 0.74999994, y: -0.4615385}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -899,8 +899,8 @@ ScriptedImporter:
     uvTransform: {x: 35, y: 181}
   - name: All Animations in Aseprite_Frame_31
     originalName: 
-    pivot: {x: 0.74999994, y: -0.4615385}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -919,8 +919,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: 411}
   - name: All Animations in Aseprite_Frame_32
     originalName: 
-    pivot: {x: 0.74999994, y: -0.5}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -939,8 +939,8 @@ ScriptedImporter:
     uvTransform: {x: 137, y: 411}
   - name: All Animations in Aseprite_Frame_33
     originalName: 
-    pivot: {x: 0.74999994, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -959,8 +959,8 @@ ScriptedImporter:
     uvTransform: {x: 100, y: 411}
   - name: All Animations in Aseprite_Frame_34
     originalName: 
-    pivot: {x: 0.5227273, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -979,8 +979,8 @@ ScriptedImporter:
     uvTransform: {x: 469, y: 113}
   - name: All Animations in Aseprite_Frame_35
     originalName: 
-    pivot: {x: 0.49999994, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -999,8 +999,8 @@ ScriptedImporter:
     uvTransform: {x: 281, y: 190}
   - name: All Animations in Aseprite_Frame_36
     originalName: 
-    pivot: {x: 0.49999994, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1019,8 +1019,8 @@ ScriptedImporter:
     uvTransform: {x: 310, y: 190}
   - name: All Animations in Aseprite_Frame_37
     originalName: 
-    pivot: {x: 0.5227273, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1039,8 +1039,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: 190}
   - name: All Animations in Aseprite_Frame_38
     originalName: 
-    pivot: {x: 0.50000006, y: -0.6818182}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1059,8 +1059,8 @@ ScriptedImporter:
     uvTransform: {x: 54, y: 304}
   - name: All Animations in Aseprite_Frame_39
     originalName: 
-    pivot: {x: 0.22727272, y: -0.6818182}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1079,8 +1079,8 @@ ScriptedImporter:
     uvTransform: {x: 112, y: 408}
   - name: All Animations in Aseprite_Frame_40
     originalName: 
-    pivot: {x: 0.34615386, y: -0.6818182}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1099,8 +1099,8 @@ ScriptedImporter:
     uvTransform: {x: 118, y: 375}
   - name: All Animations in Aseprite_Frame_41
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6818182}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1119,8 +1119,8 @@ ScriptedImporter:
     uvTransform: {x: 52, y: 424}
   - name: All Animations in Aseprite_Frame_42
     originalName: 
-    pivot: {x: 0.46874997, y: -0.5416666}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1139,8 +1139,8 @@ ScriptedImporter:
     uvTransform: {x: 53, y: 274}
   - name: All Animations in Aseprite_Frame_43
     originalName: 
-    pivot: {x: 0.3928571, y: -0.5416666}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1159,8 +1159,8 @@ ScriptedImporter:
     uvTransform: {x: 51, y: 394}
   - name: All Animations in Aseprite_Frame_44
     originalName: 
-    pivot: {x: 0.34615386, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1179,8 +1179,8 @@ ScriptedImporter:
     uvTransform: {x: 50, y: 457}
   - name: All Animations in Aseprite_Frame_45
     originalName: 
-    pivot: {x: 0.3928571, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1199,8 +1199,8 @@ ScriptedImporter:
     uvTransform: {x: 51, y: 337}
   - name: All Animations in Aseprite_Frame_46
     originalName: 
-    pivot: {x: 0.34615386, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1219,8 +1219,8 @@ ScriptedImporter:
     uvTransform: {x: 78, y: 240}
   - name: All Animations in Aseprite_Frame_47
     originalName: 
-    pivot: {x: 0.34615386, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1239,8 +1239,8 @@ ScriptedImporter:
     uvTransform: {x: 99, y: 240}
   - name: All Animations in Aseprite_Frame_48
     originalName: 
-    pivot: {x: 0.34615386, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1259,8 +1259,8 @@ ScriptedImporter:
     uvTransform: {x: 120, y: 240}
   - name: All Animations in Aseprite_Frame_49
     originalName: 
-    pivot: {x: 0.34615386, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1279,8 +1279,8 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 240}
   - name: All Animations in Aseprite_Frame_50
     originalName: 
-    pivot: {x: 0.34615386, y: -0.48000002}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1299,8 +1299,8 @@ ScriptedImporter:
     uvTransform: {x: 162, y: 240}
   - name: All Animations in Aseprite_Frame_51
     originalName: 
-    pivot: {x: 0.42307687, y: -0.67999995}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1319,8 +1319,8 @@ ScriptedImporter:
     uvTransform: {x: 187, y: 240}
   - name: All Animations in Aseprite_Frame_52
     originalName: 
-    pivot: {x: 0.375, y: -0.67999995}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1339,8 +1339,8 @@ ScriptedImporter:
     uvTransform: {x: 81, y: 378}
   - name: All Animations in Aseprite_Frame_53
     originalName: 
-    pivot: {x: 0.375, y: -0.67999995}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1359,8 +1359,8 @@ ScriptedImporter:
     uvTransform: {x: 101, y: 378}
   - name: All Animations in Aseprite_Frame_54
     originalName: 
-    pivot: {x: 0.40909094, y: -0.67999995}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1379,8 +1379,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 336}
   - name: All Animations in Aseprite_Frame_55
     originalName: 
-    pivot: {x: 0.43333337, y: -0.42857143}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1399,8 +1399,8 @@ ScriptedImporter:
     uvTransform: {x: 54, y: 239}
   - name: All Animations in Aseprite_Frame_56
     originalName: 
-    pivot: {x: 0.43333337, y: -0.41379312}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1419,8 +1419,8 @@ ScriptedImporter:
     uvTransform: {x: 484, y: 148}
   - name: All Animations in Aseprite_Frame_57
     originalName: 
-    pivot: {x: 0.40625003, y: -0.4}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1439,8 +1439,8 @@ ScriptedImporter:
     uvTransform: {x: 492, y: 4}
   - name: All Animations in Aseprite_Frame_58
     originalName: 
-    pivot: {x: 0.40625003, y: -0.4}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1459,8 +1459,8 @@ ScriptedImporter:
     uvTransform: {x: 346, y: 148}
   - name: All Animations in Aseprite_Frame_60
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1479,8 +1479,8 @@ ScriptedImporter:
     uvTransform: {x: 347, y: 378}
   - name: All Animations in Aseprite_Frame_61
     originalName: 
-    pivot: {x: 0.525, y: -0.7058824}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1499,8 +1499,8 @@ ScriptedImporter:
     uvTransform: {x: 54, y: 370}
   - name: All Animations in Aseprite_Frame_62
     originalName: 
-    pivot: {x: 0.50000006, y: -0.85714287}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1519,8 +1519,8 @@ ScriptedImporter:
     uvTransform: {x: 260, y: 323}
   - name: All Animations in Aseprite_Frame_63
     originalName: 
-    pivot: {x: 0.375, y: -1.0909091}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1539,8 +1539,8 @@ ScriptedImporter:
     uvTransform: {x: 486, y: 42}
   - name: All Animations in Aseprite_Frame_64
     originalName: 
-    pivot: {x: 0.29166657, y: -1}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1559,8 +1559,8 @@ ScriptedImporter:
     uvTransform: {x: 489, y: 297}
   - name: All Animations in Aseprite_Frame_65
     originalName: 
-    pivot: {x: 0.43333337, y: -1}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1579,8 +1579,8 @@ ScriptedImporter:
     uvTransform: {x: 283, y: 323}
   - name: All Animations in Aseprite_Frame_66
     originalName: 
-    pivot: {x: 0.50000006, y: -0.7058824}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1599,8 +1599,8 @@ ScriptedImporter:
     uvTransform: {x: 235, y: 297}
   - name: All Animations in Aseprite_Frame_67
     originalName: 
-    pivot: {x: 0.5588235, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1619,8 +1619,8 @@ ScriptedImporter:
     uvTransform: {x: 106, y: 297}
   - name: All Animations in Aseprite_Frame_68
     originalName: 
-    pivot: {x: 0.40625003, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1639,8 +1639,8 @@ ScriptedImporter:
     uvTransform: {x: 234, y: 323}
   - name: All Animations in Aseprite_Frame_69
     originalName: 
-    pivot: {x: 0.32500002, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1659,8 +1659,8 @@ ScriptedImporter:
     uvTransform: {x: 205, y: 297}
   - name: All Animations in Aseprite_Frame_70
     originalName: 
-    pivot: {x: 0.36111113, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1679,8 +1679,8 @@ ScriptedImporter:
     uvTransform: {x: 369, y: 378}
   - name: All Animations in Aseprite_Frame_71
     originalName: 
-    pivot: {x: 0.50000006, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1699,8 +1699,8 @@ ScriptedImporter:
     uvTransform: {x: 256, y: 240}
   - name: All Animations in Aseprite_Frame_72
     originalName: 
-    pivot: {x: 0.53125006, y: -0.631579}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1719,8 +1719,8 @@ ScriptedImporter:
     uvTransform: {x: 80, y: 323}
   - name: All Animations in Aseprite_Frame_73
     originalName: 
-    pivot: {x: 0.5588235, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1739,8 +1739,8 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 297}
   - name: All Animations in Aseprite_Frame_74
     originalName: 
-    pivot: {x: 0.47222224, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1759,8 +1759,8 @@ ScriptedImporter:
     uvTransform: {x: 52, y: 490}
   - name: All Animations in Aseprite_Frame_75
     originalName: 
-    pivot: {x: 0.44736847, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1779,8 +1779,8 @@ ScriptedImporter:
     uvTransform: {x: 484, y: 190}
   - name: All Animations in Aseprite_Frame_76
     originalName: 
-    pivot: {x: 0.44117644, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1799,8 +1799,8 @@ ScriptedImporter:
     uvTransform: {x: 154, y: 297}
   - name: All Animations in Aseprite_Frame_77
     originalName: 
-    pivot: {x: 0.46874997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1819,8 +1819,8 @@ ScriptedImporter:
     uvTransform: {x: 259, y: 297}
   - name: All Animations in Aseprite_Frame_79
     originalName: 
-    pivot: {x: 0.53571427, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1839,8 +1839,8 @@ ScriptedImporter:
     uvTransform: {x: 466, y: 350}
   - name: All Animations in Aseprite_Frame_80
     originalName: 
-    pivot: {x: 0.24999999, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1859,8 +1859,8 @@ ScriptedImporter:
     uvTransform: {x: 157, y: 113}
   - name: All Animations in Aseprite_Frame_81
     originalName: 
-    pivot: {x: 0.5, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1879,8 +1879,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 488}
   - name: All Animations in Aseprite_Frame_82
     originalName: 
-    pivot: {x: 0.51785713, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1899,8 +1899,8 @@ ScriptedImporter:
     uvTransform: {x: 217, y: 113}
   - name: All Animations in Aseprite_Frame_83
     originalName: 
-    pivot: {x: 0.537037, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1919,8 +1919,8 @@ ScriptedImporter:
     uvTransform: {x: 327, y: 113}
   - name: All Animations in Aseprite_Frame_84
     originalName: 
-    pivot: {x: 0.5576923, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1939,8 +1939,8 @@ ScriptedImporter:
     uvTransform: {x: 112, y: 190}
   - name: All Animations in Aseprite_Frame_85
     originalName: 
-    pivot: {x: 0.5576923, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1959,8 +1959,8 @@ ScriptedImporter:
     uvTransform: {x: 146, y: 190}
   - name: All Animations in Aseprite_Frame_86
     originalName: 
-    pivot: {x: 0.5576923, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1979,8 +1979,8 @@ ScriptedImporter:
     uvTransform: {x: 180, y: 190}
   - name: All Animations in Aseprite_Frame_87
     originalName: 
-    pivot: {x: 0.5576923, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1999,8 +1999,8 @@ ScriptedImporter:
     uvTransform: {x: 214, y: 190}
   - name: All Animations in Aseprite_Frame_88
     originalName: 
-    pivot: {x: 0.5576923, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2019,8 +2019,8 @@ ScriptedImporter:
     uvTransform: {x: 248, y: 190}
   - name: All Animations in Aseprite_Frame_89
     originalName: 
-    pivot: {x: 0.537037, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2039,8 +2039,8 @@ ScriptedImporter:
     uvTransform: {x: 362, y: 113}
   - name: All Animations in Aseprite_Frame_90
     originalName: 
-    pivot: {x: 0.19318184, y: -0.5714286}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2059,8 +2059,8 @@ ScriptedImporter:
     uvTransform: {x: 101, y: 113}
   - name: All Animations in Aseprite_Frame_91
     originalName: 
-    pivot: {x: 0.4772727, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2079,8 +2079,8 @@ ScriptedImporter:
     uvTransform: {x: 452, y: 190}
   - name: All Animations in Aseprite_Frame_92
     originalName: 
-    pivot: {x: 0.49999994, y: -0.7058824}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2099,8 +2099,8 @@ ScriptedImporter:
     uvTransform: {x: 423, y: 190}
   - name: All Animations in Aseprite_Frame_93
     originalName: 
-    pivot: {x: 0.525, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2119,8 +2119,8 @@ ScriptedImporter:
     uvTransform: {x: 395, y: 190}
   - name: All Animations in Aseprite_Frame_94
     originalName: 
-    pivot: {x: 0.525, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2139,8 +2139,8 @@ ScriptedImporter:
     uvTransform: {x: 375, y: 240}
   - name: All Animations in Aseprite_Frame_95
     originalName: 
-    pivot: {x: 0.525, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2159,8 +2159,8 @@ ScriptedImporter:
     uvTransform: {x: 403, y: 240}
   - name: All Animations in Aseprite_Frame_96
     originalName: 
-    pivot: {x: 0.525, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2179,8 +2179,8 @@ ScriptedImporter:
     uvTransform: {x: 431, y: 240}
   - name: All Animations in Aseprite_Frame_97
     originalName: 
-    pivot: {x: 0.525, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2199,8 +2199,8 @@ ScriptedImporter:
     uvTransform: {x: 459, y: 240}
   - name: All Animations in Aseprite_Frame_98
     originalName: 
-    pivot: {x: 0.525, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2219,8 +2219,8 @@ ScriptedImporter:
     uvTransform: {x: 78, y: 273}
   - name: All Animations in Aseprite_Frame_99
     originalName: 
-    pivot: {x: 0.44736847, y: -0.75}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2239,8 +2239,8 @@ ScriptedImporter:
     uvTransform: {x: 176, y: 297}
   - name: All Animations in Aseprite_Frame_100
     originalName: 
-    pivot: {x: 0.3222222, y: -0.44444445}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2259,8 +2259,8 @@ ScriptedImporter:
     uvTransform: {x: 54, y: 113}
   - name: All Animations in Aseprite_Frame_101
     originalName: 
-    pivot: {x: 0.10869564, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2279,8 +2279,8 @@ ScriptedImporter:
     uvTransform: {x: 70, y: 217}
   - name: All Animations in Aseprite_Frame_102
     originalName: 
-    pivot: {x: 0.15217386, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2299,8 +2299,8 @@ ScriptedImporter:
     uvTransform: {x: 102, y: 217}
   - name: All Animations in Aseprite_Frame_103
     originalName: 
-    pivot: {x: 0.26785713, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2319,8 +2319,8 @@ ScriptedImporter:
     uvTransform: {x: 390, y: 113}
   - name: All Animations in Aseprite_Frame_104
     originalName: 
-    pivot: {x: 0.2931035, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2339,8 +2339,8 @@ ScriptedImporter:
     uvTransform: {x: 247, y: 113}
   - name: All Animations in Aseprite_Frame_105
     originalName: 
-    pivot: {x: 0.26785713, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2359,8 +2359,8 @@ ScriptedImporter:
     uvTransform: {x: 426, y: 113}
   - name: All Animations in Aseprite_Frame_106
     originalName: 
-    pivot: {x: 0.2931035, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2379,8 +2379,8 @@ ScriptedImporter:
     uvTransform: {x: 284, y: 113}
   - name: All Animations in Aseprite_Frame_107
     originalName: 
-    pivot: {x: 0.31666666, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2399,8 +2399,8 @@ ScriptedImporter:
     uvTransform: {x: 365, y: 148}
   - name: All Animations in Aseprite_Frame_108
     originalName: 
-    pivot: {x: 0.31666666, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2419,8 +2419,8 @@ ScriptedImporter:
     uvTransform: {x: 403, y: 148}
   - name: All Animations in Aseprite_Frame_109
     originalName: 
-    pivot: {x: 0.31666666, y: -0.8}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2439,8 +2439,8 @@ ScriptedImporter:
     uvTransform: {x: 441, y: 148}
   - name: All Animations in Aseprite_Frame_111
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2459,8 +2459,8 @@ ScriptedImporter:
     uvTransform: {x: 399, y: 378}
   - name: All Animations in Aseprite_Frame_112
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2479,8 +2479,8 @@ ScriptedImporter:
     uvTransform: {x: 421, y: 378}
   - name: All Animations in Aseprite_Frame_113
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2499,8 +2499,8 @@ ScriptedImporter:
     uvTransform: {x: 444, y: 378}
   - name: All Animations in Aseprite_Frame_114
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2519,8 +2519,8 @@ ScriptedImporter:
     uvTransform: {x: 467, y: 378}
   - name: All Animations in Aseprite_Frame_115
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2539,8 +2539,8 @@ ScriptedImporter:
     uvTransform: {x: 490, y: 378}
   - name: All Animations in Aseprite_Frame_116
     originalName: 
-    pivot: {x: 0.40625003, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2559,8 +2559,8 @@ ScriptedImporter:
     uvTransform: {x: 285, y: 297}
   - name: All Animations in Aseprite_Frame_117
     originalName: 
-    pivot: {x: 0.36666662, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2579,8 +2579,8 @@ ScriptedImporter:
     uvTransform: {x: 126, y: 350}
   - name: All Animations in Aseprite_Frame_118
     originalName: 
-    pivot: {x: 0.3928571, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2599,8 +2599,8 @@ ScriptedImporter:
     uvTransform: {x: 104, y: 323}
   - name: All Animations in Aseprite_Frame_119
     originalName: 
-    pivot: {x: 0.3928571, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2619,8 +2619,8 @@ ScriptedImporter:
     uvTransform: {x: 126, y: 323}
   - name: All Animations in Aseprite_Frame_120
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2639,8 +2639,8 @@ ScriptedImporter:
     uvTransform: {x: 150, y: 350}
   - name: All Animations in Aseprite_Frame_121
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2659,8 +2659,8 @@ ScriptedImporter:
     uvTransform: {x: 173, y: 350}
   - name: All Animations in Aseprite_Frame_122
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2679,8 +2679,8 @@ ScriptedImporter:
     uvTransform: {x: 196, y: 350}
   - name: All Animations in Aseprite_Frame_123
     originalName: 
-    pivot: {x: 0.43333337, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2699,8 +2699,8 @@ ScriptedImporter:
     uvTransform: {x: 219, y: 350}
   - name: All Animations in Aseprite_Frame_124
     originalName: 
-    pivot: {x: 0.46428576, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2719,8 +2719,8 @@ ScriptedImporter:
     uvTransform: {x: 149, y: 323}
   - name: All Animations in Aseprite_Frame_125
     originalName: 
-    pivot: {x: 0.46428576, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2739,8 +2739,8 @@ ScriptedImporter:
     uvTransform: {x: 171, y: 323}
   - name: All Animations in Aseprite_Frame_126
     originalName: 
-    pivot: {x: 0.46428576, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2759,8 +2759,8 @@ ScriptedImporter:
     uvTransform: {x: 193, y: 323}
   - name: All Animations in Aseprite_Frame_127
     originalName: 
-    pivot: {x: 0.46428576, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2779,8 +2779,8 @@ ScriptedImporter:
     uvTransform: {x: 215, y: 323}
   - name: All Animations in Aseprite_Frame_128
     originalName: 
-    pivot: {x: 0.46874997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2799,8 +2799,8 @@ ScriptedImporter:
     uvTransform: {x: 310, y: 297}
   - name: All Animations in Aseprite_Frame_129
     originalName: 
-    pivot: {x: 0.46874997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2819,8 +2819,8 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 297}
   - name: All Animations in Aseprite_Frame_131
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2839,8 +2839,8 @@ ScriptedImporter:
     uvTransform: {x: 239, y: 347}
   - name: All Animations in Aseprite_Frame_132
     originalName: 
-    pivot: {x: 0.58695656, y: -0.22222222}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2859,8 +2859,8 @@ ScriptedImporter:
     uvTransform: {x: -14, y: 169}
   - name: All Animations in Aseprite_Frame_133
     originalName: 
-    pivot: {x: 0.41666663, y: -0.13207547}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2879,8 +2879,8 @@ ScriptedImporter:
     uvTransform: {x: -10, y: 54}
   - name: All Animations in Aseprite_Frame_134
     originalName: 
-    pivot: {x: 0.5092592, y: -0.12244898}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2899,8 +2899,8 @@ ScriptedImporter:
     uvTransform: {x: 0, y: -2}
   - name: All Animations in Aseprite_Frame_135
     originalName: 
-    pivot: {x: 0.5267857, y: -0.15}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2919,8 +2919,8 @@ ScriptedImporter:
     uvTransform: {x: 191, y: -2}
   - name: All Animations in Aseprite_Frame_136
     originalName: 
-    pivot: {x: 0.51754385, y: -0.15}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2939,8 +2939,8 @@ ScriptedImporter:
     uvTransform: {x: 64, y: -2}
   - name: All Animations in Aseprite_Frame_137
     originalName: 
-    pivot: {x: 0.5648148, y: -0.14285715}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2959,8 +2959,8 @@ ScriptedImporter:
     uvTransform: {x: 130, y: -2}
   - name: All Animations in Aseprite_Frame_138
     originalName: 
-    pivot: {x: 0.55454546, y: -0.32432434}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2979,8 +2979,8 @@ ScriptedImporter:
     uvTransform: {x: 108, y: 49}
   - name: All Animations in Aseprite_Frame_139
     originalName: 
-    pivot: {x: 0.5625, y: -0.30769232}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2999,8 +2999,8 @@ ScriptedImporter:
     uvTransform: {x: 314, y: -8}
   - name: All Animations in Aseprite_Frame_140
     originalName: 
-    pivot: {x: 0.35185182, y: -0.3}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3019,8 +3019,8 @@ ScriptedImporter:
     uvTransform: {x: -18, y: 379}
   - name: All Animations in Aseprite_Frame_141
     originalName: 
-    pivot: {x: 0.38, y: -0.29268295}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3039,8 +3039,8 @@ ScriptedImporter:
     uvTransform: {x: -18, y: 427}
   - name: All Animations in Aseprite_Frame_142
     originalName: 
-    pivot: {x: 0.29999998, y: -0.23529413}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3059,8 +3059,8 @@ ScriptedImporter:
     uvTransform: {x: -20, y: 110}
   - name: All Animations in Aseprite_Frame_143
     originalName: 
-    pivot: {x: 0.19565217, y: -0.7446809}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3079,8 +3079,8 @@ ScriptedImporter:
     uvTransform: {x: -23, y: 301}
   - name: All Animations in Aseprite_Frame_144
     originalName: 
-    pivot: {x: 0.30357146, y: -1}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3099,8 +3099,8 @@ ScriptedImporter:
     uvTransform: {x: -19, y: 201}
   - name: All Animations in Aseprite_Frame_145
     originalName: 
-    pivot: {x: 0.37096775, y: -0.95454544}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3119,8 +3119,8 @@ ScriptedImporter:
     uvTransform: {x: 454, y: 19}
   - name: All Animations in Aseprite_Frame_146
     originalName: 
-    pivot: {x: 0.4032258, y: -1.4857143}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3139,8 +3139,8 @@ ScriptedImporter:
     uvTransform: {x: -15, y: 241}
   - name: All Animations in Aseprite_Frame_147
     originalName: 
-    pivot: {x: 0.6041666, y: -1.5588236}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3159,8 +3159,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 95}
   - name: All Animations in Aseprite_Frame_148
     originalName: 
-    pivot: {x: 0.6041666, y: -1.5882354}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3179,8 +3179,8 @@ ScriptedImporter:
     uvTransform: {x: 107, y: 94}
   - name: All Animations in Aseprite_Frame_149
     originalName: 
-    pivot: {x: 0.6041666, y: -1.9285715}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3199,8 +3199,8 @@ ScriptedImporter:
     uvTransform: {x: 203, y: 94}
   - name: All Animations in Aseprite_Frame_150
     originalName: 
-    pivot: {x: 0.63043475, y: -1.862069}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3219,8 +3219,8 @@ ScriptedImporter:
     uvTransform: {x: 267, y: 94}
   - name: All Animations in Aseprite_Frame_151
     originalName: 
-    pivot: {x: 0.6458334, y: -1.6774192}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3239,8 +3239,8 @@ ScriptedImporter:
     uvTransform: {x: 172, y: 96}
   - name: All Animations in Aseprite_Frame_152
     originalName: 
-    pivot: {x: 0.58695656, y: -1.6896552}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3259,8 +3259,8 @@ ScriptedImporter:
     uvTransform: {x: 297, y: 99}
   - name: All Animations in Aseprite_Frame_153
     originalName: 
-    pivot: {x: 0.6041666, y: -1.5714285}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3279,8 +3279,8 @@ ScriptedImporter:
     uvTransform: {x: 235, y: 104}
   - name: All Animations in Aseprite_Frame_154
     originalName: 
-    pivot: {x: 0.6458334, y: -1.030303}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3299,8 +3299,8 @@ ScriptedImporter:
     uvTransform: {x: 140, y: 114}
   - name: All Animations in Aseprite_Frame_155
     originalName: 
-    pivot: {x: 0.575, y: -0.14634147}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3319,8 +3319,8 @@ ScriptedImporter:
     uvTransform: {x: 34, y: 184}
   - name: All Animations in Aseprite_Frame_3
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3339,8 +3339,8 @@ ScriptedImporter:
     uvTransform: {x: 266, y: 350}
   - name: All Animations in Aseprite_Frame_4
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3359,8 +3359,8 @@ ScriptedImporter:
     uvTransform: {x: 289, y: 350}
   - name: All Animations in Aseprite_Frame_5
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3379,8 +3379,8 @@ ScriptedImporter:
     uvTransform: {x: 312, y: 350}
   - name: All Animations in Aseprite_Frame_14
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3399,8 +3399,8 @@ ScriptedImporter:
     uvTransform: {x: 335, y: 350}
   - name: All Animations in Aseprite_Frame_15
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3419,8 +3419,8 @@ ScriptedImporter:
     uvTransform: {x: 358, y: 350}
   - name: All Animations in Aseprite_Frame_59
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3439,8 +3439,8 @@ ScriptedImporter:
     uvTransform: {x: 381, y: 350}
   - name: All Animations in Aseprite_Frame_78
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3459,8 +3459,8 @@ ScriptedImporter:
     uvTransform: {x: 404, y: 350}
   - name: All Animations in Aseprite_Frame_110
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3479,8 +3479,8 @@ ScriptedImporter:
     uvTransform: {x: 427, y: 350}
   - name: All Animations in Aseprite_Frame_130
     originalName: 
-    pivot: {x: 0.49999997, y: -0.6666667}
-    alignment: 9
+    pivot: {x: 0, y: 0}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3497,7 +3497,3647 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 450, y: 350}
-  spriteSheetImportData: []
+  spriteSheetImportData:
+  - name: All Animations in Aseprite_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 488
+      width: 29
+      height: 16
+    spriteID: 5962850fc884b8544ab91e52b21df7fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 490
+      width: 18
+      height: 18
+    spriteID: f127fb3c17d64df45a1fc09d20573421
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 15
+      y: 464
+      width: 14
+      height: 16
+    spriteID: 0f66a8c312448f742b687957bc4a53c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 457
+      width: 13
+      height: 25
+    spriteID: b4334d23a598ce04d88539fb99338d80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 439
+      width: 18
+      height: 14
+    spriteID: aeb027670d83142498b272b9190b1fa9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 427
+      width: 15
+      height: 22
+    spriteID: 3d314a7bf12a2344abfd811e1ec5ce38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 15
+      y: 411
+      width: 16
+      height: 20
+    spriteID: e09b8763d3bbd14429c0bfbb7e42b98e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 395
+      width: 14
+      height: 24
+    spriteID: 98c215c297f0ab0489beef74360072f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 411
+      width: 10
+      height: 26
+    spriteID: 60168c253d70ced4f8f13ad0b7eabe32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 411
+      width: 10
+      height: 25
+    spriteID: f15d6dbe15e69184fa9413f3839e5b65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 411
+      width: 11
+      height: 22
+    spriteID: 58aa7e6b70f6b574cb3917b6518d23b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 411
+      width: 10
+      height: 24
+    spriteID: ead7793e79f5650469159d1d01aa35e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 391
+      width: 18
+      height: 14
+    spriteID: dbcece2b1cf68704f89c3a17237a3beb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 378
+      width: 12
+      height: 25
+    spriteID: 5ec4a88458fa7b54584bde898031bb4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 378
+      width: 12
+      height: 25
+    spriteID: ee285efb566ab2b469d4df5f06d78e0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 378
+      width: 13
+      height: 22
+    spriteID: d9663ed491775ff4cb315d02a8b8257a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 143
+      y: 378
+      width: 15
+      height: 18
+    spriteID: a5e69db1a69272f4bb63e05a86380fad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 166
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 24317ec013b29d242bc9beae1a18e1cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 189
+      y: 378
+      width: 15
+      height: 18
+    spriteID: e97f8f79293b86446a3a2e8d68e7f908
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 212
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 71a132eb9bda12948bea51872a8c09bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 235
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 8aeae125e6fa0514794fe02ce29eaf0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 17b69af3f152c5f40b1606d0eda24372
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 378
+      width: 15
+      height: 18
+    spriteID: a41cb077104789b4387e07f66a5a2ecb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 304
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 93a04e44a03b5d441869fbb0a1f4fe1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 327
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 054ad320866000449bc089cb8a40c059
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 378
+      width: 15
+      height: 18
+    spriteID: c4ae8898191fb36449434c0be2bd4465
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 373
+      y: 378
+      width: 18
+      height: 15
+    spriteID: f2b132e4449f6484684cb0d25f90be16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 399
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 52e956520dcce9545b9d4be29098c813
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 422
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 3f9d4a7534f9d0447b35b0489ec4f58a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 378
+      width: 15
+      height: 18
+    spriteID: 9508aa8d75d9fa84ebfaf04d5b969eb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 468
+      y: 378
+      width: 15
+      height: 18
+    spriteID: bb81b548dcdbaeb4bb63a23ac2cbf31a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 491
+      y: 378
+      width: 15
+      height: 18
+    spriteID: c3f114b70b0e440459ef2c62330d353f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 336
+      width: 23
+      height: 47
+    spriteID: 06a58789ae15d714dbf700f7ba44e7d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 370
+      width: 20
+      height: 17
+    spriteID: f57e43c7485f769409ba97b252a94a6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 336
+      width: 11
+      height: 25
+    spriteID: d0838cf43067b1043891048070945575
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 337
+      width: 14
+      height: 25
+    spriteID: a45dd7fb0d405c0408497e30b9e31603
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 350
+      width: 15
+      height: 20
+    spriteID: 0abf55a8807aeb34b9ae2a3e36f65424
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 350
+      width: 15
+      height: 20
+    spriteID: 6da565b03e7c707429ecb90bc90a6553
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 905d69fa86e345d4ba52612d1c94d175
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 151
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 827dfa6e71e6b094b99a20b68dfb7d1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 5e24dab034c73d4439ef57e868536e63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 197
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 05275cd09ddf6c94aab43261df0fd951
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 350
+      width: 15
+      height: 18
+    spriteID: a8169ceba908ce840a8cfb19574cd564
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 243
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 29223897bddefea40af91af662986314
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 266
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 0bf741737996f1b4685c5ba3fb5c2aee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 289
+      y: 350
+      width: 15
+      height: 18
+    spriteID: ea193a2a9ccecc5468e66925ffd017b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 312
+      y: 350
+      width: 15
+      height: 18
+    spriteID: c7434f984599cd141a8d6beb514b47dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 5322ff1ba8ed1514b97d8c957a18e92e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 358
+      y: 350
+      width: 15
+      height: 18
+    spriteID: db92bb47c910ee14f903dc33bfbac336
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 381
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 838b606097c6afb46ba51d229c6de56f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 65682b7d1827ba04eb2764bcb0d3d9ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 427
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 906977fc1c6fd30459e63259b4fdee73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 450
+      y: 350
+      width: 15
+      height: 18
+    spriteID: 8438aa8ffd6b00f4ba8c7a7abe729a4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 473
+      y: 350
+      width: 14
+      height: 18
+    spriteID: d1074bcb04b8b0d4c89e23fae271ff38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 293
+      width: 31
+      height: 35
+    spriteID: 6335790fc07272c40a09cc02989ee803
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 307
+      width: 17
+      height: 22
+    spriteID: 05b3a21653d739e4eaf1796bfb468449
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 323
+      width: 16
+      height: 19
+    spriteID: e5a2d657e4b711644bb3519bc0e28b93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 323
+      width: 14
+      height: 18
+    spriteID: d8544a54328d6e04dad2884502f7926d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 323
+      width: 14
+      height: 18
+    spriteID: d2873166ff5d72d41a90c0eddbc0cd1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 150
+      y: 323
+      width: 14
+      height: 18
+    spriteID: c00941be23a764b4e8391f0887f1c265
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 323
+      width: 14
+      height: 18
+    spriteID: a35eb1f3402257243bc5c31d87ad3ac0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 194
+      y: 323
+      width: 14
+      height: 18
+    spriteID: d8b89a2c810eba240a5fb3e35acb43a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 216
+      y: 323
+      width: 14
+      height: 18
+    spriteID: 9ab8eddccc61d2d409b05611c13e7083
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 238
+      y: 323
+      width: 16
+      height: 15
+    spriteID: 20ce7c44a7cfabb4c822d7ded6565df7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 262
+      y: 323
+      width: 17
+      height: 14
+    spriteID: 67348c74a5c7c1840b77bc2015eae4a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 287
+      y: 323
+      width: 15
+      height: 12
+    spriteID: b8d8295c83ef18746ad6e73038e104bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 275
+      width: 16
+      height: 24
+    spriteID: 1d433d2cb1d795d499b280447de41bcf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 297
+      width: 17
+      height: 18
+    spriteID: 1542a352efd6a2a48a8da7d7db0d573a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 297
+      width: 17
+      height: 18
+    spriteID: 94a6824f105ab794ebfec7409bc81a53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 297
+      width: 17
+      height: 18
+    spriteID: 65dc2f1731fd32f4ab9168338b764a42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 297
+      width: 17
+      height: 18
+    spriteID: c22c44e9743b30241bc5e20c2a50b48c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 297
+      width: 19
+      height: 16
+    spriteID: 5b703409ab058f941af6c41a611cdede
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 297
+      width: 20
+      height: 15
+    spriteID: eed11e1c8f7cd4e4aa237ee2359fd6c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 237
+      y: 297
+      width: 17
+      height: 17
+    spriteID: d183207ecc84ea7478605e73d21331dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 262
+      y: 297
+      width: 16
+      height: 18
+    spriteID: d96c4ad34a8073140919e9c98dc881e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 286
+      y: 297
+      width: 16
+      height: 18
+    spriteID: 08b1718dac233e246a0521af12acc40d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 297
+      width: 16
+      height: 18
+    spriteID: 49aaa3cd5ebe3cd48bdfbbee5306dcb1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 334
+      y: 297
+      width: 16
+      height: 18
+    spriteID: 70a897a83325c5f41a75203a22bf61f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 358
+      y: 297
+      width: 15
+      height: 18
+    spriteID: 3cb513f15343d7245acc9f1444152e8b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 381
+      y: 297
+      width: 15
+      height: 18
+    spriteID: 3c31806221e27f04bbaf73d1cfeb7f74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 297
+      width: 15
+      height: 18
+    spriteID: 8036bb3f5d5cc914d98e3d8f9e40c676
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 427
+      y: 297
+      width: 15
+      height: 18
+    spriteID: 38be0086705ca6e4e900f1522e053725
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 450
+      y: 297
+      width: 15
+      height: 18
+    spriteID: 89fad795444604a42916f375f86ed103
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 473
+      y: 297
+      width: 15
+      height: 18
+    spriteID: 872df9f7cd4937c48ac7e450f8a01513
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 496
+      y: 297
+      width: 12
+      height: 12
+    spriteID: 9adb5597f6841b2428ea1f29ea3e0fa1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 243
+      width: 28
+      height: 42
+    spriteID: f719f02169a051344b479f7a60045e78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 273
+      width: 20
+      height: 16
+    spriteID: d60b30944771e2048906a3b0cf0da86c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 239
+      width: 15
+      height: 28
+    spriteID: dddfc5ff936705d4f8a71df016c5cd43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 240
+      width: 13
+      height: 25
+    spriteID: e6960bca8360bd140994d8fe324fb978
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 240
+      width: 13
+      height: 25
+    spriteID: 01e16dc1bb01aa44a90540fb1a0a712f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 240
+      width: 13
+      height: 25
+    spriteID: 58d18536272d00442a1b9d1b4211b625
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 240
+      width: 13
+      height: 25
+    spriteID: 81da18c190076ba4d8fcfa2965115840
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 166
+      y: 240
+      width: 13
+      height: 25
+    spriteID: fe7898d46c7a7c442b65ffe5f773adbd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 187
+      y: 240
+      width: 13
+      height: 25
+    spriteID: 53c552ff89631be4e8daf78356d1a9e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 240
+      width: 17
+      height: 19
+    spriteID: 4a65ab435d6382b4194d32024da3aa9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 240
+      width: 17
+      height: 19
+    spriteID: 9b5faf514ce680c47ac815e9eef7730a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 240
+      width: 17
+      height: 19
+    spriteID: 9af8be5622741bd4d8de206cd152d5ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 283
+      y: 240
+      width: 16
+      height: 20
+    spriteID: 1834ac65b6c487c4a994bf539081d12b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 307
+      y: 240
+      width: 16
+      height: 20
+    spriteID: 0ef9eb7d5a6e20e499c7aa69a7dc285b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 240
+      width: 16
+      height: 20
+    spriteID: ef6ccffaf4e2c0f4196abe65a32c9ed2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 355
+      y: 240
+      width: 16
+      height: 20
+    spriteID: 701b786ee38efdf4a92a69c69ebc199c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 379
+      y: 240
+      width: 20
+      height: 16
+    spriteID: a3f430e97850f6549a37e5225b39115b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 407
+      y: 240
+      width: 20
+      height: 16
+    spriteID: 2b6881b6a1f8b734f9235640f5a890e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 435
+      y: 240
+      width: 20
+      height: 16
+    spriteID: 7bc975a8e406dea4898375a84e054bab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 463
+      y: 240
+      width: 20
+      height: 16
+    spriteID: 710d298974844a8448bb367e1b5c1a59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 491
+      y: 240
+      width: 17
+      height: 18
+    spriteID: ec983700ba5c07f4ead9059e0214ab7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 181
+      width: 23
+      height: 54
+    spriteID: d5467e7858c23d24c9f1508c3a5e9640
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 190
+      width: 20
+      height: 41
+    spriteID: 85fa6597eee141b428eb3cf043c3d2bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 217
+      width: 23
+      height: 15
+    spriteID: 4ad6db65020db8b46abea314f883ed4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 217
+      width: 23
+      height: 15
+    spriteID: c6f77bcac0200d341b27434aa3164663
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 181
+      width: 10
+      height: 26
+    spriteID: 71893b36998cc274e95de66a60b070a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 190
+      width: 22
+      height: 19
+    spriteID: c58ec74ac82e28641b4c1a305854db4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 190
+      width: 26
+      height: 16
+    spriteID: 8646eb3b0d8924643bc35aa9c33522cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 146
+      y: 190
+      width: 26
+      height: 16
+    spriteID: b0aad241ecd35d44d99e867b84e13d7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 190
+      width: 26
+      height: 16
+    spriteID: 4ee87c400d6b601499c9395ebdd36691
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 214
+      y: 190
+      width: 26
+      height: 16
+    spriteID: 6aa55cc2f7f308f4785888805091122d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 248
+      y: 190
+      width: 26
+      height: 16
+    spriteID: 47a5fef06313a334eaa2fc0a61b3a7f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 282
+      y: 190
+      width: 21
+      height: 19
+    spriteID: 19167511abf9aba4e801670277c6e41e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 311
+      y: 190
+      width: 21
+      height: 19
+    spriteID: 972193d5dfd683c4c9d83007f852a6f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 190
+      width: 22
+      height: 18
+    spriteID: df315463c3e3d4b4f96ac06d86b3c54b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 370
+      y: 190
+      width: 21
+      height: 18
+    spriteID: b87899542f835ea4b874c1b59bdc2c6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 399
+      y: 190
+      width: 20
+      height: 18
+    spriteID: dd8d460aa3228984480b6e4f180507ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 427
+      y: 190
+      width: 21
+      height: 17
+    spriteID: 22fa7f3b00332734d9881c924f42cc45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 456
+      y: 190
+      width: 22
+      height: 16
+    spriteID: 65d9c3ea954845c4f868d9bece5bc6cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 486
+      y: 190
+      width: 19
+      height: 18
+    spriteID: 3257d11645643714b9b152b457c4d9a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14
+      y: 149
+      width: 15
+      height: 24
+    spriteID: 3ec7f2138ec37a44d861438a503ba1a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 148
+      width: 30
+      height: 34
+    spriteID: 55c8db9bee94f7247a20412eccb3f9ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 148
+      width: 24
+      height: 34
+    spriteID: 100da225a77891c4b932084d9163d394
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 148
+      width: 24
+      height: 34
+    spriteID: 0fe2864dd5d8bc94ca6d4b1e94fdc293
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 148
+      width: 24
+      height: 33
+    spriteID: d92c93fe1b702024aa2250d8552ff555
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 148
+      width: 24
+      height: 31
+    spriteID: 54089ae5f1617b24491416bb352caa10
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_131
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 148
+      width: 24
+      height: 28
+    spriteID: 0d3e59f6f1136594ab587dd37ac2d6e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 252
+      y: 148
+      width: 24
+      height: 28
+    spriteID: f72d5bf7f6cbc2d4fb235d2d4bf263a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_133
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 284
+      y: 148
+      width: 23
+      height: 29
+    spriteID: a47c31d956cbe1141a1f893454c5ca03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_134
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 315
+      y: 148
+      width: 23
+      height: 29
+    spriteID: d4aaedf55b7e737439bcbe9333123cb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_135
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 346
+      y: 148
+      width: 16
+      height: 30
+    spriteID: 54596fe782fdb5e429a77eb8f783766c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_136
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 370
+      y: 148
+      width: 30
+      height: 15
+    spriteID: 3c0191b5ea092ab47a513bafb1f142c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_137
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 408
+      y: 148
+      width: 30
+      height: 15
+    spriteID: 624c348625b19b944bf46f476aeda0f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 446
+      y: 148
+      width: 30
+      height: 15
+    spriteID: 4f66241edbaea49468ab2f1fef9695b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_139
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 484
+      y: 148
+      width: 15
+      height: 29
+    spriteID: 41bea763ad19b8e44b686994c04d79c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 122
+      width: 15
+      height: 27
+    spriteID: 4c3d7928e7ab4be4bb1b8d394df4b09b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_141
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 113
+      width: 45
+      height: 27
+    spriteID: 001e3312f612dce4096e7c1abb8fc2c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_142
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 113
+      width: 44
+      height: 21
+    spriteID: 7770778cb40013341bc90bfe7d91778b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_143
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 159
+      y: 113
+      width: 50
+      height: 16
+    spriteID: 6f8cd54a4c62f384cb989b54ea3c0e58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_144
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 217
+      y: 113
+      width: 28
+      height: 16
+    spriteID: cd9e0e5f6418df248ac029766abe41eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_145
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 253
+      y: 113
+      width: 29
+      height: 15
+    spriteID: 96fd4d5b46a0d8040ba275de7eca9cd5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_146
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 113
+      width: 29
+      height: 15
+    spriteID: c51034c85fb811f4fb95184777732c62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_147
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 327
+      y: 113
+      width: 27
+      height: 16
+    spriteID: 951d6fd889250394ea0e8a4dcf20640f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_148
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 362
+      y: 113
+      width: 27
+      height: 16
+    spriteID: e4c5b8eef5ed7d2419cd422ab8d29dde
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_149
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 397
+      y: 113
+      width: 28
+      height: 15
+    spriteID: 523102747ada76d4c9e067b651aacf06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 433
+      y: 113
+      width: 28
+      height: 15
+    spriteID: b34f1731c0c198f40afabc3b0591ca86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_151
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 469
+      y: 113
+      width: 22
+      height: 19
+    spriteID: 1ca8ed4e6a904834ebbcdd7343ea416b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_152
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 61
+      width: 42
+      height: 53
+    spriteID: 87014b507e34a874984814803a6fed80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_153
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 61
+      width: 47
+      height: 44
+    spriteID: 75b3a952fedaa5d429ce109989dc9c2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_154
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 63
+      width: 13
+      height: 13
+    spriteID: 587db1344e71da64f83845963d8d2593
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_155
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 61
+      width: 18
+      height: 14
+    spriteID: daee4b9d926b4b34fbd6dc0b18ec7170
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_156
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 142
+      y: 65
+      width: 22
+      height: 33
+    spriteID: 16a25de4fdd032b4aad3ca478e00fa32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_157
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 61
+      width: 46
+      height: 40
+    spriteID: e0df57124a5f63e468bb9e4c084f5e7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_158
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 61
+      width: 42
+      height: 42
+    spriteID: 13f4105cbcdbae84c94324e3cee8a1c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_159
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 276
+      y: 61
+      width: 43
+      height: 41
+    spriteID: 7d51a5c31c9c3f94181720b18eb77d46
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_160
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 327
+      y: 61
+      width: 43
+      height: 40
+    spriteID: f3cee2cadb207c2488e4b67713cc1023
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_161
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 378
+      y: 61
+      width: 40
+      height: 40
+    spriteID: cae65ef1e53882f40adff86cf5996be6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_162
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 426
+      y: 61
+      width: 40
+      height: 40
+    spriteID: 0d1e0e5c4e9e2e74d890948b7f3a7529
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_163
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 474
+      y: 61
+      width: 31
+      height: 44
+    spriteID: e6d875f2e46b89841b7333c3f4550520
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_164
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14
+      y: 27
+      width: 16
+      height: 26
+    spriteID: 1a3057f4f7275884381e14437db6d847
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_165
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 77
+      y: 30
+      width: 13
+      height: 13
+    spriteID: f2809577836223d4dac03e5724112725
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_166
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 81
+      y: 4
+      width: 42
+      height: 40
+    spriteID: 23fcc0881aea9964dbbe49c9c1aec65c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_167
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 142
+      y: 30
+      width: 13
+      height: 13
+    spriteID: 8674d89d5e9ae4c449c60baa05779245
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_168
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 150
+      y: 4
+      width: 35
+      height: 42
+    spriteID: abdd1f76fccc3b143ad9768aa64d107a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_169
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 30
+      width: 14
+      height: 14
+    spriteID: e906c878fc8260e4aa178a8ae3fa69d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_170
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 257
+      y: 4
+      width: 49
+      height: 45
+    spriteID: 634dbf36f8f3ec946be5ac67b4e7a22d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_171
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 348
+      y: 18
+      width: 22
+      height: 25
+    spriteID: 0dbe83ca05e3c054491c95a3289c0bd2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_172
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 378
+      y: 4
+      width: 49
+      height: 44
+    spriteID: f4ffe87015b34b14e835464bf04dd80e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_173
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 435
+      y: 4
+      width: 49
+      height: 44
+    spriteID: ffa4648cfbd170545a9bd18e03a299b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_174
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 492
+      y: 42
+      width: 12
+      height: 11
+    spriteID: aad06b6e0cc281c4e95a43440413966f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_175
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 54
+      height: 22
+    spriteID: 5acc187cdd8b6d5479fa28f5dd1150ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_176
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 6
+      width: 14
+      height: 18
+    spriteID: 00110f60563256647b6c391dfd3f514f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_177
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 11
+      width: 14
+      height: 14
+    spriteID: 0ee0d7a5536f7b241b6ced1449df4ca0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_178
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 193
+      y: 4
+      width: 56
+      height: 31
+    spriteID: 40fede0704c0ef9438e616ee3aade0a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_179
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 314
+      y: 6
+      width: 13
+      height: 13
+    spriteID: ffa5de95f4eace840b17c47ca8307c9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_180
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 336
+      y: 4
+      width: 18
+      height: 14
+    spriteID: 4ae8ff3f8465b494f837feaa3f8eb847
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: All Animations in Aseprite_181
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 492
+      y: 4
+      width: 16
+      height: 30
+    spriteID: 869026d257741c84a80381abf365a892
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
     guid: 1727156774
