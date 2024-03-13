@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject attackCollision;
+
     private Animator anime;
     private Rigidbody2D rigid;
 
@@ -82,6 +83,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.layer == 6)
         {
             anime.SetBool("IsJump", false);
+            anime.SetBool("IsFalling", false);
         }
     }
     public void OnAttackCollision()
