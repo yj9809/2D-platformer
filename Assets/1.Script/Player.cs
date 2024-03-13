@@ -29,7 +29,6 @@ public class Player : MonoBehaviour
                 if (rayHit.distance < 0.6f)
                 {
                     anime.SetBool("IsJump", false);
-                    Debug.Log(rayHit.collider.name);
                 }
             }
         }
@@ -41,6 +40,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Jump();
+        Attack();
     }
 
     void Move()
@@ -84,4 +84,11 @@ public class Player : MonoBehaviour
             anime.SetBool("IsFalling", false);
         }
     }    
+    void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            anime.SetTrigger("IsAttack");
+        }
+    }
 }
