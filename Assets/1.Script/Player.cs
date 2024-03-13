@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
 
     private float speed;
     private float jumpPower;
-    private bool isAttack;
+
+    public bool isMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         speed = 5f;
         jumpPower = 8f;
+        isMove = true;
     }
 
     // Update is called once per frame
@@ -29,16 +31,16 @@ public class Player : MonoBehaviour
         Attack();
     }
 
-    void Move()
+    private void Move()
     {
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) && isMove)
         {
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
             GetComponent<SpriteRenderer>().flipX = false;
             anime.SetBool("Run", true);
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) && isMove)
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
             GetComponent<SpriteRenderer>().flipX = true;
@@ -49,7 +51,7 @@ public class Player : MonoBehaviour
             anime.SetBool("Run", false);
         }
     }
-    void Jump()
+    private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.X) && !anime.GetBool("IsJump"))
         {
@@ -70,13 +72,13 @@ public class Player : MonoBehaviour
             anime.SetBool("IsFalling", false);
         }
     }    
-    void Attack()
+    private void Attack()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
             anime.SetTrigger("IsAttack");
+            isMove = false;
         }
-        isAttack = true;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -86,8 +88,12 @@ public class Player : MonoBehaviour
             anime.SetBool("IsFalling", false);
         }
     }
-    public void OnAttackCollision()
+    private void OnAttackCollision()
     {
         attackCollision.SetActive(true);
+    }
+    private void OnMove()
+    {
+        isMove = true;
     }
 }
