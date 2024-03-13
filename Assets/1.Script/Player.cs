@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameObject attackCollision;
     private Animator anime;
     private Rigidbody2D rigid;
 
     private float speed;
     private float jumpPower;
+    private bool isAttack;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,23 +18,6 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         speed = 5f;
         jumpPower = 8f;
-    }
-
-    private void FixedUpdate()
-    {
-        if (rigid.velocity.y <= 0)
-        {
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Ground"));
-
-            if (rayHit.collider != null)
-            {
-                if (rayHit.distance < 0.6f)
-                {
-                    anime.SetBool("IsJump", false);
-                }
-            }
-        }
-            
     }
 
     // Update is called once per frame
@@ -90,5 +75,17 @@ public class Player : MonoBehaviour
         {
             anime.SetTrigger("IsAttack");
         }
+        isAttack = true;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            anime.SetBool("IsJump", false);
+        }
+    }
+    public void OnAttackCollision()
+    {
+        attackCollision.SetActive(true);
     }
 }
