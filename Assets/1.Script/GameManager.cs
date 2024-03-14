@@ -14,7 +14,11 @@ public class GameManager : Singleton<GameManager>
         {
             if (p == null)
             {
-                Instantiate(player, new Vector3(-24, -9, 0), Quaternion.identity);
+                if (FindObjectOfType<Player>() == null)
+                {
+                    Instantiate(player, new Vector3(-24, -9, 0), Quaternion.identity);
+                }
+               
                 p = FindObjectOfType<Player>();
                 DontDestroyOnLoad(p);
             }

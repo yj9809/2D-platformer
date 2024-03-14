@@ -15,9 +15,9 @@ TagManager:
   - Wall
   - Attack
   - Gate
-  - 
-  - 
-  - 
+  - PlayerDamage
+  - Trap
+  - Collision
   - 
   - 
   - 

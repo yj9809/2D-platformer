@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 46419834}
   - component: {fileID: 46419836}
   - component: {fileID: 46419835}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 61825782}
   - component: {fileID: 61825784}
   - component: {fileID: 61825783}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,6 +757,7 @@ Transform:
   - {fileID: 121121652}
   - {fileID: 600385079}
   - {fileID: 1517246252}
+  - {fileID: 745428753}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1239,7 +1240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 600385079}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,7 +1255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600385078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.952979, y: -9.64, z: -1.2471224}
+  m_LocalPosition: {x: 10.952979, y: -10.47, z: -1.2471224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1840,6 +1841,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1626158122}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &745428752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745428753}
+  m_Layer: 0
+  m_Name: Collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &745428753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745428752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1859165176}
+  m_Father: {fileID: 137030660}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &754161518
 GameObject:
@@ -3164,7 +3197,7 @@ GameObject:
   - component: {fileID: 1425985861}
   - component: {fileID: 1425985862}
   - component: {fileID: 1425985863}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3499,7 +3532,7 @@ GameObject:
   - component: {fileID: 1517559360}
   - component: {fileID: 1517559362}
   - component: {fileID: 1517559361}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4875,6 +4908,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1859165175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859165176}
+  - component: {fileID: 1859165177}
+  m_Layer: 0
+  m_Name: TrapColli
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1859165176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859165175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.71, y: -11.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 745428753}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1859165177
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859165175}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.39, y: 0.37}
+  m_EdgeRadius: 0
 --- !u!1 &1970585927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,7 +4977,7 @@ GameObject:
   - component: {fileID: 1970585929}
   - component: {fileID: 1970585928}
   - component: {fileID: 1970585930}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5271,7 +5362,7 @@ GameObject:
   - component: {fileID: 2025532665}
   - component: {fileID: 2025532667}
   - component: {fileID: 2025532666}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5518,6 +5609,7 @@ GameObject:
   - component: {fileID: 2030563248}
   - component: {fileID: 2030563246}
   - component: {fileID: 2030563245}
+  - component: {fileID: 2030563249}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5603,6 +5695,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32604f4e4a3b734984ad332647a5834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2030563249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030563244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 18
+  m_RefResolutionX: 285
+  m_RefResolutionY: 160
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
+--- !u!1001 &2044183735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1510126982303488584, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_Name
+      value: '[ Player ]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510126982303488591, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
 --- !u!1 &2047095302
 GameObject:
   m_ObjectHideFlags: 0
@@ -5614,7 +5783,7 @@ GameObject:
   - component: {fileID: 2047095303}
   - component: {fileID: 2047095305}
   - component: {fileID: 2047095304}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_16 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5840,7 +6009,7 @@ GameObject:
   - component: {fileID: 2096994065}
   - component: {fileID: 2096994067}
   - component: {fileID: 2096994066}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cave - RockCombinations1_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}

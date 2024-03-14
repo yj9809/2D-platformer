@@ -8,19 +8,26 @@ public class Player : MonoBehaviour
 
     private Animator anime;
     private Rigidbody2D rigid;
+    private SpriteRenderer spriteRenderer;
 
     private float speed;
     private float jumpPower;
 
     public bool isMove;
+    public bool isJump;
+    public bool isDash;
     // Start is called before the first frame update
     void Start()
     {
         anime = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         speed = 5f;
         jumpPower = 8f;
         isMove = true;
+        isJump = true;
+        isDash = true;
     }
 
     // Update is called once per frame
@@ -29,6 +36,7 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         Attack();
+        Dash();
         if (Input.GetKeyDown(KeyCode.U))
         {
             GameManager.Instance.OnGameSceneLode();
@@ -57,7 +65,7 @@ public class Player : MonoBehaviour
     }
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.X) && !anime.GetBool("IsJump"))
+        if (Input.GetKeyDown(KeyCode.X) && !anime.GetBool("IsJump") && isJump)
         {
             anime.SetBool("IsJump", true);
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -76,12 +84,22 @@ public class Player : MonoBehaviour
             anime.SetBool("IsFalling", false);
         }
     }    
+    private void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && isDash)
+        {
+            anime.SetTrigger("IsDash");
+            isDash = false;
+            speed = 10f;
+        }
+    }
     private void Attack()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
             anime.SetTrigger("IsAttack");
             isMove = false;
+            isJump = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -91,6 +109,10 @@ public class Player : MonoBehaviour
             anime.SetBool("IsJump", false);
             anime.SetBool("IsFalling", false);
         }
+        if (collision.gameObject.layer == 11)
+        {
+            OnDamage(collision.transform.position);
+        }
     }
     private void OnAttackCollision()
     {
@@ -99,5 +121,24 @@ public class Player : MonoBehaviour
     private void OnMove()
     {
         isMove = true;
+        isJump = true;
+    }
+    private void OnDash()
+    {
+        isDash = true;
+        speed = 5f;
+    }
+    void OnDamage(Vector2 pos)
+    {
+        gameObject.layer = 10;
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+        int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc, 1) * 3, ForceMode2D.Impulse);
+
+        Invoke("OffDamage", 3f);
+    }
+    void OffDamage()
+    {
+        spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 }
