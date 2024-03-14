@@ -7,16 +7,24 @@ using TMPro;
 public class Gate : MonoBehaviour
 {
     [SerializeField] private Image entrance;
-
+    [SerializeField] private string nextScene;
+    [SerializeField] private Transform[] spawonPos;
+    
     private void Update()
     {
         if (entrance.enabled)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Debug.Log("입장합니다");
-                GameManager.Instance.OnMiddleBossSceneLode();
-
+                if (nextScene == "MiddleBossRoom")
+                {
+                    GameManager.Instance.OnMiddleBossSceneLode();
+                    GameManager.Instance.P.transform.position = spawonPos[1].position;
+                }
+                if (nextScene == "Game")
+                {
+                    GameManager.Instance.OnGameSceneLode();
+                }
             }
         }
     }

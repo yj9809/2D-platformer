@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private GameObject player;
+    public GameObject player;
 
     private Player p;
     public Player P
@@ -13,7 +13,12 @@ public class GameManager : Singleton<GameManager>
         get
         {
             if (p == null)
+            {
+                Instantiate(player, new Vector3(-24, -9, 0), Quaternion.identity);
                 p = FindObjectOfType<Player>();
+                DontDestroyOnLoad(p);
+            }
+
 
             return p;
         }
@@ -21,7 +26,6 @@ public class GameManager : Singleton<GameManager>
     public void OnMiddleBossSceneLode()
     {
         SceneManager.LoadScene("MiddleBossRoom");
-        Instantiate(player, new Vector2(-11, -5.8f), Quaternion.identity);
     }
     public void OnGameSceneLode()
     {
