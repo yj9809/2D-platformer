@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AttackCollison : MonoBehaviour
 {
-    [SerializeField] private Player p;
-
     private void OnEnable()
     {
         StartCoroutine(AutoEnable());

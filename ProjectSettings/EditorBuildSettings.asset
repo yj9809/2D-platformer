@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/4.Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/4.Scenes/Game.unity
+    guid: 510aa24a3aa3ca34187c5636dfcc6567
+  - enabled: 1
+    path: Assets/4.Scenes/MiddleBossRoom.unity
+    guid: 022f86f04af337542af72a3ccd7566ca
   m_configObjects: {}

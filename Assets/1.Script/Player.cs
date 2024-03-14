@@ -29,6 +29,10 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         Attack();
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            GameManager.Instance.OnGameSceneLode();
+        }
     }
 
     private void Move()

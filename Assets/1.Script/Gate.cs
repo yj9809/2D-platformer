@@ -6,20 +6,32 @@ using TMPro;
 
 public class Gate : MonoBehaviour
 {
-    [SerializeField] private TMP_Text txt;
+    [SerializeField] private Image entrance;
 
+    private void Update()
+    {
+        if (entrance.enabled)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("입장합니다");
+                GameManager.Instance.OnMiddleBossSceneLode();
+
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.GetComponent<Player>())
         {
-            txt.transform.gameObject.SetActive(true);
+            entrance.transform.gameObject.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.transform.GetComponent<Player>())
         {
-            txt.transform.gameObject.SetActive(false);
+            entrance.transform.gameObject.SetActive(false);
         }
     }
 }
