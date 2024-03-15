@@ -37,9 +37,20 @@ public class Player : MonoBehaviour
         Jump();
         Attack();
         Dash();
-        if (Input.GetKeyDown(KeyCode.U))
+        if (!isDash)
         {
-            GameManager.Instance.OnGameSceneLode();
+            if (!spriteRenderer.flipX)
+            {
+                transform.position = 
+                    Vector2.MoveTowards
+                    (transform.position, new Vector2(transform.position.x + 0.1f, transform.position.y), Time.deltaTime * (speed * 2));
+            }
+            else if (spriteRenderer.flipX)
+            {
+                transform.position =
+                    Vector2.MoveTowards
+                    (transform.position, new Vector2(transform.position.x - 0.1f, transform.position.y), Time.deltaTime * (speed * 2));
+            }
         }
     }
 
@@ -49,13 +60,13 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) && isMove)
         {
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
-            GetComponent<SpriteRenderer>().flipX = false;
+            spriteRenderer.flipX = false;
             anime.SetBool("Run", true);
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && isMove)
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
-            GetComponent<SpriteRenderer>().flipX = true;
+            spriteRenderer.flipX = true;
             anime.SetBool("Run", true);
         }
         else
@@ -90,7 +101,7 @@ public class Player : MonoBehaviour
         {
             anime.SetTrigger("IsDash");
             isDash = false;
-            speed = 10f;
+            Invoke("OnDash", 2f);
         }
     }
     private void Attack()
@@ -111,7 +122,7 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.layer == 11)
         {
-            OnDamage(collision.transform.position);
+            OnTrapDamage(collision.transform.position);
         }
     }
     private void OnAttackCollision()
@@ -126,19 +137,19 @@ public class Player : MonoBehaviour
     private void OnDash()
     {
         isDash = true;
-        speed = 5f;
     }
-    void OnDamage(Vector2 pos)
+    void OnTrapDamage(Vector2 pos)
     {
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc, 1) * 3, ForceMode2D.Impulse);
 
-        Invoke("OffDamage", 3f);
+        Invoke("OffDamage", 2f);
     }
     void OffDamage()
     {
+        gameObject.layer = 3;
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 }
