@@ -12,10 +12,15 @@ public class Player : MonoBehaviour
 
     private float speed;
     private float jumpPower;
+    //´ë½¬
+    private float dashSpeed;
+    public float defaultTime;
+    private float dashTime;
 
     public bool isMove;
     public bool isJump;
     public bool isDash;
+    public bool onDash;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +30,11 @@ public class Player : MonoBehaviour
 
         speed = 5f;
         jumpPower = 8f;
+        dashSpeed = 25f;
+
         isMove = true;
         isJump = true;
-        isDash = true;
+        onDash = true;
     }
 
     // Update is called once per frame
@@ -37,21 +44,6 @@ public class Player : MonoBehaviour
         Jump();
         Attack();
         Dash();
-        if (!isDash)
-        {
-            if (!spriteRenderer.flipX)
-            {
-                transform.position = 
-                    Vector2.MoveTowards
-                    (transform.position, new Vector2(transform.position.x + 0.1f, transform.position.y), Time.deltaTime * (speed * 2));
-            }
-            else if (spriteRenderer.flipX)
-            {
-                transform.position =
-                    Vector2.MoveTowards
-                    (transform.position, new Vector2(transform.position.x - 0.1f, transform.position.y), Time.deltaTime * (speed * 2));
-            }
-        }
     }
 
     private void Move()
@@ -97,12 +89,27 @@ public class Player : MonoBehaviour
     }    
     private void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && isDash)
+        if (Input.GetKeyDown(KeyCode.Z) && onDash && anime.GetBool("Run"))
         {
+            onDash = false;
+            isDash = true;
             anime.SetTrigger("IsDash");
-            isDash = false;
-            Invoke("OnDash", 2f);
+
+            Invoke("OnDash", 0.5f);
         }
+
+        if (dashTime <=0)
+        {
+            speed = 5f;
+            if (isDash)
+                dashTime = 0.1f;
+        }
+        else
+        {
+            dashTime -= Time.deltaTime;
+            speed = dashSpeed;
+        }
+        isDash = false;
     }
     private void Attack()
     {
@@ -136,7 +143,7 @@ public class Player : MonoBehaviour
     }
     private void OnDash()
     {
-        isDash = true;
+        onDash = true;
     }
     void OnTrapDamage(Vector2 pos)
     {
