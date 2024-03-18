@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int direction;
-    [SerializeField] private RaycastHit2D hit;
 
     private Vector2 rayPos;
+    private RaycastHit2D[] ray = new RaycastHit2D[2];
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
 
@@ -27,28 +27,29 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
-
         rayPos = new Vector2(transform.position.x, transform.position.y + 1);
-
-
-        if (hit)
-        {
-            direction = -1;
-            Debug.Log("Ãæµ¹");
-        }
+        Debug.Log(ray[0].collider.name);
+        ray[0] = Physics2D.Raycast(rayPos, Vector2.right, 1f, LayerMask.GetMask("Wall"));
+        ray[1] = Physics2D.Raycast(rayPos, Vector2.left, 1f, LayerMask.GetMask("Wall"));
     }
     void Move()
     {
+
         if (direction < 0)
         {
             sprite.flipX = true;
-            hit = Physics2D.Raycast(rayPos, Vector2.right, 0.5f, LayerMask.GetMask("Wall"));
         }
         else if (direction > 0)
         {
             sprite.flipX = false;
-            hit = Physics2D.Raycast(rayPos, Vector2.left, 0.5f, LayerMask.GetMask("Wall"));
         }
+
+        if (ray[0])
+            direction = -1;
+        else if (ray[1])
+            direction = 1;
+        else
+        
 
         rigid.velocity = new Vector2(direction, rigid.velocity.y) * speed;
     }
