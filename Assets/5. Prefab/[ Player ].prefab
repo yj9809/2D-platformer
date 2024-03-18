@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1510126981276409304
 Transform:
   m_ObjectHideFlags: 0
@@ -121,8 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCollision: {fileID: 1510126981276409305}
+  defaultTime: 0
   isMove: 0
   isJump: 0
+  isDash: 0
+  onDash: 0
 --- !u!212 &1510126982303488588
 SpriteRenderer:
   m_ObjectHideFlags: 0

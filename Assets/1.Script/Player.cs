@@ -119,6 +119,14 @@ public class Player : MonoBehaviour
             isMove = false;
             isJump = false;
         }
+        if (spriteRenderer.flipX)
+        {
+            transform.GetChild(0).transform.localPosition = new Vector2(-1.28f, 1.26f);
+        }
+        else
+        {
+            transform.GetChild(0).transform.localPosition = new Vector2(1.28f, 1.26f);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
