@@ -18,8 +18,8 @@ TagManager:
   - PlayerDamage
   - Trap
   - Collision
-  - 
-  - 
+  - Enemy
+  - EnemyDamage
   - 
   - 
   - 

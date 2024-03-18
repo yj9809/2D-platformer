@@ -53,12 +53,14 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
             spriteRenderer.flipX = false;
+            transform.GetChild(0).localPosition = new Vector2(1.28f, 1.26f);
             anime.SetBool("Run", true);
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && isMove)
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
             spriteRenderer.flipX = true;
+            transform.GetChild(0).localPosition = new Vector2(-1.28f, 1.26f);
             anime.SetBool("Run", true);
         }
         else
@@ -119,26 +121,6 @@ public class Player : MonoBehaviour
             isMove = false;
             isJump = false;
         }
-        if (spriteRenderer.flipX)
-        {
-            transform.GetChild(0).transform.localPosition = new Vector2(-1.28f, 1.26f);
-        }
-        else
-        {
-            transform.GetChild(0).transform.localPosition = new Vector2(1.28f, 1.26f);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 6)
-        {
-            anime.SetBool("IsJump", false);
-            anime.SetBool("IsFalling", false);
-        }
-        if (collision.gameObject.layer == 11)
-        {
-            OnTrapDamage(collision.transform.position);
-        }
     }
     private void OnAttackCollision()
     {
@@ -153,7 +135,7 @@ public class Player : MonoBehaviour
     {
         onDash = true;
     }
-    void OnTrapDamage(Vector2 pos)
+    public void OnPlayerDamage(Vector2 pos)
     {
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
@@ -162,9 +144,21 @@ public class Player : MonoBehaviour
 
         Invoke("OffDamage", 2f);
     }
-    void OffDamage()
+    private void OffDamage()
     {
         gameObject.layer = 3;
         spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            anime.SetBool("IsJump", false);
+            anime.SetBool("IsFalling", false);
+        }
+        if (collision.gameObject.layer == 11)
+        {
+            OnPlayerDamage(collision.transform.position);
+        }
     }
 }
