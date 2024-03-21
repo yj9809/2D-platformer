@@ -22,8 +22,6 @@ public class GameManager : Singleton<GameManager>
                 p = FindObjectOfType<Player>();
                 DontDestroyOnLoad(p);
             }
-
-
             return p;
         }
     }

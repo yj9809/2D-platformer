@@ -38,8 +38,8 @@ public class Enemy : MonoBehaviour
         {
             sprite.flipX = false;
         }
-        
-        rigid.velocity = new Vector2(direction, rigid.velocity.y) * speed;
+
+        rigid.velocity = new Vector2(direction * speed, rigid.velocity.y);
     }
     void ChangeDirection()
     {
@@ -77,5 +77,23 @@ public class Enemy : MonoBehaviour
         {
             GameManager.Instance.P.OnPlayerDamage(transform.position);
         }
+        if (collision.GetComponent<AttackCollison>())
+        {
+            OnEnemyDamage(collision.transform.position);
+        }
+    }
+    public void OnEnemyDamage(Vector2 pos)
+    {
+        gameObject.layer = 14;
+        sprite.color = new Color(1, 1, 1, 0.4f);
+        int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc, 1) * 1, ForceMode2D.Impulse);
+
+        Invoke("OffDamage", 2f);
+    }
+    private void OffDamage()
+    {
+        gameObject.layer = 13;
+        sprite.color = new Color(1, 1, 1, 1);
     }
 }
