@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/4.Scenes/MiddleBossRoom.unity
     guid: 022f86f04af337542af72a3ccd7566ca
+  - enabled: 1
+    path: Assets/4.Scenes/Main.unity
+    guid: 586088072d65ac44ca778bdd75f9d3ff
   m_configObjects: {}
