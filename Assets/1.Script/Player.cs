@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     private float dashSpeed;
     public float defaultTime;
     private float dashTime;
+    
+    public int damage;
 
     public bool isMove;
     public bool isJump;
@@ -31,6 +33,8 @@ public class Player : MonoBehaviour
         speed = 5f;
         jumpPower = 8f;
         dashSpeed = 25f;
+
+        damage = 2;
 
         isMove = true;
         isJump = true;
@@ -93,6 +97,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && onDash && anime.GetBool("Run"))
         {
+            gameObject.layer = 10;
             onDash = false;
             isDash = true;
             anime.SetTrigger("IsDash");
@@ -112,6 +117,10 @@ public class Player : MonoBehaviour
             speed = dashSpeed;
         }
         isDash = false;
+    }
+    public void OffDashDamage()
+    {
+        gameObject.layer = 3;
     }
     private void Attack()
     {
@@ -139,10 +148,8 @@ public class Player : MonoBehaviour
     {
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
-        int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc, 1) * 3, ForceMode2D.Impulse);
 
-        Invoke("OffDamage", 2f);
+        Invoke("OffDamage", 0.5f);
     }
     private void OffDamage()
     {

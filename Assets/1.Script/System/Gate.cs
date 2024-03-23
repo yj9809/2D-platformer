@@ -8,8 +8,8 @@ public class Gate : MonoBehaviour
 {
     [SerializeField] private Image entrance;
     [SerializeField] private string nextScene;
-    [SerializeField] private Transform[] spawonPos;
-    
+    [SerializeField] private Transform spawonPos;
+
     private void Update()
     {
         if (entrance.enabled)
@@ -18,11 +18,12 @@ public class Gate : MonoBehaviour
             {
                 if (nextScene == "MiddleBossRoom")
                 {
+                    GameManager.Instance.P.transform.position = spawonPos.localPosition;
                     GameManager.Instance.OnMiddleBossSceneLode();
-                    GameManager.Instance.P.transform.position = spawonPos[1].position;
                 }
                 if (nextScene == "Game")
                 {
+                    GameManager.Instance.P.transform.position = spawonPos.localPosition;
                     GameManager.Instance.OnGameSceneLode();
                 }
             }
