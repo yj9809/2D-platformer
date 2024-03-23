@@ -12,19 +12,19 @@ public class Gate : MonoBehaviour
 
     private void Update()
     {
-        if (entrance.enabled)
+        if (entrance.gameObject.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
                 if (nextScene == "MiddleBossRoom")
                 {
-                    GameManager.Instance.P.transform.position = spawonPos.localPosition;
                     GameManager.Instance.OnMiddleBossSceneLode();
+                    GameManager.Instance.pos = spawonPos.localPosition;
                 }
                 if (nextScene == "Game")
                 {
-                    GameManager.Instance.P.transform.position = spawonPos.localPosition;
                     GameManager.Instance.OnGameSceneLode();
+                    GameManager.Instance.pos = spawonPos.localPosition;
                 }
             }
         }

@@ -54,7 +54,6 @@ public abstract class Enemy : MonoBehaviour
 
         Invoke("ChangeDirection", 2f);
     }
-
     void Ground()
     {
         //Ground Check
@@ -77,7 +76,31 @@ public abstract class Enemy : MonoBehaviour
         if (rayHitWall.collider != null)
             direction *= -1;
     }
+    public void OnEnemyDamage(Vector2 pos)
+    {
+        if (hp <= 0)
+            return;
 
+        hp -= p.damage;
+        gameObject.layer = 14;
+        sprite.color = new Color(1, 1, 1, 0.4f);
+
+        if (hp <= 0)
+        {
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
+            transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
+            anime.SetBool("Death", true);
+            Destroy(gameObject, 3f);
+        }
+
+        Invoke("OffDamage", 0.5f);
+    }
+    private void OffDamage()
+    {
+        gameObject.layer = 13;
+        sprite.color = new Color(1, 1, 1, 1);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<AttackCollison>())
@@ -91,28 +114,5 @@ public abstract class Enemy : MonoBehaviour
         {
             GameManager.Instance.P.OnPlayerDamage(transform.position);
         }
-    }
-    public void OnEnemyDamage(Vector2 pos)
-    {
-        if (hp <= 0)
-            return;
-        hp -= p.damage;
-        if (hp <= 0)
-        {
-            GetComponent<Collider2D>().enabled = false;
-            GetComponent<Rigidbody2D>().simulated = false;
-            anime.SetBool("Death", true);
-            Destroy(gameObject, 3f);
-        }
-        gameObject.layer = 14;
-        sprite.color = new Color(1, 1, 1, 0.4f);
-
-
-        Invoke("OffDamage", 0.5f);
-    }
-    private void OffDamage()
-    {
-        gameObject.layer = 13;
-        sprite.color = new Color(1, 1, 1, 1);
     }
 }

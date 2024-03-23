@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameObject player;
+    [SerializeField] private GameObject player;
+
+    public Vector2 pos;
 
     private Player p;
     public Player P
@@ -16,21 +18,25 @@ public class GameManager : Singleton<GameManager>
             {
                 if (FindObjectOfType<Player>() == null)
                 {
-                    Instantiate(player, new Vector3(-24, -9, 0), Quaternion.identity);
+                    Instantiate(player, pos, Quaternion.identity);
                 }
                
                 p = FindObjectOfType<Player>();
-                DontDestroyOnLoad(p);
+                //DontDestroyOnLoad(p);
             }
             return p;
         }
     }
+    private void Start()
+    {
+        pos = new Vector2(-24, -9);
+    }
     public void OnMiddleBossSceneLode()
     {
-        SceneManager.LoadScene("MiddleBossRoom");
+        LodingSceneController.LoadScene("MiddleBossRoom");
     }
     public void OnGameSceneLode()
     {
-        SceneManager.LoadScene("Game");
+        LodingSceneController.LoadScene("Game");
     }
 }

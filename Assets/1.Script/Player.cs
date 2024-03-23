@@ -48,6 +48,11 @@ public class Player : MonoBehaviour
         Jump();
         Attack();
         Dash();
+        //어택 스피드 조절 코드 나중에 활용
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            anime.SetFloat("AttackSpeed", anime.GetFloat("AttackSpeed") + 0.2f);
+        }
     }
 
     private void Move()

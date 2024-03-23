@@ -25,14 +25,23 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     }
     private void Awake()
     {
-        if (instance == null)
+        if (transform.parent != null)
         {
-            instance = (T)FindObjectOfType(typeof(T));
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(transform.parent);
         }
         else
         {
-            DontDestroyOnLoad(gameObject);
+            if (instance == null)
+            {
+                instance = (T)FindObjectOfType(typeof(T));
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                DontDestroyOnLoad(gameObject);
+            }
         }
+
+        
     }
 }
