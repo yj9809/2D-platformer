@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 30867
+  controlID: 90
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 30858
+  controlID: 73
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 30868
+  controlID: 85
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,8 +296,8 @@ MonoBehaviour:
     y: 0
     width: 410
     height: 839
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -703,9 +703,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -21.95407, y: -5.6393094, z: 0.13442978}
+    m_Target: {x: 728.44836, y: 598.06604, z: -1.6839302}
     speed: 2
-    m_Value: {x: -21.95407, y: -5.6393094, z: 0.13442978}
+    m_Value: {x: 728.44836, y: 598.06604, z: -1.6839302}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -756,9 +756,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.191781
+    m_Target: 271.47067
     speed: 2
-    m_Value: 6.191781
+    m_Value: 271.47067
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1003,9 +1003,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: aad5404d5b75e71458cd40bbbe2ae0d6, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: d40bfdab6d965f640be24fdfd32157a0, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -4090729592202719079, guid: aad5404d5b75e71458cd40bbbe2ae0d6, type: 2}
+  - m_Target: {fileID: 4018081466988142741, guid: d40bfdab6d965f640be24fdfd32157a0, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1050,9 +1050,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3c940200
-      m_LastClickedID: 169020
-      m_ExpandedIDs: aa57feffc859feff745ffeffa662feff1874feff7e74feff2e7cfeff607dfeffd67dfeff207ffeff687ffeff1284feff4a85feffca87feffa88bfeffa09bfeffd09dfeffaaa0feffaaa1feffe2a3feff58a4feff80a6feff7ea7feffbea8feffaeb7fefff6b7feff26b9fefffad1feffbee1feffe4e1feffe8e1feff34e2feff84e2feff74fcfeffc80dffff120effff420fffff8a0fffff0a48ffff327cffffb082ffff7483ffff4ca8ffff9ebdffffbac7ffff1eceffff50dbffffc8dbffff02f9ffff2cfbffffd890010026130200da48020058520200dc5302005a550200828b0200fa9102003c940200
+      m_SelectedIDs: 1c630000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 64e5feff2cfefeff4c09fffffc59ffff025afffffa64ffff647cffffb27cffff9a7effff04f9ffff2cfbfffff4ffffff3c660000406600009c660000ae6600006af00000c2f00000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1116,37 +1116,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/4.Scenes
     m_Globs: []
     m_OriginalText: 
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
   m_StartGridSize: 33
   m_LastFolders:
-  - Assets
+  - Assets/4.Scenes
   m_LastFoldersGridSize: 33
   m_LastProjectPath: "C:\\Users\\dkrkt\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uC720\uB2C8\uD2F0\\2D-platformer"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 12650000
-    m_LastClickedID: 25874
-    m_ExpandedIDs: 0000000012650000146500002cfe00003afe000044fe0000c2fe000000ca9a3b
+    m_SelectedIDs: d4650000
+    m_LastClickedID: 26068
+    m_ExpandedIDs: 00000000926500009465000096650000986500009a6500009c650000307500007a760000d67f0000e08e00009e95000034960000969900007e9a0000f2b60000aeba000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: 7 Day & Night Cycle
+      m_OriginalName: 7 Day & Night Cycle
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 39318
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -1160,7 +1160,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000012650000146500002cfe00003afe000044fe0000c2fe000000ca9a3b
+    m_ExpandedIDs: 00000000926500009465000096650000986500009a6500009c650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1188,7 +1188,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: ec980000809700003c9800003695000008af000012af0000d85f0000326b00007a700000827a00009a640000d267000034710000fe7800002e7d0000d4660000ca6a00001a600000f45f000016600000ba610000aa6100000a6000000e600000126000001e60000022600000266000002a6000002e60000032600000366000003a6000003e60000042600000466000004a6000004e60000052600000566000005a6000005e60000062600000666000006a6000006e60000072600000766000007a6000007e600000e2850000da850000e6850000de850000d6850000d2850000d6740000668700005c87000058870000508700006a870000ca790000e85f00004ec1000044970000d8960000e8a20000dc960000b88e0000429c00001e9e0000fc97000084b60000c4750000665f0000e67e0000d66200000e650000f26700009ea200009e87000004a4000002610000ce740000b487000040610000366100007a740000386100003c6100009a6500006c660000ae6700001af4ffffa26200009e9b0000587f000032a2000092a0000022750000048e0000747d0000a8880000aacf00009cc400003cba0000d0cb000082b50000eeb80000c4c100000cb3000014b5000068b00000e2a90000ceb60000d0b5000050ca00003aaa00005aab000098a9000010ae000042ab000070c5000086c6000056b8000078a9000004a80000dcb1000036af0000bcb70000b8a70000ceae00005cb20000f6cf000014b2000042af0000fabb000014ac000084ad00008eb600006cc50000ccd900004665000062fe00003cfe00008efe00007efe000012fe000024fe00005cfe0000bafe0000a2fe0000c6a90000689900006c6b0000ea9800008285000036fe0000aafe000098fe000088fe000028fe000092f1000000000000
+    m_ExpandedInstanceIDs: ec980000809700003c9800003695000008af000012af0000d85f0000326b00007a700000827a00009a640000d267000034710000fe7800002e7d0000d4660000ca6a00001a600000f45f000016600000ba610000aa6100000a6000000e600000126000001e60000022600000266000002a6000002e60000032600000366000003a6000003e60000042600000466000004a6000004e60000052600000566000005a6000005e60000062600000666000006a6000006e60000072600000766000007a6000007e600000e2850000da850000e6850000de850000d6850000d2850000d6740000668700005c87000058870000508700006a870000ca790000e85f00004ec1000044970000d8960000e8a20000dc960000b88e0000429c00001e9e0000fc97000084b60000c4750000665f0000e67e0000d66200000e650000f26700009ea200009e87000004a4000002610000ce740000b487000040610000366100007a740000386100003c6100009a6500006c660000ae6700001af4ffffa26200009e9b0000587f000032a2000092a0000022750000048e0000747d0000a8880000aacf00009cc400003cba0000d0cb000082b50000eeb80000c4c100000cb3000014b5000068b00000e2a90000ceb60000d0b5000050ca00003aaa00005aab000098a9000010ae000042ab000070c5000086c6000056b8000078a9000004a80000dcb1000036af0000bcb70000b8a70000ceae00005cb20000f6cf000014b2000042af0000fabb000014ac000084ad00008eb600006cc50000ccd900004665000062fe00003cfe00008efe00007efe000012fe000024fe00005cfe0000bafe0000a2fe0000c6a90000689900006c6b0000ea9800008285000036fe0000aafe000098fe000088fe000028fe000092f1000000000000029f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 151
+    m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1

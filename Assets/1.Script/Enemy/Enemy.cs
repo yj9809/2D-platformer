@@ -81,7 +81,7 @@ public abstract class Enemy : MonoBehaviour
         if (hp <= 0)
             return;
 
-        hp -= p.damage;
+        hp -= p.attackDamage;
         gameObject.layer = 14;
         sprite.color = new Color(1, 1, 1, 0.4f);
 

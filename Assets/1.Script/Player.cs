@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
 
+    private float hp;
+    private float mp;
     private float speed;
     private float jumpPower;
     //대쉬
@@ -17,7 +19,8 @@ public class Player : MonoBehaviour
     public float defaultTime;
     private float dashTime;
     
-    public int damage;
+    public int attackDamage;
+    private float attackSpeed;
 
     public bool isMove;
     public bool isJump;
@@ -34,7 +37,10 @@ public class Player : MonoBehaviour
         jumpPower = 8f;
         dashSpeed = 25f;
 
-        damage = 2;
+        attackDamage = DataManager.Instance.nowPlayer.attackDamage;
+        attackSpeed = DataManager.Instance.nowPlayer.attackSpeed;
+
+        anime.SetFloat("AttackSpeed", attackSpeed);
 
         isMove = true;
         isJump = true;
@@ -51,7 +57,8 @@ public class Player : MonoBehaviour
         //어택 스피드 조절 코드 나중에 활용
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            anime.SetFloat("AttackSpeed", anime.GetFloat("AttackSpeed") + 0.2f);
+            DataManager.Instance.nowPlayer.attackSpeed += 0.2f;
+            anime.SetFloat("AttackSpeed", attackSpeed);
         }
     }
 
@@ -172,5 +179,9 @@ public class Player : MonoBehaviour
         {
             OnPlayerDamage(collision.transform.position);
         }
+    }
+    public void Save()
+    {
+        DataManager.Instance.SaveData();
     }
 }
