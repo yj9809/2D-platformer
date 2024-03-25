@@ -912,6 +912,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1510126982303488584, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
+  gate: {fileID: 0}
+  scene:
+    m_Handle: 0
   pos: {x: -24, y: -9}
 --- !u!1 &359732594
 GameObject:
@@ -1957,6 +1960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993b6be21319f9641ba38fe4c3fef9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  load: {fileID: 1606094695}
 --- !u!1 &820713803
 GameObject:
   m_ObjectHideFlags: 0

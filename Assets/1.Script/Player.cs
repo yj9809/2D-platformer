@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
             data.attackSpeed += 0.2f;
-            anime.SetFloat("AttackSpeed", attackSpeed);
+            anime.SetFloat("AttackSpeed", data.attackSpeed);
         }
     }
 

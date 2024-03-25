@@ -21,9 +21,8 @@ public class Selet : MonoBehaviour
             if (File.Exists(DataManager.Instance.path + $"{i}"))
             {
                 saveFile[i] = true;
-                DataManager.Instance.nowSlot = i;
-                DataManager.Instance.LoadData();
-                slotText[i].text = DataManager.Instance.nowPlayer.name;
+                PlayerData pd =  DataManager.Instance.LoadData(i);
+                slotText[i].text = pd.name;
             }
             else
             {
@@ -34,6 +33,7 @@ public class Selet : MonoBehaviour
     public void NewGame(int number)
     {
         DataManager.Instance.nowSlot = number;
+
         if (!saveFile[number])
         {
             Creat();

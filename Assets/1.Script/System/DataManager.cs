@@ -21,24 +21,41 @@ public class DataManager : Singleton<DataManager>
 
     private void Awake()
     {
-        string data = JsonUtility.ToJson(nowPlayer);
         path = Application.persistentDataPath + "/Save";
-        print(data);
     }
     // Start is called before the first frame update
     void Start()
     {
+        //bool isLoad = false;
 
+        //for (int i = 0; i < 3; i++)
+        //{
+        //    if (File.Exists(DataManager.Instance.path + $"{i}"))
+        //    {
+        //        isLoad = true;
+        //    }
+        //}
+
+        //UiManager.Instance.load.SetActive(isLoad);
     }
 
     public void SaveData()
     {
         string data = JsonUtility.ToJson(nowPlayer);
+        Debug.Log(data);
         File.WriteAllText(path + nowSlot.ToString(), data);
     }
     public void LoadData()
     {
         string data = File.ReadAllText(path + nowSlot.ToString());
         nowPlayer = JsonUtility.FromJson<PlayerData>(data);
+    }
+
+    public PlayerData LoadData(int index)
+    {
+        string data = File.ReadAllText(path + index.ToString());
+        PlayerData pd = JsonUtility.FromJson<PlayerData>(data);
+
+        return pd;
     }
 }

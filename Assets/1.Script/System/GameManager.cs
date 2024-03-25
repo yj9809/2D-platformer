@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject gate;
 
-    Scene scene;
+    public Scene scene;
 
     public Vector2 pos;
 
