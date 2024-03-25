@@ -31,7 +31,15 @@ public class Selet : MonoBehaviour
             }
         }
     }
-    public void Slot(int number)
+    public void NewGame(int number)
+    {
+        DataManager.Instance.nowSlot = number;
+        if (!saveFile[number])
+        {
+            Creat();
+        }
+    }
+    public void LoadGame(int number)
     {
         DataManager.Instance.nowSlot = number;
 
@@ -39,10 +47,6 @@ public class Selet : MonoBehaviour
         {
             DataManager.Instance.LoadData();
             GoGame();
-        }
-        else
-        {
-            Creat();
         }
     }
     public void Creat()

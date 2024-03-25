@@ -16,13 +16,14 @@ public class PlayerData
 public class DataManager : Singleton<DataManager>
 {
     public PlayerData nowPlayer = new PlayerData();
-
     public string path;
     public int nowSlot;
 
     private void Awake()
     {
+        string data = JsonUtility.ToJson(nowPlayer);
         path = Application.persistentDataPath + "/Save";
+        print(data);
     }
     // Start is called before the first frame update
     void Start()

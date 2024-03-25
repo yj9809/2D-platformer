@@ -7,6 +7,8 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject player;
 
+    Scene scene;
+
     public Vector2 pos;
 
     private Player p;
@@ -14,15 +16,18 @@ public class GameManager : Singleton<GameManager>
     {
         get
         {
-            if (p == null)
+            if (scene.name != "Main")
             {
-                if (FindObjectOfType<Player>() == null)
+                if (p == null)
                 {
-                    Instantiate(player, pos, Quaternion.identity);
+                    if (FindObjectOfType<Player>() == null)
+                    {
+                        Instantiate(player, pos, Quaternion.identity);
+                    }
+
+                    p = FindObjectOfType<Player>();
+                    //DontDestroyOnLoad(p);
                 }
-               
-                p = FindObjectOfType<Player>();
-                //DontDestroyOnLoad(p);
             }
             return p;
         }
@@ -30,6 +35,7 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         pos = new Vector2(-24, -9);
+        scene = SceneManager.GetActiveScene();
     }
     public void OnMiddleBossSceneLode()
     {

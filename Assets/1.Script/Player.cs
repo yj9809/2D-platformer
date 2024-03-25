@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
 
+    private PlayerData data;
+
     private float hp;
     private float mp;
     private float speed;
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        data = DataManager.Instance.nowPlayer;
         anime = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -37,8 +40,8 @@ public class Player : MonoBehaviour
         jumpPower = 8f;
         dashSpeed = 25f;
 
-        attackDamage = DataManager.Instance.nowPlayer.attackDamage;
-        attackSpeed = DataManager.Instance.nowPlayer.attackSpeed;
+        attackDamage = data.attackDamage;
+        attackSpeed = data.attackSpeed;
 
         anime.SetFloat("AttackSpeed", attackSpeed);
 
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour
         //어택 스피드 조절 코드 나중에 활용
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            DataManager.Instance.nowPlayer.attackSpeed += 0.2f;
+            data.attackSpeed += 0.2f;
             anime.SetFloat("AttackSpeed", attackSpeed);
         }
     }

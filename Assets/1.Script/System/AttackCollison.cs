@@ -21,8 +21,4 @@ public class AttackCollison : MonoBehaviour
 
     }
 
-    void OnAttack()
-    {
-
-    }
 }
