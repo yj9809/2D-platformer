@@ -26,23 +26,12 @@ public class DataManager : Singleton<DataManager>
     // Start is called before the first frame update
     void Start()
     {
-        //bool isLoad = false;
 
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    if (File.Exists(DataManager.Instance.path + $"{i}"))
-        //    {
-        //        isLoad = true;
-        //    }
-        //}
-
-        //UiManager.Instance.load.SetActive(isLoad);
     }
 
     public void SaveData()
     {
         string data = JsonUtility.ToJson(nowPlayer);
-        Debug.Log(data);
         File.WriteAllText(path + nowSlot.ToString(), data);
     }
     public void LoadData()

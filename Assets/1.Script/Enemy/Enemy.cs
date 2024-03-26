@@ -2,24 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Type
+{
+    nomal,
+    Boss
+}
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] private int direction;
-
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private Animator anime;
-    private Player p;
+   [SerializeField] private Player p;
 
+    protected Type type;
+    protected float attackDis;
     protected float speed;
     protected float hp;
+
+    private float attackCool = 2f;
+    private int direction;
 
     public virtual void Init()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
-
         p = GameManager.Instance.P;
 
         ChangeDirection();
@@ -30,23 +37,47 @@ public abstract class Enemy : MonoBehaviour
     {
         if (hp <= 0)
             return;
-
         Move();
         Ground();
     }
     void Move()
     {
+        attackCool -= Time.deltaTime;
 
-        if (direction < 0)
+        Debug.Log(attackCool);
+        if (type == Type.nomal)
         {
-            sprite.flipX = true;
-        }
-        else if (direction > 0)
-        {
-            sprite.flipX = false;
-        }
+            if (direction < 0)
+            {
+                sprite.flipX = true;
+            }
+            else if (direction > 0)
+            {
+                sprite.flipX = false;
+            }
 
-        rigid.velocity = new Vector2(direction * speed, rigid.velocity.y);
+            rigid.velocity = new Vector2(direction * speed, rigid.velocity.y);
+        }
+        else if(type == Type.Boss)
+        {
+            float distance = Vector2.Distance(p.transform.position, transform.position);
+            if (distance > attackDis)
+            {
+                Vector2 dis = p.transform.position - transform.position;
+                Vector3 dir = dis.normalized * Time.deltaTime * speed;
+                sprite.flipX = dis.normalized.x > 0 ? false : true;
+
+                transform.Translate(dir);
+
+                anime.SetBool("Run", true);
+                anime.SetBool("Attack", false);
+            }
+            else
+            {
+
+            }
+        }
+        
     }
     void ChangeDirection()
     {
