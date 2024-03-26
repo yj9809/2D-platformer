@@ -22,13 +22,14 @@ public abstract class Enemy : MonoBehaviour
     private float attackCool = 2f;
     private int direction;
 
+    bool isMove;
     public virtual void Init()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
         p = GameManager.Instance.P;
-
+        isMove = true;
         ChangeDirection();
     }
 
@@ -42,9 +43,6 @@ public abstract class Enemy : MonoBehaviour
     }
     void Move()
     {
-        attackCool -= Time.deltaTime;
-
-        Debug.Log(attackCool);
         if (type == Type.nomal)
         {
             if (direction < 0)
@@ -61,7 +59,7 @@ public abstract class Enemy : MonoBehaviour
         else if(type == Type.Boss)
         {
             float distance = Vector2.Distance(p.transform.position, transform.position);
-            if (distance > attackDis)
+            if (distance > attackDis && isMove)
             {
                 Vector2 dis = p.transform.position - transform.position;
                 Vector3 dir = dis.normalized * Time.deltaTime * speed;
@@ -69,15 +67,29 @@ public abstract class Enemy : MonoBehaviour
 
                 transform.Translate(dir);
 
-                anime.SetBool("Run", true);
+                anime.SetFloat("Speed", 1);
                 anime.SetBool("Attack", false);
             }
             else
             {
-
+                anime.SetFloat("Speed", 0);
+                attackCool -= Time.deltaTime;
+                if (attackCool < 0)
+                {
+                    int ran = Random.Range(0, 3);
+                    isMove = false;
+                    anime.SetFloat("AttackNum", ran);
+                    anime.SetTrigger("Attack");
+                    attackCool = 1;
+                }
+                
             }
         }
         
+    }
+    public void OnMove()
+    {
+        isMove = true;
     }
     void ChangeDirection()
     {
