@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject gate;
 
+    public GameObject[] hit;
     public Scene scene;
 
     public Vector2 pos;

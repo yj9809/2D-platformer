@@ -13,7 +13,7 @@ public class Bat : Enemy
     {
         speed = 3;
         hp = 4;
-        type = Type.nomal;
+        type = Type.Bat;
 
         base.Init();
     }

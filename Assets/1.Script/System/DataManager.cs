@@ -9,7 +9,7 @@ public class PlayerData
     public float hp = 10;
     public float mp = 10;
     public int attackDamage = 1;
-    public float attackSpeed = 1;
+    public float attackSpeed = 1.5f;
     public Transform lastPos;
 }
 

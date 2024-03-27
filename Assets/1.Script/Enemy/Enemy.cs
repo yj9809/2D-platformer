@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum Type
 {
-    nomal,
+    Bat,
     Boss
 }
 public abstract class Enemy : MonoBehaviour
@@ -43,7 +43,7 @@ public abstract class Enemy : MonoBehaviour
     }
     void Move()
     {
-        if (type == Type.nomal)
+        if (type == Type.Bat)
         {
             if (direction < 0)
             {
@@ -146,16 +146,23 @@ public abstract class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<AttackCollison>())
+        if (type == Type.Bat)
         {
-            OnEnemyDamage(collision.transform.position);
+            Vector2 pos = new Vector2(transform.position.x, transform.position.y + 1);
+            if (collision.GetComponent<AttackCollison>())
+            {
+                OnEnemyDamage(collision.transform.position);
+                Instantiate(GameManager.Instance.hit[1], pos, Quaternion.identity);
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.GetComponent<Player>())
         {
+            Vector2 pos = new Vector2(p.transform.position.x, p.transform.position.y + 1);
             GameManager.Instance.P.OnPlayerDamage(transform.position);
+            Instantiate(GameManager.Instance.hit[0], pos, Quaternion.identity);
         }
     }
 }

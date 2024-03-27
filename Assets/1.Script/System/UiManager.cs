@@ -7,6 +7,7 @@ using System.IO;
 public class UiManager : Singleton<UiManager>
 {
     public GameObject load;
+    public GameObject hp;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class UiManager : Singleton<UiManager>
                     isLoad = true;
                 }
             }
-            UiManager.Instance.load.SetActive(isLoad);
+            load.SetActive(isLoad);
         }
     }
 }

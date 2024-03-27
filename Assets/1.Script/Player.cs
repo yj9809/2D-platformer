@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     private Animator anime;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
+    private Image iHp;
 
     private PlayerData data;
 
@@ -35,11 +37,13 @@ public class Player : MonoBehaviour
         anime = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        iHp = UiManager.Instance.hp.transform.GetChild(0).GetComponent<Image>();
 
         speed = 5f;
         jumpPower = 8f;
         dashSpeed = 25f;
 
+        iHp.fillAmount = 0;
         attackDamage = data.attackDamage;
         attackSpeed = data.attackSpeed;
 

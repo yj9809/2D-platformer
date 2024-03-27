@@ -13,7 +13,7 @@ public class MainCamera : MonoBehaviour
     void Update()
     {
         float clampX = Mathf.Clamp(p.transform.position.x, -21f, 21f);
-        float clampY = Mathf.Clamp(p.transform.position.y + 2f, -9.3f, 9.3f);
+        float clampY = Mathf.Clamp(p.transform.position.y + 2f, -9.3f, 9.4f);
 
         transform.position = new Vector3(clampX, clampY, -10f);
     }
