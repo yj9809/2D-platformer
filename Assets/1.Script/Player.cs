@@ -30,20 +30,35 @@ public class Player : MonoBehaviour
     public bool isJump;
     public bool isDash;
     public bool onDash;
-    // Start is called before the first frame update
-    void Start()
+    public float SetHp
     {
-        data = DataManager.Instance.nowPlayer;
+        get { return data.hp; }
+        set
+        {
+            data.hp = value;
+            UiManager.Instance.SetHpImg();
+        }
+    }
+    public float MaxHP
+    {
+        get { return data.maxHp; }
+    }
+    private void Awake()
+    {
         anime = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        iHp = UiManager.Instance.hp.transform.GetChild(0).GetComponent<Image>();
+        data = DataManager.Instance.nowPlayer;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        SetHp = data.maxHp;
 
         speed = 5f;
         jumpPower = 8f;
         dashSpeed = 25f;
 
-        iHp.fillAmount = 0;
         attackDamage = data.attackDamage;
         attackSpeed = data.attackSpeed;
 
@@ -167,6 +182,8 @@ public class Player : MonoBehaviour
     {
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+        int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc, 1) * 4,ForceMode2D.Impulse);
 
         Invoke("OffDamage", 0.5f);
     }

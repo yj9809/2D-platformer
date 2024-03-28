@@ -15,6 +15,7 @@ public abstract class Enemy : MonoBehaviour
    [SerializeField] private Player p;
 
     protected Type type;
+    protected int damage;
     protected float attackDis;
     protected float speed;
     protected float hp;
@@ -162,6 +163,7 @@ public abstract class Enemy : MonoBehaviour
         {
             Vector2 pos = new Vector2(p.transform.position.x, p.transform.position.y + 1);
             GameManager.Instance.P.OnPlayerDamage(transform.position);
+            p.SetHp -= damage;
             Instantiate(GameManager.Instance.hit[0], pos, Quaternion.identity);
         }
     }

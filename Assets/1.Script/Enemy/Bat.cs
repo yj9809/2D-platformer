@@ -11,6 +11,7 @@ public class Bat : Enemy
     }
     public override void Init()
     {
+        damage = 2;
         speed = 3;
         hp = 4;
         type = Type.Bat;

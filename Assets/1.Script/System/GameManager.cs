@@ -39,6 +39,11 @@ public class GameManager : Singleton<GameManager>
     {
         pos = new Vector2(-24, -9);
         scene = SceneManager.GetActiveScene();
+        SceneManager.activeSceneChanged += UpdateActiveScene;
+    }
+    private void UpdateActiveScene(Scene previousScene, Scene newScene)
+    {
+        scene = newScene;
     }
     public void OnMiddleBossSceneLode()
     {

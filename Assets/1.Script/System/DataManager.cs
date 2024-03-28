@@ -6,6 +6,7 @@ using System.IO;
 public class PlayerData
 {
     public string name;
+    public float maxHp = 10;
     public float hp = 10;
     public float mp = 10;
     public int attackDamage = 1;

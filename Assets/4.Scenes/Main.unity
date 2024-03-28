@@ -1964,7 +1964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   load: {fileID: 1606094695}
-  hp: {fileID: 9140854985272858466, guid: ae1da8b9a6089074b8d0d861122279de, type: 3}
+  state: {fileID: 727310817691022128, guid: c7ae184bb8fddca4b8b4c7ff839f890f, type: 3}
 --- !u!1 &820713803
 GameObject:
   m_ObjectHideFlags: 0
