@@ -43,6 +43,7 @@ public class UiManager : Singleton<UiManager>
                 Instantiate(state, canvas.transform);
                 hp = canvas.transform.GetChild(0).
                     transform.GetChild(0).
+                    transform.GetChild(1).
                     transform.GetChild(0).
                     GetComponent<Image>();
             }
