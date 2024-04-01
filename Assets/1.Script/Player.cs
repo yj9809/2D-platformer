@@ -77,6 +77,17 @@ public class Player : MonoBehaviour
             data.coin = value;
         }
     }
+    public Vector2 LastPos
+    {
+        get
+        {
+            return data.lastPos;
+        }
+        set
+        {
+            data.lastPos = value;
+        }
+    }
     private void Awake()
     {
         anime = GetComponent<Animator>();
@@ -232,6 +243,7 @@ public class Player : MonoBehaviour
     }
     public void Save()
     {
+        LastPos = new Vector2(transform.position.x, transform.position.y);
         DataManager.Instance.SaveData();
     }
 }

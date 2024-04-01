@@ -13,7 +13,7 @@ public class PlayerData
     public float attackSpeed = 1.5f;
     public float critical = 0;
     public int coin = 0;
-    public Transform lastPos;
+    public Vector2 lastPos = new Vector2(-24, -9);
 }
 
 public class DataManager : Singleton<DataManager>
@@ -41,6 +41,7 @@ public class DataManager : Singleton<DataManager>
     {
         string data = File.ReadAllText(path + nowSlot.ToString());
         nowPlayer = JsonUtility.FromJson<PlayerData>(data);
+        GameManager.Instance.pos = nowPlayer.lastPos;
     }
 
     public PlayerData LoadData(int index)

@@ -37,7 +37,6 @@ public class GameManager : Singleton<GameManager>
     }
     private void Start()
     {
-        pos = new Vector2(-24, -9);
         scene = SceneManager.GetActiveScene();
         SceneManager.activeSceneChanged += UpdateActiveScene;
     }

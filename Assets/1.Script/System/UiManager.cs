@@ -16,7 +16,8 @@ public class UiManager : Singleton<UiManager>
 
     private float dis = 550f;
     private float time = 0.5f;
-    private bool OnBord = false;
+    private bool onBord = false;
+    private bool onMenu = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +61,7 @@ public class UiManager : Singleton<UiManager>
     }
     public void OnStateBord(Transform state)
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && !OnBord)
+        if (Input.GetKeyDown(KeyCode.Tab) && !onBord)
         {
             state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y + dis, time)
                 .SetEase(Ease.Linear)
@@ -68,9 +69,9 @@ public class UiManager : Singleton<UiManager>
                 {
                     state.GetChild(0).DOScale(Vector3.one, 0.1f);
                 });
-            OnBord = true;
+            onBord = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Tab) && OnBord)
+        else if (Input.GetKeyDown(KeyCode.Tab) && onBord)
         {
             state.GetChild(0).DOScale(Vector3.zero, 0.1f)
                 .OnComplete(() =>
@@ -78,9 +79,7 @@ public class UiManager : Singleton<UiManager>
                     state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y - dis, time)
                     .SetEase(Ease.Linear);
                 });
-            //state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y - dis, time)
-            //    .SetEase(Ease.Linear);
-            OnBord = false;
+            onBord = false;
         }
     }
     public void OnStateSet(TMP_Text txt0, TMP_Text txt1)
@@ -106,6 +105,21 @@ public class UiManager : Singleton<UiManager>
             case 3:
                 p.Critical += 10;
                 break;
+        }
+    }
+    public void OnMenu(Transform menu)
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !onMenu)
+        {
+            menu.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y + dis, time)
+                .SetEase(Ease.Linear);
+            onMenu = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && onMenu)
+        {
+            menu.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y - dis, time)
+                .SetEase(Ease.Linear);
+            onMenu = false;
         }
     }
 }
