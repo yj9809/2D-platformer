@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
+using TMPro;
+using DG.Tweening;
 
 public class UiManager : Singleton<UiManager>
 {
@@ -12,7 +14,9 @@ public class UiManager : Singleton<UiManager>
     public GameObject load;
     public GameObject state;
 
-
+    private float dis = 550f;
+    private float time = 0.5f;
+    private bool OnBord = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +57,55 @@ public class UiManager : Singleton<UiManager>
     {
         Player p = GameManager.Instance.P;
         hp.fillAmount = p.SetHp / p.MaxHP;
+    }
+    public void OnStateBord(Transform state)
+    {
+        if (Input.GetKeyDown(KeyCode.Tab) && !OnBord)
+        {
+            state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y + dis, time)
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    state.GetChild(0).DOScale(Vector3.one, 0.1f);
+                });
+            OnBord = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab) && OnBord)
+        {
+            state.GetChild(0).DOScale(Vector3.zero, 0.1f)
+                .OnComplete(() =>
+                {
+                    state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y - dis, time)
+                    .SetEase(Ease.Linear);
+                });
+            //state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y - dis, time)
+            //    .SetEase(Ease.Linear);
+            OnBord = false;
+        }
+    }
+    public void OnStateSet(TMP_Text txt0, TMP_Text txt1)
+    {
+        Player p = GameManager.Instance.P;
+        txt0.text = $"{p.MaxHP}\n{p.AttackDamage}\n{p.AttackSpeed}\n{p.Critical}%";
+        txt1.text = $"{p.Coin}";
+    }
+    public void StatUp(int num)
+    {
+        Player p = GameManager.Instance.P;
+        switch (num)
+        {
+            case 0:
+                p.MaxHP += 2;
+                break;
+            case 1:
+                p.AttackDamage += 2;
+                break;
+            case 2:
+                p.AttackSpeed += 0.2f;
+                break;
+            case 3:
+                p.Critical += 10;
+                break;
+        }
     }
 }

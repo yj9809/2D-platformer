@@ -22,9 +22,6 @@ public class Player : MonoBehaviour
     private float dashSpeed;
     public float defaultTime;
     private float dashTime;
-    
-    public int attackDamage;
-    private float attackSpeed;
 
     public bool isMove;
     public bool isJump;
@@ -39,9 +36,46 @@ public class Player : MonoBehaviour
             UiManager.Instance.SetHpImg();
         }
     }
+    public int AttackDamage
+    {
+        get { return data.attackDamage; }
+        set
+        {
+            data.attackDamage = value;
+        }
+    }
+    public float AttackSpeed
+    {
+        get { return data.attackSpeed; }
+        set
+        {
+            data.attackSpeed = value;
+            anime.SetFloat("AttackSpeed", AttackSpeed);
+        }
+    }
+    public float Critical
+    {
+        get { return data.critical; }
+        set
+        {
+            data.critical = value;
+        }
+    }
     public float MaxHP
     {
         get { return data.maxHp; }
+        set
+        {
+            data.maxHp = value;
+        }
+    }
+    public int Coin
+    {
+        get { return data.coin; }
+        set
+        {
+            data.coin = value;
+        }
     }
     private void Awake()
     {
@@ -53,16 +87,13 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetHp = data.maxHp;
+        UiManager.Instance.SetHpImg();
+        anime.SetFloat("AttackSpeed", AttackSpeed);
 
         speed = 5f;
-        jumpPower = 8f;
+        jumpPower = 10f;
         dashSpeed = 25f;
 
-        attackDamage = data.attackDamage;
-        attackSpeed = data.attackSpeed;
-
-        anime.SetFloat("AttackSpeed", attackSpeed);
 
         isMove = true;
         isJump = true;
@@ -76,12 +107,6 @@ public class Player : MonoBehaviour
         Jump();
         Attack();
         Dash();
-        //어택 스피드 조절 코드 나중에 활용
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            data.attackSpeed += 0.2f;
-            anime.SetFloat("AttackSpeed", data.attackSpeed);
-        }
     }
 
     private void Move()
@@ -183,13 +208,14 @@ public class Player : MonoBehaviour
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc, 1) * 4,ForceMode2D.Impulse);
-
+        rigid.AddForce(new Vector2(dirc, 1) * 2,ForceMode2D.Impulse);
+        isMove = false;
         Invoke("OffDamage", 0.5f);
     }
     private void OffDamage()
     {
         gameObject.layer = 3;
+        isMove = true;
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
     private void OnCollisionEnter2D(Collision2D collision)

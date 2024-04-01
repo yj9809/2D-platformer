@@ -11,6 +11,8 @@ public class PlayerData
     public float mp = 10;
     public int attackDamage = 1;
     public float attackSpeed = 1.5f;
+    public float critical = 0;
+    public int coin = 0;
     public Transform lastPos;
 }
 
@@ -27,7 +29,7 @@ public class DataManager : Singleton<DataManager>
     // Start is called before the first frame update
     void Start()
     {
-
+        Debug.Log(path);
     }
 
     public void SaveData()

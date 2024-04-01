@@ -53,4 +53,8 @@ public class GameManager : Singleton<GameManager>
     {
         LodingSceneController.LoadScene("Game");
     }
+    public void OnUiSceneLode()
+    {
+        SceneManager.LoadScene("Ui", LoadSceneMode.Additive);
+    }
 }

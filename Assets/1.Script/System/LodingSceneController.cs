@@ -33,7 +33,7 @@ public class LodingSceneController : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.5f);
                 op.allowSceneActivation = true;
-
+                SceneManager.LoadScene("Ui", LoadSceneMode.Additive);
             }
         }
     }
