@@ -161,7 +161,9 @@ public abstract class Enemy : MonoBehaviour
             if (type == Type.Boss)
                 pos = new Vector2(transform.position.x, transform.position.y);
 
-            Instantiate(GameManager.Instance.hit[1], pos, Quaternion.identity);
+            GameObject pHit = Pooling.Instance.GetObj(true);
+            pHit.GetComponent<ParticleSystem>().Play();
+            pHit.transform.position = pos;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -171,7 +173,11 @@ public abstract class Enemy : MonoBehaviour
             Vector2 pos = new Vector2(p.transform.position.x, p.transform.position.y + 1);
             GameManager.Instance.P.OnPlayerDamage(transform.position);
             p.SetHp -= damage;
-            Instantiate(GameManager.Instance.hit[0], pos, Quaternion.identity);
+
+            GameObject eHit = Pooling.Instance.GetObj(false);
+            eHit.GetComponent<ParticleSystem>().Play();
+            eHit.transform.position = pos;
+            //Instantiate(GameManager.Instance.hit[0], pos, Quaternion.identity);
         }
     }
     private void OnAttackCollision()

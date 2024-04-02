@@ -4891,11 +4891,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2955623459812423940}
+  - component: {fileID: 1446481748185897192}
   - component: {fileID: 2955623459812423941}
   - component: {fileID: 2955623459812423942}
   m_Layer: 0
   m_Name: Hit_03 1
-  m_TagString: Untagged
+  m_TagString: PHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4917,6 +4918,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446481748185897192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955623459812423943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 273307c052ac7f848b9e0264f26f2f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &2955623459812423941
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4927,7 +4940,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 0.75
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
