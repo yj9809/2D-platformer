@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject gate;
+    public GameObject middleBoss;
 
     public GameObject[] hit;
     public Scene scene;
@@ -29,7 +30,6 @@ public class GameManager : Singleton<GameManager>
                     }
 
                     p = FindObjectOfType<Player>();
-                    //DontDestroyOnLoad(p);
                 }
             }
             return p;

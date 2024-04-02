@@ -9,10 +9,11 @@ public enum Type
 }
 public abstract class Enemy : MonoBehaviour
 {
+   [SerializeField] private Player p;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private Animator anime;
-   [SerializeField] private Player p;
+    [SerializeField] private GameObject attackCollison;
 
     protected Type type;
     protected int damage;
@@ -20,6 +21,7 @@ public abstract class Enemy : MonoBehaviour
     protected float speed;
     protected float hp;
 
+    [SerializeField] private int combo;
     private float attackCool = 2f;
     private int direction;
 
@@ -77,11 +79,12 @@ public abstract class Enemy : MonoBehaviour
                 attackCool -= Time.deltaTime;
                 if (attackCool < 0)
                 {
-                    int ran = Random.Range(0, 3);
+                    int ran = Random.Range(0, combo);
+                    int ranCool = Random.Range(1, 4);
                     isMove = false;
                     anime.SetFloat("AttackNum", ran);
                     anime.SetTrigger("Attack");
-                    attackCool = 1;
+                    attackCool = ranCool;
                 }
                 
             }
@@ -133,7 +136,9 @@ public abstract class Enemy : MonoBehaviour
         {
             GetComponent<Collider2D>().enabled = false;
             GetComponent<Rigidbody2D>().simulated = false;
-            transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
+            if (type == Type.Bat)
+                transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
+
             anime.SetBool("Death", true);
             Destroy(gameObject, 3f);
         }
@@ -147,14 +152,16 @@ public abstract class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (type == Type.Bat)
+        if (collision.GetComponent<AttackCollison>())
         {
             Vector2 pos = new Vector2(transform.position.x, transform.position.y + 1);
-            if (collision.GetComponent<AttackCollison>())
-            {
-                OnEnemyDamage(collision.transform.position);
-                Instantiate(GameManager.Instance.hit[1], pos, Quaternion.identity);
-            }
+
+            OnEnemyDamage(collision.transform.position);
+
+            if (type == Type.Boss)
+                pos = new Vector2(transform.position.x, transform.position.y);
+
+            Instantiate(GameManager.Instance.hit[1], pos, Quaternion.identity);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -166,5 +173,10 @@ public abstract class Enemy : MonoBehaviour
             p.SetHp -= damage;
             Instantiate(GameManager.Instance.hit[0], pos, Quaternion.identity);
         }
+    }
+    private void OnAttackCollision()
+    {
+        if (type == Type.Boss)
+            attackCollison.SetActive(true);
     }
 }

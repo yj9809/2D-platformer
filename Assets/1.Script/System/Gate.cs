@@ -20,11 +20,13 @@ public class Gate : MonoBehaviour
                 {
                     GameManager.Instance.OnMiddleBossSceneLode();
                     GameManager.Instance.pos = spawonPos.localPosition;
+                    UiManager.Instance.menu.OnSave();
                 }
                 if (nextScene == "Game")
                 {
                     GameManager.Instance.OnGameSceneLode();
                     GameManager.Instance.pos = spawonPos.localPosition;
+                    UiManager.Instance.menu.OnSave();
                 }
             }
         }

@@ -14,7 +14,8 @@ public class MiddleBoss : Enemy
         speed = 3;
         hp = 30;
         type = Type.Boss;
-        attackDis = 4;
+        attackDis = 2.5f;
+        damage = 4;
 
         base.Init();
     }

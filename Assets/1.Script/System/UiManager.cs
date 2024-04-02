@@ -9,10 +9,12 @@ using DG.Tweening;
 
 public class UiManager : Singleton<UiManager>
 {
+    public Menu menu;
     private Image hp;
 
     public GameObject load;
     public GameObject state;
+    public GameObject loadMenu;
 
     private float dis = 550f;
     private float time = 0.5f;
@@ -20,11 +22,6 @@ public class UiManager : Singleton<UiManager>
     private bool onMenu = false;
     // Start is called before the first frame update
     void Start()
-    {
-        SceneManager.activeSceneChanged += ActiveSceneChanged;
-    }
-
-    private void ActiveSceneChanged(Scene arg0, Scene arg1)
     {
         string sceneName = GameManager.Instance.scene.name;
         if (sceneName == "Main")
@@ -40,7 +37,13 @@ public class UiManager : Singleton<UiManager>
             }
             load.SetActive(isLoad);
         }
-        else if (sceneName != "Main" && sceneName != "Loding")
+        SceneManager.activeSceneChanged += ActiveSceneChanged;
+    }
+
+    private void ActiveSceneChanged(Scene arg0, Scene arg1)
+    {
+        string sceneName = GameManager.Instance.scene.name;
+        if (sceneName != "Main" && sceneName != "Loding")
         {
             GameObject canvas = GameObject.Find("Ui Canvas");
             if (canvas != null)
@@ -53,6 +56,10 @@ public class UiManager : Singleton<UiManager>
                     GetComponent<Image>();
             }
         }
+    }
+    public void SetMenu(Menu menu)
+    {
+        this.menu = menu;
     }
     public void SetHpImg()
     {
@@ -121,5 +128,14 @@ public class UiManager : Singleton<UiManager>
                 .SetEase(Ease.Linear);
             onMenu = false;
         }
+    }
+    public void OnLoadMenu(Transform pos)
+    {
+        Instantiate(loadMenu, pos);
+        loadMenu.gameObject.SetActive(true);
+    }
+    public void OnExit()
+    {
+        Application.Quit();
     }
 }
