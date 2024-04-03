@@ -11,8 +11,8 @@ public class Pooling : Singleton<Pooling>
     [SerializeField] private Queue<GameObject> poolEHit = new Queue<GameObject>();
     void Awake()
     {
-        Initialize(2, pHit, poolPHit);
-        Initialize(2, eHit, poolEHit);
+        //Initialize(2, pHit, poolPHit);
+        //Initialize(2, eHit, poolEHit);
     }
     private GameObject CreatObj(GameObject hit)
     {
@@ -45,7 +45,6 @@ public class Pooling : Singleton<Pooling>
         }
         else
         {
-            Debug.LogWarning("Pool is empty, creating new object");
             GameObject newObj = CreatObj(pool == poolPHit ? pHit : eHit);
             newObj.transform.SetParent(null);
             newObj.SetActive(true);

@@ -15,6 +15,7 @@ public class UiManager : Singleton<UiManager>
     public GameObject load;
     public GameObject state;
     public GameObject loadMenu;
+    public GameObject potions;
 
     private float dis = 550f;
     private float time = 0.5f;
@@ -52,7 +53,7 @@ public class UiManager : Singleton<UiManager>
                 hp = canvas.transform.GetChild(0).
                     transform.GetChild(0).
                     transform.GetChild(1).
-                    transform.GetChild(0).
+                    transform.GetChild(1).
                     GetComponent<Image>();
             }
         }
@@ -137,5 +138,9 @@ public class UiManager : Singleton<UiManager>
     public void OnExit()
     {
         Application.Quit();
+    }
+    public void OnPotions()
+    {
+        
     }
 }

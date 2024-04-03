@@ -10,12 +10,9 @@ public class Player : MonoBehaviour
     private Animator anime;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
-    private Image iHp;
 
     private PlayerData data;
 
-    private float hp;
-    private float mp;
     private float speed;
     private float jumpPower;
     //´ë½¬
@@ -102,7 +99,7 @@ public class Player : MonoBehaviour
         anime.SetFloat("AttackSpeed", AttackSpeed);
 
         speed = 5f;
-        jumpPower = 10f;
+        jumpPower = 8f;
         dashSpeed = 25f;
 
 
@@ -141,6 +138,11 @@ public class Player : MonoBehaviour
         {
             anime.SetBool("Run", false);
         }
+    }
+    private void OnMove()
+    {
+        isMove = true;
+        isJump = true;
     }
     private void Jump()
     {
@@ -188,6 +190,10 @@ public class Player : MonoBehaviour
         }
         isDash = false;
     }
+    private void OnDash()
+    {
+        onDash = true;
+    }
     public void OffDashDamage()
     {
         gameObject.layer = 3;
@@ -204,15 +210,6 @@ public class Player : MonoBehaviour
     private void OnAttackCollision()
     {
         attackCollision.SetActive(true);
-    }
-    private void OnMove()
-    {
-        isMove = true;
-        isJump = true;
-    }
-    private void OnDash()
-    {
-        onDash = true;
     }
     public void OnPlayerDamage(Vector2 pos)
     {
@@ -240,6 +237,10 @@ public class Player : MonoBehaviour
         {
             OnPlayerDamage(collision.transform.position);
         }
+    }
+    public void Potions()
+    {
+
     }
     public void Save()
     {

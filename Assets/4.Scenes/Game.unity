@@ -329,6 +329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  attackCollison: {fileID: 0}
+  combo: 0
 --- !u!50 &30708745
 Rigidbody2D:
   serializedVersion: 4
@@ -5175,6 +5177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  attackCollison: {fileID: 0}
+  combo: 0
 --- !u!1 &994695999
 GameObject:
   m_ObjectHideFlags: 0
@@ -5593,6 +5597,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  attackCollison: {fileID: 0}
+  combo: 0
 --- !u!4 &1012950956
 Transform:
   m_ObjectHideFlags: 0
@@ -6673,6 +6679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  attackCollison: {fileID: 0}
+  combo: 0
 --- !u!1 &1183072086
 GameObject:
   m_ObjectHideFlags: 0
@@ -10900,6 +10908,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  attackCollison: {fileID: 0}
+  combo: 0
 --- !u!1 &1819274805
 GameObject:
   m_ObjectHideFlags: 0
@@ -13738,6 +13748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
+  attackCollison: {fileID: 0}
+  combo: 0
 --- !u!1 &2110773221
 GameObject:
   m_ObjectHideFlags: 0
