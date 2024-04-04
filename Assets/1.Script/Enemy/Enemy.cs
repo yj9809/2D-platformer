@@ -172,7 +172,10 @@ public abstract class Enemy : MonoBehaviour
         {
             Vector2 pos = new Vector2(p.transform.position.x, p.transform.position.y + 1);
             GameManager.Instance.P.OnPlayerDamage(transform.position);
-            p.SetHp -= damage;
+            if (p.SetHp > 0)
+            {
+                p.SetHp -= damage;
+            }
 
             GameObject eHit = Pooling.Instance.GetObj(false);
             eHit.GetComponent<ParticleSystem>().Play();

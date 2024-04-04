@@ -9,13 +9,15 @@ using DG.Tweening;
 
 public class UiManager : Singleton<UiManager>
 {
-    public Menu menu;
+    public Sprite[] potionsImg;
     private Image hp;
+    public Image nowPotions;
+    public Menu menu;
+    public Potions potions;
 
     public GameObject load;
     public GameObject state;
     public GameObject loadMenu;
-    public GameObject potions;
 
     private float dis = 550f;
     private float time = 0.5f;
@@ -93,7 +95,7 @@ public class UiManager : Singleton<UiManager>
     public void OnStateSet(TMP_Text txt0, TMP_Text txt1)
     {
         Player p = GameManager.Instance.P;
-        txt0.text = $"{p.MaxHP}\n{p.AttackDamage}\n{p.AttackSpeed}\n{p.Critical}%";
+        txt0.text = $"{p.MaxHP}\n{p.AttackDamage}\n{p.AttackSpeed}\n{p.Speed}%";
         txt1.text = $"{p.Coin}";
     }
     public void StatUp(int num)
@@ -103,6 +105,7 @@ public class UiManager : Singleton<UiManager>
         {
             case 0:
                 p.MaxHP += 2;
+                p.SetHp += 2;
                 break;
             case 1:
                 p.AttackDamage += 2;
@@ -111,7 +114,7 @@ public class UiManager : Singleton<UiManager>
                 p.AttackSpeed += 0.2f;
                 break;
             case 3:
-                p.Critical += 10;
+                p.Speed += 0.5f;
                 break;
         }
     }
@@ -139,8 +142,17 @@ public class UiManager : Singleton<UiManager>
     {
         Application.Quit();
     }
-    public void OnPotions()
+    public void TransPotionsImg(int num)
     {
-        
+        Image nowPotions = NowPotions();
+        nowPotions.sprite = potionsImg[num];
+    }
+    public void SetPotions(Potions potions)
+    {
+        this.potions = potions;
+    }
+    public Image NowPotions()
+    {
+        return potions.NowPotions();
     }
 }

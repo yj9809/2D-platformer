@@ -11,8 +11,9 @@ public class PlayerData
     public float mp = 10;
     public int attackDamage = 1;
     public float attackSpeed = 1f;
-    public float critical = 0;
+    public float speed = 5;
     public int coin = 0;
+    public int potions = 6;
     public Vector2 lastPos = new Vector2(-24, -9);
 }
 

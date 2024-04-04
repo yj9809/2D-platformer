@@ -10,9 +10,11 @@ public class Player : MonoBehaviour
     private Animator anime;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
+    private UiManager ui;
 
     private PlayerData data;
 
+    private int num = 2;
     private float speed;
     private float jumpPower;
     //´ë½¬
@@ -50,12 +52,12 @@ public class Player : MonoBehaviour
             anime.SetFloat("AttackSpeed", AttackSpeed);
         }
     }
-    public float Critical
+    public float Speed
     {
-        get { return data.critical; }
+        get { return data.speed; }
         set
         {
-            data.critical = value;
+            data.speed = value;
         }
     }
     public float MaxHP
@@ -72,6 +74,17 @@ public class Player : MonoBehaviour
         set
         {
             data.coin = value;
+        }
+    }
+    public int Potions
+    {
+        get
+        {
+            return data.potions;
+        }
+        set
+        {
+            data.potions = value;
         }
     }
     public Vector2 LastPos
@@ -91,14 +104,15 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         data = DataManager.Instance.nowPlayer;
+        ui = UiManager.Instance;
     }
     // Start is called before the first frame update
     void Start()
     {
         UiManager.Instance.SetHpImg();
         anime.SetFloat("AttackSpeed", AttackSpeed);
+        speed = data.speed;
 
-        speed = 5f;
         jumpPower = 8f;
         dashSpeed = 25f;
 
@@ -115,6 +129,11 @@ public class Player : MonoBehaviour
         Jump();
         Attack();
         Dash();
+        OnPotions();
+        if (SetHp <= 0)
+        {
+            SetHp = 0;
+        }
     }
 
     private void Move()
@@ -238,9 +257,19 @@ public class Player : MonoBehaviour
             OnPlayerDamage(collision.transform.position);
         }
     }
-    public void Potions()
+    public void OnPotions()
     {
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (Potions > 0)
+            {
+                SetHp += 2;
+                Potions -= 1;
+                num -= 1;
+            }
+            Debug.Log(num);
+            ui.TransPotionsImg(num);
+        }
     }
     public void Save()
     {
