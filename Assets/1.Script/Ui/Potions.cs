@@ -15,7 +15,15 @@ public class Potions : MonoBehaviour
     {
         for (int i = 0; i < potions.Length; i++)
         {
-            if (potions[i].sprite == UiManager.Instance.potionsImg[2])
+            if (potions[i].sprite == UiManager.Instance.potionsImg[0])
+            {
+                if (i == 0)
+                {
+                    return potions[i];
+                }
+                return potions[i - 1];
+            }
+            else if (potions[i].sprite == UiManager.Instance.potionsImg[2])
             {
                 if (i == 2)
                 {

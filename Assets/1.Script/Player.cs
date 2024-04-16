@@ -5,27 +5,28 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    // 공격용 콜리더
     [SerializeField] private GameObject attackCollision;
-
+    // 참조
     private Animator anime;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
     private UiManager ui;
-
     private PlayerData data;
-
-    private int num = 2;
+    // 포션 관련 Num
+    private int potionsNum = 2; 
+    // 이동 관련 수치
     private float speed;
     private float jumpPower;
-    //대쉬
     private float dashSpeed;
     public float defaultTime;
     private float dashTime;
-
+    //이동 관련 참/거짓
     public bool isMove;
     public bool isJump;
     public bool isDash;
     public bool onDash;
+    //프로퍼티
     public float SetHp
     {
         get { return data.hp; }
@@ -125,17 +126,30 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //수치 제한
+        HpClamp();
+        //이동
         Move();
         Jump();
-        Attack();
         Dash();
+        //공격
+        Attack();
+        //포션
         OnPotions();
-        if (SetHp <= 0)
+    }
+    //Ui 제한
+    private void HpClamp()
+    {
+        if (SetHp > MaxHP)
+        {
+            SetHp = MaxHP;
+        }
+        else if (SetHp <= 0)
         {
             SetHp = 0;
         }
     }
-
+    //이동 관련
     private void Move()
     {
 
@@ -217,6 +231,7 @@ public class Player : MonoBehaviour
     {
         gameObject.layer = 3;
     }
+    //공격 관련 & 데미지 함수
     private void Attack()
     {
         if (Input.GetKeyDown(KeyCode.C))
@@ -257,20 +272,18 @@ public class Player : MonoBehaviour
             OnPlayerDamage(collision.transform.position);
         }
     }
+    //포션
     public void OnPotions()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && Potions > 0)
         {
-            if (Potions > 0)
-            {
-                SetHp += 2;
-                Potions -= 1;
-                num -= 1;
-            }
-            Debug.Log(num);
-            ui.TransPotionsImg(num);
+            SetHp += 2;
+            Potions--;
+            potionsNum = potionsNum <= 0 ? 1 : potionsNum - 1;
+            ui.TransPotionsImg(potionsNum);
         }
     }
+    //저장
     public void Save()
     {
         LastPos = new Vector2(transform.position.x, transform.position.y);

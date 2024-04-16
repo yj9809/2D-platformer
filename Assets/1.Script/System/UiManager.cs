@@ -146,6 +146,7 @@ public class UiManager : Singleton<UiManager>
     {
         Image nowPotions = NowPotions();
         nowPotions.sprite = potionsImg[num];
+
     }
     public void SetPotions(Potions potions)
     {
