@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PHit
   - Ehit
+  - BossBar
+  - Gate
   layers:
   - Default
   - TransparentFX

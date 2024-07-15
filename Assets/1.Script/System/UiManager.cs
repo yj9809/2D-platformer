@@ -9,11 +9,12 @@ using DG.Tweening;
 
 public class UiManager : Singleton<UiManager>
 {
+    public GameObject bossBar;
     public Sprite[] potionsImg;
     private Image hp;
-    public Image nowPotions;
     public Menu menu;
-    public Potions potions;
+    public Image nowPotions;
+    public Potions potions; 
 
     public GameObject load;
     public GameObject state;
@@ -23,24 +24,47 @@ public class UiManager : Singleton<UiManager>
     private float time = 0.5f;
     private bool onBord = false;
     private bool onMenu = false;
+
+    private float bossMaxHp;
+    public float BossMaxHp
+    {
+        get { return bossMaxHp; }
+        set
+        {
+            bossMaxHp = value;
+        }
+    }
+    private float bossHp;
+    public float BossHp
+    {
+        get { return bossHp; }
+        set
+        {
+            bossHp = value;
+            SetBossHpImg();
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
         string sceneName = GameManager.Instance.scene.name;
         if (sceneName == "Main")
         {
-            bool isLoad = false;
-
-            for (int i = 0; i < 3; i++)
-            {
-                if (File.Exists(DataManager.Instance.path + $"{i}"))
-                {
-                    isLoad = true;
-                }
-            }
+            bool isLoad = CheckFile();
             load.SetActive(isLoad);
         }
         SceneManager.activeSceneChanged += ActiveSceneChanged;
+    }
+    private bool CheckFile()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (File.Exists(DataManager.Instance.path + $"{i}"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void ActiveSceneChanged(Scene arg0, Scene arg1)
@@ -59,6 +83,12 @@ public class UiManager : Singleton<UiManager>
                     GetComponent<Image>();
             }
         }
+
+        if (sceneName == "BossRoom (Stage 1)")
+        {
+            bossBar = GameObject.Find("Boss Bar");
+            bossBar.SetActive(false);
+        }
     }
     public void SetMenu(Menu menu)
     {
@@ -68,6 +98,11 @@ public class UiManager : Singleton<UiManager>
     {
         Player p = GameManager.Instance.P;
         hp.fillAmount = p.SetHp / p.MaxHP;
+    }
+    public void SetBossHpImg()
+    {
+        Image bossHpImg = bossBar.transform.GetChild(0).GetComponent<Image>();
+        bossHpImg.fillAmount = bossHp / bossMaxHp;
     }
     public void OnStateBord(Transform state)
     {
@@ -144,7 +179,7 @@ public class UiManager : Singleton<UiManager>
     }
     public void TransPotionsImg(int num)
     {
-        Image nowPotions = NowPotions();
+        nowPotions = NowPotions();
         nowPotions.sprite = potionsImg[num];
 
     }

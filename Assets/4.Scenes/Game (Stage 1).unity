@@ -330,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   attackCollison: {fileID: 0}
+  gate: {fileID: 0}
   combo: 0
 --- !u!50 &30708745
 Rigidbody2D:
@@ -5178,6 +5179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   attackCollison: {fileID: 0}
+  gate: {fileID: 0}
   combo: 0
 --- !u!1 &994695999
 GameObject:
@@ -5598,6 +5600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   attackCollison: {fileID: 0}
+  gate: {fileID: 0}
   combo: 0
 --- !u!4 &1012950956
 Transform:
@@ -6680,6 +6683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   attackCollison: {fileID: 0}
+  gate: {fileID: 0}
   combo: 0
 --- !u!1 &1183072086
 GameObject:
@@ -9611,6 +9615,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2130931985655163656, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651813960287991936, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 917200283811601060, guid: 51291b5a4ef951442a84842cf440d48d, type: 3}
+    - target: {fileID: 3651813960287991936, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
+      propertyPath: nextScene
+      value: BossRoom (Stage 1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
 --- !u!1 &1587452338
@@ -10909,6 +10925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   attackCollison: {fileID: 0}
+  gate: {fileID: 0}
   combo: 0
 --- !u!1 &1819274805
 GameObject:
@@ -13749,6 +13766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   attackCollison: {fileID: 0}
+  gate: {fileID: 0}
   combo: 0
 --- !u!1 &2110773221
 GameObject:
@@ -14269,7 +14287,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2130931985655163656, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651813960287991936, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 3578820154894126396, guid: 8b13ff1b4e757d640ad4fe825927f7b8, type: 3}
+    - target: {fileID: 3651813960287991936, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
+      propertyPath: nextScene
+      value: BossRoom (Stage 1)
       objectReference: {fileID: 0}
     - target: {fileID: 6988697033210022825, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
       propertyPath: m_AnchoredPosition.y

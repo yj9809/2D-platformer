@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 0}
   attackCollison: {fileID: 3578820154402379430}
+  gate: {fileID: 0}
   combo: 3
 --- !u!212 &3578820154894126386
 SpriteRenderer:

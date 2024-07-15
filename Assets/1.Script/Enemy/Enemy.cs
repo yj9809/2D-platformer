@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public enum Type
 {
@@ -9,13 +10,16 @@ public enum Type
 }
 public abstract class Enemy : MonoBehaviour
 {
-   [SerializeField] private Player p;
+    [SerializeField] private Player p;
+    [SerializeField] private GameObject attackCollison;
+    [SerializeField] private GameObject gate;
+
+    private UiManager ui;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private Animator anime;
-    [SerializeField] private GameObject attackCollison;
 
-    protected Type type;
+    [SerializeField] protected Type type;
     protected int damage;
     protected float attackDis;
     protected float speed;
@@ -25,14 +29,18 @@ public abstract class Enemy : MonoBehaviour
     private float attackCool = 2f;
     private int direction;
 
-    bool isMove;
+    private bool isMove;
+    protected bool main = false;
+    protected bool middle = false;
     public virtual void Init()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
         p = GameManager.Instance.P;
-        isMove = true;
+        ui = UiManager.Instance;
+        gate = GameObject.FindWithTag("Gate");
+        isMove = false;
         ChangeDirection();
     }
 
@@ -68,6 +76,10 @@ public abstract class Enemy : MonoBehaviour
                 Vector3 dir = dis.normalized * Time.deltaTime * speed;
                 sprite.flipX = dis.normalized.x > 0 ? false : true;
 
+                if(middle)
+                    transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.35f) : new Vector2(-1.15f, -0.35f);
+                else if(main)
+                    transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.12f) : new Vector2(-1.15f, -0.12f);
                 transform.Translate(dir);
 
                 anime.SetFloat("Speed", 1);
@@ -86,14 +98,22 @@ public abstract class Enemy : MonoBehaviour
                     anime.SetTrigger("Attack");
                     attackCool = ranCool;
                 }
-                
             }
         }
-        
+    }
+    protected void SetBossHp()
+    {
+        if (type == Type.Boss)
+        {
+            ui.BossMaxHp = hp;
+            ui.BossHp = hp;
+        }
     }
     public void OnMove()
     {
         isMove = true;
+        if (type == Type.Boss)
+            ui.bossBar.SetActive(true);
     }
     void ChangeDirection()
     {
@@ -129,6 +149,8 @@ public abstract class Enemy : MonoBehaviour
             return;
 
         hp -= p.AttackDamage;
+        if (type == Type.Boss)
+            ui.BossHp -= p.AttackDamage;
         gameObject.layer = 14;
         sprite.color = new Color(1, 1, 1, 0.4f);
 
@@ -140,6 +162,7 @@ public abstract class Enemy : MonoBehaviour
                 transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
 
             anime.SetBool("Death", true);
+            GateOpen();
             Destroy(gameObject, 3f);
         }
 
@@ -149,6 +172,10 @@ public abstract class Enemy : MonoBehaviour
     {
         gameObject.layer = 13;
         sprite.color = new Color(1, 1, 1, 1);
+    }
+    private void GateOpen()
+    {
+        gate.transform.DOMoveY(-5.5f, 2f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

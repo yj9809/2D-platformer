@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LodingSceneController : MonoBehaviour
 {
+    private GameManager gm;
     private static string nextScene;
 
     [SerializeField] private Image lodingBar;
@@ -18,6 +19,7 @@ public class LodingSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameManager.Instance;
         StartCoroutine(LodingProcess());
     }
     IEnumerator LodingProcess()

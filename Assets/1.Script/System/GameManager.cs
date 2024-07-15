@@ -8,8 +8,8 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject gate;
-    public GameObject middleBoss;
 
+    public GameObject boss;
     public GameObject[] hit;
     public Scene scene;
 
@@ -46,10 +46,17 @@ public class GameManager : Singleton<GameManager>
     }
     public void OnMiddleBossSceneLode()
     {
-        LodingSceneController.LoadScene("MiddleBossRoom");
+        LodingSceneController.LoadScene("BossRoom (Stage 1)");
+        Invoke("SpawnBoss", 3f);
     }
     public void OnGameSceneLode()
     {
-        LodingSceneController.LoadScene("Game");
+        LodingSceneController.LoadScene("Game (Stage 1)");
+    }
+    public void SpawnBoss()
+    {
+        Vector2 pos = new Vector2(1.5f, -3.5f);
+        Debug.Log(boss.name);
+        Instantiate(boss, pos, Quaternion.identity);
     }
 }

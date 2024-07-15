@@ -30,10 +30,10 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 1
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -72,8 +72,8 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotSpace: 1
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
     generateModelPrefab: 1
@@ -84,8 +84,8 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotSpace: 1
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
     generateModelPrefab: 1
@@ -93,7 +93,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638566506102844448
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,8 +119,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Royal Knight Platformer_Frame_22
     originalName: 
-    pivot: {x: 0.37878788, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -139,8 +139,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Royal Knight Platformer_Frame_23
     originalName: 
-    pivot: {x: 0.45238093, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -159,8 +159,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 444}
   - name: Royal Knight Platformer_Frame_24
     originalName: 
-    pivot: {x: 0.45238093, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -179,8 +179,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 232}
   - name: Royal Knight Platformer_Frame_25
     originalName: 
-    pivot: {x: 0.43181816, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -199,8 +199,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 386}
   - name: Royal Knight Platformer_Frame_28
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -219,8 +219,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 330}
   - name: Royal Knight Platformer_Frame_29
     originalName: 
-    pivot: {x: 0.38333333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -239,8 +239,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 43}
   - name: Royal Knight Platformer_Frame_30
     originalName: 
-    pivot: {x: 0.76666665, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -259,8 +259,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 259}
   - name: Royal Knight Platformer_Frame_31
     originalName: 
-    pivot: {x: 0.75, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -279,8 +279,8 @@ ScriptedImporter:
     uvTransform: {x: 194, y: 27}
   - name: Royal Knight Platformer_Frame_32
     originalName: 
-    pivot: {x: 0.47297302, y: 0.045454543}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -299,8 +299,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 4}
   - name: Royal Knight Platformer_Frame_33
     originalName: 
-    pivot: {x: 0.7291667, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -319,8 +319,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 302}
   - name: Royal Knight Platformer_Frame_34
     originalName: 
-    pivot: {x: 0.7173913, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -339,8 +339,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 358}
   - name: Royal Knight Platformer_Frame_35
     originalName: 
-    pivot: {x: 0.61764705, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -359,8 +359,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 91}
   - name: Royal Knight Platformer_Frame_39
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -379,8 +379,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 471}
   - name: Royal Knight Platformer_Frame_40
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -399,8 +399,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 4}
   - name: Royal Knight Platformer_Frame_41
     originalName: 
-    pivot: {x: 0.44736847, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -419,8 +419,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 32}
   - name: Royal Knight Platformer_Frame_42
     originalName: 
-    pivot: {x: 0.44736847, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -439,8 +439,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 60}
   - name: Royal Knight Platformer_Frame_46
     originalName: 
-    pivot: {x: 0.43939397, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -459,8 +459,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 75}
   - name: Royal Knight Platformer_Frame_47
     originalName: 
-    pivot: {x: 0.375, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -479,8 +479,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 132}
   - name: Royal Knight Platformer_Frame_48
     originalName: 
-    pivot: {x: 0.375, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -499,8 +499,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 160}
   - name: Royal Knight Platformer_Frame_49
     originalName: 
-    pivot: {x: 0.3269231, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -519,8 +519,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 246}
   - name: Royal Knight Platformer_Frame_50
     originalName: 
-    pivot: {x: 0.44736847, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -539,8 +539,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 88}
   - name: Royal Knight Platformer_Frame_79
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -559,8 +559,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 116}
   - name: Royal Knight Platformer_Frame_80
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -579,8 +579,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 144}
   - name: Royal Knight Platformer_Frame_81
     originalName: 
-    pivot: {x: 0.44736847, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -599,8 +599,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 172}
   - name: Royal Knight Platformer_Frame_82
     originalName: 
-    pivot: {x: 0.44736847, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -619,8 +619,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 200}
   - name: Royal Knight Platformer_Frame_93
     originalName: 
-    pivot: {x: 0.40625, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -639,8 +639,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 408}
   - name: Royal Knight Platformer_Frame_94
     originalName: 
-    pivot: {x: 0.38235292, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -659,8 +659,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 205}
   - name: Royal Knight Platformer_Frame_95
     originalName: 
-    pivot: {x: 0.575, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -679,8 +679,8 @@ ScriptedImporter:
     uvTransform: {x: 194, y: 4}
   - name: Royal Knight Platformer_Frame_96
     originalName: 
-    pivot: {x: 0.59374994, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -699,8 +699,8 @@ ScriptedImporter:
     uvTransform: {x: 194, y: 107}
   - name: Royal Knight Platformer_Frame_97
     originalName: 
-    pivot: {x: 0.71875, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -719,8 +719,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 463}
   - name: Royal Knight Platformer_Frame_98
     originalName: 
-    pivot: {x: 0.71875, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -739,8 +739,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 489}
   - name: Royal Knight Platformer_Frame_99
     originalName: 
-    pivot: {x: 0.6785714, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -759,8 +759,8 @@ ScriptedImporter:
     uvTransform: {x: 194, y: 80}
   - name: Royal Knight Platformer_Frame_101
     originalName: 
-    pivot: {x: 0.6785714, y: -0.27272725}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -779,8 +779,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 288}
   - name: Royal Knight Platformer_Frame_102
     originalName: 
-    pivot: {x: 0.6785714, y: -0.27272725}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -799,8 +799,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 318}
   - name: Royal Knight Platformer_Frame_103
     originalName: 
-    pivot: {x: 0.6785714, y: -0.27272725}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -819,8 +819,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 348}
   - name: Royal Knight Platformer_Frame_104
     originalName: 
-    pivot: {x: 0.6785714, y: -0.27272725}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -839,8 +839,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 378}
   - name: Royal Knight Platformer_Frame_105
     originalName: 
-    pivot: {x: 0.71875, y: -0.26086956}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -859,8 +859,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 352}
   - name: Royal Knight Platformer_Frame_106
     originalName: 
-    pivot: {x: 0.71875, y: -0.26086956}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -879,8 +879,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 383}
   - name: Royal Knight Platformer_Frame_107
     originalName: 
-    pivot: {x: 0.71875, y: -0.28571427}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -899,8 +899,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 147}
   - name: Royal Knight Platformer_Frame_108
     originalName: 
-    pivot: {x: 0.71875, y: -0.28571427}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -919,8 +919,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 176}
   - name: Royal Knight Platformer_Frame_0
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -939,8 +939,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 368}
   - name: Royal Knight Platformer_Frame_1
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -959,8 +959,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 397}
   - name: Royal Knight Platformer_Frame_2
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -979,8 +979,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 426}
   - name: Royal Knight Platformer_Frame_3
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -999,8 +999,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 414}
   - name: Royal Knight Platformer_Frame_4
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1019,8 +1019,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 442}
   - name: Royal Knight Platformer_Frame_5
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1039,8 +1039,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 455}
   - name: Royal Knight Platformer_Frame_6
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1059,8 +1059,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 484}
   - name: Royal Knight Platformer_Frame_7
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1079,8 +1079,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 4}
   - name: Royal Knight Platformer_Frame_8
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1099,8 +1099,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 470}
   - name: Royal Knight Platformer_Frame_9
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1119,8 +1119,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 4}
   - name: Royal Knight Platformer_Frame_10
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1139,8 +1139,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 32}
   - name: Royal Knight Platformer_Frame_11
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1159,8 +1159,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 260}
   - name: Royal Knight Platformer_Frame_12
     originalName: 
-    pivot: {x: 0.5526316, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1179,8 +1179,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 228}
   - name: Royal Knight Platformer_Frame_13
     originalName: 
-    pivot: {x: 0.5526316, y: -0.045454543}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1199,8 +1199,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 290}
   - name: Royal Knight Platformer_Frame_14
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1219,8 +1219,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 320}
   - name: Royal Knight Platformer_Frame_15
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1239,8 +1239,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 350}
   - name: Royal Knight Platformer_Frame_16
     originalName: 
-    pivot: {x: 0.5526316, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1259,8 +1259,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 414}
   - name: Royal Knight Platformer_Frame_17
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1279,8 +1279,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 60}
   - name: Royal Knight Platformer_Frame_18
     originalName: 
-    pivot: {x: 0.7115385, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1299,8 +1299,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 274}
   - name: Royal Knight Platformer_Frame_19
     originalName: 
-    pivot: {x: 0.73214287, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1319,8 +1319,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 103}
   - name: Royal Knight Platformer_Frame_20
     originalName: 
-    pivot: {x: 0.75, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1339,8 +1339,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 188}
   - name: Royal Knight Platformer_Frame_21
     originalName: 
-    pivot: {x: 0.73999995, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1359,8 +1359,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 217}
   - name: Royal Knight Platformer_Frame_26
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1379,8 +1379,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 88}
   - name: Royal Knight Platformer_Frame_27
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1399,8 +1399,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 116}
   - name: Royal Knight Platformer_Frame_36
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1419,8 +1419,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 144}
   - name: Royal Knight Platformer_Frame_37
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1439,8 +1439,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 256}
   - name: Royal Knight Platformer_Frame_38
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1459,8 +1459,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 172}
   - name: Royal Knight Platformer_Frame_43
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1479,8 +1479,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 200}
   - name: Royal Knight Platformer_Frame_44
     originalName: 
-    pivot: {x: 0.6052632, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1499,8 +1499,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 284}
   - name: Royal Knight Platformer_Frame_45
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1519,8 +1519,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 119}
   - name: Royal Knight Platformer_Frame_51
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1539,8 +1539,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 312}
   - name: Royal Knight Platformer_Frame_52
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1559,8 +1559,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 33}
   - name: Royal Knight Platformer_Frame_53
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1579,8 +1579,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 62}
   - name: Royal Knight Platformer_Frame_54
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1599,8 +1599,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 91}
   - name: Royal Knight Platformer_Frame_55
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1619,8 +1619,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 228}
   - name: Royal Knight Platformer_Frame_56
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1639,8 +1639,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 256}
   - name: Royal Knight Platformer_Frame_57
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1659,8 +1659,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 120}
   - name: Royal Knight Platformer_Frame_58
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1679,8 +1679,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 149}
   - name: Royal Knight Platformer_Frame_59
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1699,8 +1699,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 178}
   - name: Royal Knight Platformer_Frame_60
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1719,8 +1719,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 284}
   - name: Royal Knight Platformer_Frame_61
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1739,8 +1739,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 312}
   - name: Royal Knight Platformer_Frame_62
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1759,8 +1759,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 340}
   - name: Royal Knight Platformer_Frame_63
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1779,8 +1779,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 207}
   - name: Royal Knight Platformer_Frame_64
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1799,8 +1799,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 236}
   - name: Royal Knight Platformer_Frame_65
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1819,8 +1819,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 265}
   - name: Royal Knight Platformer_Frame_66
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1839,8 +1839,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 480}
   - name: Royal Knight Platformer_Frame_67
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1859,8 +1859,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 368}
   - name: Royal Knight Platformer_Frame_68
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1879,8 +1879,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 445}
   - name: Royal Knight Platformer_Frame_69
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1899,8 +1899,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 478}
   - name: Royal Knight Platformer_Frame_70
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1919,8 +1919,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 34}
   - name: Royal Knight Platformer_Frame_71
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1939,8 +1939,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 67}
   - name: Royal Knight Platformer_Frame_72
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1959,8 +1959,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 100}
   - name: Royal Knight Platformer_Frame_73
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1979,8 +1979,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 133}
   - name: Royal Knight Platformer_Frame_74
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1999,8 +1999,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 166}
   - name: Royal Knight Platformer_Frame_75
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2019,8 +2019,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 199}
   - name: Royal Knight Platformer_Frame_76
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2039,8 +2039,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 380}
   - name: Royal Knight Platformer_Frame_77
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2059,8 +2059,8 @@ ScriptedImporter:
     uvTransform: {x: 45, y: 412}
   - name: Royal Knight Platformer_Frame_78
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2079,8 +2079,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 396}
   - name: Royal Knight Platformer_Frame_83
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2099,8 +2099,8 @@ ScriptedImporter:
     uvTransform: {x: 90, y: 340}
   - name: Royal Knight Platformer_Frame_84
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2119,8 +2119,8 @@ ScriptedImporter:
     uvTransform: {x: 143, y: 424}
   - name: Royal Knight Platformer_Frame_85
     originalName: 
-    pivot: {x: 0.6764706, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2139,8 +2139,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 4}
   - name: Royal Knight Platformer_Frame_86
     originalName: 
-    pivot: {x: 0.7, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2159,8 +2159,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 435}
   - name: Royal Knight Platformer_Frame_87
     originalName: 
-    pivot: {x: 0.61764705, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2179,8 +2179,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 232}
   - name: Royal Knight Platformer_Frame_88
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2199,8 +2199,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 33}
   - name: Royal Knight Platformer_Frame_89
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2219,8 +2219,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 294}
   - name: Royal Knight Platformer_Frame_90
     originalName: 
-    pivot: {x: 0.55882347, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2239,8 +2239,8 @@ ScriptedImporter:
     uvTransform: {x: 169, y: 62}
   - name: Royal Knight Platformer_Frame_91
     originalName: 
-    pivot: {x: 0.52777773, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2259,8 +2259,8 @@ ScriptedImporter:
     uvTransform: {x: 117, y: 323}
   - name: Royal Knight Platformer_Frame_92
     originalName: 
-    pivot: {x: 0.40625, y: -0.11764705}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -2279,8 +2279,8 @@ ScriptedImporter:
     uvTransform: {x: 194, y: 55}
   - name: Royal Knight Platformer_Frame_100
     originalName: 
-    pivot: {x: 0.5833333, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -3180,7 +3180,62 @@ ScriptedImporter:
       spriteId: 711281b0efbd5b142b1ebe78187c283a
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 41, y: 31}

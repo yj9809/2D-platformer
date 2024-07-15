@@ -9,24 +9,33 @@ public class Gate : MonoBehaviour
     [SerializeField] private Image entrance;
     [SerializeField] private string nextScene;
     [SerializeField] private Transform spawonPos;
+    [SerializeField] private GameObject boss;
 
+    private GameManager gm;
+    private UiManager ui;
+    private void Start()
+    {
+        gm = GameManager.Instance;
+        ui = UiManager.Instance;
+    }
     private void Update()
     {
         if (entrance.gameObject.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (nextScene == "MiddleBossRoom")
+                if (nextScene == "BossRoom (Stage 1)")
                 {
-                    GameManager.Instance.OnMiddleBossSceneLode();
-                    GameManager.Instance.pos = spawonPos.localPosition;
-                    UiManager.Instance.menu.OnSave();
+                    gm.OnMiddleBossSceneLode();
+                    gm.boss = this.boss;
+                    gm.pos = spawonPos.localPosition;
+                    ui.menu.OnSave();
                 }
-                if (nextScene == "Game")
+                if (nextScene == "Game (Stage 1)")
                 {
-                    GameManager.Instance.OnGameSceneLode();
-                    GameManager.Instance.pos = spawonPos.localPosition;
-                    UiManager.Instance.menu.OnSave();
+                    gm.OnGameSceneLode();
+                    gm.pos = spawonPos.localPosition;
+                    ui.menu.OnSave();
                 }
             }
         }

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
     private UiManager ui;
+    private DataManager dm;
     private PlayerData data;
     // 포션 관련 Num
     private int potionsNum = 2; 
@@ -106,11 +107,12 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         data = DataManager.Instance.nowPlayer;
         ui = UiManager.Instance;
+        dm = DataManager.Instance;
     }
     // Start is called before the first frame update
     void Start()
     {
-        UiManager.Instance.SetHpImg();
+        ui.SetHpImg();
         anime.SetFloat("AttackSpeed", AttackSpeed);
         speed = data.speed;
 
@@ -275,7 +277,7 @@ public class Player : MonoBehaviour
     //포션
     public void OnPotions()
     {
-        if (Input.GetKeyDown(KeyCode.R) && Potions > 0)
+        if (Input.GetKeyDown(KeyCode.R) && Potions > 0 && SetHp != MaxHP)
         {
             SetHp += 2;
             Potions--;
@@ -287,6 +289,6 @@ public class Player : MonoBehaviour
     public void Save()
     {
         LastPos = new Vector2(transform.position.x, transform.position.y);
-        DataManager.Instance.SaveData();
+        dm.SaveData();
     }
 }

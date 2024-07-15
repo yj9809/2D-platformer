@@ -8,6 +8,7 @@ public class MiddleBoss : Enemy
     void Start()
     {
         Init();
+        SetBossHp();
     }
     public override void Init()
     {
@@ -16,6 +17,7 @@ public class MiddleBoss : Enemy
         type = Type.Boss;
         attackDis = 2.5f;
         damage = 4;
+        middle = true;
 
         base.Init();
     }

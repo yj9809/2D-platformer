@@ -809,7 +809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1510126982303488584, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
   gate: {fileID: 0}
-  middleBoss: {fileID: 3578820154894126396, guid: 8b13ff1b4e757d640ad4fe825927f7b8, type: 3}
+  boss: {fileID: 0}
   hit:
   - {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
   - {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
@@ -1591,11 +1591,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993b6be21319f9641ba38fe4c3fef9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossBar: {fileID: 0}
   potionsImg:
   - {fileID: 21300000, guid: fca12e7b2cfa26241a884d544840ac91, type: 3}
   - {fileID: 21300000, guid: 5280fe7ab6c0de14ebeffaa095f1ace5, type: 3}
   - {fileID: 21300000, guid: 5baba638a09b920499258cffd4a7afe8, type: 3}
   menu: {fileID: 0}
+  nowPotions: {fileID: 0}
+  potions: {fileID: 0}
   load: {fileID: 1606094695}
   state: {fileID: 727310817691022128, guid: c7ae184bb8fddca4b8b4c7ff839f890f, type: 3}
   loadMenu: {fileID: 8484951214785373982, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
