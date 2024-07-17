@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 
+public enum GameType
+{
+    Stop,
+    Start
+}
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject player;
@@ -12,8 +17,28 @@ public class GameManager : Singleton<GameManager>
     public GameObject boss;
     public GameObject[] hit;
     public Scene scene;
-
     public Vector2 pos;
+
+    [SerializeField] private MainCamera mainCamera;
+    public MainCamera MainCamera
+    {
+        get
+        {
+            if (mainCamera == null)
+                mainCamera = FindObjectOfType<MainCamera>();
+            return mainCamera;
+        }
+    }
+
+    private GameType gameType = GameType.Stop;
+    public GameType GameType
+    {
+        get { return gameType; }
+        set
+        {
+            gameType = value;
+        }
+    }
 
     private Player p;
     public Player P
@@ -44,14 +69,17 @@ public class GameManager : Singleton<GameManager>
     {
         scene = newScene;
     }
-    public void OnMiddleBossSceneLode()
+    public void OnBossSceneLode()
     {
         LodingSceneController.LoadScene("BossRoom (Stage 1)");
         Invoke("SpawnBoss", 3f);
     }
-    public void OnGameSceneLode()
+    public void OnGameSceneLode(string nextScene)
     {
-        LodingSceneController.LoadScene("Game (Stage 1)");
+        if (nextScene == "Game (Stage 1)")
+            LodingSceneController.LoadScene("Game (Stage 1)");
+        else if(nextScene == "Game (Stage 2)")
+            LodingSceneController.LoadScene("Game (Stage 2)");
     }
     public void SpawnBoss()
     {

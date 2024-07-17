@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.U2D;
 using System.IO;
 using TMPro;
 using DG.Tweening;
 
 public class UiManager : Singleton<UiManager>
 {
+    [SerializeField] private GameObject state;
+    private GameManager gm;
+
     public GameObject bossBar;
     public Sprite[] potionsImg;
     private Image hp;
@@ -17,8 +21,8 @@ public class UiManager : Singleton<UiManager>
     public Potions potions; 
 
     public GameObject load;
-    public GameObject state;
     public GameObject loadMenu;
+    private GameObject stateBar;
 
     private float dis = 550f;
     private float time = 0.5f;
@@ -47,6 +51,7 @@ public class UiManager : Singleton<UiManager>
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameManager.Instance;
         string sceneName = GameManager.Instance.scene.name;
         if (sceneName == "Main")
         {
@@ -75,12 +80,16 @@ public class UiManager : Singleton<UiManager>
             GameObject canvas = GameObject.Find("Ui Canvas");
             if (canvas != null)
             {
-                Instantiate(state, canvas.transform);
+                stateBar = Instantiate(this.state, canvas.transform);
                 hp = canvas.transform.GetChild(0).
                     transform.GetChild(0).
                     transform.GetChild(1).
                     transform.GetChild(1).
                     GetComponent<Image>();
+                if (DataManager.Instance.nowPlayer.newGame)
+                    stateBar.SetActive(false);
+                else
+                    stateBar.SetActive(true);
             }
         }
 
@@ -190,5 +199,18 @@ public class UiManager : Singleton<UiManager>
     public Image NowPotions()
     {
         return potions.NowPotions();
+    }
+    public void NewGameCamera(PixelPerfectCamera pixelCamera)
+    {
+        DOTween.To(() => pixelCamera.assetsPPU, x => pixelCamera.assetsPPU = x, 16, 2)
+            .SetEase(Ease.InOutQuad)
+            .OnComplete(() =>
+            {
+                gm.MainCamera.blind[0].rectTransform.DOAnchorPosY(200, 2f);
+                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f);
+                stateBar.SetActive(true);
+                DataManager.Instance.nowPlayer.newGame = false;
+                gm.GameType = GameType.Start;
+            });
     }
 }

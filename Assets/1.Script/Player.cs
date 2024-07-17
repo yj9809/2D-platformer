@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
     // 공격용 콜리더
     [SerializeField] private GameObject attackCollision;
     // 참조
+    private GameManager gm;
     private Animator anime;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
     private UiManager ui;
     private DataManager dm;
     private PlayerData data;
+    private PixelPerfectCamera pixelCamera;
     // 포션 관련 Num
     private int potionsNum = 2; 
     // 이동 관련 수치
@@ -105,6 +109,7 @@ public class Player : MonoBehaviour
         anime = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        gm = GameManager.Instance;
         data = DataManager.Instance.nowPlayer;
         ui = UiManager.Instance;
         dm = DataManager.Instance;
@@ -112,6 +117,15 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pixelCamera = gm.MainCamera.GetComponent<PixelPerfectCamera>();
+        if (data.newGame)
+        {
+            pixelCamera.assetsPPU = 36;
+            gm.MainCamera.blind[0].rectTransform.anchoredPosition = Vector2.zero;
+            gm.MainCamera.blind[1].rectTransform.anchoredPosition = Vector2.zero;
+            anime.SetTrigger("Start");
+        }
+
         ui.SetHpImg();
         anime.SetFloat("AttackSpeed", AttackSpeed);
         speed = data.speed;
@@ -289,6 +303,11 @@ public class Player : MonoBehaviour
     public void Save()
     {
         LastPos = new Vector2(transform.position.x, transform.position.y);
+        data.currentScene = gm.scene.name;
         dm.SaveData();
+    }
+    private void GameStart()
+    {
+        ui.NewGameCamera(pixelCamera);
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Ehit
   - BossBar
   - Gate
+  - Map
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Collision
   - Enemy
   - EnemyDamage
-  - 
+  - Map
   - 
   - 
   - 

@@ -815,7 +815,8 @@ MonoBehaviour:
   - {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
   scene:
     m_Handle: 0
-  pos: {x: -24, y: -9}
+  pos: {x: -21, y: -10}
+  mainCamera: {fileID: 0}
 --- !u!1 &402706243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,14 +2199,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1844803432}
         m_TargetAssemblyTypeName: Selet, Assembly-CSharp
         m_MethodName: GoGame
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1084198878
 MonoBehaviour:

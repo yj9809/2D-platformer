@@ -6,6 +6,7 @@ using System.IO;
 public class PlayerData
 {
     public string name;
+    public bool newGame = true;
     public float maxHp = 10;
     public float hp = 10;
     public float mp = 10;
@@ -14,6 +15,7 @@ public class PlayerData
     public float speed = 5;
     public int coin = 0;
     public int potions = 6;
+    public string currentScene = "Game (Stage 1)";
     public Vector2 lastPos = new Vector2(-24, -9);
 }
 

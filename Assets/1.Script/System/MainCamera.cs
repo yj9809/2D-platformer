@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainCamera : MonoBehaviour
 {
+
     private Player p;
     private GameManager gm;
+
+    public Image[] blind;
     private void Start()
     {
         p = GameManager.Instance.P;

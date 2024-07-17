@@ -11,17 +11,20 @@ public class Selet : MonoBehaviour
     [SerializeField] private TMP_Text[] slotText;
     [SerializeField] private TMP_Text newPlayerName;
 
+    private DataManager dm;
+
     bool[] saveFile = new bool[3];
 
     // Start is called before the first frame update
     void Start()
     {
+        dm = DataManager.Instance;
         for (int i = 0; i < 3; i++)
         {
-            if (File.Exists(DataManager.Instance.path + $"{i}"))
+            if (File.Exists(dm.path + $"{i}"))
             {
                 saveFile[i] = true;
-                PlayerData pd =  DataManager.Instance.LoadData(i);
+                PlayerData pd =  dm.LoadData(i);
                 slotText[i].text = pd.name;
             }
             else
@@ -32,7 +35,7 @@ public class Selet : MonoBehaviour
     }
     public void NewGame(int number)
     {
-        DataManager.Instance.nowSlot = number;
+        dm.nowSlot = number;
 
         if (!saveFile[number])
         {
@@ -41,25 +44,30 @@ public class Selet : MonoBehaviour
     }
     public void LoadGame(int number)
     {
-        DataManager.Instance.nowSlot = number;
+        dm.nowSlot = number;
 
         if (saveFile[number])
         {
-            DataManager.Instance.LoadData();
-            GoGame();
+            dm.LoadData();
+            GoGame(false);
         }
     }
     public void Creat()
     {
         creat.gameObject.SetActive(true);
     }
-    public void GoGame()
+    public void GoGame(bool newGame)
     {
-        if (!saveFile[DataManager.Instance.nowSlot])
+        if (!saveFile[dm.nowSlot])
         {
-            DataManager.Instance.nowPlayer.name = newPlayerName.text;
-            DataManager.Instance.SaveData();
+            dm.nowPlayer.name = newPlayerName.text;
+            dm.SaveData();
         }
-        GameManager.Instance.OnGameSceneLode();
+        if (!newGame)
+        {
+            dm.nowPlayer.newGame = false;
+            GameManager.Instance.GameType = GameType.Start;
+        }
+        GameManager.Instance.OnGameSceneLode(DataManager.Instance.nowPlayer.currentScene);
     }
 }

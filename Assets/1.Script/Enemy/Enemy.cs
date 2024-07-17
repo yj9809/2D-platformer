@@ -14,6 +14,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private GameObject attackCollison;
     [SerializeField] private GameObject gate;
 
+    private GameManager gm;
     private UiManager ui;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
@@ -34,6 +35,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool middle = false;
     public virtual void Init()
     {
+        gm = GameManager.Instance;
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
@@ -47,6 +49,9 @@ public abstract class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gm.GameType == GameType.Stop)
+            return;
+
         if (hp <= 0)
             return;
         Move();
@@ -115,13 +120,13 @@ public abstract class Enemy : MonoBehaviour
         if (type == Type.Boss)
             ui.bossBar.SetActive(true);
     }
-    void ChangeDirection()
+    private void ChangeDirection()
     {
         direction = Random.Range(-1, 2);
 
         Invoke("ChangeDirection", 2f);
     }
-    void Ground()
+    private void Ground()
     {
         //Ground Check
         Vector2 frontVec = new Vector2(rigid.position.x + (direction * 0.2f), rigid.position.y + 1);
@@ -162,7 +167,8 @@ public abstract class Enemy : MonoBehaviour
                 transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
 
             anime.SetBool("Death", true);
-            GateOpen();
+            if(type == Type.Boss)
+                GateOpen();
             Destroy(gameObject, 3f);
         }
 
