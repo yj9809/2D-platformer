@@ -12,36 +12,51 @@ public class Potions : MonoBehaviour
     private void Start()
     {
         ui = UiManager.Instance;
+        ui.SetPotions(this);
+        PotionsImage();
     }
     private void Update()
     {
-        ui.SetPotions(this);
+        
     }
-    public Image NowPotions()
+    public void PotionsImage()
     {
-        for (int i = 0; i < potions.Length; i++)
+        switch(DataManager.Instance.nowPlayer.potions)
         {
-            if (potions[i].sprite == ui.potionsImg[0])
-            {
-                if (i == 0)
-                {
-                    return potions[i];
-                }
-                return potions[i - 1];
-            }
-            else if (potions[i].sprite == ui.potionsImg[2])
-            {
-                if (i == 2)
-                {
-                    return potions[i];
-                }
-                continue;
-            }
-            else
-            {
-                return potions[i];
-            }
+            case 6:
+                for (int i = 0; i < potions.Length; i++)
+                    potions[i].sprite = ui.potionsImg[2];
+                break;
+            case 5:
+                for (int i = 0; i < potions.Length - 1; i++)
+                    potions[i].sprite = ui.potionsImg[2];
+                potions[2].sprite = ui.potionsImg[1];
+                break;
+            case 4:
+                for (int i = 0; i < potions.Length - 1; i++)
+                    potions[i].sprite = ui.potionsImg[2];
+                potions[2].sprite = ui.potionsImg[0];
+                break;
+            case 3:
+                potions[0].sprite = ui.potionsImg[2];
+                potions[1].sprite = ui.potionsImg[1];
+                potions[2].sprite = ui.potionsImg[0];
+                break;
+            case 2:
+                potions[0].sprite = ui.potionsImg[2];
+                potions[1].sprite = ui.potionsImg[0];
+                potions[2].sprite = ui.potionsImg[0];
+                break;
+            case 1:
+                potions[0].sprite = ui.potionsImg[1];
+                potions[1].sprite = ui.potionsImg[0];
+                potions[2].sprite = ui.potionsImg[0];
+                break;
+            case 0:
+                potions[0].sprite = ui.potionsImg[0];
+                potions[1].sprite = ui.potionsImg[0];
+                potions[2].sprite = ui.potionsImg[0];
+                break;
         }
-        return null;
     }
 }

@@ -9,6 +9,8 @@ TagManager:
   - BossBar
   - Gate
   - Map
+  - SpwanEffect
+  - BossSpwan
   layers:
   - Default
   - TransparentFX

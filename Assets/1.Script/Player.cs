@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     public bool isJump;
     public bool isDash;
     public bool onDash;
+    public bool doubleJump;
+    public bool OnBossRoomMove = false;
     //프로퍼티
     public float SetHp
     {
@@ -142,6 +144,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //보스룸 입장시
+        PlayerBossRoomMove();
+        //게임 멈춤
+        if (gm.GameType == GameType.Stop)
+            return;
         //수치 제한
         HpClamp();
         //이동
@@ -195,10 +202,21 @@ public class Player : MonoBehaviour
     }
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.X) && !anime.GetBool("IsJump") && isJump)
+        if (Input.GetKeyDown(KeyCode.X) && isJump)
         {
-            anime.SetBool("IsJump", true);
-            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            if (!anime.GetBool("IsJump"))
+            {
+                anime.SetBool("IsJump", true);
+                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                doubleJump = true;
+            }
+            else if(doubleJump)
+            {
+                anime.SetBool("IsJump", true);
+                rigid.velocity = new Vector2(rigid.velocity.x, 0f);
+                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                doubleJump = false;
+            }
         }
 
         if (rigid.velocity.y < 0)
@@ -293,10 +311,10 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) && Potions > 0 && SetHp != MaxHP)
         {
-            SetHp += 2;
+            SetHp += 4;
             Potions--;
             potionsNum = potionsNum <= 0 ? 1 : potionsNum - 1;
-            ui.TransPotionsImg(potionsNum);
+            ui.potions.PotionsImage();
         }
     }
     //저장
@@ -309,5 +327,50 @@ public class Player : MonoBehaviour
     private void GameStart()
     {
         ui.NewGameCamera(pixelCamera);
+    }
+    private void PlayerBossRoomMove()
+    {
+        if (OnBossRoomMove)
+        {
+            GameObject collision = GameObject.Find("BossSpwan");
+            Vector2 currentPosition = transform.position;
+            Vector2 targetPosition = collision.transform.position;
+            
+
+            float dis = Vector2.Distance(currentPosition, targetPosition);
+
+            if (dis > 0.2f)
+            {
+                transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+                spriteRenderer.flipX = true;
+                anime.SetBool("Run", true);
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<BossSpwan>())
+        {
+            transform.position = collision.transform.position;
+            anime.SetBool("Run", false);
+            collision.transform.gameObject.SetActive(false);
+            StartCoroutine(SpwanBoss());
+            StartCoroutine(CameraReset());
+            OnBossRoomMove = false;
+        }
+    }
+    IEnumerator SpwanBoss()
+    {
+        yield return new WaitForSeconds(1f);
+        gm.SpwanBoss();
+    }
+    IEnumerator CameraReset()
+    {
+        yield return new WaitForSeconds(3f);
+
+        ui.NewGameCamera(pixelCamera);
+
+        yield return new WaitForSeconds(2f);
+        ui.bossBar.SetActive(true);
     }
 }

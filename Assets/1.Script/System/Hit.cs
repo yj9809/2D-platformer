@@ -13,7 +13,7 @@ public class Hit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Invoke("ReturnHit", 0.1f);
+        Invoke("ReturnHit", 1.5f);
     }
     private void ReturnHit()
     {

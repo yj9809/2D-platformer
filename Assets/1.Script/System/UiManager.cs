@@ -12,6 +12,7 @@ public class UiManager : Singleton<UiManager>
 {
     [SerializeField] private GameObject state;
     private GameManager gm;
+    private PixelPerfectCamera pixelCamera;
 
     public GameObject bossBar;
     public Sprite[] potionsImg;
@@ -28,6 +29,7 @@ public class UiManager : Singleton<UiManager>
     private float time = 0.5f;
     private bool onBord = false;
     private bool onMenu = false;
+    private bool isMove = false;
 
     private float bossMaxHp;
     public float BossMaxHp
@@ -186,19 +188,9 @@ public class UiManager : Singleton<UiManager>
     {
         Application.Quit();
     }
-    public void TransPotionsImg(int num)
-    {
-        nowPotions = NowPotions();
-        nowPotions.sprite = potionsImg[num];
-
-    }
     public void SetPotions(Potions potions)
     {
         this.potions = potions;
-    }
-    public Image NowPotions()
-    {
-        return potions.NowPotions();
     }
     public void NewGameCamera(PixelPerfectCamera pixelCamera)
     {
@@ -207,10 +199,26 @@ public class UiManager : Singleton<UiManager>
             .OnComplete(() =>
             {
                 gm.MainCamera.blind[0].rectTransform.DOAnchorPosY(200, 2f);
-                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f);
-                stateBar.SetActive(true);
+                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f).
+                OnComplete(() => 
+                { 
+                    stateBar.SetActive(true);
+                    gm.GameType = GameType.Start;
+                });
                 DataManager.Instance.nowPlayer.newGame = false;
-                gm.GameType = GameType.Start;
+                
             });
     }
+    public void BossCamera()
+    {
+        state.SetActive(false);
+        DOTween.To(() => gm.MainCamera.GetComponent<PixelPerfectCamera>().assetsPPU, x =>
+        gm.MainCamera.GetComponent<PixelPerfectCamera>().assetsPPU = x, 36, 2);
+        gm.MainCamera.transform.position = gm.P.transform.position;
+        gm.MainCamera.blind[0].rectTransform.anchoredPosition = Vector2.zero;
+        gm.MainCamera.blind[1].rectTransform.anchoredPosition = Vector2.zero;
+
+        gm.P.OnBossRoomMove = true;
+    }
+    
 }

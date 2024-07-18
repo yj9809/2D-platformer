@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 
@@ -72,7 +73,7 @@ public class GameManager : Singleton<GameManager>
     public void OnBossSceneLode()
     {
         LodingSceneController.LoadScene("BossRoom (Stage 1)");
-        Invoke("SpawnBoss", 3f);
+        Invoke("BossSpwanTrigger", 1f);
     }
     public void OnGameSceneLode(string nextScene)
     {
@@ -81,10 +82,14 @@ public class GameManager : Singleton<GameManager>
         else if(nextScene == "Game (Stage 2)")
             LodingSceneController.LoadScene("Game (Stage 2)");
     }
-    public void SpawnBoss()
+    public void SpwanBoss()
     {
-        Vector2 pos = new Vector2(1.5f, -3.5f);
-        Debug.Log(boss.name);
+        Vector2 pos = new Vector2(0.5f, -4.3f);
         Instantiate(boss, pos, Quaternion.identity);
+    }
+    private void BossSpwanTrigger()
+    {
+        gameType = GameType.Stop;
+        UiManager.Instance.BossCamera();
     }
 }

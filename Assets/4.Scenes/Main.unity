@@ -1592,6 +1592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993b6be21319f9641ba38fe4c3fef9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: {fileID: 727310817691022128, guid: c7ae184bb8fddca4b8b4c7ff839f890f, type: 3}
   bossBar: {fileID: 0}
   potionsImg:
   - {fileID: 21300000, guid: fca12e7b2cfa26241a884d544840ac91, type: 3}
@@ -1601,7 +1602,6 @@ MonoBehaviour:
   nowPotions: {fileID: 0}
   potions: {fileID: 0}
   load: {fileID: 1606094695}
-  state: {fileID: 727310817691022128, guid: c7ae184bb8fddca4b8b4c7ff839f890f, type: 3}
   loadMenu: {fileID: 8484951214785373982, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
 --- !u!1 &820713803
 GameObject:
@@ -2653,6 +2653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pHit: {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
   eHit: {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
+  spwanEffect: {fileID: 8849863365560508854, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}
 --- !u!1 &1198236403
 GameObject:
   m_ObjectHideFlags: 0

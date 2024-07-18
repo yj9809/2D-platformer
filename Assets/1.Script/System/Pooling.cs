@@ -6,26 +6,28 @@ public class Pooling : Singleton<Pooling>
 {
     [SerializeField] private GameObject pHit;
     [SerializeField] private GameObject eHit;
+    [SerializeField] private GameObject spwanEffect;
 
     [SerializeField] private Queue<GameObject> poolPHit = new Queue<GameObject>();
     [SerializeField] private Queue<GameObject> poolEHit = new Queue<GameObject>();
-    void Awake()
-    {
-        //Initialize(2, pHit, poolPHit);
-        //Initialize(2, eHit, poolEHit);
-    }
+    [SerializeField] private Queue<GameObject> spwanE = new Queue<GameObject>();
     private GameObject CreatObj(GameObject hit)
     {
         GameObject newObj = Instantiate(hit,transform).gameObject;
         newObj.SetActive(false);
         return newObj;
     }
-    private void Initialize(int count, GameObject hit, Queue<GameObject> pool)
+    public GameObject GetSpwanEffect()
     {
-        for (int i = 0; i < count; i++)
-        {
-            pool.Equals(CreatObj(hit));
-        }
+        GameObject effect;
+
+        if (spwanE.Count > 0)
+            effect = spwanE.Dequeue();
+        else
+            effect = Instantiate(spwanEffect);
+
+        effect.SetActive(true);
+        return effect;
     }
     public GameObject GetObj(bool isPHit)
     {
@@ -55,13 +57,12 @@ public class Pooling : Singleton<Pooling>
     {
         obj.SetActive(false);
         obj.transform.SetParent(transform);
+
         if (obj.CompareTag("PHit"))
-        {
             poolPHit.Enqueue(obj);
-        }
         else if (obj.CompareTag("Ehit"))
-        {
             poolEHit.Enqueue(obj);
-        }
+        else if (obj.CompareTag("SpwanEffect"))
+            spwanE.Enqueue(obj);
     }
 }

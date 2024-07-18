@@ -10,8 +10,8 @@ public class PlayerData
     public float maxHp = 10;
     public float hp = 10;
     public float mp = 10;
-    public int attackDamage = 1;
-    public float attackSpeed = 1f;
+    public int attackDamage = 2;
+    public float attackSpeed = 1.5f;
     public float speed = 5;
     public int coin = 0;
     public int potions = 6;

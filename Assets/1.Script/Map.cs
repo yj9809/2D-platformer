@@ -22,4 +22,11 @@ public class Map : MonoBehaviour
             UiManager.Instance.menu.OnSave();
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<Player>())
+        {
+            MoveMap();
+        }
+    }
 }

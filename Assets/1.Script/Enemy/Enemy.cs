@@ -41,7 +41,7 @@ public abstract class Enemy : MonoBehaviour
         anime = GetComponent<Animator>();
         p = GameManager.Instance.P;
         ui = UiManager.Instance;
-        gate = GameObject.FindWithTag("Gate");
+        gate = GameObject.Find("Gate");
         isMove = false;
         ChangeDirection();
     }
@@ -117,8 +117,6 @@ public abstract class Enemy : MonoBehaviour
     public void OnMove()
     {
         isMove = true;
-        if (type == Type.Boss)
-            ui.bossBar.SetActive(true);
     }
     private void ChangeDirection()
     {
@@ -220,5 +218,14 @@ public abstract class Enemy : MonoBehaviour
     {
         if (type == Type.Boss)
             attackCollison.SetActive(true);
+    }
+    private void SpwanEffect() 
+    {
+        GameObject effect = Pooling.Instance.GetSpwanEffect();
+        if (effect != null)
+        {
+            effect.transform.position = transform.position;
+            effect.SetActive(true);
+        }
     }
 }
