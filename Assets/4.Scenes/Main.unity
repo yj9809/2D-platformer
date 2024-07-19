@@ -2654,6 +2654,7 @@ MonoBehaviour:
   pHit: {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
   eHit: {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
   spwanEffect: {fileID: 8849863365560508854, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}
+  item: {fileID: 4111129431154144933, guid: 2b1b202871b421544a37f39efbf49c65, type: 3}
 --- !u!1 &1198236403
 GameObject:
   m_ObjectHideFlags: 0

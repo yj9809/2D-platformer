@@ -11,6 +11,7 @@ TagManager:
   - Map
   - SpwanEffect
   - BossSpwan
+  - Item
   layers:
   - Default
   - TransparentFX

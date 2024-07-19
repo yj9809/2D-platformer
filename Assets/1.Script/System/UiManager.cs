@@ -17,6 +17,7 @@ public class UiManager : Singleton<UiManager>
     public GameObject bossBar;
     public Sprite[] potionsImg;
     private Image hp;
+    private Image mp;
     public Menu menu;
     public Image nowPotions;
     public Potions potions; 
@@ -83,11 +84,19 @@ public class UiManager : Singleton<UiManager>
             if (canvas != null)
             {
                 stateBar = Instantiate(this.state, canvas.transform);
+
                 hp = canvas.transform.GetChild(0).
                     transform.GetChild(0).
                     transform.GetChild(1).
                     transform.GetChild(1).
                     GetComponent<Image>();
+
+                mp = canvas.transform.GetChild(0).
+                    transform.GetChild(0).
+                    transform.GetChild(2).
+                    transform.GetChild(1).
+                    GetComponent<Image>();
+
                 if (DataManager.Instance.nowPlayer.newGame)
                     stateBar.SetActive(false);
                 else
@@ -107,8 +116,13 @@ public class UiManager : Singleton<UiManager>
     }
     public void SetHpImg()
     {
-        Player p = GameManager.Instance.P;
+        Player p = gm.P;
         hp.fillAmount = p.SetHp / p.MaxHP;
+    }
+    public void SetMpImg()
+    {
+        Player p = gm.P;
+        mp.fillAmount = p.SetMp / p.MaxMp;
     }
     public void SetBossHpImg()
     {
@@ -120,31 +134,28 @@ public class UiManager : Singleton<UiManager>
         if (Input.GetKeyDown(KeyCode.Tab) && !onBord)
         {
             state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y + dis, time)
-                .SetEase(Ease.Linear)
-                .OnComplete(() =>
-                {
-                    state.GetChild(0).DOScale(Vector3.one, 0.1f);
-                });
+                .SetEase(Ease.Linear);
+            OnStateSet();
             onBord = true;
         }
         else if (Input.GetKeyDown(KeyCode.Tab) && onBord)
         {
-            state.GetChild(0).DOScale(Vector3.zero, 0.1f)
-                .OnComplete(() =>
-                {
-                    state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y - dis, time)
-                    .SetEase(Ease.Linear);
-                });
+            state.transform.GetComponent<RectTransform>().DOMoveY(transform.position.y - dis, time)
+                .SetEase(Ease.Linear);
+            OnStateSet();
             onBord = false;
         }
     }
-    public void OnStateSet(TMP_Text txt0, TMP_Text txt1)
+    public void OnStateSet()
     {
+        State state = FindObjectOfType<State>();
         Player p = GameManager.Instance.P;
-        txt0.text = $"{p.MaxHP}\n{p.AttackDamage}\n{p.AttackSpeed}\n{p.Speed}%";
-        txt1.text = $"{p.Coin}";
+        state.txt[2].text = $"Cost : {state.cost}";
+        state.txt[0].text = $"{p.MaxHP}\n{p.AttackDamage}\n{p.AttackSpeed}\n{p.Speed}%";
+        state.txt[1].text = $"{p.Coin}";
+        state.txt[4].text = $"{p.Level}";
     }
-    public void StatUp(int num)
+    public void StateUp(int num)
     {
         Player p = GameManager.Instance.P;
         switch (num)
@@ -163,6 +174,11 @@ public class UiManager : Singleton<UiManager>
                 p.Speed += 0.5f;
                 break;
         }
+    }
+    public void SetCoin()
+    {
+        State state = FindObjectOfType<State>();
+        state.txt[3].text = gm.P.Coin.ToString();
     }
     public void OnMenu(Transform menu)
     {

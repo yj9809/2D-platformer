@@ -6,8 +6,11 @@ using System.IO;
 public class PlayerData
 {
     public string name;
+    public int level = 1;
     public bool newGame = true;
+    public bool transOn = false;
     public float maxHp = 10;
+    public float maxMp = 10;
     public float hp = 10;
     public float mp = 10;
     public int attackDamage = 2;

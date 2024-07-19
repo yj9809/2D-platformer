@@ -21,17 +21,19 @@ public class Player : MonoBehaviour
     // 포션 관련 Num
     private int potionsNum = 2; 
     // 이동 관련 수치
-    private float speed;
     private float jumpPower;
     private float dashSpeed;
     public float defaultTime;
     private float dashTime;
+    private float transTime;
+    private float mpTime;
     //이동 관련 참/거짓
     public bool isMove;
     public bool isJump;
     public bool isDash;
     public bool onDash;
     public bool doubleJump;
+    public bool trans;
     public bool OnBossRoomMove = false;
     //프로퍼티
     public float SetHp
@@ -40,7 +42,32 @@ public class Player : MonoBehaviour
         set
         {
             data.hp = value;
-            UiManager.Instance.SetHpImg();
+            ui.SetHpImg();
+        }
+    }
+    public float SetMp
+    {
+        get { return data.mp; }
+        set
+        {
+            data.mp = value;
+            ui.SetMpImg();
+        }
+    }
+    public float MaxHP
+    {
+        get { return data.maxHp; }
+        set
+        {
+            data.maxHp = value;
+        }
+    }
+    public float MaxMp
+    {
+        get { return data.maxMp; }
+        set
+        {
+            data.maxMp = value;
         }
     }
     public int AttackDamage
@@ -68,12 +95,12 @@ public class Player : MonoBehaviour
             data.speed = value;
         }
     }
-    public float MaxHP
+    public int Level
     {
-        get { return data.maxHp; }
+        get { return data.level; }
         set
         {
-            data.maxHp = value;
+            data.level += value;
         }
     }
     public int Coin
@@ -82,6 +109,7 @@ public class Player : MonoBehaviour
         set
         {
             data.coin = value;
+            ui.SetCoin();
         }
     }
     public int Potions
@@ -129,8 +157,9 @@ public class Player : MonoBehaviour
         }
 
         ui.SetHpImg();
+        ui.SetMpImg();
+        ui.SetCoin();
         anime.SetFloat("AttackSpeed", AttackSpeed);
-        speed = data.speed;
 
         jumpPower = 8f;
         dashSpeed = 25f;
@@ -139,11 +168,12 @@ public class Player : MonoBehaviour
         isMove = true;
         isJump = true;
         onDash = true;
+        trans = false;
     }
-
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Level);
         //보스룸 입장시
         PlayerBossRoomMove();
         //게임 멈춤
@@ -157,8 +187,11 @@ public class Player : MonoBehaviour
         Dash();
         //공격
         Attack();
-        //포션
+        //포션&Mp 자연회복
         OnPotions();
+        MpUp();
+        //변신
+        OnTransform();
     }
     //Ui 제한
     private void HpClamp()
@@ -178,14 +211,14 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow) && isMove)
         {
-            transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x + Speed * Time.deltaTime, transform.position.y);
             spriteRenderer.flipX = false;
             transform.GetChild(0).localPosition = new Vector2(1.28f, 1.26f);
             anime.SetBool("Run", true);
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && isMove)
         {
-            transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x - Speed * Time.deltaTime, transform.position.y);
             spriteRenderer.flipX = true;
             transform.GetChild(0).localPosition = new Vector2(-1.28f, 1.26f);
             anime.SetBool("Run", true);
@@ -246,20 +279,74 @@ public class Player : MonoBehaviour
 
         if (dashTime <=0)
         {
-            speed = 5f;
+            Speed = 5f;
             if (isDash)
                 dashTime = 0.1f;
         }
         else
         {
             dashTime -= Time.deltaTime;
-            speed = dashSpeed;
+            Speed = dashSpeed;
         }
         isDash = false;
     }
     private void OnDash()
     {
         onDash = true;
+    }
+    private void OnTransform()
+    {
+        if(data.transOn && Input.GetKeyDown(KeyCode.F) && SetMp >= 3)
+        {
+            if(!trans)
+            {
+                anime.SetBool("Trans", true);
+                isMove = false;
+                isJump = false;
+                AttackDamage *= 2;
+                AttackSpeed *= 2;
+            }
+        }
+        if (trans)
+        {
+            if (transTime <= 0)
+            {
+                SetMp -= 1;
+                transTime = 1f;
+            }
+            else
+            {
+                transTime -= Time.deltaTime;
+            }
+            if(SetMp == 0)
+            {
+                anime.SetBool("Trans", false);
+                isMove = false;
+                isJump = false;
+                trans = false;
+                AttackDamage /= 2;
+                AttackSpeed /= 2;
+            }
+        }
+    }
+    private void TransTrue()
+    {
+        trans = true;
+    }
+    private void MpUp()
+    {
+        if(SetMp <= 10 && !trans)
+        {
+            if (mpTime <= 0)
+            {
+                SetMp += 1f;
+                mpTime = 3f;
+            }
+            else
+            {
+                mpTime -= Time.deltaTime;
+            }
+        }
     }
     public void OffDashDamage()
     {
@@ -341,7 +428,7 @@ public class Player : MonoBehaviour
 
             if (dis > 0.2f)
             {
-                transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(currentPosition, targetPosition, 3 * Time.deltaTime);
                 spriteRenderer.flipX = true;
                 anime.SetBool("Run", true);
             }
@@ -361,7 +448,7 @@ public class Player : MonoBehaviour
     }
     IEnumerator SpwanBoss()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         gm.SpwanBoss();
     }
     IEnumerator CameraReset()

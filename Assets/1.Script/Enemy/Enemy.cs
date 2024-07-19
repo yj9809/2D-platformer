@@ -162,7 +162,12 @@ public abstract class Enemy : MonoBehaviour
             GetComponent<Collider2D>().enabled = false;
             GetComponent<Rigidbody2D>().simulated = false;
             if (type == Type.Bat)
+            {
                 transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
+                GameObject item = Pooling.Instance.getItems();
+                Vector2 itemPos = new Vector2(transform.position.x, transform.position.y + 1f);
+                item.transform.position = itemPos;
+            }
 
             anime.SetBool("Death", true);
             if(type == Type.Boss)

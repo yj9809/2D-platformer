@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dark Attack
+  m_Name: Dark Attack 1
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,29 +21,29 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 5632beb9b927ac646946f1a862171c58, type: 3}
-    - time: 0.083333336
+    - time: 0.11
       value: {fileID: 21300000, guid: 3e946e99b6d30b4439c6c821730f3770, type: 3}
-    - time: 0.16666667
+    - time: 0.22
       value: {fileID: 21300000, guid: 2b48d69a7589b1a4baeb8ac77aac7485, type: 3}
-    - time: 0.25
+    - time: 0.33
       value: {fileID: 21300000, guid: 3ceb34a8c7dcb13408d6feee0eccd173, type: 3}
-    - time: 0.33333334
+    - time: 0.44
       value: {fileID: 21300000, guid: 3bed30c23b4e97640929efaa74c249c7, type: 3}
-    - time: 0.41666666
+    - time: 0.56
       value: {fileID: 21300000, guid: 52e2b0ac336e70643ba63c4c8e5982ff, type: 3}
-    - time: 0.5
+    - time: 0.67
       value: {fileID: 21300000, guid: 080d05392d0074b4e8623355c85b07cf, type: 3}
-    - time: 0.5833333
+    - time: 0.78
       value: {fileID: 21300000, guid: e5055200fd82b57469665e7d40c4c000, type: 3}
-    - time: 0.6666667
+    - time: 0.89
       value: {fileID: 21300000, guid: a94bb46f38a43e34599f914e4d247852, type: 3}
-    - time: 0.75
+    - time: 1
       value: {fileID: 21300000, guid: 1313db005a1fa6d43a931710f5c9c334, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 100
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -73,7 +73,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8333333
+    m_StopTime: 1.01
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -92,4 +92,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.17
+    functionName: OnAttackCollision
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.71
+    functionName: OnMove
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
