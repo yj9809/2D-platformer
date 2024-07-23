@@ -10,7 +10,7 @@ public class MiddleBoss : Enemy
         Init();
         SetBossHp();
     }
-    public override void Init()
+    protected override void Init()
     {
         speed = 3;
         hp = 30;

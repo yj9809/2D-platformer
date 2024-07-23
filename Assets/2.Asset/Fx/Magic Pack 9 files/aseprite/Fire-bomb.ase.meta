@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: 89ae6d43f73da0a4b9eccaf401f553fa
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 16
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 9
+    customPivotPosition: {x: 0.5, y: 0.3}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 9
+    customPivotPosition: {x: 0.5, y: 0.3}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638573352485585097
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Fire-bomb_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 64
+      height: 64
+    spriteID: 1fd7f66e67b25d24b861e21f41f66a67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Fire-bomb_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.20444447}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 4
+      width: 44
+      height: 45
+    spriteID: 214f9707af1242f4799ec35a20c850bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 4}
+  - name: Fire-bomb_Frame_2
+    originalName: 
+    pivot: {x: 0.48, y: 0.24800003}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 126
+      width: 25
+      height: 25
+    spriteID: e93ea0f5ceac6a64aa4c63fd2f0b18e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 126}
+  - name: Fire-bomb_Frame_3
+    originalName: 
+    pivot: {x: 0.4, y: 0.24000016}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 146
+      width: 5
+      height: 5
+    spriteID: 3c189c9ae05d0ed4cada5198b4f3af8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 146}
+  - name: Fire-bomb_Frame_4
+    originalName: 
+    pivot: {x: 0.45454547, y: 0.4333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 126
+      width: 11
+      height: 12
+    spriteID: e852f0798e210ab4cbd2d30b00e00515
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 126}
+  - name: Fire-bomb_Frame_5
+    originalName: 
+    pivot: {x: 0.45454547, y: 0.36428577}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 188
+      width: 11
+      height: 28
+    spriteID: f1eff6a36717f8f46b278c10873a768b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 188}
+  - name: Fire-bomb_Frame_6
+    originalName: 
+    pivot: {x: 0.4857143, y: 0.4636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 96
+      width: 35
+      height: 22
+    spriteID: 78d83f7db50d95c4ba9e17928abeed96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 96}
+  - name: Fire-bomb_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.1500001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 224
+      width: 8
+      height: 8
+    spriteID: 6222c856884be2f4193c22b5cf21e52f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 224}
+  - name: Fire-bomb_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.20000003}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 159
+      width: 24
+      height: 21
+    spriteID: ba212ce043841b140866d97afb7afb36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 159}
+  - name: Fire-bomb_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.26451614}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 57
+      width: 36
+      height: 31
+    spriteID: 0ec706ad4121c904ea7d13e1c9f702e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 57}
+  - name: Fire-bomb_Frame_10
+    originalName: 
+    pivot: {x: 0.5106383, y: 0.2871795}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 4
+      width: 47
+      height: 39
+    spriteID: c7408a28efbbc6649ad98ef168e45b9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 4}
+  - name: Fire-bomb_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.25454548}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 188
+      width: 54
+      height: 44
+    spriteID: bd00264524867a7448f21c3d64dd4de2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 188}
+  - name: Fire-bomb_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.2541667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 76
+      width: 58
+      height: 48
+    spriteID: b676c9f319ebb9f459bb84e1f47e08c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 76}
+  - name: Fire-bomb_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.2541667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 132
+      width: 58
+      height: 48
+    spriteID: 4d730bbf61c95d946b7621833a903292
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 132}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -350326397
+    name: Fire-bomb
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Fire-bomb_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      spriteId: 1fd7f66e67b25d24b861e21f41f66a67
+    - name: Fire-bomb_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 10
+        width: 44
+        height: 45
+      spriteId: 214f9707af1242f4799ec35a20c850bf
+    - name: Fire-bomb_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 20
+        y: 13
+        width: 25
+        height: 25
+      spriteId: e93ea0f5ceac6a64aa4c63fd2f0b18e5
+    - name: Fire-bomb_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 30
+        y: 18
+        width: 5
+        height: 5
+      spriteId: 3c189c9ae05d0ed4cada5198b4f3af8d
+    - name: Fire-bomb_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 27
+        y: 14
+        width: 11
+        height: 12
+      spriteId: e852f0798e210ab4cbd2d30b00e00515
+    - name: Fire-bomb_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 27
+        y: 9
+        width: 11
+        height: 28
+      spriteId: f1eff6a36717f8f46b278c10873a768b
+    - name: Fire-bomb_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 15
+        y: 9
+        width: 35
+        height: 22
+      spriteId: 78d83f7db50d95c4ba9e17928abeed96
+    - name: Fire-bomb_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 28
+        y: 18
+        width: 8
+        height: 8
+      spriteId: 6222c856884be2f4193c22b5cf21e52f
+    - name: Fire-bomb_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 20
+        y: 15
+        width: 24
+        height: 21
+      spriteId: ba212ce043841b140866d97afb7afb36
+    - name: Fire-bomb_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 14
+        y: 11
+        width: 36
+        height: 31
+      spriteId: 0ec706ad4121c904ea7d13e1c9f702e0
+    - name: Fire-bomb_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 8
+        y: 8
+        width: 47
+        height: 39
+      spriteId: c7408a28efbbc6649ad98ef168e45b9c
+    - name: Fire-bomb_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 5
+        y: 8
+        width: 54
+        height: 44
+      spriteId: bd00264524867a7448f21c3d64dd4de2
+    - name: Fire-bomb_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 3
+        y: 7
+        width: 58
+        height: 48
+      spriteId: b676c9f319ebb9f459bb84e1f47e08c8
+    - name: Fire-bomb_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 3
+        y: 7
+        width: 58
+        height: 48
+      spriteId: 4d730bbf61c95d946b7621833a903292
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

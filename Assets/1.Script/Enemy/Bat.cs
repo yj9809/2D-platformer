@@ -9,7 +9,7 @@ public class Bat : Enemy
     {
         Init();
     }
-    public override void Init()
+    protected override void Init()
     {
         damage = 2;
         speed = 3;

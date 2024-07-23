@@ -80,7 +80,7 @@ public class UiManager : Singleton<UiManager>
             SetupStateBar();
         }
 
-        if (sceneName == "BossRoom (Stage 1)")
+        if (sceneName == "BossRoom (Stage 1)" || sceneName == "BossRoom (Stage 2)")
         {
             bossBar = GameObject.Find("Boss Bar");
             bossBar.SetActive(false);
@@ -206,12 +206,7 @@ public class UiManager : Singleton<UiManager>
             .OnComplete(() =>
             {
                 gm.MainCamera.blind[0].rectTransform.DOAnchorPosY(200, 2f);
-                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f)
-                    .OnComplete(() =>
-                    {
-                        stateBar.SetActive(true);
-                        gm.GameType = GameType.Start;
-                    });
+                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f);
                 DataManager.Instance.nowPlayer.newGame = false;
             });
     }

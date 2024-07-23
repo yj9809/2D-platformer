@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Invoke("ReturnHit", 1.5f);
+        Invoke("ReturnHit", 0.75f);
     }
     private void ReturnHit()
     {

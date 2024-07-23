@@ -49,13 +49,13 @@ MonoBehaviour:
 --- !u!198 &3462806011388405626
 ParticleSystem:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8849863365560508848, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3462806011388405628}
   serializedVersion: 8
   lengthInSec: 0.75
-  simulationSpeed: 2
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -129,7 +129,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2

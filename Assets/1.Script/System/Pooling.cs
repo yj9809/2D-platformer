@@ -49,12 +49,18 @@ public class Pooling : Singleton<Pooling>
     {
         GameObject dash;
 
-        if (items.Count > 0)
+        if (dashs.Count > 0)
+        { 
             dash = dashs.Dequeue();
+            dash.transform.SetParent(null);
+            dash.SetActive(true);
+        }
         else
+        {
             dash = Instantiate(dashEffect);
-
-        dash.SetActive(true);
+            dash.transform.SetParent(null);
+            dash.SetActive(true);
+        }
         return dash;
     }
     public GameObject GetObj(bool isPHit)

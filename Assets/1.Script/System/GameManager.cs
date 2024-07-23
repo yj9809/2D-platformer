@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private GameType gameType = GameType.Stop;
+    [SerializeField] private GameType gameType = GameType.Stop;
     public GameType GameType
     {
         get { return gameType; }
@@ -70,9 +70,9 @@ public class GameManager : Singleton<GameManager>
     {
         scene = newScene;
     }
-    public void OnBossSceneLode()
+    public void OnBossSceneLode(string nextScene)
     {
-        LodingSceneController.LoadScene("BossRoom (Stage 1)");
+        LodingSceneController.LoadScene(nextScene);
         Invoke("BossSpwanTrigger", 1f);
     }
     public void OnGameSceneLoad(string nextScene)

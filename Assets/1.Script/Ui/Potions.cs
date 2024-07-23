@@ -15,10 +15,6 @@ public class Potions : MonoBehaviour
         ui.SetPotions(this);
         PotionsImage();
     }
-    private void Update()
-    {
-        
-    }
     public void PotionsImage()
     {
         switch(DataManager.Instance.nowPlayer.potions)

@@ -271,8 +271,8 @@ public class Player : MonoBehaviour
             Vector2 pos = new Vector2(transform.position.x, transform.position.y + 1.25f);
             GameObject dashEffect = Pooling.Instance.GetDash();
             dashEffect.transform.GetComponent<ParticleSystemRenderer>().flip = spriteRenderer.flipX ? new Vector3(1, 0, 0) : Vector3.zero;
-            dashEffect.transform.position = pos;
             dashEffect.GetComponent<ParticleSystem>().Play();
+            dashEffect.transform.position = pos;
             onDash = false;
             isDash = true;
             anime.SetTrigger("IsDash");
@@ -461,5 +461,6 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         ui.bossBar.SetActive(true);
+        gm.GameType = GameType.Start;
     }
 }

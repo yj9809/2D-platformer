@@ -22,9 +22,16 @@ public class MainCamera : MonoBehaviour
     }
     private void CameraMove()
     {
-        if (gm.scene.name == "Game (Stage 1)" || gm.scene.name == "Game (Stage 2)")
+        if (gm.scene.name == "Game (Stage 1)")
         {
             float clampX = Mathf.Clamp(p.transform.position.x, -21f, 21f);
+            float clampY = Mathf.Clamp(p.transform.position.y + 2f, -9.3f, 9.4f);
+
+            transform.position = new Vector3(clampX, clampY, -10f);
+        }
+        else if(gm.scene.name == "Game (Stage 2)")
+        {
+            float clampX = Mathf.Clamp(p.transform.position.x, -36.5f, 67f);
             float clampY = Mathf.Clamp(p.transform.position.y + 2f, -9.3f, 9.4f);
 
             transform.position = new Vector3(clampX, clampY, -10f);
@@ -33,6 +40,13 @@ public class MainCamera : MonoBehaviour
         {
             float clampX = Mathf.Clamp(p.transform.position.x, -8f, 10f);
             float clampY = Mathf.Clamp(p.transform.position.y + 2f, -4f, 9.4f);
+
+            transform.position = new Vector3(clampX, clampY, -10f);
+        }
+        else if(gm.scene.name == "BossRoom (Stage 2)")
+        {
+            float clampX = Mathf.Clamp(p.transform.position.x, -8f, 10f);
+            float clampY = Mathf.Clamp(p.transform.position.y + 2f, -7f, 9.4f);
 
             transform.position = new Vector3(clampX, clampY, -10f);
         }
