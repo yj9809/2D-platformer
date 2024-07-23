@@ -19,6 +19,7 @@ public abstract class Enemy : MonoBehaviour
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private Animator anime;
+    private SpriteRenderer renderer; 
 
     [SerializeField] protected Type type;
     protected int damage;
@@ -39,6 +40,7 @@ public abstract class Enemy : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
+        renderer = transform.GetComponent<SpriteRenderer>();
         p = GameManager.Instance.P;
         ui = UiManager.Instance;
         gate = GameObject.Find("Gate");
@@ -54,6 +56,12 @@ public abstract class Enemy : MonoBehaviour
 
         if (hp <= 0)
             return;
+
+        //if (CameraCheck())
+        //    renderer.enabled = true;
+        //else
+        //    renderer.enabled = false;
+
         Move();
         Ground();
     }
@@ -229,5 +237,13 @@ public abstract class Enemy : MonoBehaviour
             effect.transform.position = transform.position;
             effect.SetActive(true);
         }
+    }
+    private bool CameraCheck()
+    {
+        Vector3 viewport = Camera.main.WorldToViewportPoint(transform.position);
+
+        return (viewport.x >= 0 && viewport.x <= 1 &&
+            viewport.y >= 0 && viewport.y <= 1 &&
+            viewport.z > 0);
     }
 }
