@@ -75,7 +75,7 @@ public class GameManager : Singleton<GameManager>
         LodingSceneController.LoadScene("BossRoom (Stage 1)");
         Invoke("BossSpwanTrigger", 1f);
     }
-    public void OnGameSceneLode(string nextScene)
+    public void OnGameSceneLoad(string nextScene)
     {
         if (nextScene == "Game (Stage 1)")
             LodingSceneController.LoadScene("Game (Stage 1)");

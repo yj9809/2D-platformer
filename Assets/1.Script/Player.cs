@@ -19,10 +19,16 @@ public class Player : MonoBehaviour
     private PlayerData data;
     private PixelPerfectCamera pixelCamera;
     // 포션 관련 Num
-    private int potionsNum = 2; 
+    private int potionsNum = 2;
     // 이동 관련 수치
-    private float jumpPower;
-    private float dashSpeed;
+    private const float JumpPower = 8f;
+    private const float DashSpeed = 25f;
+    private const float DefaultSpeed = 5f;
+    private const float DashDuration = 0.1f;
+    private const float MpRegenInterval = 3f;  // MP 회복 간격
+    private const float TransformMpCostInterval = 1f;
+    private const float TransformMpCost = 1f;
+
     public float defaultTime;
     private float dashTime;
     private float transTime;
@@ -100,7 +106,7 @@ public class Player : MonoBehaviour
         get { return data.level; }
         set
         {
-            data.level += value;
+            data.level = value;
         }
     }
     public int Coin
@@ -148,6 +154,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         pixelCamera = gm.MainCamera.GetComponent<PixelPerfectCamera>();
+
         if (data.newGame)
         {
             pixelCamera.assetsPPU = 36;
@@ -161,10 +168,6 @@ public class Player : MonoBehaviour
         ui.SetCoin();
         anime.SetFloat("AttackSpeed", AttackSpeed);
 
-        jumpPower = 8f;
-        dashSpeed = 25f;
-
-
         isMove = true;
         isJump = true;
         onDash = true;
@@ -173,65 +176,71 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Level);
-        //보스룸 입장시
+        // 보스룸 입장시
         PlayerBossRoomMove();
-        //게임 멈춤
-        if (gm.GameType == GameType.Stop)
+
+        // 게임 멈춤
+        if (gm.GameType == GameType.Stop || SetHp <= 0)
             return;
-        //수치 제한
+
+        // 수치 제한
         HpClamp();
-        //이동
+        MpClamp();
+
+        // 이동
         Move();
         Jump();
         Dash();
-        //공격
+
+        // 공격
         Attack();
-        //포션&Mp 자연회복
+
+        // 포션&Mp 자연회복
         OnPotions();
         MpUp();
-        //변신
+
+        // 변신
         OnTransform();
     }
-    //Ui 제한
+    //Ui 관련
     private void HpClamp()
     {
-        if (SetHp > MaxHP)
+        SetHp = Mathf.Clamp(SetHp, 0, MaxHP);
+    }
+    private void MpClamp()
+    {
+        SetMp = Mathf.Clamp(SetMp, 0, MaxMp);
+    }
+    private void MpUp()
+    {
+        if (SetMp <= 10 && !trans && mpTime <= 0)
         {
-            SetHp = MaxHP;
+            SetMp += 1f;
+            mpTime = MpRegenInterval;
         }
-        else if (SetHp <= 0)
-        {
-            SetHp = 0;
-        }
+        mpTime -= Time.deltaTime;
     }
     //이동 관련
     private void Move()
     {
-
-        if (Input.GetKey(KeyCode.RightArrow) && isMove)
+        if (!isMove)
         {
-            transform.position = new Vector2(transform.position.x + Speed * Time.deltaTime, transform.position.y);
-            spriteRenderer.flipX = false;
-            transform.GetChild(0).localPosition = new Vector2(1.28f, 1.26f);
-            anime.SetBool("Run", true);
+            anime.SetBool("Run", false);
+            return;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow) && isMove)
+
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        if (moveInput != 0)
         {
-            transform.position = new Vector2(transform.position.x - Speed * Time.deltaTime, transform.position.y);
-            spriteRenderer.flipX = true;
-            transform.GetChild(0).localPosition = new Vector2(-1.28f, 1.26f);
+            transform.position += new Vector3(moveInput * Speed * Time.deltaTime, 0);
+            spriteRenderer.flipX = moveInput < 0;
+            transform.GetChild(0).localPosition = new Vector2(spriteRenderer.flipX ? -1.28f : 1.28f, 1.26f);
             anime.SetBool("Run", true);
         }
         else
         {
             anime.SetBool("Run", false);
         }
-    }
-    private void OnMove()
-    {
-        isMove = true;
-        isJump = true;
     }
     private void Jump()
     {
@@ -240,36 +249,30 @@ public class Player : MonoBehaviour
             if (!anime.GetBool("IsJump"))
             {
                 anime.SetBool("IsJump", true);
-                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
                 doubleJump = true;
             }
-            else if(doubleJump)
+            else if (doubleJump)
             {
                 anime.SetBool("IsJump", true);
                 rigid.velocity = new Vector2(rigid.velocity.x, 0f);
-                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
                 doubleJump = false;
             }
         }
 
-        if (rigid.velocity.y < 0)
-        {
-            anime.SetBool("IsFalling", true);
-        }
-        else if (rigid.velocity.y > 0)
-        {
-            anime.SetBool("IsFalling", false);
-        }
-        else
-        {
-            anime.SetBool("IsFalling", false);
-        }
+        anime.SetBool("IsFalling", rigid.velocity.y < 0);
     }    
     private void Dash()
     {
         if (Input.GetKeyDown(KeyCode.Z) && onDash && anime.GetBool("Run"))
         {
             gameObject.layer = 10;
+            Vector2 pos = new Vector2(transform.position.x, transform.position.y + 1.25f);
+            GameObject dashEffect = Pooling.Instance.GetDash();
+            dashEffect.transform.GetComponent<ParticleSystemRenderer>().flip = spriteRenderer.flipX ? new Vector3(1, 0, 0) : Vector3.zero;
+            dashEffect.transform.position = pos;
+            dashEffect.GetComponent<ParticleSystem>().Play();
             onDash = false;
             isDash = true;
             anime.SetTrigger("IsDash");
@@ -277,16 +280,16 @@ public class Player : MonoBehaviour
             Invoke("OnDash", 0.5f);
         }
 
-        if (dashTime <=0)
+        if (dashTime <= 0)
         {
-            Speed = 5f;
+            Speed = DefaultSpeed;
             if (isDash)
-                dashTime = 0.1f;
+                dashTime = DashDuration;
         }
         else
         {
             dashTime -= Time.deltaTime;
-            Speed = dashSpeed;
+            Speed = DashSpeed;
         }
         isDash = false;
     }
@@ -294,11 +297,16 @@ public class Player : MonoBehaviour
     {
         onDash = true;
     }
+    public void OffDashDamage()
+    {
+        gameObject.layer = 3;
+    }
+    // 변신 관련
     private void OnTransform()
     {
-        if(data.transOn && Input.GetKeyDown(KeyCode.F) && SetMp >= 3)
+        if (data.transOn && Input.GetKeyDown(KeyCode.G) && SetMp >= 3)
         {
-            if(!trans)
+            if (!trans)
             {
                 anime.SetBool("Trans", true);
                 isMove = false;
@@ -307,18 +315,20 @@ public class Player : MonoBehaviour
                 AttackSpeed *= 2;
             }
         }
+
         if (trans)
         {
             if (transTime <= 0)
             {
-                SetMp -= 1;
-                transTime = 1f;
+                SetMp -= TransformMpCost;
+                transTime = TransformMpCostInterval;
             }
             else
             {
                 transTime -= Time.deltaTime;
             }
-            if(SetMp == 0)
+
+            if (SetMp <= 0)
             {
                 anime.SetBool("Trans", false);
                 isMove = false;
@@ -333,47 +343,37 @@ public class Player : MonoBehaviour
     {
         trans = true;
     }
-    private void MpUp()
-    {
-        if(SetMp <= 10 && !trans)
-        {
-            if (mpTime <= 0)
-            {
-                SetMp += 1f;
-                mpTime = 3f;
-            }
-            else
-            {
-                mpTime -= Time.deltaTime;
-            }
-        }
-    }
-    public void OffDashDamage()
-    {
-        gameObject.layer = 3;
-    }
     //공격 관련 & 데미지 함수
     private void Attack()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
             anime.SetTrigger("IsAttack");
-            isMove = false;
-            isJump = false;
         }
     }
     private void OnAttackCollision()
     {
         attackCollision.SetActive(true);
     }
-    public void OnPlayerDamage(Vector2 pos)
+    public void OnPlayerDamage(Vector2 pos, int damage)
     {
+        if (SetHp <= 0)
+            return;
+
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc, 1) * 2,ForceMode2D.Impulse);
+        rigid.AddForce(new Vector2(dirc, 1) * 2, ForceMode2D.Impulse);
+        SetHp -= damage;
         isMove = false;
         Invoke("OffDamage", 0.5f);
+
+        if (SetHp <= 0)
+        {
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
+            anime.SetTrigger("Death");
+        }
     }
     private void OffDamage()
     {
@@ -390,10 +390,10 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.layer == 11)
         {
-            OnPlayerDamage(collision.transform.position);
+            OnPlayerDamage(collision.transform.position, 2);
         }
     }
-    //포션
+    // 포션
     public void OnPotions()
     {
         if (Input.GetKeyDown(KeyCode.R) && Potions > 0 && SetHp != MaxHP)
@@ -404,17 +404,19 @@ public class Player : MonoBehaviour
             ui.potions.PotionsImage();
         }
     }
-    //저장
+    // 저장
     public void Save()
     {
         LastPos = new Vector2(transform.position.x, transform.position.y);
         data.currentScene = gm.scene.name;
         dm.SaveData();
     }
+    // 새로운 게임 시작시
     private void GameStart()
     {
         ui.NewGameCamera(pixelCamera);
     }
+    // 보스룸 입장시
     private void PlayerBossRoomMove()
     {
         if (OnBossRoomMove)

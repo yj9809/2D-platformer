@@ -12,6 +12,7 @@ TagManager:
   - SpwanEffect
   - BossSpwan
   - Item
+  - Dash
   layers:
   - Default
   - TransparentFX

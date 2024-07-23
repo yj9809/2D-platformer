@@ -17,7 +17,7 @@ public class Map : MonoBehaviour
     {
         if(nextScene == "Game (Stage 2)")
         {
-            gm.OnGameSceneLode(nextScene);
+            gm.OnGameSceneLoad(nextScene);
             gm.pos = spwanPos.localPosition;
             UiManager.Instance.menu.OnSave();
         }

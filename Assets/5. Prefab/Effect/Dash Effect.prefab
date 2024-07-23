@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8849863365560508854
+--- !u!1 &3462806011388405628
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8849863365560508851}
-  - component: {fileID: 7363888642958830684}
-  - component: {fileID: 8849863365560508848}
-  - component: {fileID: 8849863365560508849}
+  - component: {fileID: 3462806011388405625}
+  - component: {fileID: 3237689951382842006}
+  - component: {fileID: 3462806011388405626}
+  - component: {fileID: 3462806011388405627}
   m_Layer: 0
-  m_Name: Spwan Effect
-  m_TagString: SpwanEffect
+  m_Name: Dash Effect
+  m_TagString: Dash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8849863365560508851
+--- !u!4 &3462806011388405625
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8849863365560508854}
+  m_GameObject: {fileID: 3462806011388405628}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.13415723, y: -3.1321576, z: -0.3867683}
+  m_LocalPosition: {x: -13.813335, y: -4.106174, z: -0.3867683}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &7363888642958830684
+--- !u!114 &3237689951382842006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8849863365560508854}
+  m_GameObject: {fileID: 3462806011388405628}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 273307c052ac7f848b9e0264f26f2f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!198 &8849863365560508848
+--- !u!198 &3462806011388405626
 ParticleSystem:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8849863365560508848, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8849863365560508854}
+  m_GameObject: {fileID: 3462806011388405628}
   serializedVersion: 8
   lengthInSec: 0.75
   simulationSpeed: 2
@@ -298,7 +298,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1589,11 +1589,20 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -161846056, guid: 556afc8b13dbfdb448fe0b7dc3221113, type: 3}
-    - sprite: {fileID: -1802960405, guid: 556afc8b13dbfdb448fe0b7dc3221113, type: 3}
-    - sprite: {fileID: 1411821066, guid: 556afc8b13dbfdb448fe0b7dc3221113, type: 3}
-    - sprite: {fileID: -575336180, guid: 556afc8b13dbfdb448fe0b7dc3221113, type: 3}
-    - sprite: {fileID: 589815026, guid: 556afc8b13dbfdb448fe0b7dc3221113, type: 3}
+    - sprite: {fileID: -1269051187, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: -282925704, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: -975725400, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: -1368350273, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: -396945812, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: -1518715660, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: 2102741413, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: 651021203, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: 44310072, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: 240204656, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: -16189821, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: -1709344583, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: 1601322075, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
+    - sprite: {fileID: 359316693, guid: 24abc538fae362d40ba2e5dcf65a159d, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4851,14 +4860,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &8849863365560508849
+--- !u!199 &3462806011388405627
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8849863365560508854}
+  m_GameObject: {fileID: 3462806011388405628}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4892,7 +4901,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0

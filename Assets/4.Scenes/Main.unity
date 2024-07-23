@@ -414,6 +414,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8484951214785373983, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
   m_PrefabInstance: {fileID: 8484951214699932656}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &91770096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8484951214785373952, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+  m_PrefabInstance: {fileID: 8484951214699932656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91770094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdaf6212369827f43b1cd52c21a55b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &115945388
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +828,17 @@ MonoBehaviour:
     m_Handle: 0
   pos: {x: -21, y: -10}
   mainCamera: {fileID: 0}
+--- !u!114 &359433928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8484951215358660465, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+  m_PrefabInstance: {fileID: 8484951214699932656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &402706243
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +854,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &402706244
 Transform:
@@ -1322,7 +1344,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!95 &572771445
 Animator:
@@ -1426,7 +1448,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &603521328
 Transform:
@@ -1546,7 +1568,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb5f22c23309604b8a166d188da9ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
+  nowPlayer:
+    name: 
+    level: 1
+    newGame: 1
+    transOn: 0
+    maxHp: 10
+    maxMp: 10
+    hp: 10
+    mp: 10
+    attackDamage: 2
+    attackSpeed: 1.5
+    speed: 5
+    coin: 0
+    potions: 6
+    currentScene: Game (Stage 1)
+    lastPos: {x: -24, y: -9}
+  savePath: 
   nowSlot: 0
 --- !u!1 &767411898
 GameObject:
@@ -1844,8 +1882,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1844803432}
-        m_TargetAssemblyTypeName: Selet, Assembly-CSharp
-        m_MethodName: NewGame
+        m_TargetAssemblyTypeName: Select, Assembly-CSharp
+        m_MethodName: StartNewGame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1908,7 +1946,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!212 &966206372
 SpriteRenderer:
@@ -2197,8 +2235,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1844803432}
-        m_TargetAssemblyTypeName: Selet, Assembly-CSharp
-        m_MethodName: GoGame
+        m_TargetAssemblyTypeName: Select, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2437,7 +2475,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!212 &1131432336
 SpriteRenderer:
@@ -2655,6 +2693,7 @@ MonoBehaviour:
   eHit: {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
   spwanEffect: {fileID: 8849863365560508854, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}
   item: {fileID: 4111129431154144933, guid: 2b1b202871b421544a37f39efbf49c65, type: 3}
+  dashEffect: {fileID: 3462806011388405628, guid: 6cae0582876fe6e4caf1944ad3b12942, type: 3}
 --- !u!1 &1198236403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,8 +2779,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1844803432}
-        m_TargetAssemblyTypeName: Selet, Assembly-CSharp
-        m_MethodName: NewGame
+        m_TargetAssemblyTypeName: Select, Assembly-CSharp
+        m_MethodName: StartNewGame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2940,7 +2979,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!95 &1205383182
 Animator:
@@ -3182,7 +3221,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!212 &1266837753
 SpriteRenderer:
@@ -3266,7 +3305,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1340766516
 Transform:
@@ -3349,7 +3388,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1377154027
 Transform:
@@ -3387,7 +3426,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!212 &1473864616
 SpriteRenderer:
@@ -3471,7 +3510,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!212 &1488082289
 SpriteRenderer:
@@ -3692,7 +3731,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!156049354 &1506340939
 Grid:
@@ -3738,7 +3777,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1513205703
 Transform:
@@ -4205,8 +4244,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1844803432}
-        m_TargetAssemblyTypeName: Selet, Assembly-CSharp
-        m_MethodName: NewGame
+        m_TargetAssemblyTypeName: Select, Assembly-CSharp
+        m_MethodName: StartNewGame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4405,7 +4444,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!95 &1656061119
 Animator:
@@ -4644,7 +4683,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1710287286
 Transform:
@@ -5065,12 +5104,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdaf6212369827f43b1cd52c21a55b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creat: {fileID: 201266502}
-  slotText:
+  createPanel: {fileID: 201266502}
+  slotTexts:
   - {fileID: 2078513740}
   - {fileID: 1716577143}
   - {fileID: 200827674}
-  newPlayerName: {fileID: 1198295264}
+  newPlayerNameText: {fileID: 1198295264}
 --- !u!1 &1873279916
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,7 +5126,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!95 &1873279917
 Animator:
@@ -5177,6 +5216,28 @@ Transform:
   m_Father: {fileID: 603521328}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.48}
+--- !u!114 &1923864128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8484951214024908587, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+  m_PrefabInstance: {fileID: 8484951214699932656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1926395963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8484951215647299298, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+  m_PrefabInstance: {fileID: 8484951214699932656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1962934983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,7 +5358,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!95 &1990237523
 Animator:
@@ -5402,7 +5463,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!212 &2046051695
 SpriteRenderer:
@@ -5622,7 +5683,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!95 &2140435851
 Animator:
@@ -5755,6 +5816,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8484951214516371076, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 91770096}
+    - target: {fileID: 8484951214516371076, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484951214516371076, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Select, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8484951214673862921, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5792,9 +5865,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 201266502}
     - target: {fileID: 8484951214785373952, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: createPanel
+      value: 
+      objectReference: {fileID: 201266502}
+    - target: {fileID: 8484951214785373952, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
       propertyPath: newPlayerName
       value: 
       objectReference: {fileID: 1198295264}
+    - target: {fileID: 8484951214785373952, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: slotTexts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484951214785373952, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: slotTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1926395963}
+    - target: {fileID: 8484951214785373952, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: slotTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 359433928}
+    - target: {fileID: 8484951214785373952, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+      propertyPath: slotTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1923864128}
     - target: {fileID: 8484951214785373982, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
       propertyPath: m_Name
       value: Load Game Solt

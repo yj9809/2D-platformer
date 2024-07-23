@@ -152,8 +152,10 @@ public abstract class Enemy : MonoBehaviour
             return;
 
         hp -= p.AttackDamage;
+
         if (type == Type.Boss)
             ui.BossHp -= p.AttackDamage;
+
         gameObject.layer = 14;
         sprite.color = new Color(1, 1, 1, 0.4f);
 
@@ -164,7 +166,7 @@ public abstract class Enemy : MonoBehaviour
             if (type == Type.Bat)
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
-                GameObject item = Pooling.Instance.getItems();
+                GameObject item = Pooling.Instance.GetItems();
                 Vector2 itemPos = new Vector2(transform.position.x, transform.position.y + 1f);
                 item.transform.position = itemPos;
             }
@@ -207,16 +209,11 @@ public abstract class Enemy : MonoBehaviour
         if (collision.transform.GetComponent<Player>())
         {
             Vector2 pos = new Vector2(p.transform.position.x, p.transform.position.y + 1);
-            GameManager.Instance.P.OnPlayerDamage(transform.position);
-            if (p.SetHp > 0)
-            {
-                p.SetHp -= damage;
-            }
+            p.OnPlayerDamage(transform.position, damage);
 
             GameObject eHit = Pooling.Instance.GetObj(false);
             eHit.GetComponent<ParticleSystem>().Play();
             eHit.transform.position = pos;
-            //Instantiate(GameManager.Instance.hit[0], pos, Quaternion.identity);
         }
     }
     private void OnAttackCollision()

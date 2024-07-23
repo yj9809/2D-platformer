@@ -33,7 +33,7 @@ public class Gate : MonoBehaviour
                 }
                 if (nextScene == "Game (Stage 1)")
                 {
-                    gm.OnGameSceneLode(nextScene);
+                    gm.OnGameSceneLoad(nextScene);
                     gm.pos = spawonPos.localPosition;
                     ui.menu.OnSave();
                 }

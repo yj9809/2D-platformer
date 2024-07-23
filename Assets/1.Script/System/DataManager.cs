@@ -3,58 +3,84 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+[System.Serializable]
 public class PlayerData
 {
     public string name;
     public int level = 1;
     public bool newGame = true;
     public bool transOn = false;
-    public float maxHp = 10;
-    public float maxMp = 10;
-    public float hp = 10;
-    public float mp = 10;
+    public float maxHp = 10f;
+    public float maxMp = 10f;
+    public float hp = 10f;
+    public float mp = 10f;
     public int attackDamage = 2;
     public float attackSpeed = 1.5f;
-    public float speed = 5;
+    public float speed = 5f;
     public int coin = 0;
     public int potions = 6;
     public string currentScene = "Game (Stage 1)";
-    public Vector2 lastPos = new Vector2(-24, -9);
+    public Vector2 lastPos = new Vector2(-24f, -9f);
 }
 
 public class DataManager : Singleton<DataManager>
 {
     public PlayerData nowPlayer = new PlayerData();
-    public string path;
+    public string savePath;
     public int nowSlot;
 
     private void Awake()
     {
-        path = Application.persistentDataPath + "/Save";
+        savePath = Path.Combine(Application.persistentDataPath, "Save");
+        if (!Directory.Exists(savePath))
+        {
+            Directory.CreateDirectory(savePath);
+        }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        Debug.Log(path);
+        Debug.Log(savePath);
     }
 
     public void SaveData()
     {
-        string data = JsonUtility.ToJson(nowPlayer);
-        File.WriteAllText(path + nowSlot.ToString(), data);
+        string filePath = Path.Combine(savePath, $"slot_{nowSlot}.json");
+        string jsonData = JsonUtility.ToJson(nowPlayer);
+        File.WriteAllText(filePath, jsonData);
     }
+
     public void LoadData()
     {
-        string data = File.ReadAllText(path + nowSlot.ToString());
-        nowPlayer = JsonUtility.FromJson<PlayerData>(data);
-        GameManager.Instance.pos = nowPlayer.lastPos;
+        string filePath = Path.Combine(savePath, $"slot_{nowSlot}.json");
+        if (File.Exists(filePath))
+        {
+            string jsonData = File.ReadAllText(filePath);
+            nowPlayer = JsonUtility.FromJson<PlayerData>(jsonData);
+            GameManager.Instance.pos = nowPlayer.lastPos;
+        }
+        else
+        {
+            Debug.LogWarning($"Save file not found: {filePath}");
+        }
     }
 
-    public PlayerData LoadData(int index)
+    public PlayerData LoadData(int slotIndex)
     {
-        string data = File.ReadAllText(path + index.ToString());
-        PlayerData pd = JsonUtility.FromJson<PlayerData>(data);
-
-        return pd;
+        string filePath = Path.Combine(savePath, $"slot_{slotIndex}.json");
+        if (File.Exists(filePath))
+        {
+            string jsonData = File.ReadAllText(filePath);
+            return JsonUtility.FromJson<PlayerData>(jsonData);
+        }
+        else
+        {
+            Debug.LogWarning($"Save file not found: {filePath}");
+            return null;
+        }
+    }
+    public string GetSaveFilePath(int slotIndex)
+    {
+        return Path.Combine(savePath, $"slot_{slotIndex}.json");
     }
 }

@@ -8,11 +8,13 @@ public class Pooling : Singleton<Pooling>
     [SerializeField] private GameObject eHit;
     [SerializeField] private GameObject spwanEffect;
     [SerializeField] private GameObject item;
+    [SerializeField] private GameObject dashEffect;
 
     [SerializeField] private Queue<GameObject> poolPHit = new Queue<GameObject>();
     [SerializeField] private Queue<GameObject> poolEHit = new Queue<GameObject>();
     [SerializeField] private Queue<GameObject> spwanE = new Queue<GameObject>();
     [SerializeField] private Queue<GameObject> items = new Queue<GameObject>();
+    [SerializeField] private Queue<GameObject> dashs = new Queue<GameObject>();
     private GameObject CreatObj(GameObject hit)
     {
         GameObject newObj = Instantiate(hit,transform).gameObject;
@@ -31,7 +33,7 @@ public class Pooling : Singleton<Pooling>
         effect.SetActive(true);
         return effect;
     }
-    public GameObject getItems()
+    public GameObject GetItems()
     {
         GameObject item;
 
@@ -42,6 +44,18 @@ public class Pooling : Singleton<Pooling>
 
         item.SetActive(true);
         return item;
+    }
+    public GameObject GetDash()
+    {
+        GameObject dash;
+
+        if (items.Count > 0)
+            dash = dashs.Dequeue();
+        else
+            dash = Instantiate(dashEffect);
+
+        dash.SetActive(true);
+        return dash;
     }
     public GameObject GetObj(bool isPHit)
     {
@@ -80,5 +94,7 @@ public class Pooling : Singleton<Pooling>
             spwanE.Enqueue(obj);
         else if (obj.CompareTag("Item"))
             items.Enqueue(obj);
+        else if (obj.CompareTag("Dash"))
+            dashs.Enqueue(obj);
     }
 }
