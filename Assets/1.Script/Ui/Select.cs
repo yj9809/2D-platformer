@@ -56,7 +56,6 @@ public class Select : MonoBehaviour
 
         if (saveFileExists[slotIndex])
         {
-            Debug.Log("½ÇÇà");
             dataManager.LoadData();
             StartGame(false);
         }

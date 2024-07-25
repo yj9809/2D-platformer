@@ -10,7 +10,8 @@ using DG.Tweening;
 
 public class UiManager : Singleton<UiManager>
 {
-    [SerializeField] private GameObject state;
+    [SerializeField] private GameObject hpState;
+    [SerializeField] private GameObject loadMenu;
     private GameManager gm;
     private PixelPerfectCamera pixelCamera;
 
@@ -18,19 +19,18 @@ public class UiManager : Singleton<UiManager>
     public Sprite[] potionsImg;
     private Image hp;
     private Image mp;
-    public Menu menu;
+    private Menu menu;
+    private State stateBord;
     public Image nowPotions;
     public Potions potions;
 
+    private GameObject hpBar;
     public GameObject load;
-    public GameObject loadMenu;
-    private GameObject stateBar;
 
     private float dis = 550f;
     private float time = 0.5f;
     private bool onBord = false;
     private bool onMenu = false;
-    private bool isMove = false;
 
     private float bossMaxHp;
     public float BossMaxHp
@@ -38,6 +38,7 @@ public class UiManager : Singleton<UiManager>
         get { return bossMaxHp; }
         set { bossMaxHp = value; }
     }
+
     private float bossHp;
     public float BossHp
     {
@@ -77,7 +78,7 @@ public class UiManager : Singleton<UiManager>
         string sceneName = gm.scene.name;
         if (sceneName != "Main" && sceneName != "Loding")
         {
-            SetupStateBar();
+            SetHpBar();
         }
 
         if (sceneName == "BossRoom (Stage 1)" || sceneName == "BossRoom (Stage 2)")
@@ -87,18 +88,18 @@ public class UiManager : Singleton<UiManager>
         }
     }
 
-    private void SetupStateBar()
+    private void SetHpBar()
     {
         GameObject canvas = GameObject.Find("Ui Canvas");
         if (canvas != null)
         {
-            stateBar = Instantiate(this.state, canvas.transform);
+            hpBar = Instantiate(this.hpState, canvas.transform);
 
             Transform healthTransform = canvas.transform.GetChild(0).GetChild(0);
             hp = healthTransform.GetChild(1).GetChild(1).GetComponent<Image>();
             mp = healthTransform.GetChild(2).GetChild(1).GetComponent<Image>();
 
-            stateBar.SetActive(!DataManager.Instance.nowPlayer.newGame);
+            hpBar.SetActive(!DataManager.Instance.nowPlayer.newGame);
         }
     }
 
@@ -106,13 +107,15 @@ public class UiManager : Singleton<UiManager>
     {
         this.menu = menu;
     }
-
+    public void SetState(State state)
+    {
+        this.stateBord = state;
+    }
     public void SetHpImg()
     {
         Player p = gm.P;
         hp.fillAmount = p.SetHp / p.MaxHP;
     }
-
     public void SetMpImg()
     {
         Player p = gm.P;
@@ -125,17 +128,16 @@ public class UiManager : Singleton<UiManager>
         bossHpImg.fillAmount = bossHp / bossMaxHp;
     }
 
-    public void OnStateBord(Transform state)
+    public void OnStateBord()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             float targetY = onBord ? transform.position.y - dis : transform.position.y + dis;
-            state.GetComponent<RectTransform>().DOMoveY(targetY, time).SetEase(Ease.Linear);
+            stateBord.GetComponent<RectTransform>().DOMoveY(targetY, time).SetEase(Ease.Linear);
             OnStateSet();
             onBord = !onBord;
         }
     }
-
     public void OnStateSet()
     {
         State state = FindObjectOfType<State>();
@@ -173,7 +175,7 @@ public class UiManager : Singleton<UiManager>
         state.txt[3].text = gm.P.Coin.ToString();
     }
 
-    public void OnMenu(Transform menu)
+    public void OnMenu()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -182,11 +184,10 @@ public class UiManager : Singleton<UiManager>
             onMenu = !onMenu;
         }
     }
-
-    public void OnLoadMenu(Transform pos)
+    public GameObject OnLoadMenu(Transform pos)
     {
-        Instantiate(loadMenu, pos);
-        loadMenu.SetActive(true);
+        GameObject newLoadMebnu = Instantiate(loadMenu, pos);
+        return newLoadMebnu;
     }
 
     public void OnExit()
@@ -206,14 +207,21 @@ public class UiManager : Singleton<UiManager>
             .OnComplete(() =>
             {
                 gm.MainCamera.blind[0].rectTransform.DOAnchorPosY(200, 2f);
-                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f);
+                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f)
+                .OnComplete(() => 
+                {
+                    gm.GameType = GameType.Start;
+                    bossBar.SetActive(true);
+                    hpBar.SetActive(true);
+                }
+                );
                 DataManager.Instance.nowPlayer.newGame = false;
             });
     }
 
     public void BossCamera()
     {
-        state.SetActive(false);
+        hpBar.SetActive(false);
         DOTween.To(() => gm.MainCamera.GetComponent<PixelPerfectCamera>().assetsPPU,
             x => gm.MainCamera.GetComponent<PixelPerfectCamera>().assetsPPU = x, 36, 2);
         gm.MainCamera.transform.position = gm.P.transform.position;

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private Image loding;
+    private GameObject loadMenu;
     private UiManager ui;
     
     // Start is called before the first frame update
@@ -13,12 +14,7 @@ public class Menu : MonoBehaviour
     {
         ui = UiManager.Instance;
         ui.SetMenu(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        ui.OnMenu(this.transform);
+        loadMenu = ui.OnLoadMenu(this.transform);
     }
     public void OnSave()
     {
@@ -28,7 +24,10 @@ public class Menu : MonoBehaviour
     }
     public void OnLoad()
     {
-        ui.OnLoadMenu(this.transform);
+        if(loadMenu == null)
+            Debug.LogError("loadMenu에 아무것도 없어");
+
+        loadMenu.SetActive(true);
     }
     public void OnExit()
     {

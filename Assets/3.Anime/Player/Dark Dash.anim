@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 417111d8842b56c46834dfe2a65835b5, type: 3}
+      value: {fileID: -1591265841, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - time: 0.04
+      value: {fileID: -1027313806, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.08
-      value: {fileID: 21300000, guid: 345f1913a60a4584881d46aa6d15f0c6, type: 3}
-    - time: 0.17
-      value: {fileID: 21300000, guid: 3dbaedde234c8cf4597538d17f49c27a, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: 8bd40428a6b31934db7ea0354de56cdc, type: 3}
+      value: {fileID: -1246223486, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - time: 0.12
+      value: {fileID: -575676306, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,16 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 417111d8842b56c46834dfe2a65835b5, type: 3}
-    - {fileID: 21300000, guid: 345f1913a60a4584881d46aa6d15f0c6, type: 3}
-    - {fileID: 21300000, guid: 3dbaedde234c8cf4597538d17f49c27a, type: 3}
-    - {fileID: 21300000, guid: 8bd40428a6b31934db7ea0354de56cdc, type: 3}
+    - {fileID: -1591265841, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -1027313806, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -1246223486, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -575676306, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.26
+    m_StopTime: 0.13
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,11 +74,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.22
-    functionName: OffDashDamage
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

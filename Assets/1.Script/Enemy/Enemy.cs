@@ -138,7 +138,7 @@ public abstract class Enemy : MonoBehaviour
     private void Ground()
     {
         //Ground Check
-        Vector2 frontVec = new Vector2(rigid.position.x + (direction * 0.2f), rigid.position.y + 1);
+        Vector2 frontVec = new Vector2(rigid.position.x + (direction * 0.2f), rigid.position.y);
 
         RaycastHit2D rayHitDown = Physics2D.Raycast(frontVec, Vector2.down, 1f, LayerMask.GetMask("Ground"));
 
@@ -170,20 +170,21 @@ public abstract class Enemy : MonoBehaviour
 
         if (hp <= 0)
         {
-            GetComponent<Collider2D>().enabled = false;
-            GetComponent<Rigidbody2D>().simulated = false;
-            if (type == Type.Bat || type == Type.Frog)
+            if (type == Type.Bat)
+                rigid.gravityScale = 10;
+            gameObject.layer = 14;
+
+            if (type != Type.Boss)
             {
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.27f);
                 GameObject item = Pooling.Instance.GetItems();
-                Vector2 itemPos = new Vector2(transform.position.x, transform.position.y + 1f);
-                item.transform.position = itemPos;
+                item.transform.position = transform.position;
             }
 
             anime.SetBool("Death", true);
             if (type == Type.Boss)
                 GateOpen();
             Destroy(gameObject, 3f);
+            return;
         }
 
         Invoke("OffDamage", 0.5f);
@@ -205,29 +206,23 @@ public abstract class Enemy : MonoBehaviour
 
             OnEnemyDamage();
 
-            if (type == Type.Boss)
-                pos = new Vector2(transform.position.x, transform.position.y);
-
             GameObject pHit = Pooling.Instance.GetObj(true);
             pHit.GetComponent<ParticleSystem>().Play();
-            pHit.transform.position = pos;
+            pHit.transform.position = transform.position;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.GetComponent<Player>())
         {
-            Vector2 pos = new Vector2(p.transform.position.x, p.transform.position.y + 1);
-            GameManager.Instance.P.OnPlayerDamage(transform.position, damage);
             if (p.SetHp > 0)
             {
-                p.SetHp -= damage;
+                gm.P.OnPlayerDamage(transform.position, damage);
             }
 
             GameObject eHit = Pooling.Instance.GetObj(false);
             eHit.GetComponent<ParticleSystem>().Play();
-            eHit.transform.position = pos;
-            //Instantiate(GameManager.Instance.hit[0], pos, Quaternion.identity);
+            eHit.transform.position = p.transform.position;
         }
     }
     private void OnAttackCollision()

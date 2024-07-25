@@ -20,27 +20,27 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: a9579dfd6de1c724ea7bc65a0d293b5f, type: 3}
+      value: {fileID: -447758569, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.1
-      value: {fileID: 21300000, guid: fa6e1401cbe8c45469ec3b12ec74ba79, type: 3}
+      value: {fileID: 1868324326, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: 1cc918dd400248640b83d9a6d8ac0bb8, type: 3}
+      value: {fileID: -1008577735, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.3
-      value: {fileID: 21300000, guid: 306b3aff7b75fae458e06af63469b4f4, type: 3}
+      value: {fileID: 1141678121, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.4
-      value: {fileID: 21300000, guid: 0b6454e33e2cc5b4ca1d0df64469c454, type: 3}
+      value: {fileID: -974738270, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: fdb28482f5288054487c1fd3fd342a16, type: 3}
+      value: {fileID: -1668374482, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.6
-      value: {fileID: 21300000, guid: 54c27fcc5b231af4c9bc9defed797663, type: 3}
+      value: {fileID: 1083553973, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.7
-      value: {fileID: 21300000, guid: 203656c8fb704e24d94f41b6b07c6507, type: 3}
+      value: {fileID: -160070207, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.8
-      value: {fileID: 21300000, guid: 2625abe9961d60e42aeb0a8db1e65e63, type: 3}
+      value: {fileID: -1852223140, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 0.9
-      value: {fileID: 21300000, guid: 6e5dc1dceef5f8441b2b75c600e04b00, type: 3}
+      value: {fileID: -635226203, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     - time: 1
-      value: {fileID: 21300000, guid: e0161b55cb7907248879c4ba03d6a1dd, type: 3}
+      value: {fileID: -1225416453, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -60,17 +60,17 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a9579dfd6de1c724ea7bc65a0d293b5f, type: 3}
-    - {fileID: 21300000, guid: fa6e1401cbe8c45469ec3b12ec74ba79, type: 3}
-    - {fileID: 21300000, guid: 1cc918dd400248640b83d9a6d8ac0bb8, type: 3}
-    - {fileID: 21300000, guid: 306b3aff7b75fae458e06af63469b4f4, type: 3}
-    - {fileID: 21300000, guid: 0b6454e33e2cc5b4ca1d0df64469c454, type: 3}
-    - {fileID: 21300000, guid: fdb28482f5288054487c1fd3fd342a16, type: 3}
-    - {fileID: 21300000, guid: 54c27fcc5b231af4c9bc9defed797663, type: 3}
-    - {fileID: 21300000, guid: 203656c8fb704e24d94f41b6b07c6507, type: 3}
-    - {fileID: 21300000, guid: 2625abe9961d60e42aeb0a8db1e65e63, type: 3}
-    - {fileID: 21300000, guid: 6e5dc1dceef5f8441b2b75c600e04b00, type: 3}
-    - {fileID: 21300000, guid: e0161b55cb7907248879c4ba03d6a1dd, type: 3}
+    - {fileID: -447758569, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: 1868324326, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -1008577735, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: 1141678121, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -974738270, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -1668374482, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: 1083553973, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -160070207, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -1852223140, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -635226203, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
+    - {fileID: -1225416453, guid: 5d2f99b2e8bc2394c86fddf3df809709, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -96,7 +96,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.18
+  - time: 0.14
     functionName: OnAttackCollision
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -404,7 +404,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8484951214785373952}
-        m_TargetAssemblyTypeName: Selet, Assembly-CSharp
+        m_TargetAssemblyTypeName: Select, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 3
         m_Arguments:
@@ -838,7 +838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8484951214785373983
 RectTransform:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8484951214785373982}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -876,12 +876,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdaf6212369827f43b1cd52c21a55b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creat: {fileID: 0}
-  slotText:
+  createPanel: {fileID: 0}
+  slotTexts:
   - {fileID: 8484951215647299298}
   - {fileID: 8484951215358660465}
   - {fileID: 8484951214024908587}
-  newPlayerName: {fileID: 0}
+  newPlayerNameText: {fileID: 0}
 --- !u!222 &8484951214785373955
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -29,13 +29,13 @@ public class Gate : MonoBehaviour
                     gm.OnBossSceneLode(nextScene);
                     gm.boss = this.boss;
                     gm.pos = spawonPos.localPosition;
-                    ui.menu.OnSave();
+                    gm.P.Save();
                 }
                 else if (nextScene == "Game (Stage 1)")
                 {
                     gm.OnGameSceneLoad(nextScene);
                     gm.pos = spawonPos.localPosition;
-                    ui.menu.OnSave();
+                    gm.P.Save();
                 }
                 else if(nextScene == "BossRoom (Stage 2)")
                 {
@@ -43,7 +43,7 @@ public class Gate : MonoBehaviour
                     gm.OnBossSceneLode(nextScene);
                     gm.boss = this.boss;
                     gm.pos = spawonPos.localPosition;
-                    ui.menu.OnSave();
+                    gm.P.Save();
                 }
             }
         }

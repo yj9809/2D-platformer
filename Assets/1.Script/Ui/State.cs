@@ -18,14 +18,10 @@ public class State : MonoBehaviour
     {
         ui = UiManager.Instance;
         gm = GameManager.Instance;
+        ui.SetState(this);
         SetCost();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        ui.OnStateBord(this.transform);
-    }
     public void OnPush(int num)
     {
         if (gm.P.Coin >= cost)

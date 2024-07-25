@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     public bool isDash;
     public bool onDash;
     public bool doubleJump;
-    public bool trans;
+    public bool darkTransform;
     public bool OnBossRoomMove = false;
     //프로퍼티
     public float SetHp
@@ -171,7 +171,7 @@ public class Player : MonoBehaviour
         isMove = true;
         isJump = true;
         onDash = true;
-        trans = false;
+        darkTransform = false;
     }
     // Update is called once per frame
     void Update()
@@ -201,6 +201,10 @@ public class Player : MonoBehaviour
 
         // 변신
         OnTransform();
+
+        // ui 제어
+        ui.OnMenu();
+        ui.OnStateBord();
     }
     //Ui 관련
     private void HpClamp()
@@ -213,7 +217,7 @@ public class Player : MonoBehaviour
     }
     private void MpUp()
     {
-        if (SetMp <= 10 && !trans && mpTime <= 0)
+        if (SetMp <= 10 && !darkTransform && mpTime <= 0)
         {
             SetMp += 1f;
             mpTime = MpRegenInterval;
@@ -234,7 +238,7 @@ public class Player : MonoBehaviour
         {
             transform.position += new Vector3(moveInput * Speed * Time.deltaTime, 0);
             spriteRenderer.flipX = moveInput < 0;
-            transform.GetChild(0).localPosition = new Vector2(spriteRenderer.flipX ? -1.28f : 1.28f, 1.26f);
+            transform.GetChild(0).localPosition = new Vector2(spriteRenderer.flipX ? -1.28f : 1.28f, 0f);
             anime.SetBool("Run", true);
         }
         else
@@ -268,15 +272,15 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && onDash && anime.GetBool("Run"))
         {
             gameObject.layer = 10;
-            Vector2 pos = new Vector2(transform.position.x, transform.position.y + 1.25f);
             GameObject dashEffect = Pooling.Instance.GetDash();
             dashEffect.transform.GetComponent<ParticleSystemRenderer>().flip = spriteRenderer.flipX ? new Vector3(1, 0, 0) : Vector3.zero;
             dashEffect.GetComponent<ParticleSystem>().Play();
-            dashEffect.transform.position = pos;
+            dashEffect.transform.position = transform.position;
             onDash = false;
             isDash = true;
             anime.SetTrigger("IsDash");
 
+            Invoke("OffDashDamage", 0.2f);
             Invoke("OnDash", 0.5f);
         }
 
@@ -306,7 +310,7 @@ public class Player : MonoBehaviour
     {
         if (data.transOn && Input.GetKeyDown(KeyCode.G) && SetMp >= 3)
         {
-            if (!trans)
+            if (!darkTransform)
             {
                 anime.SetBool("Trans", true);
                 isMove = false;
@@ -316,7 +320,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (trans)
+        if (darkTransform)
         {
             if (transTime <= 0)
             {
@@ -333,7 +337,7 @@ public class Player : MonoBehaviour
                 anime.SetBool("Trans", false);
                 isMove = false;
                 isJump = false;
-                trans = false;
+                darkTransform = false;
                 AttackDamage /= 2;
                 AttackSpeed /= 2;
             }
@@ -341,7 +345,7 @@ public class Player : MonoBehaviour
     }
     private void TransTrue()
     {
-        trans = true;
+        darkTransform = true;
     }
     //공격 관련 & 데미지 함수
     private void Attack()
@@ -459,8 +463,7 @@ public class Player : MonoBehaviour
 
         ui.NewGameCamera(pixelCamera);
 
-        yield return new WaitForSeconds(2f);
-        ui.bossBar.SetActive(true);
-        gm.GameType = GameType.Start;
+        //yield return new WaitForSeconds(2f);
+        //gm.GameType = GameType.Start;
     }
 }

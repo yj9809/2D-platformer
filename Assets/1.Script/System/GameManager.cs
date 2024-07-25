@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager>
     public Scene scene;
     public Vector2 pos;
 
-    [SerializeField] private MainCamera mainCamera;
+    private MainCamera mainCamera;
     public MainCamera MainCamera
     {
         get

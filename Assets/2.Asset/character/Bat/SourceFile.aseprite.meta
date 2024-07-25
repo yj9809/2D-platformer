@@ -72,8 +72,8 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotSpace: 1
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
     generateModelPrefab: 1
@@ -84,8 +84,8 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotSpace: 1
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
     generateModelPrefab: 1
@@ -93,7 +93,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638463699083352657
+  platformSettingsDirtyTick: 638575157913830261
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,8 +119,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: SourceFile_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -1.4444444}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -139,8 +139,8 @@ ScriptedImporter:
     uvTransform: {x: 41, y: 4}
   - name: SourceFile_Frame_1
     originalName: 
-    pivot: {x: 0.53846157, y: -2.1666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -159,8 +159,8 @@ ScriptedImporter:
     uvTransform: {x: 61, y: 68}
   - name: SourceFile_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -1.2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -179,8 +179,8 @@ ScriptedImporter:
     uvTransform: {x: 41, y: 106}
   - name: SourceFile_Frame_3
     originalName: 
-    pivot: {x: 0.4615385, y: -2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -199,8 +199,8 @@ ScriptedImporter:
     uvTransform: {x: 61, y: 4}
   - name: SourceFile_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -1.4444444}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -219,8 +219,8 @@ ScriptedImporter:
     uvTransform: {x: 41, y: 21}
   - name: SourceFile_Frame_5
     originalName: 
-    pivot: {x: 0.7, y: -1.2727273}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -239,8 +239,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: SourceFile_Frame_6
     originalName: 
-    pivot: {x: 0.7777778, y: -1.3636364}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -259,8 +259,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 23}
   - name: SourceFile_Frame_7
     originalName: 
-    pivot: {x: 0.53846157, y: -2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -279,8 +279,8 @@ ScriptedImporter:
     uvTransform: {x: 61, y: 82}
   - name: SourceFile_Frame_8
     originalName: 
-    pivot: {x: 0.3846154, y: -1.6666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -299,8 +299,8 @@ ScriptedImporter:
     uvTransform: {x: 61, y: 96}
   - name: SourceFile_Frame_9
     originalName: 
-    pivot: {x: 0.53846157, y: -2.1666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -319,8 +319,8 @@ ScriptedImporter:
     uvTransform: {x: 61, y: 110}
   - name: SourceFile_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: -1.4444444}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -339,8 +339,8 @@ ScriptedImporter:
     uvTransform: {x: 41, y: 38}
   - name: SourceFile_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: -1.4444444}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -359,8 +359,8 @@ ScriptedImporter:
     uvTransform: {x: 41, y: 55}
   - name: SourceFile_Frame_12
     originalName: 
-    pivot: {x: 0.6363636, y: -1.2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -379,8 +379,8 @@ ScriptedImporter:
     uvTransform: {x: 22, y: 4}
   - name: SourceFile_Frame_13
     originalName: 
-    pivot: {x: 0.4615385, y: -2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -399,8 +399,8 @@ ScriptedImporter:
     uvTransform: {x: 61, y: 19}
   - name: SourceFile_Frame_14
     originalName: 
-    pivot: {x: 0.5, y: -1.4444444}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -419,8 +419,8 @@ ScriptedImporter:
     uvTransform: {x: 41, y: 72}
   - name: SourceFile_Frame_15
     originalName: 
-    pivot: {x: 0.5, y: -1.4444444}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -439,8 +439,8 @@ ScriptedImporter:
     uvTransform: {x: 41, y: 89}
   - name: SourceFile_Frame_16
     originalName: 
-    pivot: {x: 0.53846157, y: -1.8333334}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -459,8 +459,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: 4}
   - name: SourceFile_Frame_17
     originalName: 
-    pivot: {x: 0.4615385, y: -1.1666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -479,8 +479,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: 18}
   - name: SourceFile_Frame_18
     originalName: 
-    pivot: {x: 0.30769232, y: -1.1666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -499,8 +499,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: 32}
   - name: SourceFile_Frame_19
     originalName: 
-    pivot: {x: 0.23076925, y: -1}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -519,8 +519,8 @@ ScriptedImporter:
     uvTransform: {x: 61, y: 34}
   - name: SourceFile_Frame_20
     originalName: 
-    pivot: {x: 0.15384616, y: -1.1666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -539,8 +539,8 @@ ScriptedImporter:
     uvTransform: {x: 82, y: 46}
   - name: SourceFile_Frame_21
     originalName: 
-    pivot: {x: 0.5, y: -1.1818182}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -747,7 +747,7 @@ ScriptedImporter:
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -768,6 +768,28 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
     overridden: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0

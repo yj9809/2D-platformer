@@ -19,7 +19,7 @@ public class Map : MonoBehaviour
         {
             gm.OnGameSceneLoad(nextScene);
             gm.pos = spwanPos.localPosition;
-            UiManager.Instance.menu.OnSave();
+            gm.P.Save();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
