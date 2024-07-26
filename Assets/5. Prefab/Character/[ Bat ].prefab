@@ -51,8 +51,9 @@ MonoBehaviour:
   p: {fileID: 0}
   attackCollison: {fileID: 0}
   gate: {fileID: 0}
-  type: 0
+  item: {fileID: 0}
   combo: 0
+  type: 0
 --- !u!212 &3280270331628985753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -162,4 +163,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6

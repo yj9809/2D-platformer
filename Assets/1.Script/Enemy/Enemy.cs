@@ -59,7 +59,15 @@ public abstract class Enemy : MonoBehaviour
     void Update()
     {
         if (gm.GameType == GameType.Stop)
+        {
+            transform.GetComponent<Animator>().enabled = false;
+            rigid.velocity = new Vector2(0, 0);
             return;
+        }
+        else
+        {
+            transform.GetComponent<Animator>().enabled = true;
+        }
 
         if (hp <= 0)
             return;
@@ -194,7 +202,10 @@ public abstract class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             if (type == Type.Bat)
+            {
+                rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
                 rigid.gravityScale = 10;
+            }
             gameObject.layer = 14;
 
             if (type != Type.Boss)

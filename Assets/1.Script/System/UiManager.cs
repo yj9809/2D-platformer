@@ -33,8 +33,8 @@ public class UiManager : Singleton<UiManager>
 
     private float dis = 550f;
     private float time = 0.5f;
-    private bool onBord = false;
-    private bool onMenu = false;
+    [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onBord = false;
+    [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onMenu = false;
 
     private float bossMaxHp;
     public float BossMaxHp
@@ -64,7 +64,6 @@ public class UiManager : Singleton<UiManager>
         }
         SceneManager.activeSceneChanged += ActiveSceneChanged;
     }
-
     private bool CheckFile()
     {
         for (int i = 0; i < 3; i++)
@@ -76,7 +75,6 @@ public class UiManager : Singleton<UiManager>
         }
         return false;
     }
-
     private void ActiveSceneChanged(Scene current, Scene next)
     {
         string sceneName = gm.scene.name;
@@ -91,7 +89,6 @@ public class UiManager : Singleton<UiManager>
             bossBar.SetActive(false);
         }
     }
-
     private void SetHpBar()
     {
         GameObject canvas = GameObject.Find("Ui Canvas");
@@ -106,7 +103,6 @@ public class UiManager : Singleton<UiManager>
             hpBar.SetActive(!DataManager.Instance.nowPlayer.newGame);
         }
     }
-
     public void SetMenu(Menu menu)
     {
         this.menu = menu;
@@ -125,18 +121,18 @@ public class UiManager : Singleton<UiManager>
         Player p = gm.P;
         mp.fillAmount = p.SetMp / p.MaxMp;
     }
-
     public void SetBossHpImg()
     {
         Image bossHpImg = bossBar.transform.GetChild(0).GetComponent<Image>();
         bossHpImg.fillAmount = bossHp / bossMaxHp;
     }
-
     public void OnStateBord()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            Debug.Log("½ÇÇà");
             float targetY = onBord ? transform.position.y - dis : transform.position.y + dis;
+            gm.GameType = onBord ? GameType.Start : GameType.Stop;
             stateBord.GetComponent<RectTransform>().DOMoveY(targetY, time).SetEase(Ease.Linear);
             OnStateSet();
             onBord = !onBord;
@@ -172,13 +168,11 @@ public class UiManager : Singleton<UiManager>
                 break;
         }
     }
-
     public void SetCoin()
     {
         State state = FindObjectOfType<State>();
         state.txt[3].text = gm.P.Coin.ToString();
     }
-
     public void OnMenu()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -193,17 +187,14 @@ public class UiManager : Singleton<UiManager>
         GameObject newLoadMebnu = Instantiate(loadMenu, pos);
         return newLoadMebnu;
     }
-
     public void OnExit()
     {
         Application.Quit();
     }
-
     public void SetPotions(Potions potions)
     {
         this.potions = potions;
     }
-
     public void NewGameCamera(PixelPerfectCamera pixelCamera)
     {
         DOTween.To(() => (float)pixelCamera.assetsPPU, x => pixelCamera.assetsPPU = Mathf.RoundToInt(x), 16, 2f)
@@ -225,7 +216,6 @@ public class UiManager : Singleton<UiManager>
                 DataManager.Instance.nowPlayer.newGame = false;
             });
     }
-
     public void BossCamera()
     {
         hpBar.SetActive(false);

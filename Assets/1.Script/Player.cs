@@ -22,26 +22,34 @@ public class Player : MonoBehaviour
     // 포션 관련 Num
     private int potionsNum = 2;
     // 이동 관련 수치
-    private const float JumpPower = 8f;
     private const float DashSpeed = 25f;
     private const float DefaultSpeed = 5f;
     private const float DashDuration = 0.1f;
     private const float MpRegenInterval = 3f;  // MP 회복 간격
     private const float TransformMpCostInterval = 1f;
     private const float TransformMpCost = 1f;
+    // 점프 바닥 체크
+    [FoldoutGroup("Jump Control")] 
+    private const float JumpPower = 8f;
+    [FoldoutGroup("Jump Control")] 
+    [SerializeField] private Transform groundCheckObj;
+    [FoldoutGroup("Jump Control")]
+    [SerializeField] private LayerMask groundLayer;
+    [FoldoutGroup("Jump Control")]
+    [SerializeField] private bool isGround;
+
 
     private float dashTime;
     private float transTime;
     private float mpTime;
     //이동 관련 참/거짓
-    [FoldoutGroup("Moving Control")]
-    [FoldoutGroup("Moving Control")] public bool isMove;
-    [FoldoutGroup("Moving Control")] public bool isJump;
-    [FoldoutGroup("Moving Control")] public bool isDash;
-    [FoldoutGroup("Moving Control")] public bool onDash;
-    [FoldoutGroup("Moving Control")] public bool doubleJump;
-    [FoldoutGroup("Moving Control")] public bool darkTransform;
-    [FoldoutGroup("Moving Control")] public bool OnBossRoomMove = false;
+    [FoldoutGroup("Moving Control")] [ReadOnly] public bool isMove;
+    [FoldoutGroup("Moving Control")] [ReadOnly] public bool isJump;
+    [FoldoutGroup("Moving Control")] [ReadOnly] public bool isDash;
+    [FoldoutGroup("Moving Control")] [ReadOnly] public bool onDash;
+    [FoldoutGroup("Moving Control")] [ReadOnly] public bool doubleJump;
+    [FoldoutGroup("Moving Control")] [ReadOnly] public bool darkTransform;
+    [FoldoutGroup("Moving Control")] [ReadOnly] public bool OnBossRoomMove = false;
     //프로퍼티
     public float SetHp
     {
@@ -179,33 +187,33 @@ public class Player : MonoBehaviour
     {
         // 보스룸 입장시
         PlayerBossRoomMove();
-
+        // ui 제어
+        ui.OnMenu();
+        ui.OnStateBord();
         // 게임 멈춤
-        if (gm.GameType == GameType.Stop || SetHp <= 0)
+        if (gm.GameType == GameType.Stop && !data.newGame)
+        {
+            anime.enabled = false;
             return;
+        }
+        else
+            anime.enabled = true;
 
         // 수치 제한
         HpClamp();
         MpClamp();
-
         // 이동
         Move();
         Jump();
+        GroundCheck();
         Dash();
-
         // 공격
         Attack();
-
         // 포션&Mp 자연회복
         OnPotions();
         MpUp();
-
         // 변신
         OnTransform();
-
-        // ui 제어
-        ui.OnMenu();
-        ui.OnStateBord();
     }
     //Ui 관련
     private void HpClamp()
@@ -254,11 +262,10 @@ public class Player : MonoBehaviour
     }
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.X) && isJump)
+        if (Input.GetKeyDown(KeyCode.X) && isJump && isGround)
         {
             if (!anime.GetBool("IsJump"))
             {
-                anime.SetBool("IsJump", true);
                 rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
                 doubleJump = true;
             }
@@ -270,9 +277,13 @@ public class Player : MonoBehaviour
                 doubleJump = false;
             }
         }
-
+        anime.SetBool("IsJump", rigid.velocity.y > 0);
         anime.SetBool("IsFalling", rigid.velocity.y < 0);
     }    
+    private void GroundCheck()
+    {
+        isGround = Physics2D.OverlapCircle(groundCheckObj.position, 0.1f, groundLayer);
+    }
     private void Dash()
     {
         if (Input.GetKeyDown(KeyCode.Z) && onDash && anime.GetBool("Run"))
@@ -381,7 +392,7 @@ public class Player : MonoBehaviour
         if (SetHp <= 0)
         {
             GetComponent<Collider2D>().enabled = false;
-            GetComponent<Rigidbody2D>().simulated = false;
+            rigid.simulated = false;
             anime.SetTrigger("Death");
         }
     }
@@ -390,18 +401,6 @@ public class Player : MonoBehaviour
         gameObject.layer = 3;
         isMove = true;
         spriteRenderer.color = new Color(1, 1, 1, 1);
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 6)
-        {
-            anime.SetBool("IsJump", false);
-            anime.SetBool("IsFalling", false);
-        }
-        if (collision.gameObject.layer == 11)
-        {
-            OnPlayerDamage(collision.transform.position, 2);
-        }
     }
     // 포션
     public void OnPotions()
@@ -455,17 +454,9 @@ public class Player : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void ChangeGameType()
     {
-        if(collision.GetComponent<BossSpwan>())
-        {
-            transform.position = collision.transform.position;
-            anime.SetBool("Run", false);
-            collision.transform.gameObject.SetActive(false);
-            StartCoroutine(SpwanBoss());
-            StartCoroutine(CameraReset());
-            OnBossRoomMove = false;
-        }
+        gm.GameType = GameType.Stop;
     }
     IEnumerator SpwanBoss()
     {
@@ -480,5 +471,24 @@ public class Player : MonoBehaviour
 
         //yield return new WaitForSeconds(2f);
         //gm.GameType = GameType.Start;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 11)
+        {
+            OnPlayerDamage(collision.transform.position, 2);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<BossSpwan>())
+        {
+            transform.position = collision.transform.position;
+            anime.SetBool("Run", false);
+            collision.transform.gameObject.SetActive(false);
+            StartCoroutine(SpwanBoss());
+            StartCoroutine(CameraReset());
+            OnBossRoomMove = false;
+        }
     }
 }

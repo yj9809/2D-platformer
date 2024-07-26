@@ -413,7 +413,7 @@ MonoBehaviour:
     Key: Assets/1.Script/System
     Ordinal: 33
     Priority: 0
-    IconType: 0
+    IconType: 2660
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
     Key: Assets/1.Script/Enemy
     Ordinal: 34
     Priority: 0
-    IconType: 0
+    IconType: 2660
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
     Key: Assets/1.Script/Ui
     Ordinal: 35
     Priority: 0
-    IconType: 0
+    IconType: 2660
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
     Key: Assets/5. Prefab/Character
     Ordinal: 36
     Priority: 0
-    IconType: 0
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -461,7 +461,7 @@ MonoBehaviour:
     Key: Assets/2.Asset/character
     Ordinal: 37
     Priority: 0
-    IconType: 0
+    IconType: 2590
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
     Key: Assets/2.Asset/Fx
     Ordinal: 38
     Priority: 0
-    IconType: 0
+    IconType: 2590
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
     Key: Assets/2.Asset/Tile
     Ordinal: 39
     Priority: 0
-    IconType: 0
+    IconType: 2590
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -497,7 +497,7 @@ MonoBehaviour:
     Key: Assets/2.Asset/Ui
     Ordinal: 40
     Priority: 0
-    IconType: 0
+    IconType: 2590
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
     Key: Assets/3.Anime/Npc
     Ordinal: 41
     Priority: 0
-    IconType: 0
+    IconType: 2510
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
     Key: Assets/3.Anime/UI
     Ordinal: 42
     Priority: 0
-    IconType: 0
+    IconType: 2510
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -533,7 +533,7 @@ MonoBehaviour:
     Key: Assets/3.Anime/Enemy
     Ordinal: 43
     Priority: 0
-    IconType: 0
+    IconType: 2510
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -545,7 +545,7 @@ MonoBehaviour:
     Key: Assets/3.Anime/Plant
     Ordinal: 44
     Priority: 0
-    IconType: 0
+    IconType: 2510
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
     Key: Assets/3.Anime/Player
     Ordinal: 45
     Priority: 0
-    IconType: 0
+    IconType: 2510
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
     Key: Assets/5. Prefab/Ui
     Ordinal: 46
     Priority: 0
-    IconType: 0
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
     Key: Assets/5. Prefab/Tile
     Ordinal: 47
     Priority: 0
-    IconType: 0
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -593,7 +593,7 @@ MonoBehaviour:
     Key: Assets/5. Prefab/Effect
     Ordinal: 48
     Priority: 0
-    IconType: 0
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
     Key: Assets/5. Prefab/Magic
     Ordinal: 49
     Priority: 0
-    IconType: 0
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
     Key: Assets/5. Prefab/Item
     Ordinal: 50
     Priority: 0
-    IconType: 0
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
     Key: Assets/5. Prefab/Gate
     Ordinal: 51
     Priority: 0
-    IconType: 0
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0

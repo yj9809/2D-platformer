@@ -137,6 +137,9 @@ public class Pooling : Singleton<Pooling>
         else if (obj.CompareTag("Dash"))
             poolDashs.Enqueue(obj);
         else if (obj.CompareTag("Magic"))
+        {
+            obj.GetComponent<Collider2D>().enabled = false;
             poolMagic.Add(obj);
+        }
     }
 }
