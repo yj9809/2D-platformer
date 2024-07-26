@@ -9,12 +9,21 @@ public class Pooling : Singleton<Pooling>
     [SerializeField] private GameObject spwanEffect;
     [SerializeField] private GameObject item;
     [SerializeField] private GameObject dashEffect;
+    [SerializeField] private GameObject[] magic;
 
     [SerializeField] private Queue<GameObject> poolPHit = new Queue<GameObject>();
     [SerializeField] private Queue<GameObject> poolEHit = new Queue<GameObject>();
-    [SerializeField] private Queue<GameObject> spwanE = new Queue<GameObject>();
-    [SerializeField] private Queue<GameObject> items = new Queue<GameObject>();
-    [SerializeField] private Queue<GameObject> dashs = new Queue<GameObject>();
+    [SerializeField] private Queue<GameObject> poolSpwanEffect = new Queue<GameObject>();
+    [SerializeField] private Queue<GameObject> poolItem = new Queue<GameObject>();
+    [SerializeField] private Queue<GameObject> poolDashs = new Queue<GameObject>();
+    [SerializeField] private List<GameObject> poolMagic = new List<GameObject>();
+    private void Start()
+    {
+        foreach (GameObject item in magic)
+        {
+            GameObject newMagic = Instantiate(item, transform);
+        }
+    }
     private GameObject CreatObj(GameObject hit)
     {
         GameObject newObj = Instantiate(hit,transform).gameObject;
@@ -25,8 +34,8 @@ public class Pooling : Singleton<Pooling>
     {
         GameObject effect;
 
-        if (spwanE.Count > 0)
-            effect = spwanE.Dequeue();
+        if (poolSpwanEffect.Count > 0)
+            effect = poolSpwanEffect.Dequeue();
         else
             effect = Instantiate(spwanEffect);
 
@@ -37,8 +46,8 @@ public class Pooling : Singleton<Pooling>
     {
         GameObject item;
 
-        if (items.Count > 0)
-            item = items.Dequeue();
+        if (poolItem.Count > 0)
+            item = poolItem.Dequeue();
         else
             item = Instantiate(this.item);
 
@@ -49,9 +58,9 @@ public class Pooling : Singleton<Pooling>
     {
         GameObject dash;
 
-        if (dashs.Count > 0)
+        if (poolDashs.Count > 0)
         { 
-            dash = dashs.Dequeue();
+            dash = poolDashs.Dequeue();
             dash.transform.SetParent(null);
             dash.SetActive(true);
         }
@@ -97,10 +106,10 @@ public class Pooling : Singleton<Pooling>
         else if (obj.CompareTag("Ehit"))
             poolEHit.Enqueue(obj);
         else if (obj.CompareTag("SpwanEffect"))
-            spwanE.Enqueue(obj);
+            poolSpwanEffect.Enqueue(obj);
         else if (obj.CompareTag("Item"))
-            items.Enqueue(obj);
+            poolItem.Enqueue(obj);
         else if (obj.CompareTag("Dash"))
-            dashs.Enqueue(obj);
+            poolDashs.Enqueue(obj);
     }
 }
