@@ -76,7 +76,7 @@ public class GameManager : Singleton<GameManager>
     public void OnBossSceneLode(string nextScene)
     {
         LodingSceneController.LoadScene(nextScene);
-        Invoke("BossSpwanTrigger", 1f);
+        Invoke("BossSpwanTrigger", 0.6f);
     }
     public void OnGameSceneLoad(string nextScene)
     {

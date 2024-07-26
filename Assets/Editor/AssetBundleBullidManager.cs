@@ -14,5 +14,7 @@ public class AssetBundleBuildManager
         }
 
         BuildPipeline.BuildAssetBundles(directory, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
+
+        EditorUtility.DisplayDialog("에셋 번들 빌드", "에셋 번들 빌드를 완료했습니다.", "완료");
     }
 }

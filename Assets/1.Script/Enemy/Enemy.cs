@@ -60,13 +60,8 @@ public abstract class Enemy : MonoBehaviour
     {
         if (gm.GameType == GameType.Stop)
         {
-            transform.GetComponent<Animator>().enabled = false;
             rigid.velocity = new Vector2(0, 0);
             return;
-        }
-        else
-        {
-            transform.GetComponent<Animator>().enabled = true;
         }
 
         if (hp <= 0)
@@ -100,16 +95,12 @@ public abstract class Enemy : MonoBehaviour
         else if (type == Type.Boss)
         {
             float distance = Vector2.Distance(p.transform.position, transform.position);
+            Vector2 dis = p.transform.position - transform.position;
             if (distance > attackDis && isMove)
             {
-                Vector2 dis = p.transform.position - transform.position;
                 Vector3 dir = dis.normalized * Time.deltaTime * speed;
-                sprite.flipX = dis.normalized.x > 0 ? false : true;
 
-                if (middle)
-                    transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.35f) : new Vector2(-1.15f, -0.35f);
-                else if (main)
-                    transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.12f) : new Vector2(-1.15f, -0.12f);
+                BossSpriteFilp(dis);
 
                 transform.Translate(dir);
 
@@ -118,6 +109,7 @@ public abstract class Enemy : MonoBehaviour
             }
             else
             {
+                BossSpriteFilp(dis);
                 anime.SetFloat("Speed", 0);
                 attackCool -= Time.deltaTime;
                 if (attackCool < 0)
@@ -138,6 +130,15 @@ public abstract class Enemy : MonoBehaviour
                 }
             }
         }
+    }
+    private void BossSpriteFilp(Vector2 dis)
+    {
+        sprite.flipX = dis.normalized.x > 0 ? false : true;
+
+        if (middle)
+            transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.35f) : new Vector2(-1.15f, -0.35f);
+        else if (main)
+            transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.12f) : new Vector2(-1.15f, -0.12f);
     }
     private void GetMagic()
     {
@@ -237,6 +238,28 @@ public abstract class Enemy : MonoBehaviour
     {
         gate.transform.DOMoveY(-5.5f, 2f);
     }
+    private void OnAttackCollision()
+    {
+        if (type == Type.Boss)
+            attackCollison.SetActive(true);
+    }
+    private void SpwanEffect()
+    {
+        GameObject effect = pool.GetSpwanEffect();
+        if (effect != null)
+        {
+            effect.transform.position = transform.position;
+            effect.SetActive(true);
+        }
+    }
+    private bool CameraCheck()
+    {
+        Vector3 viewport = Camera.main.WorldToViewportPoint(transform.position);
+
+        return (viewport.x >= 0 && viewport.x <= 1 &&
+            viewport.y >= 0 && viewport.y <= 1 &&
+            viewport.z > 0);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<AttackCollison>())
@@ -261,27 +284,5 @@ public abstract class Enemy : MonoBehaviour
             eHit.GetComponent<ParticleSystem>().Play();
             eHit.transform.position = p.transform.position;
         }
-    }
-    private void OnAttackCollision()
-    {
-        if (type == Type.Boss)
-            attackCollison.SetActive(true);
-    }
-    private void SpwanEffect()
-    {
-        GameObject effect = pool.GetSpwanEffect();
-        if (effect != null)
-        {
-            effect.transform.position = transform.position;
-            effect.SetActive(true);
-        }
-    }
-    private bool CameraCheck()
-    {
-        Vector3 viewport = Camera.main.WorldToViewportPoint(transform.position);
-
-        return (viewport.x >= 0 && viewport.x <= 1 &&
-            viewport.y >= 0 && viewport.y <= 1 &&
-            viewport.z > 0);
     }
 }

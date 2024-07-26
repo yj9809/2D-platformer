@@ -8,8 +8,6 @@ public class MainCamera : MonoBehaviour
 
     private Player p;
     private GameManager gm;
-
-    public Image[] blind;
     private void Start()
     {
         p = GameManager.Instance.P;

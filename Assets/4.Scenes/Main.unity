@@ -1545,19 +1545,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nowPlayer:
     name: 
+    currentScene: Game (Stage 1)
     level: 1
-    newGame: 1
-    transOn: 0
+    attackDamage: 2
+    coin: 0
+    potions: 6
     maxHp: 10
     maxMp: 10
     hp: 10
     mp: 10
-    attackDamage: 2
     attackSpeed: 1.5
     speed: 5
-    coin: 0
-    potions: 6
-    currentScene: Game (Stage 1)
+    newGame: 1
+    blackSoul: 1
     lastPos: {x: -24, y: -9}
   savePath: 
   nowSlot: 0
@@ -1615,6 +1615,8 @@ MonoBehaviour:
   potions: {fileID: 0}
   nowPotions: {fileID: 0}
   load: {fileID: 1606094695}
+  onBord: 0
+  onMenu: 0
 --- !u!1 &820713803
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,11 +12,9 @@ public class Gate : MonoBehaviour
     [SerializeField] private GameObject boss;
 
     private GameManager gm;
-    private UiManager ui;
     private void Start()
     {
         gm = GameManager.Instance;
-        ui = UiManager.Instance;
     }
     private void Update()
     {
@@ -39,7 +37,6 @@ public class Gate : MonoBehaviour
                 }
                 else if(nextScene == "BossRoom (Stage 2)")
                 {
-                    Debug.Log("½ÇÇà");
                     gm.OnBossSceneLode(nextScene);
                     gm.boss = this.boss;
                     gm.pos = spawonPos.localPosition;

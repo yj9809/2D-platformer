@@ -16,6 +16,7 @@ public class UiManager : Singleton<UiManager>
 
     [TabGroup("Game Scene Ui")] [SerializeField] private GameObject hpState;
     [TabGroup("Game Scene Ui")] [SerializeField] private GameObject loadMenu;
+    [TabGroup("Game Scene Ui")] [SerializeField] private GameObject coinBox;
     [TabGroup("Game Scene Ui")] public GameObject bossBar;
 
     [TabGroup("Potion")] public Sprite[] potionsImg;
@@ -130,7 +131,6 @@ public class UiManager : Singleton<UiManager>
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Debug.Log("½ÇÇà");
             float targetY = onBord ? transform.position.y - dis : transform.position.y + dis;
             gm.GameType = onBord ? GameType.Start : GameType.Stop;
             stateBord.GetComponent<RectTransform>().DOMoveY(targetY, time).SetEase(Ease.Linear);
@@ -154,8 +154,8 @@ public class UiManager : Singleton<UiManager>
         switch (num)
         {
             case 0:
-                p.MaxHP += 2;
-                p.SetHp += 2;
+                p.MaxHP += 4;
+                p.SetHp += 4;
                 break;
             case 1:
                 p.AttackDamage += 2;
@@ -201,29 +201,24 @@ public class UiManager : Singleton<UiManager>
             .SetEase(Ease.InOutQuad)
             .OnComplete(() =>
             {
-                gm.MainCamera.blind[0].rectTransform.DOAnchorPosY(200, 0.5f);
-                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 0.5f)
-                .OnComplete(() => 
-                {
-                    gm.GameType = GameType.Start;
+                gm.GameType = GameType.Start;
 
-                    if(bossBar != null)
-                        bossBar.SetActive(true);
+                if(bossBar != null)
+                    bossBar.SetActive(true);
+                hpBar.SetActive(true);
 
-                    hpBar.SetActive(true);
-                }
-                );
+                stateBord.CoinBoxActive(true);
+
                 DataManager.Instance.nowPlayer.newGame = false;
             });
     }
     public void BossCamera()
     {
         hpBar.SetActive(false);
+        stateBord.CoinBoxActive(false);
         PixelPerfectCamera ppc = gm.MainCamera.GetComponent<PixelPerfectCamera>();
         DOTween.To(() => (float)ppc.assetsPPU, x => ppc.assetsPPU = Mathf.RoundToInt(x), 36f, 2f);
         gm.MainCamera.transform.position = gm.P.transform.position;
-        gm.MainCamera.blind[0].rectTransform.anchoredPosition = Vector2.zero;
-        gm.MainCamera.blind[1].rectTransform.anchoredPosition = Vector2.zero;
 
         gm.P.OnBossRoomMove = true;
     }

@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 126779236}
   - component: {fileID: 126779235}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: 'Text (TMP) : Coin Box'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2773,6 +2773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db4b45b378bf05469856bd23c084e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinBox: {fileID: 1893674107}
   txt:
   - {fileID: 2111800587}
   - {fileID: 852016405}
@@ -2948,7 +2949,7 @@ GameObject:
   - component: {fileID: 1893674110}
   - component: {fileID: 1893674109}
   m_Layer: 5
-  m_Name: Coin
+  m_Name: Coin Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

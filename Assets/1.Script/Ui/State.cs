@@ -6,9 +6,9 @@ using TMPro;
 
 public class State : MonoBehaviour
 {
+    [SerializeField] private GameObject coinBox;
     public TMP_Text[] txt;
     [SerializeField] private Image[] item;
-
     private GameManager gm;
     private DataManager data;
     private UiManager ui;
@@ -20,6 +20,10 @@ public class State : MonoBehaviour
         ui = UiManager.Instance;
         gm = GameManager.Instance;
         data = DataManager.Instance;
+
+        if (data.nowPlayer.newGame)
+            coinBox.SetActive(false);
+
         ui.SetState(this);
         SetCost();
     }
@@ -41,5 +45,9 @@ public class State : MonoBehaviour
     public void UpdateItem()
     {
         item[0].gameObject.SetActive(data.nowPlayer.blackSoul);
+    }
+    public void CoinBoxActive(bool isCoinBox)
+    {
+        coinBox.SetActive(isCoinBox);
     }
 }

@@ -167,8 +167,6 @@ public class Player : MonoBehaviour
         if (data.newGame)
         {
             pixelCamera.assetsPPU = 36;
-            gm.MainCamera.blind[0].rectTransform.anchoredPosition = Vector2.zero;
-            gm.MainCamera.blind[1].rectTransform.anchoredPosition = Vector2.zero;
             anime.SetTrigger("Start");
         }
 
@@ -191,13 +189,8 @@ public class Player : MonoBehaviour
         ui.OnMenu();
         ui.OnStateBord();
         // ∞‘¿” ∏ÿ√„
-        if (gm.GameType == GameType.Stop && !data.newGame)
-        {
-            anime.enabled = false;
+        if (gm.GameType == GameType.Stop)
             return;
-        }
-        else
-            anime.enabled = true;
 
         // ºˆƒ° ¡¶«—
         HpClamp();
@@ -391,6 +384,7 @@ public class Player : MonoBehaviour
 
         if (SetHp <= 0)
         {
+            gm.GameType = GameType.Stop;
             GetComponent<Collider2D>().enabled = false;
             rigid.simulated = false;
             anime.SetTrigger("Death");
@@ -442,7 +436,6 @@ public class Player : MonoBehaviour
             GameObject collision = GameObject.Find("BossSpwan");
             Vector2 currentPosition = transform.position;
             Vector2 targetPosition = collision.transform.position;
-            
 
             float dis = Vector2.Distance(currentPosition, targetPosition);
 
@@ -460,7 +453,7 @@ public class Player : MonoBehaviour
     }
     IEnumerator SpwanBoss()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         gm.SpwanBoss();
     }
     IEnumerator CameraReset()
@@ -468,9 +461,6 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         ui.NewGameCamera(pixelCamera);
-
-        //yield return new WaitForSeconds(2f);
-        //gm.GameType = GameType.Start;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -51,8 +51,9 @@ MonoBehaviour:
   p: {fileID: 0}
   attackCollison: {fileID: 0}
   gate: {fileID: 0}
-  type: 0
+  item: {fileID: 0}
   combo: 0
+  type: 0
 --- !u!212 &6978952750418934327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -160,6 +161,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15625, y: 1.4375}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.48
