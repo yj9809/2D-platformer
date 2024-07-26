@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 public enum GameType
 {
@@ -12,11 +13,11 @@ public enum GameType
 }
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject gate;
+    [TabGroup("Obj")]
+    [TabGroup("Obj")] [SerializeField] private GameObject player;
+    [TabGroup("Obj")] [SerializeField] private GameObject gate;
 
-    public GameObject boss;
-    public GameObject[] hit;
+    [TabGroup("Boss")] public GameObject boss;
     public Scene scene;
     public Vector2 pos;
 
@@ -31,6 +32,8 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    [Title("Game Type")]
+    [EnumToggleButtons]
     [SerializeField] private GameType gameType = GameType.Stop;
     public GameType GameType
     {

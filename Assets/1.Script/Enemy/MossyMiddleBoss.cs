@@ -17,6 +17,7 @@ public class MossyMiddleBoss : Enemy
         type = Type.Boss;
         attackDis = 5f;
         speed = 3f;
+        mossyMiddle = true;
 
         base.Init();
     }

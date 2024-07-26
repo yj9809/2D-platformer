@@ -1,27 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class Pooling : Singleton<Pooling>
 {
-    [SerializeField] private GameObject pHit;
-    [SerializeField] private GameObject eHit;
-    [SerializeField] private GameObject spwanEffect;
-    [SerializeField] private GameObject item;
-    [SerializeField] private GameObject dashEffect;
-    [SerializeField] private GameObject[] magic;
+    [BoxGroup("Skill")] [SerializeField] private GameObject[] magic;
+    [BoxGroup("Skill")] [SerializeField] private List<GameObject> poolMagic = new List<GameObject>();
 
-    [SerializeField] private Queue<GameObject> poolPHit = new Queue<GameObject>();
-    [SerializeField] private Queue<GameObject> poolEHit = new Queue<GameObject>();
-    [SerializeField] private Queue<GameObject> poolSpwanEffect = new Queue<GameObject>();
-    [SerializeField] private Queue<GameObject> poolItem = new Queue<GameObject>();
-    [SerializeField] private Queue<GameObject> poolDashs = new Queue<GameObject>();
-    [SerializeField] private List<GameObject> poolMagic = new List<GameObject>();
+    [FoldoutGroup("PoolObj")] [SerializeField] private GameObject pHit;
+    [FoldoutGroup("PoolObj")] [SerializeField] private GameObject eHit;
+    [FoldoutGroup("PoolObj")] [SerializeField] private GameObject spwanEffect;
+    [FoldoutGroup("PoolObj")] [SerializeField] private GameObject item;
+    [FoldoutGroup("PoolObj")] [SerializeField] private GameObject dashEffect;
+
+    private Queue<GameObject> poolPHit = new Queue<GameObject>();
+    private Queue<GameObject> poolEHit = new Queue<GameObject>();
+    private Queue<GameObject> poolSpwanEffect = new Queue<GameObject>();
+    private Queue<GameObject> poolItem = new Queue<GameObject>();
+    private Queue<GameObject> poolDashs = new Queue<GameObject>();
     private void Start()
     {
         foreach (GameObject item in magic)
         {
             GameObject newMagic = Instantiate(item, transform);
+            newMagic.SetActive(false);
+            poolMagic.Add(newMagic);
         }
     }
     private GameObject CreatObj(GameObject hit)
@@ -72,6 +76,27 @@ public class Pooling : Singleton<Pooling>
         }
         return dash;
     }
+    public GameObject GetMagic()
+    {
+        GameObject magic;
+
+        if(poolMagic.Count > 0)
+        {
+            int randomNum = Random.Range(0, poolMagic.Count);
+            magic = poolMagic[randomNum];
+            magic.transform.SetParent(null);
+            magic.SetActive(true);
+            poolMagic.RemoveAt(randomNum);
+        }
+        else
+        {
+            int randomNum = Random.Range(0, this.magic.Length);
+            magic = Instantiate(this.magic[randomNum]);
+            magic.SetActive(true);
+        }
+
+        return magic;
+    }
     public GameObject GetObj(bool isPHit)
     {
         if (isPHit)
@@ -111,5 +136,7 @@ public class Pooling : Singleton<Pooling>
             poolItem.Enqueue(obj);
         else if (obj.CompareTag("Dash"))
             poolDashs.Enqueue(obj);
+        else if (obj.CompareTag("Magic"))
+            poolMagic.Add(obj);
     }
 }

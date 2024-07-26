@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 public enum Type
 {
@@ -11,23 +12,28 @@ public enum Type
 }
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] private Player p;
-    [SerializeField] private GameObject attackCollison;
-    [SerializeField] private GameObject gate;
+    [BoxGroup("Enemy Reference")] [SerializeField] private Player p;
+    [BoxGroup("Enemy Reference")] [SerializeField] private GameObject attackCollison;
+    [BoxGroup("Enemy Reference")] [SerializeField] private GameObject gate;
+    [BoxGroup("Enemy Reference")] [SerializeField] private GameObject item;
+    [BoxGroup("Enemy Reference")] [SerializeField] private int combo;
 
     private GameManager gm;
     private UiManager ui;
+    private Pooling pool;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private Animator anime;
 
+    [Title("Enemy Type")]
+    [EnumToggleButtons]
     [SerializeField] protected Type type;
+
     protected int damage;
     protected float attackDis;
     protected float speed;
     protected float hp;
 
-    [SerializeField] private int combo;
     private float attackCool = 2f;
     private int direction;
 
@@ -38,11 +44,12 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Init()
     {
         gm = GameManager.Instance;
+        ui = UiManager.Instance;
+        pool = Pooling.Instance;
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
         p = GameManager.Instance.P;
-        ui = UiManager.Instance;
         gate = GameObject.Find("Gate");
         isMove = false;
         ChangeDirection();
@@ -107,15 +114,27 @@ public abstract class Enemy : MonoBehaviour
                 attackCool -= Time.deltaTime;
                 if (attackCool < 0)
                 {
-                    int ran = Random.Range(0, combo);
-                    int ranCool = Random.Range(1, 4);
+                    if(!mossyMiddle)
+                    {
+                        int ran = Random.Range(0, combo);
+                        anime.SetFloat("AttackNum", ran);
+                        anime.SetTrigger("Attack");
+                    }
+                    else
+                    {
+                        anime.SetBool("Attack", true);
+                    }
                     isMove = false;
-                    anime.SetFloat("AttackNum", ran);
-                    anime.SetTrigger("Attack");
+                    int ranCool = Random.Range(1, 4);
                     attackCool = ranCool;
                 }
             }
         }
+    }
+    private void GetMagic()
+    {
+        GameObject magic = pool.GetMagic();
+        magic.transform.position = p.transform.position;
     }
     protected void SetBossHp()
     {
@@ -163,8 +182,12 @@ public abstract class Enemy : MonoBehaviour
             return;
 
         hp -= p.AttackDamage;
-        if (type == Type.Boss)
+
+        if (type == Type.Boss && !anime.GetBool("Attack"))
+        { 
             ui.BossHp -= p.AttackDamage;
+            anime.SetTrigger("Hit");
+        }
         gameObject.layer = 14;
         sprite.color = new Color(1, 1, 1, 0.4f);
 
@@ -176,7 +199,12 @@ public abstract class Enemy : MonoBehaviour
 
             if (type != Type.Boss)
             {
-                GameObject item = Pooling.Instance.GetItems();
+                GameObject item = pool.GetItems();
+                item.transform.position = transform.position;
+            }
+            else
+            {
+                GameObject item = Instantiate(this.item);
                 item.transform.position = transform.position;
             }
 
@@ -202,11 +230,9 @@ public abstract class Enemy : MonoBehaviour
     {
         if (collision.GetComponent<AttackCollison>())
         {
-            Vector2 pos = new Vector2(transform.position.x, transform.position.y + 1);
-
             OnEnemyDamage();
 
-            GameObject pHit = Pooling.Instance.GetObj(true);
+            GameObject pHit = pool.GetObj(true);
             pHit.GetComponent<ParticleSystem>().Play();
             pHit.transform.position = transform.position;
         }
@@ -220,7 +246,7 @@ public abstract class Enemy : MonoBehaviour
                 gm.P.OnPlayerDamage(transform.position, damage);
             }
 
-            GameObject eHit = Pooling.Instance.GetObj(false);
+            GameObject eHit = pool.GetObj(false);
             eHit.GetComponent<ParticleSystem>().Play();
             eHit.transform.position = p.transform.position;
         }
@@ -232,7 +258,7 @@ public abstract class Enemy : MonoBehaviour
     }
     private void SpwanEffect()
     {
-        GameObject effect = Pooling.Instance.GetSpwanEffect();
+        GameObject effect = pool.GetSpwanEffect();
         if (effect != null)
         {
             effect.transform.position = transform.position;

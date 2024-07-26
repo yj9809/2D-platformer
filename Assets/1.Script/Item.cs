@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
+public enum ItemType
+{
+    NomalItem,
+    BossItem
+}
 public class Item : MonoBehaviour
 {
     private float bounceForce = 300f;
+    [Title("Itme Type")]
+    [EnumToggleButtons] [SerializeField] private ItemType itemType;
     Rigidbody2D rd;
     private void OnEnable()
     {
@@ -26,8 +34,15 @@ public class Item : MonoBehaviour
     {
         if (collision.transform.GetComponent<Player>())
         {
-            GameManager.Instance.P.Coin += 5;
-            Pooling.Instance.ReturnObj(this.gameObject);
+            if(itemType == ItemType.NomalItem)
+            { 
+                GameManager.Instance.P.Coin += 5;
+                Pooling.Instance.ReturnObj(this.gameObject);
+            }
+            else
+            {
+
+            }
         }
 
     }

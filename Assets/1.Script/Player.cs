@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 public class Player : MonoBehaviour
 {
@@ -29,18 +30,18 @@ public class Player : MonoBehaviour
     private const float TransformMpCostInterval = 1f;
     private const float TransformMpCost = 1f;
 
-    public float defaultTime;
     private float dashTime;
     private float transTime;
     private float mpTime;
     //이동 관련 참/거짓
-    public bool isMove;
-    public bool isJump;
-    public bool isDash;
-    public bool onDash;
-    public bool doubleJump;
-    public bool darkTransform;
-    public bool OnBossRoomMove = false;
+    [FoldoutGroup("Moving Control")]
+    [FoldoutGroup("Moving Control")] public bool isMove;
+    [FoldoutGroup("Moving Control")] public bool isJump;
+    [FoldoutGroup("Moving Control")] public bool isDash;
+    [FoldoutGroup("Moving Control")] public bool onDash;
+    [FoldoutGroup("Moving Control")] public bool doubleJump;
+    [FoldoutGroup("Moving Control")] public bool darkTransform;
+    [FoldoutGroup("Moving Control")] public bool OnBossRoomMove = false;
     //프로퍼티
     public float SetHp
     {
@@ -246,6 +247,11 @@ public class Player : MonoBehaviour
             anime.SetBool("Run", false);
         }
     }
+    private void OnMove()
+    {
+        isMove = true;
+        isJump = true;
+    }
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.X) && isJump)
@@ -308,7 +314,7 @@ public class Player : MonoBehaviour
     // 변신 관련
     private void OnTransform()
     {
-        if (data.transOn && Input.GetKeyDown(KeyCode.G) && SetMp >= 3)
+        if (data.blackSoul && Input.GetKeyDown(KeyCode.G) && SetMp >= 3)
         {
             if (!darkTransform)
             {
@@ -408,11 +414,20 @@ public class Player : MonoBehaviour
             ui.potions.PotionsImage();
         }
     }
+    // 부활
+    private void Resurrection()
+    {
+
+    }
     // 저장
     public void Save()
     {
-        LastPos = new Vector2(transform.position.x, transform.position.y);
-        data.currentScene = gm.scene.name;
+        if(gm.scene.name == "Game (Stage 1)" || gm.scene.name == "Game (Stage 2)")
+        {
+            data.currentScene = gm.scene.name;
+            LastPos = new Vector2(transform.position.x, transform.position.y);
+        }
+
         dm.SaveData();
     }
     // 새로운 게임 시작시

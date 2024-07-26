@@ -810,9 +810,6 @@ MonoBehaviour:
   player: {fileID: 1510126982303488584, guid: 3e0d59f314bc5c4438e3e33b85b94536, type: 3}
   gate: {fileID: 0}
   boss: {fileID: 0}
-  hit:
-  - {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
-  - {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
   scene:
     m_Handle: 0
   pos: {x: -21, y: -10}
@@ -1615,8 +1612,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fca12e7b2cfa26241a884d544840ac91, type: 3}
   - {fileID: 21300000, guid: 5280fe7ab6c0de14ebeffaa095f1ace5, type: 3}
   - {fileID: 21300000, guid: 5baba638a09b920499258cffd4a7afe8, type: 3}
-  nowPotions: {fileID: 0}
   potions: {fileID: 0}
+  nowPotions: {fileID: 0}
   load: {fileID: 1606094695}
 --- !u!1 &820713803
 GameObject:
@@ -2666,6 +2663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3765076085f9c428561ffb008215f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magic:
+  - {fileID: 7771095704047211135, guid: 7092363f724c1d34aa9574f29b55ba1e, type: 3}
+  - {fileID: 5573701404462026282, guid: 2fbb2323b486a094fa9c82d4d8541a13, type: 3}
+  - {fileID: 1654257199695846592, guid: 040652084e4a9e245aa9edbad5536970, type: 3}
+  poolMagic: []
   pHit: {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
   eHit: {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
   spwanEffect: {fileID: 8849863365560508854, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}
@@ -5228,7 +5230,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 65535
 --- !u!114 &1962934985
 MonoBehaviour:
   m_ObjectHideFlags: 0

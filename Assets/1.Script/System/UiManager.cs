@@ -7,25 +7,29 @@ using UnityEngine.U2D;
 using System.IO;
 using TMPro;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 public class UiManager : Singleton<UiManager>
 {
-    [SerializeField] private GameObject hpState;
-    [SerializeField] private GameObject loadMenu;
     private GameManager gm;
     private PixelPerfectCamera pixelCamera;
 
-    public GameObject bossBar;
-    public Sprite[] potionsImg;
+    [TabGroup("Game Scene Ui")] [SerializeField] private GameObject hpState;
+    [TabGroup("Game Scene Ui")] [SerializeField] private GameObject loadMenu;
+    [TabGroup("Game Scene Ui")] public GameObject bossBar;
+
+    [TabGroup("Potion")] public Sprite[] potionsImg;
+    [TabGroup("Potion")] public Potions potions;
+    [TabGroup("Potion")] public Image nowPotions;
+
+    [TabGroup("Main Scene Ui")] public GameObject load;
+
     private Image hp;
     private Image mp;
-    private Menu menu;
     private State stateBord;
-    public Image nowPotions;
-    public Potions potions;
-
+    private Menu menu;
     private GameObject hpBar;
-    public GameObject load;
+
 
     private float dis = 550f;
     private float time = 0.5f;
@@ -146,8 +150,8 @@ public class UiManager : Singleton<UiManager>
         state.txt[0].text = $"{p.MaxHP}\n{p.AttackDamage}\n{p.AttackSpeed}\n{p.Speed}%";
         state.txt[1].text = $"{p.Coin}";
         state.txt[4].text = $"{p.Level}";
+        state.UpdateItem();
     }
-
     public void StateUp(int num)
     {
         Player p = gm.P;
@@ -202,16 +206,19 @@ public class UiManager : Singleton<UiManager>
 
     public void NewGameCamera(PixelPerfectCamera pixelCamera)
     {
-        DOTween.To(() => pixelCamera.assetsPPU, x => pixelCamera.assetsPPU = x, 16, 2)
+        DOTween.To(() => (float)pixelCamera.assetsPPU, x => pixelCamera.assetsPPU = Mathf.RoundToInt(x), 16, 2f)
             .SetEase(Ease.InOutQuad)
             .OnComplete(() =>
             {
-                gm.MainCamera.blind[0].rectTransform.DOAnchorPosY(200, 2f);
-                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 2f)
+                gm.MainCamera.blind[0].rectTransform.DOAnchorPosY(200, 0.5f);
+                gm.MainCamera.blind[1].rectTransform.DOAnchorPosY(-200, 0.5f)
                 .OnComplete(() => 
                 {
                     gm.GameType = GameType.Start;
-                    bossBar.SetActive(true);
+
+                    if(bossBar != null)
+                        bossBar.SetActive(true);
+
                     hpBar.SetActive(true);
                 }
                 );
@@ -222,8 +229,8 @@ public class UiManager : Singleton<UiManager>
     public void BossCamera()
     {
         hpBar.SetActive(false);
-        DOTween.To(() => gm.MainCamera.GetComponent<PixelPerfectCamera>().assetsPPU,
-            x => gm.MainCamera.GetComponent<PixelPerfectCamera>().assetsPPU = x, 36, 2);
+        PixelPerfectCamera ppc = gm.MainCamera.GetComponent<PixelPerfectCamera>();
+        DOTween.To(() => (float)ppc.assetsPPU, x => ppc.assetsPPU = Mathf.RoundToInt(x), 36f, 2f);
         gm.MainCamera.transform.position = gm.P.transform.position;
         gm.MainCamera.blind[0].rectTransform.anchoredPosition = Vector2.zero;
         gm.MainCamera.blind[1].rectTransform.anchoredPosition = Vector2.zero;

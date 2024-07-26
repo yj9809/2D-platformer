@@ -13,6 +13,7 @@ TagManager:
   - BossSpwan
   - Item
   - Dash
+  - Magic
   layers:
   - Default
   - TransparentFX

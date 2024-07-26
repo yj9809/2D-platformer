@@ -72,7 +72,7 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
+    defaultPivotSpace: 1
     defaultPivotAlignment: 9
     customPivotPosition: {x: 0.5, y: 0.3}
     spritePadding: 0
@@ -84,7 +84,7 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
+    defaultPivotSpace: 1
     defaultPivotAlignment: 9
     customPivotPosition: {x: 0.5, y: 0.3}
     spritePadding: 0
@@ -93,7 +93,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638575133437149705
+  platformSettingsDirtyTick: 638575987236688932
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -139,7 +139,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Fire-bomb_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0.20444447}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -159,7 +159,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 4}
   - name: Fire-bomb_Frame_2
     originalName: 
-    pivot: {x: 0.48, y: 0.24800003}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -179,7 +179,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 126}
   - name: Fire-bomb_Frame_3
     originalName: 
-    pivot: {x: 0.4, y: 0.24000016}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -199,7 +199,7 @@ ScriptedImporter:
     uvTransform: {x: 109, y: 146}
   - name: Fire-bomb_Frame_4
     originalName: 
-    pivot: {x: 0.45454547, y: 0.4333334}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -219,7 +219,7 @@ ScriptedImporter:
     uvTransform: {x: 109, y: 126}
   - name: Fire-bomb_Frame_5
     originalName: 
-    pivot: {x: 0.45454547, y: 0.36428577}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -239,7 +239,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 188}
   - name: Fire-bomb_Frame_6
     originalName: 
-    pivot: {x: 0.4857143, y: 0.4636364}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -259,7 +259,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 96}
   - name: Fire-bomb_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: 0.1500001}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -279,7 +279,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 224}
   - name: Fire-bomb_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: 0.20000003}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -299,7 +299,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 159}
   - name: Fire-bomb_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: 0.26451614}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -319,7 +319,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 57}
   - name: Fire-bomb_Frame_10
     originalName: 
-    pivot: {x: 0.5106383, y: 0.2871795}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -339,7 +339,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 4}
   - name: Fire-bomb_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: 0.25454548}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -359,7 +359,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 188}
   - name: Fire-bomb_Frame_12
     originalName: 
-    pivot: {x: 0.5, y: 0.2541667}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -379,7 +379,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 76}
   - name: Fire-bomb_Frame_13
     originalName: 
-    pivot: {x: 0.5, y: 0.2541667}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
