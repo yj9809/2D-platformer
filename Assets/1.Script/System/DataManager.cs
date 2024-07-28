@@ -29,8 +29,10 @@ public class DataManager : Singleton<DataManager>
     public string savePath;
     public int nowSlot;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         savePath = Path.Combine(Application.persistentDataPath, "Save");
         if (!Directory.Exists(savePath))
         {

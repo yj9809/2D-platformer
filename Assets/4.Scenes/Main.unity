@@ -1607,6 +1607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpState: {fileID: 727310817691022128, guid: c7ae184bb8fddca4b8b4c7ff839f890f, type: 3}
   loadMenu: {fileID: 8484951214785373982, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
+  coinBox: {fileID: 0}
   bossBar: {fileID: 0}
   potionsImg:
   - {fileID: 21300000, guid: fca12e7b2cfa26241a884d544840ac91, type: 3}
@@ -2552,6 +2553,7 @@ Transform:
   - {fileID: 767411899}
   - {fileID: 736457664}
   - {fileID: 1173787581}
+  - {fileID: 1708219899}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2669,7 +2671,10 @@ MonoBehaviour:
   - {fileID: 7771095704047211135, guid: 7092363f724c1d34aa9574f29b55ba1e, type: 3}
   - {fileID: 5573701404462026282, guid: 2fbb2323b486a094fa9c82d4d8541a13, type: 3}
   - {fileID: 1654257199695846592, guid: 040652084e4a9e245aa9edbad5536970, type: 3}
+  mainBossMagic:
+  - {fileID: 1046801010489759685, guid: 6d0fb9716e43d3341a5f99c7411cbc48, type: 3}
   poolMagic: []
+  poolMainBossMagic: []
   pHit: {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
   eHit: {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
   spwanEffect: {fileID: 8849863365560508854, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}
@@ -4650,6 +4655,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672898874}
   m_CullTransparentMesh: 1
+--- !u!1 &1708219898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708219899}
+  - component: {fileID: 1708219900}
+  m_Layer: 0
+  m_Name: '[ Audio Manager ]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1708219899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708219898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1136787152}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1708219900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708219898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81ad700db4b86e49ad0f8ca68723de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: d7045fa9a60796644a38c7799affd4c9, type: 2}
+  bgmClip: {fileID: 8300000, guid: d35e22bd92efa3f4aba3723235498535, type: 3}
+  bgmVolume: 2
+  sfxClips:
+  - {fileID: 8300000, guid: a189f7c5d80ffa846853641d57ba989c, type: 3}
+  - {fileID: 8300000, guid: e95c2c8f3146ab841942771b20a1433a, type: 3}
+  - {fileID: 8300000, guid: ea8acf7008ce6f54383d49c2b216208a, type: 3}
+  - {fileID: 8300000, guid: 0861fea72fe4a8544a999f2673c69aea, type: 3}
+  - {fileID: 8300000, guid: caadf5725c0aad74fb774d56a3cd4f87, type: 3}
+  - {fileID: 8300000, guid: bbf4df089624532489995480a097afcd, type: 3}
+  sfxVolume: 2
+  sfxChannels: 3
 --- !u!1 &1710287285
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,6 +41,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool main = false;
     protected bool middle = false;
     protected bool mossyMiddle = false;
+    protected bool mossyMain = false;
     protected virtual void Init()
     {
         gm = GameManager.Instance;
@@ -139,10 +140,13 @@ public abstract class Enemy : MonoBehaviour
             transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.35f) : new Vector2(-1.15f, -0.35f);
         else if (main)
             transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.12f) : new Vector2(-1.15f, -0.12f);
+        else if (mossyMain)
+            transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(2.5f, -0.12f) : new Vector2(-2.5f, -0.12f);
     }
     private void GetMagic()
     {
-        GameObject magic = pool.GetMagic();
+        bool mainBoss = mossyMain ? true : false;
+        GameObject magic = pool.GetMagic(mainBoss);
         magic.transform.position = p.transform.position;
     }
     protected void SetBossHp()

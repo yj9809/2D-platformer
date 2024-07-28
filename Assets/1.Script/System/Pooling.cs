@@ -6,7 +6,9 @@ using Sirenix.OdinInspector;
 public class Pooling : Singleton<Pooling>
 {
     [BoxGroup("Skill")] [SerializeField] private GameObject[] magic;
+    [BoxGroup("Skill")] [SerializeField] private GameObject[] mainBossMagic;
     [BoxGroup("Skill")] [SerializeField] private List<GameObject> poolMagic = new List<GameObject>();
+    [BoxGroup("Skill")] [SerializeField] private List<GameObject> poolMainBossMagic = new List<GameObject>();
 
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject pHit;
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject eHit;
@@ -26,6 +28,12 @@ public class Pooling : Singleton<Pooling>
             GameObject newMagic = Instantiate(item, transform);
             newMagic.SetActive(false);
             poolMagic.Add(newMagic);
+        }
+        foreach (GameObject item in mainBossMagic)
+        {
+            GameObject newMagic = Instantiate(item, transform);
+            newMagic.SetActive(false);
+            poolMainBossMagic.Add(newMagic);
         }
     }
     private GameObject CreatObj(GameObject hit)
@@ -76,23 +84,43 @@ public class Pooling : Singleton<Pooling>
         }
         return dash;
     }
-    public GameObject GetMagic()
+    public GameObject GetMagic(bool mainBoss)
     {
         GameObject magic;
 
-        if(poolMagic.Count > 0)
+        if(!mainBoss)
         {
-            int randomNum = Random.Range(0, poolMagic.Count);
-            magic = poolMagic[randomNum];
-            magic.transform.SetParent(null);
-            magic.SetActive(true);
-            poolMagic.RemoveAt(randomNum);
+            if (poolMagic.Count > 0)
+            {
+                int randomNum = Random.Range(0, poolMagic.Count);
+                magic = poolMagic[randomNum];
+                magic.transform.SetParent(null);
+                magic.SetActive(true);
+                poolMagic.RemoveAt(randomNum);
+            }
+            else
+            {
+                int randomNum = Random.Range(0, this.magic.Length);
+                magic = Instantiate(this.magic[randomNum]);
+                magic.SetActive(true);
+            }
         }
         else
         {
-            int randomNum = Random.Range(0, this.magic.Length);
-            magic = Instantiate(this.magic[randomNum]);
-            magic.SetActive(true);
+            if (poolMainBossMagic.Count > 0)
+            {
+                int randomNum = Random.Range(0, poolMainBossMagic.Count);
+                magic = poolMainBossMagic[randomNum];
+                magic.transform.SetParent(null);
+                magic.SetActive(true);
+                poolMainBossMagic.RemoveAt(randomNum);
+            }
+            else
+            {
+                int randomNum = Random.Range(0, this.mainBossMagic.Length);
+                magic = Instantiate(this.mainBossMagic[randomNum]);
+                magic.SetActive(true);
+            }
         }
 
         return magic;
@@ -140,6 +168,11 @@ public class Pooling : Singleton<Pooling>
         {
             obj.GetComponent<Collider2D>().enabled = false;
             poolMagic.Add(obj);
+        }
+        else if (obj.CompareTag("MainBossMagic"))
+        {
+            obj.GetComponent<Collider2D>().enabled = false;
+            poolMainBossMagic.Add(obj);
         }
     }
 }

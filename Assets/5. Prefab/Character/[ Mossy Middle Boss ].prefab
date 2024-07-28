@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2818380737222154412}
   - component: {fileID: 1140696154}
   - component: {fileID: 3349868147235186208}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: '[ Mossy Middle Boss ]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ MonoBehaviour:
   p: {fileID: 0}
   attackCollison: {fileID: 0}
   gate: {fileID: 0}
+  item: {fileID: 0}
   combo: 0
   type: 0
 --- !u!212 &2818380737222154415
