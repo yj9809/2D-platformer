@@ -23,25 +23,19 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             return instance;
         }
     }
-    private void Awake()
+    protected virtual void Awake()
     {
-        if (transform.parent != null)
+        if (instance == null)
         {
-            DontDestroyOnLoad(transform.parent);
-        }
-        else
-        {
-            if (instance == null)
-            {
-                instance = (T)FindObjectOfType(typeof(T));
-                DontDestroyOnLoad(gameObject);
-            }
+            instance = this as T;
+            if (transform.parent != null)
+                DontDestroyOnLoad(transform.parent.gameObject);
             else
-            {
                 DontDestroyOnLoad(gameObject);
-            }
         }
-
-        
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 }

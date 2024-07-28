@@ -64,8 +64,9 @@ public class GameManager : Singleton<GameManager>
             return p;
         }
     }
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         scene = SceneManager.GetActiveScene();
         SceneManager.activeSceneChanged += UpdateActiveScene;
     }

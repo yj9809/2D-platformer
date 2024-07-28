@@ -14,6 +14,8 @@ TagManager:
   - Item
   - Dash
   - Magic
+  - MainBossMagic
+  - Black Soul
   layers:
   - Default
   - TransparentFX

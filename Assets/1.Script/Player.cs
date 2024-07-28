@@ -12,12 +12,13 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject attackCollision;
     // 참조
     private GameManager gm;
+    private UiManager ui;
+    private DataManager dm;
+    private AudioManager am;
+    private PlayerData data;
     private Animator anime;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
-    private UiManager ui;
-    private DataManager dm;
-    private PlayerData data;
     private PixelPerfectCamera pixelCamera;
     // 포션 관련 Num
     private int potionsNum = 2;
@@ -155,9 +156,10 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         gm = GameManager.Instance;
-        data = DataManager.Instance.nowPlayer;
+        data = DataManager.Instance.NowPlayer;
         ui = UiManager.Instance;
         dm = DataManager.Instance;
+        am = AudioManager.Instance;
     }
     // Start is called before the first frame update
     void Start()
@@ -315,6 +317,10 @@ public class Player : MonoBehaviour
     {
         gameObject.layer = 3;
     }
+    private void RunSound()
+    {
+        am.PlaySfx(3);
+    }
     // 변신 관련
     private void OnTransform()
     {
@@ -357,6 +363,14 @@ public class Player : MonoBehaviour
     {
         darkTransform = true;
     }
+    private void TransSoundBefore()
+    {
+        am.PlaySfx(4);
+    }
+    private void TransSoundAfter()
+    {
+        am.PlaySfx(5);
+    }
     //공격 관련 & 데미지 함수
     private void Attack()
     {
@@ -395,6 +409,10 @@ public class Player : MonoBehaviour
         gameObject.layer = 3;
         isMove = true;
         spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+    private void AttackSound(int num)
+    {
+        am.PlaySfx(num);
     }
     // 포션
     public void OnPotions()

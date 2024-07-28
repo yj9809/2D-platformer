@@ -19,18 +19,31 @@ public class PlayerData
     public float attackSpeed = 1.5f;
     public float speed = 5f;
     public bool newGame = true;
-    public bool blackSoul = true;
+    public bool blackSoul = false;
     public Vector2 lastPos = new Vector2(-24f, -9f);
 }
 
 public class DataManager : Singleton<DataManager>
 {
-    [ReadOnly] public PlayerData nowPlayer = new PlayerData();
-    public string savePath;
-    public int nowSlot;
+    [Title("Player Data")] 
+    [ReadOnly] 
+    [SerializeField] private PlayerData nowPlayer = new PlayerData();
+    
+    [FoldoutGroup("Save")] public string savePath;
+    [FoldoutGroup("Save")] public int nowSlot;
 
-    private void Awake()
+    public PlayerData NowPlayer
     {
+        get { return nowPlayer; }
+        set
+        {
+            nowPlayer = value;
+        }
+    }
+    protected override void Awake()
+    {
+        base.Awake();
+
         savePath = Path.Combine(Application.persistentDataPath, "Save");
         if (!Directory.Exists(savePath))
         {

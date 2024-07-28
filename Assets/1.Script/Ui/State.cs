@@ -21,7 +21,7 @@ public class State : MonoBehaviour
         gm = GameManager.Instance;
         data = DataManager.Instance;
 
-        if (data.nowPlayer.newGame)
+        if (data.NowPlayer.newGame)
             coinBox.SetActive(false);
 
         ui.SetState(this);
@@ -44,7 +44,7 @@ public class State : MonoBehaviour
     }
     public void UpdateItem()
     {
-        item[0].gameObject.SetActive(data.nowPlayer.blackSoul);
+        item[0].gameObject.SetActive(data.NowPlayer.blackSoul);
     }
     public void CoinBoxActive(bool isCoinBox)
     {

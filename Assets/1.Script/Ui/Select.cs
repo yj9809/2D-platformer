@@ -70,16 +70,16 @@ public class Select : MonoBehaviour
     {
         if (!saveFileExists[dataManager.nowSlot])
         {
-            dataManager.nowPlayer.name = newPlayerNameText.text;
+            dataManager.NowPlayer.name = newPlayerNameText.text;
             dataManager.SaveData();
         }
 
         if (!isNewGame)
         {
-            dataManager.nowPlayer.newGame = false;
+            dataManager.NowPlayer.newGame = false;
             GameManager.Instance.GameType = GameType.Start;
         }
 
-        GameManager.Instance.OnGameSceneLoad(dataManager.nowPlayer.currentScene);
+        GameManager.Instance.OnGameSceneLoad(dataManager.NowPlayer.currentScene);
     }
 }

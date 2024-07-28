@@ -101,7 +101,7 @@ public class UiManager : Singleton<UiManager>
             hp = healthTransform.GetChild(1).GetChild(1).GetComponent<Image>();
             mp = healthTransform.GetChild(2).GetChild(1).GetComponent<Image>();
 
-            hpBar.SetActive(!DataManager.Instance.nowPlayer.newGame);
+            hpBar.SetActive(!DataManager.Instance.NowPlayer.newGame);
         }
     }
     public void SetMenu(Menu menu)
@@ -209,7 +209,7 @@ public class UiManager : Singleton<UiManager>
 
                 stateBord.CoinBoxActive(true);
 
-                DataManager.Instance.nowPlayer.newGame = false;
+                DataManager.Instance.NowPlayer.newGame = false;
             });
     }
     public void BossCamera()
