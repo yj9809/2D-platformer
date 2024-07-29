@@ -17,7 +17,16 @@ public class GameManager : Singleton<GameManager>
     [TabGroup("Obj")] [SerializeField] private GameObject player;
     [TabGroup("Obj")] [SerializeField] private GameObject gate;
 
-    [TabGroup("Boss")] public GameObject boss;
+    [TabGroup("Boss")] [SerializeField] private GameObject boss;
+    public GameObject Boss
+    {
+        get { return boss; }
+        set
+        {
+            boss = value;
+        }
+    }
+
     public Scene scene;
     public Vector2 pos;
 

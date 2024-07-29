@@ -123,8 +123,9 @@ MonoBehaviour:
   p: {fileID: 0}
   attackCollison: {fileID: 917200283219181886}
   gate: {fileID: 0}
-  type: 0
+  item: {fileID: 8058297567033184939, guid: fbaa994cff69bf14099fef80368a8d32, type: 3}
   combo: 3
+  type: 0
 --- !u!212 &917200283811601066
 SpriteRenderer:
   m_ObjectHideFlags: 0

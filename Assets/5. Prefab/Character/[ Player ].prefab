@@ -122,6 +122,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCollision: {fileID: 1510126981276409305}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8192
+  targetEnemy: {fileID: 0}
   groundCheckObj: {fileID: 8929326978777728542}
   groundLayer:
     serializedVersion: 2

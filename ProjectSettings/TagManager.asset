@@ -16,6 +16,9 @@ TagManager:
   - Magic
   - MainBossMagic
   - Black Soul
+  - Wings Shoes
+  - Skill Book
+  - Player Magic
   layers:
   - Default
   - TransparentFX

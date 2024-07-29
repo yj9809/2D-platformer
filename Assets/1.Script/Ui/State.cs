@@ -45,6 +45,7 @@ public class State : MonoBehaviour
     public void UpdateItem()
     {
         item[0].gameObject.SetActive(data.NowPlayer.blackSoul);
+        item[1].gameObject.SetActive(data.NowPlayer.wingsShoes);
     }
     public void CoinBoxActive(bool isCoinBox)
     {

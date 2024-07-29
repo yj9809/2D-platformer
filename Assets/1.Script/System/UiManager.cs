@@ -17,6 +17,8 @@ public class UiManager : Singleton<UiManager>
     [TabGroup("Game Scene Ui")] [SerializeField] private GameObject hpState;
     [TabGroup("Game Scene Ui")] [SerializeField] private GameObject loadMenu;
     [TabGroup("Game Scene Ui")] [SerializeField] private GameObject coinBox;
+    [TabGroup("Game Scene Ui")] [SerializeField] private Image portrait;
+    [TabGroup("Game Scene Ui")] [SerializeField] private Sprite[] portraitSprite;
     [TabGroup("Game Scene Ui")] public GameObject bossBar;
 
     [TabGroup("Potion")] public Sprite[] potionsImg;
@@ -82,12 +84,29 @@ public class UiManager : Singleton<UiManager>
         if (sceneName != "Main" && sceneName != "Loding")
         {
             SetHpBar();
+            SetPortrait();
         }
 
         if (sceneName == "BossRoom (Stage 1)" || sceneName == "BossRoom (Stage 2)")
         {
             bossBar = GameObject.Find("Boss Bar");
             bossBar.SetActive(false);
+        }
+    }
+    private void SetPortrait()
+    {
+        portrait = GameObject.Find("Portrait").GetComponent<Image>();
+        portrait.sprite = portraitSprite[0];
+    }
+    public void ChengePortrait()
+    {
+        if(portrait.sprite == portraitSprite[0])
+        {
+            portrait.sprite = portraitSprite[1];
+        }
+        else
+        {
+            portrait.sprite = portraitSprite[0];
         }
     }
     private void SetHpBar()

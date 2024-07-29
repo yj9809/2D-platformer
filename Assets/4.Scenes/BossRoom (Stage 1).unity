@@ -432,6 +432,10 @@ PrefabInstance:
       propertyPath: nextScene
       value: Game (Stage 1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3651813960287991936, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
+      propertyPath: spawonPos
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd19ab2d980a9564a8fdcad13f2157a1, type: 3}
 --- !u!1 &210468673
@@ -1559,9 +1563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32604f4e4a3b734984ad332647a5834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blind:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &846663321
 Transform:
   m_ObjectHideFlags: 0

@@ -96,6 +96,8 @@ public abstract class Enemy : MonoBehaviour
         else if (type == Type.Boss)
         {
             float distance = Vector2.Distance(p.transform.position, transform.position);
+            Debug.Log(distance);
+            Debug.Log(isMove);
             Vector2 dis = p.transform.position - transform.position;
             if (distance > attackDis && isMove)
             {

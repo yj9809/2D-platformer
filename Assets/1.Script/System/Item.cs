@@ -10,6 +10,9 @@ public enum ItemType
 }
 public class Item : MonoBehaviour
 {
+    private GameManager gm;
+    private DataManager data;
+
     private float bounceForce = 300f;
     [Title("Itme Type")]
     [EnumToggleButtons] [SerializeField] private ItemType itemType;
@@ -21,6 +24,8 @@ public class Item : MonoBehaviour
     private void Start()
     {
         rd = GetComponent<Rigidbody2D>();
+        gm = GameManager.Instance;
+        data = DataManager.Instance;
         Drop();
     }
     private void Drop()
@@ -36,14 +41,24 @@ public class Item : MonoBehaviour
         {
             if(itemType == ItemType.NomalItem)
             { 
-                GameManager.Instance.P.Coin += 10;
+                gm.P.Coin += 10;
                 Pooling.Instance.ReturnObj(gameObject);
             }
             else
             {
                 if(gameObject.CompareTag("Black Soul"))
                 {
-                    DataManager.Instance.NowPlayer.blackSoul = true;
+                    data.NowPlayer.blackSoul = true;
+                    Destroy(gameObject);
+                }
+                else if(gameObject.CompareTag("Wings Shoes"))
+                {
+                    data.NowPlayer.wingsShoes = true;
+                    Destroy(gameObject);
+                }
+                else if(gameObject.CompareTag("Skill Book"))
+                {
+                    data.NowPlayer.skillBook = true;
                     Destroy(gameObject);
                 }
             }

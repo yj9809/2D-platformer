@@ -8,12 +8,27 @@ using Sirenix.OdinInspector;
 
 public class Player : MonoBehaviour
 {
-    // 공격용 콜리더
+    // 상수 플레이어 수치
+    private const float DashSpeed = 25f;
+    private const float DefaultSpeed = 5f;
+    private const float DashDuration = 0.1f;
+    private const float MpRegenInterval = 3f;  // MP 회복 간격
+    private const float TransformMpCostInterval = 1f;
+    private const float TransformMpCost = 1f;
+    // 쿨타임
+    private float magicCool = 2f;
+    private float dashTime;
+    private float transTime;
+    private float mpTime;
+    // 공격용 참조
     [SerializeField] private GameObject attackCollision;
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private Transform targetEnemy;
     // 참조
     private GameManager gm;
     private UiManager ui;
     private DataManager dm;
+    private Pooling pool;
     private AudioManager am;
     private PlayerData data;
     private Animator anime;
@@ -22,13 +37,6 @@ public class Player : MonoBehaviour
     private PixelPerfectCamera pixelCamera;
     // 포션 관련 Num
     private int potionsNum = 2;
-    // 이동 관련 수치
-    private const float DashSpeed = 25f;
-    private const float DefaultSpeed = 5f;
-    private const float DashDuration = 0.1f;
-    private const float MpRegenInterval = 3f;  // MP 회복 간격
-    private const float TransformMpCostInterval = 1f;
-    private const float TransformMpCost = 1f;
     // 점프 바닥 체크
     [FoldoutGroup("Jump Control")] 
     private const float JumpPower = 8f;
@@ -40,9 +48,6 @@ public class Player : MonoBehaviour
     [SerializeField] private bool isGround;
 
 
-    private float dashTime;
-    private float transTime;
-    private float mpTime;
     //이동 관련 참/거짓
     [FoldoutGroup("Moving Control")] [ReadOnly] public bool isMove;
     [FoldoutGroup("Moving Control")] [ReadOnly] public bool isJump;
@@ -158,6 +163,7 @@ public class Player : MonoBehaviour
         gm = GameManager.Instance;
         data = DataManager.Instance.NowPlayer;
         ui = UiManager.Instance;
+        pool = Pooling.Instance;
         dm = DataManager.Instance;
         am = AudioManager.Instance;
     }
@@ -195,8 +201,8 @@ public class Player : MonoBehaviour
             return;
 
         // 수치 제한
-        HpClamp();
-        MpClamp();
+        ClampHealth();
+        ClampMana();
         // 이동
         Move();
         Jump();
@@ -204,18 +210,19 @@ public class Player : MonoBehaviour
         Dash();
         // 공격
         Attack();
+        GetMagic();
         // 포션&Mp 자연회복
-        OnPotions();
+        UsePotion();
         MpUp();
         // 변신
         OnTransform();
     }
     //Ui 관련
-    private void HpClamp()
+    private void ClampHealth()
     {
         SetHp = Mathf.Clamp(SetHp, 0, MaxHP);
     }
-    private void MpClamp()
+    private void ClampMana()
     {
         SetMp = Mathf.Clamp(SetMp, 0, MaxMp);
     }
@@ -257,16 +264,14 @@ public class Player : MonoBehaviour
     }
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.X) && isJump && isGround)
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            if (!anime.GetBool("IsJump"))
+            if (isGround)
             {
                 rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
-                doubleJump = true;
             }
             else if (doubleJump)
             {
-                anime.SetBool("IsJump", true);
                 rigid.velocity = new Vector2(rigid.velocity.x, 0f);
                 rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
                 doubleJump = false;
@@ -278,13 +283,21 @@ public class Player : MonoBehaviour
     private void GroundCheck()
     {
         isGround = Physics2D.OverlapCircle(groundCheckObj.position, 0.1f, groundLayer);
+
+        if(isGround)
+        {
+            if(data.wingsShoes)
+            {
+                doubleJump = true;
+            }
+        }
     }
     private void Dash()
     {
         if (Input.GetKeyDown(KeyCode.Z) && onDash && anime.GetBool("Run"))
         {
             gameObject.layer = 10;
-            GameObject dashEffect = Pooling.Instance.GetDash();
+            GameObject dashEffect = pool.GetDash();
             dashEffect.transform.GetComponent<ParticleSystemRenderer>().flip = spriteRenderer.flipX ? new Vector3(1, 0, 0) : Vector3.zero;
             dashEffect.GetComponent<ParticleSystem>().Play();
             dashEffect.transform.position = transform.position;
@@ -328,11 +341,13 @@ public class Player : MonoBehaviour
         {
             if (!darkTransform)
             {
+                gameObject.layer = 10;
                 anime.SetBool("Trans", true);
                 isMove = false;
                 isJump = false;
-                AttackDamage *= 2;
-                AttackSpeed *= 2;
+                AttackDamage = (AttackDamage + 6);
+                AttackSpeed = (AttackSpeed + 0.5f);
+                ui.ChengePortrait();
             }
         }
 
@@ -350,12 +365,14 @@ public class Player : MonoBehaviour
 
             if (SetMp <= 0)
             {
+                gameObject.layer = 10;
                 anime.SetBool("Trans", false);
                 isMove = false;
                 isJump = false;
                 darkTransform = false;
-                AttackDamage /= 2;
-                AttackSpeed /= 2;
+                AttackDamage = (AttackDamage - 6);
+                AttackSpeed = (AttackSpeed - 0.5f);
+                ui.ChengePortrait();
             }
         }
     }
@@ -390,8 +407,6 @@ public class Player : MonoBehaviour
 
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
-        int dirc = transform.position.x - pos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc, 1) * 2, ForceMode2D.Impulse);
         SetHp -= damage;
         isMove = false;
         Invoke("OffDamage", 0.5f);
@@ -414,8 +429,37 @@ public class Player : MonoBehaviour
     {
         am.PlaySfx(num);
     }
+    private void GetMagic()
+    {
+        TargetEnemy();
+        magicCool -= Time.deltaTime;
+        if(Input.GetKeyDown(KeyCode.V) && data.skillBook && targetEnemy != null && magicCool <= 0 && SetMp >= 3)
+        {
+            anime.SetTrigger("Magic");
+            SetMp -= 3f;
+            GameObject magic = pool.GetMagic(this);
+            magic.transform.position = targetEnemy.transform.position;
+            magicCool = 2f;
+        }
+    }
+    private void TargetEnemy()
+    {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, 5f, enemyLayer);
+        Transform nearEnemy = null;
+        float minDistance = Mathf.Infinity;
+        foreach (Collider2D enemy in enemies)
+        {
+            float distance = Vector2.Distance(transform.position, enemy.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearEnemy = enemy.transform;
+            }
+        }
+        targetEnemy = nearEnemy;
+    }
     // 포션
-    public void OnPotions()
+    public void UsePotion()
     {
         if (Input.GetKeyDown(KeyCode.R) && Potions > 0 && SetHp != MaxHP)
         {

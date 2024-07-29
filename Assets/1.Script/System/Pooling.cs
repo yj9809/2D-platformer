@@ -7,8 +7,10 @@ public class Pooling : Singleton<Pooling>
 {
     [BoxGroup("Skill")] [SerializeField] private GameObject[] magic;
     [BoxGroup("Skill")] [SerializeField] private GameObject[] mainBossMagic;
+    [BoxGroup("Skill")] [SerializeField] private GameObject[] playerMagic;
     [BoxGroup("Skill")] [SerializeField] private List<GameObject> poolMagic = new List<GameObject>();
     [BoxGroup("Skill")] [SerializeField] private List<GameObject> poolMainBossMagic = new List<GameObject>();
+    [BoxGroup("Skill")] [SerializeField] private List<GameObject> poolPlayerMagic = new List<GameObject>();
 
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject pHit;
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject eHit;
@@ -18,27 +20,33 @@ public class Pooling : Singleton<Pooling>
 
     private Queue<GameObject> poolPHit = new Queue<GameObject>();
     private Queue<GameObject> poolEHit = new Queue<GameObject>();
-    private Queue<GameObject> poolSpwanEffect = new Queue<GameObject>();
+    private Queue<GameObject> poolSpawnEffect = new Queue<GameObject>();
     private Queue<GameObject> poolItem = new Queue<GameObject>();
     private Queue<GameObject> poolDashs = new Queue<GameObject>();
-    private void Start()
+    protected override void Awake()
     {
-        foreach (GameObject item in magic)
+        base.Awake();
+        InitializePool(magic, poolMagic);
+        InitializePool(mainBossMagic, poolMainBossMagic);
+        InitializePool(playerMagic, poolPlayerMagic);
+    }
+    private void InitializePool(GameObject[] prefabs, List<GameObject> pool)
+    {
+        foreach (GameObject prefab in prefabs)
         {
-            GameObject newMagic = Instantiate(item, transform);
-            newMagic.SetActive(false);
-            poolMagic.Add(newMagic);
-        }
-        foreach (GameObject item in mainBossMagic)
-        {
-            GameObject newMagic = Instantiate(item, transform);
-            newMagic.SetActive(false);
-            poolMainBossMagic.Add(newMagic);
+            GameObject newObj = Instantiate(prefab, transform);
+            newObj.SetActive(false);
+            pool.Add(newObj);
         }
     }
-    private GameObject CreatObj(GameObject hit)
+    private GameObject CreateObj(GameObject prefab)
     {
-        GameObject newObj = Instantiate(hit,transform).gameObject;
+        if (prefab == null)
+        {
+            Debug.LogError("Prefab is null.");
+            return null;
+        }
+        GameObject newObj = Instantiate(prefab, transform);
         newObj.SetActive(false);
         return newObj;
     }
@@ -46,10 +54,10 @@ public class Pooling : Singleton<Pooling>
     {
         GameObject effect;
 
-        if (poolSpwanEffect.Count > 0)
-            effect = poolSpwanEffect.Dequeue();
+        if (poolSpawnEffect.Count > 0)
+            effect = poolSpawnEffect.Dequeue();
         else
-            effect = Instantiate(spwanEffect);
+            effect = CreateObj(spwanEffect);
 
         effect.SetActive(true);
         return effect;
@@ -61,7 +69,7 @@ public class Pooling : Singleton<Pooling>
         if (poolItem.Count > 0)
             item = poolItem.Dequeue();
         else
-            item = Instantiate(this.item);
+            item = CreateObj(this.item);
 
         item.SetActive(true);
         return item;
@@ -78,7 +86,7 @@ public class Pooling : Singleton<Pooling>
         }
         else
         {
-            dash = Instantiate(dashEffect);
+            dash = CreateObj(dashEffect);
             dash.transform.SetParent(null);
             dash.SetActive(true);
         }
@@ -86,93 +94,102 @@ public class Pooling : Singleton<Pooling>
     }
     public GameObject GetMagic(bool mainBoss)
     {
-        GameObject magic;
+        List<GameObject> pool = mainBoss ? poolMainBossMagic : poolMagic;
+        GameObject[] prefabs = mainBoss ? mainBossMagic : magic;
 
-        if(!mainBoss)
+        if (pool.Count > 0)
         {
-            if (poolMagic.Count > 0)
-            {
-                int randomNum = Random.Range(0, poolMagic.Count);
-                magic = poolMagic[randomNum];
-                magic.transform.SetParent(null);
-                magic.SetActive(true);
-                poolMagic.RemoveAt(randomNum);
-            }
-            else
-            {
-                int randomNum = Random.Range(0, this.magic.Length);
-                magic = Instantiate(this.magic[randomNum]);
-                magic.SetActive(true);
-            }
+            int randomIndex = Random.Range(0, pool.Count);
+            GameObject magic = pool[randomIndex];
+            pool.RemoveAt(randomIndex);
+            magic.transform.SetParent(null);
+            magic.SetActive(true);
+            return magic;
         }
         else
         {
-            if (poolMainBossMagic.Count > 0)
-            {
-                int randomNum = Random.Range(0, poolMainBossMagic.Count);
-                magic = poolMainBossMagic[randomNum];
-                magic.transform.SetParent(null);
-                magic.SetActive(true);
-                poolMainBossMagic.RemoveAt(randomNum);
-            }
-            else
-            {
-                int randomNum = Random.Range(0, this.mainBossMagic.Length);
-                magic = Instantiate(this.mainBossMagic[randomNum]);
-                magic.SetActive(true);
-            }
+            int randomIndex = Random.Range(0, prefabs.Length);
+            GameObject magic = Instantiate(prefabs[randomIndex]);
+            magic.SetActive(true);
+            return magic;
+        }
+    }
+    public GameObject GetMagic(Player p)
+    {
+        GameObject magic;
+
+        if(poolPlayerMagic.Count > 0)
+        {
+            int randomNum = Random.Range(0, poolPlayerMagic.Count);
+            magic = poolPlayerMagic[randomNum];
+            magic.transform.SetParent(null);
+            magic.SetActive(true);
+            poolPlayerMagic.RemoveAt(randomNum);
+        }
+        else
+        {
+            int randomNum = Random.Range(0, playerMagic.Length);
+            magic = CreateObj(playerMagic[randomNum]);
+            magic.SetActive(true);
         }
 
         return magic;
     }
     public GameObject GetObj(bool isPHit)
     {
-        if (isPHit)
-            return GetObjFromPool(poolPHit);
-        else
-            return GetObjFromPool(poolEHit);
+        return GetObjFromPool(isPHit ? poolPHit : poolEHit, isPHit ? pHit : eHit);
     }
-    private GameObject GetObjFromPool(Queue<GameObject> pool)
+    private GameObject GetObjFromPool(Queue<GameObject> pool, GameObject prefab)
+{
+    if (pool.Count > 0)
     {
-        if (pool.Count > 0)
-        {
-            GameObject obj = pool.Dequeue();
-            obj.transform.SetParent(null);
-            obj.SetActive(true);
-            return obj;
-        }
-        else
-        {
-            GameObject newObj = CreatObj(pool == poolPHit ? pHit : eHit);
-            newObj.transform.SetParent(null);
-            newObj.SetActive(true);
-            return newObj;
-        }
+        GameObject obj = pool.Dequeue();
+        obj.transform.SetParent(null);
+        obj.SetActive(true);
+        return obj;
     }
+    else
+    {
+        GameObject newObj = CreateObj(prefab);
+        newObj.transform.SetParent(null);
+        newObj.SetActive(true);
+        return newObj;
+    }
+}
     public void ReturnObj(GameObject obj)
     {
         obj.SetActive(false);
         obj.transform.SetParent(transform);
 
-        if (obj.CompareTag("PHit"))
-            poolPHit.Enqueue(obj);
-        else if (obj.CompareTag("Ehit"))
-            poolEHit.Enqueue(obj);
-        else if (obj.CompareTag("SpwanEffect"))
-            poolSpwanEffect.Enqueue(obj);
-        else if (obj.CompareTag("Item"))
-            poolItem.Enqueue(obj);
-        else if (obj.CompareTag("Dash"))
-            poolDashs.Enqueue(obj);
-        else if (obj.CompareTag("Magic"))
+        switch (obj.tag)
         {
-            obj.GetComponent<Collider2D>().enabled = false;
-            poolMagic.Add(obj);
-        }
-        else if (obj.CompareTag("MainBossMagic"))
-        {
-            obj.GetComponent<Collider2D>().enabled = false;
-            poolMainBossMagic.Add(obj);
+            case "PHit":
+                poolPHit.Enqueue(obj);
+                break;
+            case "Ehit":
+                poolEHit.Enqueue(obj);
+                break;
+            case "SpawnEffect":
+                poolSpawnEffect.Enqueue(obj);
+                break;
+            case "Item":
+                poolItem.Enqueue(obj);
+                break;
+            case "Dash":
+                poolDashs.Enqueue(obj);
+                break;
+            case "Magic":
+                obj.GetComponent<Collider2D>().enabled = false;
+                poolMagic.Add(obj);
+                break;
+            case "MainBossMagic":
+                obj.GetComponent<Collider2D>().enabled = false;
+                poolMainBossMagic.Add(obj);
+                break;
+            case "Player Magic":
+                obj.GetComponent<Collider2D>().enabled = false;
+                poolPlayerMagic.Add(obj);
+                break;
         }
     }
 }

@@ -20,6 +20,8 @@ public class PlayerData
     public float speed = 5f;
     public bool newGame = true;
     public bool blackSoul = false;
+    public bool wingsShoes = false;
+    public bool skillBook = false;
     public Vector2 lastPos = new Vector2(-24f, -9f);
 }
 

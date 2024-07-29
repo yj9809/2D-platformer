@@ -25,20 +25,24 @@ public class Gate : MonoBehaviour
                 if (nextScene == "BossRoom (Stage 1)")
                 {
                     gm.OnBossSceneLode(nextScene);
-                    gm.boss = this.boss;
+                    gm.Boss = this.boss;
                     gm.pos = spawonPos.localPosition;
                     gm.P.Save();
                 }
                 else if (nextScene == "Game (Stage 1)")
                 {
                     gm.OnGameSceneLoad(nextScene);
-                    gm.pos = spawonPos.localPosition;
+                    if (spawonPos != null)
+                        gm.pos = spawonPos.localPosition;
+                    else
+                        gm.pos = gm.P.LastPos;
                     gm.P.Save();
                 }
                 else if(nextScene == "BossRoom (Stage 2)")
                 {
+                    Debug.Log(this.boss);
                     gm.OnBossSceneLode(nextScene);
-                    gm.boss = this.boss;
+                    gm.Boss = this.boss;
                     gm.pos = spawonPos.localPosition;
                     gm.P.Save();
                 }

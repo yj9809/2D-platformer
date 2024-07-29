@@ -787,8 +787,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230950031}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.307729, y: -1.7341013, z: 0.15689498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1558,6 +1558,8 @@ MonoBehaviour:
     speed: 5
     newGame: 1
     blackSoul: 0
+    wingsShoes: 0
+    skillBook: 0
     lastPos: {x: -24, y: -9}
   savePath: 
   nowSlot: 0
@@ -1608,6 +1610,10 @@ MonoBehaviour:
   hpState: {fileID: 727310817691022128, guid: c7ae184bb8fddca4b8b4c7ff839f890f, type: 3}
   loadMenu: {fileID: 8484951214785373982, guid: 7b7f69274d276b242ad2e77e32d39f7e, type: 3}
   coinBox: {fileID: 0}
+  portrait: {fileID: 0}
+  portraitSprite:
+  - {fileID: 21300000, guid: 4ddeecef9bedc004ebae39a133c5f510, type: 3}
+  - {fileID: 21300000, guid: 1ba07249d8b5b944dadcd2eaebd7be8a, type: 3}
   bossBar: {fileID: 0}
   potionsImg:
   - {fileID: 21300000, guid: fca12e7b2cfa26241a884d544840ac91, type: 3}
@@ -2544,8 +2550,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136787151}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.307729, y: 1.7341013, z: -0.15689468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2673,8 +2679,13 @@ MonoBehaviour:
   - {fileID: 1654257199695846592, guid: 040652084e4a9e245aa9edbad5536970, type: 3}
   mainBossMagic:
   - {fileID: 1046801010489759685, guid: 6d0fb9716e43d3341a5f99c7411cbc48, type: 3}
+  playerMagic:
+  - {fileID: 7771095704047211135, guid: 6444d7c983b3c7949b9cff2782fc7183, type: 3}
+  - {fileID: 5573701404462026282, guid: f274d91d779c7a74e85ac7e5e4a167d3, type: 3}
+  - {fileID: 1654257199695846592, guid: b9914ee23ac91e74b876f7c8db8e756f, type: 3}
   poolMagic: []
   poolMainBossMagic: []
+  poolPlayerMagic: []
   pHit: {fileID: 2955623459812423943, guid: 8626de7203f4aad49b5e086988fcad07, type: 3}
   eHit: {fileID: 5024009746357069194, guid: 3cf62a5fa2e73e74aa97e2cecf9115af, type: 3}
   spwanEffect: {fileID: 8849863365560508854, guid: 3609e1e2fb8aa4b43ab3a743d3f2359d, type: 3}

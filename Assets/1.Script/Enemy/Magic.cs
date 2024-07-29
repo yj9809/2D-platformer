@@ -9,7 +9,7 @@ public class Magic : MonoBehaviour
     private GameManager gm;
     private void OnEnable()
     {
-        Invoke("ReturnMagic", 1.1f);
+        Invoke("ReturnMagic", 1f);
     }
     private void Start()
     {
@@ -22,9 +22,13 @@ public class Magic : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<Player>())
+        if(collision.GetComponent<Player>() && CompareTag("Magic"))
         {
             gm.P.OnPlayerDamage(transform.position, 10);
+        }
+        else if (collision.GetComponent<Enemy>() && CompareTag("Player Magic"))
+        {
+            collision.GetComponent<Enemy>().OnEnemyDamage();    
         }
     }
     private void ReturnMagic()
