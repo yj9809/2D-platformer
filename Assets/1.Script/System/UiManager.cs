@@ -120,7 +120,7 @@ public class UiManager : Singleton<UiManager>
             hp = healthTransform.GetChild(1).GetChild(1).GetComponent<Image>();
             mp = healthTransform.GetChild(2).GetChild(1).GetComponent<Image>();
 
-            hpBar.SetActive(!DataManager.Instance.NowPlayer.newGame);
+            hpBar.SetActive(!DataManager.Instance.NowPlayer.NewGame);
         }
     }
     public void SetMenu(Menu menu)
@@ -225,10 +225,10 @@ public class UiManager : Singleton<UiManager>
                 if(bossBar != null)
                     bossBar.SetActive(true);
                 hpBar.SetActive(true);
-
+                SetPortrait();
                 stateBord.CoinBoxActive(true);
 
-                DataManager.Instance.NowPlayer.newGame = false;
+                DataManager.Instance.NowPlayer.NewGame = false;
             });
     }
     public void BossCamera()

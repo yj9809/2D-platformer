@@ -15,11 +15,18 @@ public class Map : MonoBehaviour
     }
     public void MoveMap()
     {
-        if(nextScene == "Game (Stage 2)")
+        switch(nextScene)
         {
-            gm.OnGameSceneLoad(nextScene);
-            gm.pos = spwanPos.localPosition;
-            gm.P.Save();
+            case "Game (Stage 1)":
+                gm.OnGameSceneLoad(nextScene);
+                gm.pos = spwanPos.localPosition;
+                gm.P.Save();
+                break;
+            case "Game (Stage 2)":
+                gm.OnGameSceneLoad(nextScene);
+                gm.pos = spwanPos.localPosition;
+                gm.P.Save();
+                break;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -51,7 +51,7 @@ MonoBehaviour:
   p: {fileID: 0}
   attackCollison: {fileID: 0}
   gate: {fileID: 0}
-  item: {fileID: 0}
+  item: {fileID: 1832655933684334635, guid: fff4a8134d60e614aac4d3170d7555f4, type: 3}
   combo: 0
   type: 0
 --- !u!212 &2818380737222154415

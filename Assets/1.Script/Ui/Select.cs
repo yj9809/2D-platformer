@@ -30,7 +30,7 @@ public class Select : MonoBehaviour
             {
                 saveFileExists[i] = true;
                 PlayerData playerData = dataManager.LoadData(i);
-                slotTexts[i].text = playerData.name;
+                slotTexts[i].text = playerData.Name;
             }
             else
             {
@@ -70,16 +70,16 @@ public class Select : MonoBehaviour
     {
         if (!saveFileExists[dataManager.nowSlot])
         {
-            dataManager.NowPlayer.name = newPlayerNameText.text;
+            dataManager.NowPlayer.Name = newPlayerNameText.text;
             dataManager.SaveData();
         }
 
         if (!isNewGame)
         {
-            dataManager.NowPlayer.newGame = false;
+            dataManager.NowPlayer.NewGame = false;
             GameManager.Instance.GameType = GameType.Start;
         }
 
-        GameManager.Instance.OnGameSceneLoad(dataManager.NowPlayer.currentScene);
+        GameManager.Instance.OnGameSceneLoad(dataManager.NowPlayer.CurrentScene);
     }
 }

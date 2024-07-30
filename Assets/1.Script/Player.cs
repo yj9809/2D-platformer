@@ -59,100 +59,94 @@ public class Player : MonoBehaviour
     //프로퍼티
     public float SetHp
     {
-        get { return data.hp; }
+        get { return data.Hp; }
         set
         {
-            data.hp = value;
+            data.Hp = value;
             ui.SetHpImg();
         }
     }
     public float SetMp
     {
-        get { return data.mp; }
+        get { return data.Mp; }
         set
         {
-            data.mp = value;
+            data.Mp = value;
             ui.SetMpImg();
         }
     }
     public float MaxHP
     {
-        get { return data.maxHp; }
+        get { return data.MaxHp; }
         set
         {
-            data.maxHp = value;
+            data.MaxHp = value;
         }
     }
     public float MaxMp
     {
-        get { return data.maxMp; }
+        get { return data.MaxMp; }
         set
         {
-            data.maxMp = value;
+            data.MaxMp = value;
         }
     }
     public int AttackDamage
     {
-        get { return data.attackDamage; }
+        get { return data.AttackDamage; }
         set
         {
-            data.attackDamage = value;
+            data.AttackDamage = value;
         }
     }
     public float AttackSpeed
     {
-        get { return data.attackSpeed; }
+        get { return data.AttackSpeed; }
         set
         {
-            data.attackSpeed = value;
+            data.AttackSpeed = value;
             anime.SetFloat("AttackSpeed", AttackSpeed);
         }
     }
     public float Speed
     {
-        get { return data.speed; }
+        get { return data.Speed; }
         set
         {
-            data.speed = value;
+            data.Speed = value;
         }
     }
     public int Level
     {
-        get { return data.level; }
+        get { return data.Level; }
         set
         {
-            data.level = value;
+            data.Level = value;
         }
     }
     public int Coin
     {
-        get { return data.coin; }
+        get { return data.Coin; }
         set
         {
-            data.coin = value;
+            data.Coin = value;
             ui.SetCoin();
         }
     }
     public int Potions
     {
-        get
-        {
-            return data.potions;
-        }
-        set
-        {
-            data.potions = value;
-        }
+        get { return data.Potions; }
+        set { data.Potions = value; }
     }
     public Vector2 LastPos
     {
         get
         {
-            return data.lastPos;
+            return data.LastPos;
         }
         set
         {
-            data.lastPos = value;
+            data.LastPos = value;
         }
     }
     private void Awake()
@@ -172,7 +166,7 @@ public class Player : MonoBehaviour
     {
         pixelCamera = gm.MainCamera.GetComponent<PixelPerfectCamera>();
 
-        if (data.newGame)
+        if (data.NewGame)
         {
             pixelCamera.assetsPPU = 36;
             anime.SetTrigger("Start");
@@ -187,6 +181,11 @@ public class Player : MonoBehaviour
         isJump = true;
         onDash = true;
         darkTransform = false;
+    }
+    private void FixedUpdate()
+    {
+        MpUp();
+        Dash();
     }
     // Update is called once per frame
     void Update()
@@ -207,13 +206,12 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         GroundCheck();
-        Dash();
+        //Dash();
         // 공격
         Attack();
         GetMagic();
         // 포션&Mp 자연회복
         UsePotion();
-        MpUp();
         // 변신
         OnTransform();
     }
@@ -286,7 +284,7 @@ public class Player : MonoBehaviour
 
         if(isGround)
         {
-            if(data.wingsShoes)
+            if(data.WingsShoes)
             {
                 doubleJump = true;
             }
@@ -337,7 +335,7 @@ public class Player : MonoBehaviour
     // 변신 관련
     private void OnTransform()
     {
-        if (data.blackSoul && Input.GetKeyDown(KeyCode.G) && SetMp >= 3)
+        if (data.BlackSoul && Input.GetKeyDown(KeyCode.G) && SetMp >= 3)
         {
             if (!darkTransform)
             {
@@ -433,7 +431,7 @@ public class Player : MonoBehaviour
     {
         TargetEnemy();
         magicCool -= Time.deltaTime;
-        if(Input.GetKeyDown(KeyCode.V) && data.skillBook && targetEnemy != null && magicCool <= 0 && SetMp >= 3)
+        if(Input.GetKeyDown(KeyCode.V) && data.SkillBook && targetEnemy != null && magicCool <= 0 && SetMp >= 3)
         {
             anime.SetTrigger("Magic");
             SetMp -= 3f;
@@ -463,7 +461,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) && Potions > 0 && SetHp != MaxHP)
         {
-            SetHp += 4;
+            SetHp = MaxHP;
             Potions--;
             potionsNum = potionsNum <= 0 ? 1 : potionsNum - 1;
             ui.potions.PotionsImage();
@@ -479,7 +477,7 @@ public class Player : MonoBehaviour
     {
         if(gm.scene.name == "Game (Stage 1)" || gm.scene.name == "Game (Stage 2)")
         {
-            data.currentScene = gm.scene.name;
+            data.CurrentScene = gm.scene.name;
             LastPos = new Vector2(transform.position.x, transform.position.y);
         }
 

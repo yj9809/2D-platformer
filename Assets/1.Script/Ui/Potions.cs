@@ -17,7 +17,7 @@ public class Potions : MonoBehaviour
     }
     public void PotionsImage()
     {
-        switch(DataManager.Instance.NowPlayer.potions)
+        switch(DataManager.Instance.NowPlayer.Potions)
         {
             case 6:
                 for (int i = 0; i < potions.Length; i++)

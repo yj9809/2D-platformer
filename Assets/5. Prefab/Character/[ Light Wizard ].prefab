@@ -123,7 +123,7 @@ MonoBehaviour:
   p: {fileID: 0}
   attackCollison: {fileID: 1490050745}
   gate: {fileID: 0}
-  item: {fileID: 0}
+  item: {fileID: 8982118195733865271, guid: 668782ffa7a225346a924617fb83229b, type: 3}
   combo: 3
   type: 2
 --- !u!212 &6391281124082659505

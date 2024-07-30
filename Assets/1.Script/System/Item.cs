@@ -41,24 +41,24 @@ public class Item : MonoBehaviour
         {
             if(itemType == ItemType.NomalItem)
             { 
-                gm.P.Coin += 10;
+                gm.P.Coin += 15;
                 Pooling.Instance.ReturnObj(gameObject);
             }
             else
             {
                 if(gameObject.CompareTag("Black Soul"))
                 {
-                    data.NowPlayer.blackSoul = true;
+                    data.NowPlayer.BlackSoul = true;
                     Destroy(gameObject);
                 }
                 else if(gameObject.CompareTag("Wings Shoes"))
                 {
-                    data.NowPlayer.wingsShoes = true;
+                    data.NowPlayer.WingsShoes = true;
                     Destroy(gameObject);
                 }
                 else if(gameObject.CompareTag("Skill Book"))
                 {
-                    data.NowPlayer.skillBook = true;
+                    data.NowPlayer.SkillBook = true;
                     Destroy(gameObject);
                 }
             }

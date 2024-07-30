@@ -48,5 +48,12 @@ public class MainCamera : MonoBehaviour
 
             transform.position = new Vector3(clampX, clampY, -10f);
         }
+        else if(gm.scene.name == "Tutorial Scenes")
+        {
+            float clampX = Mathf.Clamp(p.transform.position.x, -18f, 3.6f);
+            float clampY = Mathf.Clamp(p.transform.position.y, -10f, -6f);
+
+            transform.position = new Vector3(clampX, clampY, -10f);
+        }
     }
 }

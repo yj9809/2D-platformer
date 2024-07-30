@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nowPlayer:
     name: 
-    currentScene: Game (Stage 1)
+    currentScene: Tutorial Scenes
     level: 1
     attackDamage: 2
     coin: 0

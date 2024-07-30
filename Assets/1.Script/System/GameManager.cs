@@ -92,8 +92,10 @@ public class GameManager : Singleton<GameManager>
     {
         if (nextScene == "Game (Stage 1)")
             LodingSceneController.LoadScene("Game (Stage 1)");
-        else if(nextScene == "Game (Stage 2)")
+        else if (nextScene == "Game (Stage 2)")
             LodingSceneController.LoadScene("Game (Stage 2)");
+        else if (nextScene == "Tutorial Scenes")
+            LodingSceneController.LoadScene("Tutorial Scenes");
     }
     public void SpwanBoss()
     {
