@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
 public class State : MonoBehaviour
 {
     [SerializeField] private GameObject coinBox;
+    [SerializeField] private Tooltip tooltip;
     public TMP_Text[] txt;
     [SerializeField] private Image[] item;
     private GameManager gm;
