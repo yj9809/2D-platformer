@@ -35,7 +35,7 @@ public class UiManager : Singleton<UiManager>
 
 
     private float dis = 550f;
-    private float time = 0.5f;
+    private float time = 0.2f;
     [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onBord = false;
     [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onMenu = false;
 
@@ -150,11 +150,11 @@ public class UiManager : Singleton<UiManager>
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            float targetY = onBord ? transform.position.y - dis : transform.position.y + dis;
+            int targetY = onBord ? 0 : 1;
             gm.GameType = onBord ? GameType.Start : GameType.Stop;
-            stateBord.GetComponent<RectTransform>().DOMoveY(targetY, time).SetEase(Ease.Linear);
             OnStateSet();
-            onBord = !onBord;
+            stateBord.GetComponent<RectTransform>().DOScale(targetY, time).SetEase(Ease.Linear)
+                .OnComplete(() => onBord = !onBord);
         }
     }
     public void OnStateSet()
@@ -196,9 +196,10 @@ public class UiManager : Singleton<UiManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            float targetY = onMenu ? transform.position.y - dis : transform.position.y + dis;
-            menu.GetComponent<RectTransform>().DOMoveY(targetY, time).SetEase(Ease.Linear);
-            onMenu = !onMenu;
+            float targetY = onMenu ? 0 : 1;
+            gm.GameType = onBord ? GameType.Start : GameType.Stop;
+            menu.GetComponent<RectTransform>().DOScale(targetY, time).SetEase(Ease.Linear)
+                .OnComplete(() => onMenu = !onMenu);
         }
     }
     public GameObject OnLoadMenu(Transform pos)

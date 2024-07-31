@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8058297567033184936}
   - component: {fileID: 1684087791022387377}
   - component: {fileID: 6615901619883698351}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Wings Shoes
   m_TagString: Wings Shoes
   m_Icon: {fileID: 0}

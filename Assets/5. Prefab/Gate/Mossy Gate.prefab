@@ -212,8 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entrance: {fileID: 5073291765955581336}
-  nextScene: BossRoom (Stage 2)
-  spawonPos: {fileID: 646568589088668479}
+  nextScene: Game (Stage 2)
+  spawonPos: {fileID: 0}
   boss: {fileID: 0}
 --- !u!58 &5836620904032479188
 CircleCollider2D:
@@ -303,7 +303,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 74d9483d1c1f4f6429eb98583a034d6c, type: 3}
   m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_FlipX: 0
@@ -401,7 +401,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: cfdf63ff4759db44da7bc98bc544c00b, type: 3}
   m_Color: {r: 0.48235294, g: 0.63529414, b: 0.7647059, a: 1}
   m_FlipX: 0
@@ -506,7 +506,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 11e822cd1dc8861488661f5007cbd397, type: 3}
   m_Color: {r: 0.4541652, g: 0.47521016, b: 0.509434, a: 1}
   m_FlipX: 0
@@ -1605,7 +1605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 435974981080816601, guid: a485be827e5808a4a844f8c2c3793f24, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 435974981080816606, guid: a485be827e5808a4a844f8c2c3793f24, type: 3}
       propertyPath: m_RootOrder

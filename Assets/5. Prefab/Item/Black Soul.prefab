@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1515327603736514442}
   - component: {fileID: 5854018621470040514}
   - component: {fileID: 6332914002177109491}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Black Soul
   m_TagString: Black Soul
   m_Icon: {fileID: 0}

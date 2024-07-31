@@ -11,7 +11,7 @@ public enum ItemType
 public class Item : MonoBehaviour
 {
     private GameManager gm;
-    private DataManager data;
+    private PlayerData data;
 
     private float bounceForce = 300f;
     [Title("Itme Type")]
@@ -25,7 +25,7 @@ public class Item : MonoBehaviour
     {
         rd = GetComponent<Rigidbody2D>();
         gm = GameManager.Instance;
-        data = DataManager.Instance;
+        data = DataManager.Instance.NowPlayer;
         Drop();
     }
     private void Drop()
@@ -46,20 +46,24 @@ public class Item : MonoBehaviour
             }
             else
             {
-                if(gameObject.CompareTag("Black Soul"))
+                switch(gameObject.tag)
                 {
-                    data.NowPlayer.BlackSoul = true;
-                    Destroy(gameObject);
-                }
-                else if(gameObject.CompareTag("Wings Shoes"))
-                {
-                    data.NowPlayer.WingsShoes = true;
-                    Destroy(gameObject);
-                }
-                else if(gameObject.CompareTag("Skill Book"))
-                {
-                    data.NowPlayer.SkillBook = true;
-                    Destroy(gameObject);
+                    case "Black Soul":
+                        data.BlackSoul = true;
+                        Destroy(gameObject);
+                        break;
+                    case "Wings Shoes":
+                        data.WingsShoes = true;
+                        Destroy(gameObject);
+                        break;
+                    case "Skill Book":
+                        data.SkillBook = true;
+                        Destroy(gameObject);
+                        break;
+                    case "Scroll":
+                        data.Scroll = true;
+                        Destroy(gameObject);
+                        break;
                 }
             }
         }

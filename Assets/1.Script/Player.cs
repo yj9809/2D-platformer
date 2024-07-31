@@ -185,7 +185,6 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         MpUp();
-        Dash();
     }
     // Update is called once per frame
     void Update()
@@ -206,7 +205,7 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         GroundCheck();
-        //Dash();
+        Dash();
         // 공격
         Attack();
         GetMagic();
@@ -415,6 +414,7 @@ public class Player : MonoBehaviour
             GetComponent<Collider2D>().enabled = false;
             rigid.simulated = false;
             anime.SetTrigger("Death");
+            StartCoroutine(Resurrection());
         }
     }
     private void OffDamage()
@@ -468,9 +468,14 @@ public class Player : MonoBehaviour
         }
     }
     // 부활
-    private void Resurrection()
+    IEnumerator Resurrection()
     {
-
+        yield return new WaitForSeconds(3f);
+        gm.OnGameSceneLoad(data.CurrentScene);
+        SetHp = MaxHP;
+        Potions = 6;
+        gm.pos = LastPos;
+        gm.GameType = GameType.Start;
     }
     // 저장
     public void Save()

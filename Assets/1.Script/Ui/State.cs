@@ -12,7 +12,7 @@ public class State : MonoBehaviour
     public TMP_Text[] txt;
     [SerializeField] private Image[] item;
     private GameManager gm;
-    private DataManager data;
+    private PlayerData data;
     private UiManager ui;
 
     public int cost;
@@ -21,9 +21,9 @@ public class State : MonoBehaviour
     {
         ui = UiManager.Instance;
         gm = GameManager.Instance;
-        data = DataManager.Instance;
+        data = DataManager.Instance.NowPlayer;
 
-        if (data.NowPlayer.NewGame)
+        if (data.NewGame)
             coinBox.SetActive(false);
 
         ui.SetState(this);
@@ -46,8 +46,10 @@ public class State : MonoBehaviour
     }
     public void UpdateItem()
     {
-        item[0].gameObject.SetActive(data.NowPlayer.BlackSoul);
-        item[1].gameObject.SetActive(data.NowPlayer.WingsShoes);
+        item[0].gameObject.SetActive(data.BlackSoul);
+        item[1].gameObject.SetActive(data.WingsShoes);
+        item[2].gameObject.SetActive(data.SkillBook);
+        item[3].gameObject.SetActive(data.Scroll);
     }
     public void CoinBoxActive(bool isCoinBox)
     {

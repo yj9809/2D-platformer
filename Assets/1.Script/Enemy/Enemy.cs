@@ -51,7 +51,7 @@ public abstract class Enemy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
         p = GameManager.Instance.P;
-        gate = GameObject.Find("Gate");
+        
         isMove = false;
         ChangeDirection();
     }
@@ -96,8 +96,6 @@ public abstract class Enemy : MonoBehaviour
         else if (type == Type.Boss)
         {
             float distance = Vector2.Distance(p.transform.position, transform.position);
-            Debug.Log(distance);
-            Debug.Log(isMove);
             Vector2 dis = p.transform.position - transform.position;
             if (distance > attackDis && isMove)
             {
@@ -242,7 +240,17 @@ public abstract class Enemy : MonoBehaviour
     }
     private void GateOpen()
     {
-        gate.transform.DOMoveY(-5.5f, 2f);
+        if(main || middle)
+        {
+            gate = GameObject.Find("Gate");
+            gate.transform.DOMoveY(-5.5f, 2f);
+        }
+        else if(mossyMain || mossyMiddle)
+        {
+            gate = GameObject.Find("Mossy Gate");
+            gate.transform.DOMoveY(-7, 2f);
+        }
+
     }
     private void OnAttackCollision()
     {

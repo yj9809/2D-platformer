@@ -23,28 +23,33 @@ public class Gate : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (nextScene == "BossRoom (Stage 1)")
+                switch (nextScene)
                 {
-                    gm.OnBossSceneLode(nextScene);
-                    gm.Boss = this.boss;
-                    gm.pos = spawonPos.localPosition;
-                    gm.P.Save();
-                }
-                else if (nextScene == "Game (Stage 1)")
-                {
-                    gm.OnGameSceneLoad(nextScene);
-                    if (spawonPos != null)
-                        gm.pos = spawonPos.localPosition;
-                    else
-                        gm.pos = gm.P.LastPos;
-                    gm.P.Save();
-                }
-                else if(nextScene == "BossRoom (Stage 2)")
-                {
-                    gm.OnBossSceneLode(nextScene);
-                    gm.Boss = this.boss;
-                    gm.pos = spawonPos.localPosition;
-                    gm.P.Save();
+                    case "BossRoom (Stage 1)":
+                        gm.OnBossSceneLode(nextScene);
+                        gm.Boss = this.boss;
+                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                        gm.P.Save();
+                        break;
+
+                    case "Game (Stage 1)":
+                        gm.OnGameSceneLoad(nextScene);
+                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                        gm.P.Save();
+                        break;
+
+                    case "Game (Stage 2)":
+                        gm.OnGameSceneLoad(nextScene);
+                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                        gm.P.Save();
+                        break;
+
+                    case "BossRoom (Stage 2)":
+                        gm.OnBossSceneLode(nextScene);
+                        gm.Boss = this.boss;
+                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                        gm.P.Save();
+                        break;
                 }
             }
         }

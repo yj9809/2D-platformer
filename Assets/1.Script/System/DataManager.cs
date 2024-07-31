@@ -6,22 +6,23 @@ using Sirenix.OdinInspector;
 [System.Serializable]
 public class PlayerData
 {
-   [SerializeField] private string name;
-   [SerializeField] private string currentScene = "Tutorial Scenes";
-   [SerializeField] private int level = 1;
-   [SerializeField] private int attackDamage = 2;
-   [SerializeField] private int coin = 0;
-   [SerializeField] private int potions = 6;
-   [SerializeField] private float maxHp = 10f;
-   [SerializeField] private float maxMp = 10f;
-   [SerializeField] private float hp = 10f;
-   [SerializeField] private float mp = 10f;
-   [SerializeField] private float attackSpeed = 1.5f;
-   [SerializeField] private float speed = 5f;
-   [SerializeField] private bool newGame = true;
-   [SerializeField] private bool blackSoul = false;
-   [SerializeField] private bool wingsShoes = false;
-   [SerializeField] private bool skillBook = false;
+    [SerializeField] private string name;
+    [SerializeField] private string currentScene = "Tutorial Scenes";
+    [SerializeField] private int level = 1;
+    [SerializeField] private int attackDamage = 2;
+    [SerializeField] private int coin = 0;
+    [SerializeField] private int potions = 6;
+    [SerializeField] private float maxHp = 10f;
+    [SerializeField] private float maxMp = 10f;
+    [SerializeField] private float hp = 10f;
+    [SerializeField] private float mp = 10f;
+    [SerializeField] private float attackSpeed = 1.5f;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private bool newGame = true;
+    [SerializeField] private bool blackSoul = false;
+    [SerializeField] private bool wingsShoes = false;
+    [SerializeField] private bool skillBook = false;
+    [SerializeField] private bool scroll = false;
     [SerializeField] private Vector2 lastPos = new Vector2(-24f, -9f);
     public string Name
     {
@@ -102,6 +103,11 @@ public class PlayerData
     {
         get { return skillBook; }
         set { skillBook = value; }
+    }
+    public bool Scroll
+    {
+        get { return scroll; }
+        set { scroll = value; }
     }
     public Vector2 LastPos
     {

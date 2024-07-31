@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1832655933684334646}
   - component: {fileID: 1832655933684334633}
   - component: {fileID: 1832655933684334632}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Skill Book
   m_TagString: Skill Book
   m_Icon: {fileID: 0}

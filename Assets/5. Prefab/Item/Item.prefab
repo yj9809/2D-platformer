@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4111129431154144935}
   - component: {fileID: 4111129431154144934}
   - component: {fileID: 4111129431154144922}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Item
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b477bbdfea9edf4e90c55d811f0c513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 0
 --- !u!212 &4111129431154144935
 SpriteRenderer:
   m_ObjectHideFlags: 0
