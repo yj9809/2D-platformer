@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
-using UnityEngine.UI;
-using DG.Tweening;
 using Sirenix.OdinInspector;
 
 public class Player : MonoBehaviour
@@ -21,9 +18,9 @@ public class Player : MonoBehaviour
     private float transTime;
     private float mpTime;
     // 공격용 참조
-    [SerializeField] private GameObject attackCollision;
-    [SerializeField] private LayerMask enemyLayer;
-    [SerializeField] private Transform targetEnemy;
+    [SerializeField, TabGroup("Attack")] private GameObject attackCollision;
+    [SerializeField, TabGroup("Attack")] private LayerMask enemyLayer;
+    [SerializeField, TabGroup("Attack")] private Transform targetEnemy;
     // 참조
     private GameManager gm;
     private UiManager ui;
@@ -35,27 +32,29 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
     private PixelPerfectCamera pixelCamera;
+    private Joystick joy;
     // 포션 관련 Num
     private int potionsNum = 2;
     // 점프 바닥 체크
-    [FoldoutGroup("Jump Control")] 
+    [SerializeField, TabGroup("Jump Control")]
     private const float JumpPower = 8f;
-    [FoldoutGroup("Jump Control")] 
-    [SerializeField] private Transform groundCheckObj;
-    [FoldoutGroup("Jump Control")]
-    [SerializeField] private LayerMask groundLayer;
-    [FoldoutGroup("Jump Control")]
-    [SerializeField] private bool isGround;
-
-
+    [SerializeField, TabGroup("Jump Control")] 
+    private Transform groundCheckObj;
+    [SerializeField, TabGroup("Jump Control")]
+    private LayerMask groundLayer;
+    [SerializeField, TabGroup("Jump Control")]
+    private bool isGround;
     //이동 관련 참/거짓
-    [FoldoutGroup("Moving Control")] [ReadOnly] public bool isMove;
-    [FoldoutGroup("Moving Control")] [ReadOnly] public bool isJump;
-    [FoldoutGroup("Moving Control")] [ReadOnly] public bool isDash;
-    [FoldoutGroup("Moving Control")] [ReadOnly] public bool onDash;
-    [FoldoutGroup("Moving Control")] [ReadOnly] public bool doubleJump;
-    [FoldoutGroup("Moving Control")] [ReadOnly] public bool darkTransform;
-    [FoldoutGroup("Moving Control")] [ReadOnly] public bool OnBossRoomMove = false;
+    [ReadOnly, TabGroup("Moving Control")] public bool isMove;
+    [ReadOnly, TabGroup("Moving Control")] public bool isJump;
+    [ReadOnly, TabGroup("Moving Control")] public bool isDash;
+    [ReadOnly, TabGroup("Moving Control")] public bool onDash;
+    [ReadOnly, TabGroup("Moving Control")] public bool doubleJump;
+    [ReadOnly, TabGroup("Moving Control")] public bool darkTransform;
+    [ReadOnly, TabGroup("Moving Control")] public bool OnBossRoomMove = false;
+    // 스탯 저장용
+    private int originalAttackDamage;
+    private float originalAttackSpeed;
     //프로퍼티
     public float SetHp
     {
@@ -160,6 +159,7 @@ public class Player : MonoBehaviour
         pool = Pooling.Instance;
         dm = DataManager.Instance;
         am = AudioManager.Instance;
+        joy = FindObjectOfType<Joystick>();
     }
     // Start is called before the first frame update
     void Start()
@@ -175,6 +175,7 @@ public class Player : MonoBehaviour
         ui.SetHpImg();
         ui.SetMpImg();
         ui.SetCoin();
+        OriginalStats();
         anime.SetFloat("AttackSpeed", AttackSpeed);
 
         isMove = true;
@@ -197,7 +198,6 @@ public class Player : MonoBehaviour
         // 게임 멈춤
         if (gm.GameType == GameType.Stop)
             return;
-
         // 수치 제한
         ClampHealth();
         ClampMana();
@@ -241,17 +241,35 @@ public class Player : MonoBehaviour
             return;
         }
 
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        if (moveInput != 0)
+        if (joy != null)
         {
-            transform.position += new Vector3(moveInput * Speed * Time.deltaTime, 0);
-            spriteRenderer.flipX = moveInput < 0;
-            transform.GetChild(0).localPosition = new Vector2(spriteRenderer.flipX ? -1.28f : 1.28f, 0f);
-            anime.SetBool("Run", true);
+            float x = joy.Horizontal;
+            if (x != 0)
+            {
+                transform.position += new Vector3(x * Speed * Time.deltaTime, 0);
+                spriteRenderer.flipX = x < 0;
+                transform.GetChild(0).localPosition = new Vector2(spriteRenderer.flipX ? -1.28f : 1.28f, 0f);
+                anime.SetBool("Run", true);
+            }
+            else
+            {
+                anime.SetBool("Run", false);
+            }
         }
         else
         {
-            anime.SetBool("Run", false);
+            float moveInput = Input.GetAxisRaw("Horizontal");
+            if (moveInput != 0)
+            {
+                transform.position += new Vector3(moveInput * Speed * Time.deltaTime, 0);
+                spriteRenderer.flipX = moveInput < 0;
+                transform.GetChild(0).localPosition = new Vector2(spriteRenderer.flipX ? -1.28f : 1.28f, 0f);
+                anime.SetBool("Run", true);
+            }
+            else
+            {
+                anime.SetBool("Run", false);
+            }
         }
     }
     private void OnMove()
@@ -276,7 +294,22 @@ public class Player : MonoBehaviour
         }
         anime.SetBool("IsJump", rigid.velocity.y > 0);
         anime.SetBool("IsFalling", rigid.velocity.y < 0);
-    }    
+    }
+    public void JumpButton()
+    {
+        if (isGround)
+        {
+            rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+        }
+        else if (doubleJump)
+        {
+            rigid.velocity = new Vector2(rigid.velocity.x, 0f);
+            rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+            doubleJump = false;
+        }
+        anime.SetBool("IsJump", rigid.velocity.y > 0);
+        anime.SetBool("IsFalling", rigid.velocity.y < 0);
+    }
     private void GroundCheck()
     {
         isGround = Physics2D.OverlapCircle(groundCheckObj.position, 0.1f, groundLayer);
@@ -302,8 +335,7 @@ public class Player : MonoBehaviour
             isDash = true;
             anime.SetTrigger("IsDash");
 
-            Invoke("OffDashDamage", 0.2f);
-            Invoke("OnDash", 0.5f);
+            StartCoroutine(DashControl());
         }
 
         if (dashTime <= 0)
@@ -319,17 +351,23 @@ public class Player : MonoBehaviour
         }
         isDash = false;
     }
-    private void OnDash()
+    IEnumerator DashControl()
     {
-        onDash = true;
-    }
-    public void OffDashDamage()
-    {
+        yield return new WaitForSeconds(0.2f);
         gameObject.layer = 3;
+        yield return new WaitForSeconds(0.3f);
+        onDash = true;
     }
     private void RunSound()
     {
         am.PlaySfx(3);
+    }
+    // 오리지널 스탯 초기화
+    public void OriginalStats()
+    {
+        originalAttackDamage = AttackDamage;
+        originalAttackSpeed = AttackSpeed;
+        Debug.Log(originalAttackDamage);
     }
     // 변신 관련
     private void OnTransform()
@@ -342,9 +380,8 @@ public class Player : MonoBehaviour
                 anime.SetBool("Trans", true);
                 isMove = false;
                 isJump = false;
-                AttackDamage = (AttackDamage + 6);
-                AttackSpeed = (AttackSpeed + 0.5f);
-                ui.ChengePortrait();
+                ApplyDarkTransformStats();
+                ui.ChangePortrait();
             }
         }
 
@@ -367,11 +404,20 @@ public class Player : MonoBehaviour
                 isMove = false;
                 isJump = false;
                 darkTransform = false;
-                AttackDamage = (AttackDamage - 6);
-                AttackSpeed = (AttackSpeed - 0.5f);
-                ui.ChengePortrait();
+                ResetDarkTransformStats();
+                ui.ChangePortrait();
             }
         }
+    }
+    private void ApplyDarkTransformStats()
+    {
+        AttackDamage = (originalAttackDamage + 6);
+        AttackSpeed = (originalAttackSpeed + 0.5f);
+    }
+    private void ResetDarkTransformStats()
+    {
+        AttackDamage = originalAttackDamage;
+        AttackSpeed = originalAttackSpeed;
     }
     private void TransTrue()
     {
@@ -486,6 +532,9 @@ public class Player : MonoBehaviour
             LastPos = new Vector2(transform.position.x, transform.position.y);
         }
 
+        if (darkTransform)
+            ResetDarkTransformStats();
+
         dm.SaveData();
     }
     // 새로운 게임 시작시
@@ -527,6 +576,7 @@ public class Player : MonoBehaviour
 
         ui.NewGameCamera(pixelCamera);
     }
+    // 물리처리
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 11)

@@ -27,7 +27,7 @@ public class Gate : MonoBehaviour
                 {
                     case "BossRoom (Stage 1)":
                         gm.OnBossSceneLode(nextScene);
-                        gm.Boss = this.boss;
+                        gm.Boss = boss;
                         gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
                         gm.P.Save();
                         break;
@@ -46,7 +46,7 @@ public class Gate : MonoBehaviour
 
                     case "BossRoom (Stage 2)":
                         gm.OnBossSceneLode(nextScene);
-                        gm.Boss = this.boss;
+                        gm.Boss = boss;
                         gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
                         gm.P.Save();
                         break;

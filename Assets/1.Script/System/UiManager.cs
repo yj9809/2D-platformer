@@ -12,7 +12,7 @@ using Sirenix.OdinInspector;
 public class UiManager : Singleton<UiManager>
 {
     private GameManager gm;
-    private PixelPerfectCamera pixelCamera;
+    private DataManager data;
 
     [TabGroup("Game Scene Ui")] [SerializeField] private GameObject hpState;
     [TabGroup("Game Scene Ui")] [SerializeField] private GameObject loadMenu;
@@ -34,7 +34,6 @@ public class UiManager : Singleton<UiManager>
     private GameObject hpBar;
 
 
-    private float dis = 550f;
     private float time = 0.2f;
     [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onBord = false;
     [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onMenu = false;
@@ -60,6 +59,7 @@ public class UiManager : Singleton<UiManager>
     void Start()
     {
         gm = GameManager.Instance;
+        data = DataManager.Instance;
         string sceneName = gm.scene.name;
         if (sceneName == "Main")
         {
@@ -67,11 +67,15 @@ public class UiManager : Singleton<UiManager>
         }
         SceneManager.activeSceneChanged += ActiveSceneChanged;
     }
+    private void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= ActiveSceneChanged;
+    }
     private bool CheckFile()
     {
         for (int i = 0; i < 3; i++)
         {
-            if (File.Exists($"{DataManager.Instance.savePath}/slot_{i}.json"))
+            if (File.Exists($"{data.savePath}/slot_{i}.json"))
             {
                 return true;
             }
@@ -84,44 +88,46 @@ public class UiManager : Singleton<UiManager>
         if (sceneName != "Main" && sceneName != "Loding")
         {
             SetHpBar();
-            SetPortrait();
+            if(!data.NowPlayer.NewGame)
+                SetPortrait();
         }
 
         if (sceneName == "BossRoom (Stage 1)" || sceneName == "BossRoom (Stage 2)")
         {
-            bossBar = GameObject.Find("Boss Bar");
-            bossBar.SetActive(false);
+            InitBossBar();
         }
+    }
+    private void InitBossBar()
+    {
+        bossBar = GameObject.Find("Boss Bar");
+        bossBar.SetActive(false);
     }
     private void SetPortrait()
     {
         portrait = GameObject.Find("Portrait").GetComponent<Image>();
         portrait.sprite = portraitSprite[0];
     }
-    public void ChengePortrait()
+    public void ChangePortrait()
     {
-        if(portrait.sprite == portraitSprite[0])
-        {
-            portrait.sprite = portraitSprite[1];
-        }
-        else
-        {
-            portrait.sprite = portraitSprite[0];
-        }
+        portrait.sprite = (portrait.sprite == portraitSprite[0]) ? portraitSprite[1] : portraitSprite[0];
     }
     private void SetHpBar()
     {
         GameObject canvas = GameObject.Find("Ui Canvas");
         if (canvas != null)
         {
-            hpBar = Instantiate(this.hpState, canvas.transform);
+            hpBar = Instantiate(hpState, canvas.transform);
 
-            Transform healthTransform = canvas.transform.GetChild(0).GetChild(0);
-            hp = healthTransform.GetChild(1).GetChild(1).GetComponent<Image>();
-            mp = healthTransform.GetChild(2).GetChild(1).GetComponent<Image>();
+            InitStateBar(canvas);
 
-            hpBar.SetActive(!DataManager.Instance.NowPlayer.NewGame);
+            hpBar.SetActive(!data.NowPlayer.NewGame);
         }
+    }
+    private void InitStateBar(GameObject canvas)
+    {
+        Transform healthTransform = canvas.transform.GetChild(0).GetChild(0);
+        hp = healthTransform.GetChild(1).GetChild(1).GetComponent<Image>();
+        mp = healthTransform.GetChild(2).GetChild(1).GetComponent<Image>();
     }
     public void SetMenu(Menu menu)
     {
@@ -133,39 +139,39 @@ public class UiManager : Singleton<UiManager>
     }
     public void SetHpImg()
     {
-        Player p = gm.P;
-        hp.fillAmount = p.SetHp / p.MaxHP;
+        UpdateFillAmount(hp, gm.P.SetHp, gm.P.MaxHP);
     }
     public void SetMpImg()
     {
-        Player p = gm.P;
-        mp.fillAmount = p.SetMp / p.MaxMp;
+        UpdateFillAmount(mp, gm.P.SetMp, gm.P.MaxMp);
     }
     public void SetBossHpImg()
     {
-        Image bossHpImg = bossBar.transform.GetChild(0).GetComponent<Image>();
-        bossHpImg.fillAmount = bossHp / bossMaxHp;
+        UpdateFillAmount(bossBar.transform.GetChild(0).GetComponent<Image>(), bossHp, bossMaxHp);
+    }
+    private void UpdateFillAmount(Image image, float currentValue, float maxValue)
+    {
+        image.fillAmount = currentValue / maxValue;
+    }
+    private void ToggleUi(bool isOn, KeyCode key, RectTransform uiRect, System.Action onComplete)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            int targetY = isOn ? 0 : 1;
+            gm.GameType = isOn ? GameType.Start : GameType.Stop;
+            uiRect.DOScale(targetY, time).SetEase(Ease.Linear)
+                .OnComplete(() => onComplete());
+        }
     }
     public void OnStateBord()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            int targetY = onBord ? 0 : 1;
-            gm.GameType = onBord ? GameType.Start : GameType.Stop;
-            OnStateSet();
-            stateBord.GetComponent<RectTransform>().DOScale(targetY, time).SetEase(Ease.Linear)
-                .OnComplete(() => onBord = !onBord);
-        }
+        OnStateSet();
+        ToggleUi(onBord, KeyCode.Tab, stateBord.GetComponent<RectTransform>(), () => onBord = !onBord);
     }
     public void OnStateSet()
     {
-        State state = FindObjectOfType<State>();
-        Player p = gm.P;
-        state.txt[2].text = $"Cost : {state.cost}";
-        state.txt[0].text = $"{p.MaxHP}\n{p.AttackDamage}\n{p.AttackSpeed}\n{p.Speed}%";
-        state.txt[1].text = $"{p.Coin}";
-        state.txt[4].text = $"{p.Level}";
-        state.UpdateItem();
+        stateBord.StateTxtSet();
+        stateBord.UpdateItem();
     }
     public void StateUp(int num)
     {
@@ -186,21 +192,15 @@ public class UiManager : Singleton<UiManager>
                 p.Speed += 0.5f;
                 break;
         }
+        p.OriginalStats();
     }
     public void SetCoin()
     {
-        State state = FindObjectOfType<State>();
-        state.txt[3].text = gm.P.Coin.ToString();
+        stateBord.CoinSet();
     }
     public void OnMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            float targetY = onMenu ? 0 : 1;
-            gm.GameType = onBord ? GameType.Start : GameType.Stop;
-            menu.GetComponent<RectTransform>().DOScale(targetY, time).SetEase(Ease.Linear)
-                .OnComplete(() => onMenu = !onMenu);
-        }
+        ToggleUi(onMenu, KeyCode.Escape, menu.GetComponent<RectTransform>(), () => onMenu = !onMenu);
     }
     public GameObject OnLoadMenu(Transform pos)
     {
@@ -229,7 +229,7 @@ public class UiManager : Singleton<UiManager>
                 SetPortrait();
                 stateBord.CoinBoxActive(true);
 
-                DataManager.Instance.NowPlayer.NewGame = false;
+                data.NowPlayer.NewGame = false;
             });
     }
     public void BossCamera()

@@ -9,13 +9,16 @@ public class State : MonoBehaviour
 {
     [SerializeField] private GameObject coinBox;
     [SerializeField] private Tooltip tooltip;
-    public TMP_Text[] txt;
+    [SerializeField] private TMP_Text[] txt;
     [SerializeField] private Image[] item;
+
     private GameManager gm;
     private PlayerData data;
     private UiManager ui;
 
-    public int cost;
+    private int cost;
+    private float firstCost = 10;
+    private float growthRate = 0.35f;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +45,7 @@ public class State : MonoBehaviour
     }
     private void SetCost()
     {
-        cost = Mathf.RoundToInt(10 * gm.P.Level * 1.5f);
+        cost = GetCost();
     }
     public void UpdateItem()
     {
@@ -54,5 +57,28 @@ public class State : MonoBehaviour
     public void CoinBoxActive(bool isCoinBox)
     {
         coinBox.SetActive(isCoinBox);
+    }
+    public void StateTxtSet()
+    {
+       txt[0].text = $"{gm.P.MaxHP}\n{gm.P.AttackDamage}\n{gm.P.AttackSpeed}\n{gm.P.Speed}%";
+       txt[1].text = gm.P.Coin >= cost ? $"<color=green>{gm.P.Coin}</color>": $"<color=red>{gm.P.Coin}</color>";
+       txt[2].text = $"Cost : {cost}";
+       txt[4].text = $"{gm.P.Level}";
+    }
+    public void CoinSet()
+    {
+        txt[3].text = gm.P.Coin.ToString();
+    }
+    private int GetCost()
+    {
+        if(gm.P.Level < 1)
+        {
+            Debug.LogError("레벨이 이상합니다");
+            return 0;
+        }
+
+        float cost = firstCost * Mathf.Exp(growthRate * (gm.P.Level - 1));
+
+        return Mathf.RoundToInt(cost);
     }
 }

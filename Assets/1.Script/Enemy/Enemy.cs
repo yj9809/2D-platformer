@@ -51,7 +51,7 @@ public abstract class Enemy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
         p = GameManager.Instance.P;
-        
+
         isMove = false;
         ChangeDirection();
     }

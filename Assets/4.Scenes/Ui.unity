@@ -4031,7 +4031,6 @@ MonoBehaviour:
   - {fileID: 1326083197}
   - {fileID: 1172981733}
   - {fileID: 443243467}
-  cost: 0
 --- !u!1 &1700114417
 GameObject:
   m_ObjectHideFlags: 0
