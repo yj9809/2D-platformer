@@ -24,6 +24,7 @@ public abstract class Enemy : MonoBehaviour
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private Animator anime;
+    private PlayerData data;
 
     [Title("Enemy Type")]
     [EnumToggleButtons]
@@ -51,6 +52,7 @@ public abstract class Enemy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anime = GetComponent<Animator>();
         p = GameManager.Instance.P;
+        data = DataManager.Instance.NowPlayer;
 
         isMove = false;
         ChangeDirection();
@@ -137,7 +139,7 @@ public abstract class Enemy : MonoBehaviour
         sprite.flipX = dis.normalized.x > 0 ? false : true;
 
         if (middle)
-            transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.35f) : new Vector2(-1.15f, -0.35f);
+            transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.5f, -0.3f) : new Vector2(-1.5f, -0.3f);
         else if (main)
             transform.GetChild(0).localPosition = sprite.flipX == false ? new Vector2(1.15f, -0.12f) : new Vector2(-1.15f, -0.12f);
         else if (mossyMain)
@@ -222,6 +224,7 @@ public abstract class Enemy : MonoBehaviour
             {
                 GameObject item = Instantiate(this.item);
                 item.transform.position = transform.position;
+                BossEliminationCheck(gameObject.name);
             }
 
             anime.SetBool("Death", true);
@@ -232,6 +235,24 @@ public abstract class Enemy : MonoBehaviour
         }
 
         Invoke("OffDamage", 0.5f);
+    }
+    private void BossEliminationCheck(string bossName)
+    {
+        switch(bossName)
+        {
+            case "[ MainBoss ]":
+                data.MainBoss = false;
+                break;
+            case "[ MiddleBoss ]":
+                data.MiddleBoss = false;
+                break;
+            case "[ Mossy Main Boss ]":
+                data.MossyMainBoss = false;
+                break;
+            case "[ Mossy Middle Boss ]":
+                data.MossyMiddleBoss = false;
+                break;
+        }
     }
     private void OffDamage()
     {

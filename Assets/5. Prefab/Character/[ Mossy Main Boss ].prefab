@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 6391281124082659519}
   - component: {fileID: 6391281124082659518}
   m_Layer: 13
-  m_Name: '[ Light Wizard ]'
+  m_Name: '[ Mossy Main Boss ]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

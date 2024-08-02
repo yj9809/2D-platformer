@@ -34,9 +34,17 @@ public class UiManager : Singleton<UiManager>
     private GameObject hpBar;
 
 
-    private float time = 0.2f;
-    [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onBord = false;
+    private float time = 0.1f;
+    [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onState = false;
     [TabGroup("Ui Bool")] [ReadOnly] [SerializeField]private bool onMenu = false;
+    public bool OnMenu
+    {
+        get { return onMenu; }
+    }
+    public bool OnState
+    {
+        get { return onState; }
+    }
 
     private float bossMaxHp;
     public float BossMaxHp
@@ -166,7 +174,14 @@ public class UiManager : Singleton<UiManager>
     public void OnStateBord()
     {
         OnStateSet();
-        ToggleUi(onBord, KeyCode.Tab, stateBord.GetComponent<RectTransform>(), () => onBord = !onBord);
+        ToggleUi(onState, KeyCode.Tab, stateBord.GetComponent<RectTransform>(), () => onState = !onState);
+    }
+    public void OnStateBordButton()
+    {
+        int targetY = onState ? 0 : 1;
+        gm.GameType = onState ? GameType.Start : GameType.Stop;
+        stateBord.GetComponent<RectTransform>().DOScale(targetY, time).SetEase(Ease.Linear)
+            .OnComplete(() => onState = !onState);
     }
     public void OnStateSet()
     {
@@ -198,9 +213,17 @@ public class UiManager : Singleton<UiManager>
     {
         stateBord.CoinSet();
     }
-    public void OnMenu()
+    public void OnMenuBord()
     {
-        ToggleUi(onMenu, KeyCode.Escape, menu.GetComponent<RectTransform>(), () => onMenu = !onMenu);
+        ToggleUi(onMenu, KeyCode.Escape, menu.transform.parent.GetComponent<RectTransform>(), () => onMenu = !onMenu);
+    }
+    public void OnMenuBordButton()
+    {
+        int targetY = onMenu ? 0 : 1;
+        gm.GameType = onMenu ? GameType.Start : GameType.Stop;
+        menu.transform.parent.GetComponent<RectTransform>().DOScale(targetY, time).SetEase(Ease.Linear)
+            .OnComplete(() => onMenu = !onMenu);
+
     }
     public GameObject OnLoadMenu(Transform pos)
     {

@@ -15,15 +15,15 @@ public class GameManager : Singleton<GameManager>
 {
     [TabGroup("Obj")]
     [TabGroup("Obj")] [SerializeField] private GameObject player;
-    [TabGroup("Obj")] [SerializeField] private GameObject gate;
+    [TabGroup("Obj")] [SerializeField] private GameObject[] gate;
 
-    [TabGroup("Boss")] [SerializeField] private GameObject boss;
-    public GameObject Boss
+    [TabGroup("Boss")] [SerializeField] private GameObject bossPrefab;
+    public GameObject BossPrefab
     {
-        get { return boss; }
+        get { return bossPrefab; }
         set
         {
-            boss = value;
+            bossPrefab = value;
         }
     }
 
@@ -82,6 +82,7 @@ public class GameManager : Singleton<GameManager>
     private void UpdateActiveScene(Scene previousScene, Scene newScene)
     {
         scene = newScene;
+        gate = GameObject.FindGameObjectsWithTag("Gate");
     }
     public void OnBossSceneLode(string nextScene)
     {
@@ -100,11 +101,33 @@ public class GameManager : Singleton<GameManager>
     public void SpwanBoss()
     {
         Vector2 pos = new Vector2(0.5f, -4.3f);
-        Instantiate(boss, pos, Quaternion.identity);
+        GameObject boss = Instantiate(bossPrefab, pos, Quaternion.identity);
+        boss.name = bossPrefab.name;
     }
     private void BossSpwanTrigger()
     {
         gameType = GameType.Stop;
         UiManager.Instance.BossCamera();
+    }
+    public void GateCheck(PlayerData data)
+    {
+        for (int i = 0; i < gate.Length; i++)
+        {
+            switch(gate[i].name)
+            {
+                case "MiddleBossGate":
+                    gate[i].SetActive(data.MiddleBoss ? true : false);
+                    break;
+                case "MainBossGate":
+                    gate[i].SetActive(data.MainBoss ? true : false);
+                    break;
+                case "MossyMiddleBossGate":
+                    gate[i].SetActive(data.MossyMiddleBoss ? true : false);
+                    break;
+                case "MossyMainBossGate":
+                    gate[i].SetActive(data.MossyMainBoss ? true : false);
+                    break;
+            }
+        }
     }
 }

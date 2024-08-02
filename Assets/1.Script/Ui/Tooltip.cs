@@ -7,6 +7,7 @@ public class Tooltip : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
     [SerializeField] private GameObject tooltip;
 
+    private bool isTooltip = true;
     private void Start()
     {
         tooltip.SetActive(false);
@@ -24,5 +25,9 @@ public class Tooltip : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
         {
             tooltip.SetActive(false);
         }
+    }
+    public void TooltipButton()
+    {
+        tooltip.SetActive(isTooltip ? true : false);
     }
 }

@@ -190,10 +190,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gm.GateCheck(data);
         // 보스룸 입장시
         PlayerBossRoomMove();
         // ui 제어
-        ui.OnMenu();
+        ui.OnMenuBord();
         ui.OnStateBord();
         // 게임 멈춤
         if (gm.GameType == GameType.Stop)
@@ -337,7 +338,35 @@ public class Player : MonoBehaviour
 
             StartCoroutine(DashControl());
         }
+        if (dashTime <= 0)
+        {
+            Speed = DefaultSpeed;
+            if (isDash)
+                dashTime = DashDuration;
+        }
+        else
+        {
+            dashTime -= Time.deltaTime;
+            Speed = DashSpeed;
+        }
+        isDash = false;
+    }
+    public void DashButton()
+    {
+        if(onDash && anime.GetBool("Run"))
+        {
+            gameObject.layer = 10;
+            GameObject dashEffect = pool.GetDash();
+            dashEffect.transform.GetComponent<ParticleSystemRenderer>().flip = spriteRenderer.flipX ? new Vector3(1, 0, 0) : Vector3.zero;
+            dashEffect.GetComponent<ParticleSystem>().Play();
+            dashEffect.transform.position = transform.position;
+            onDash = false;
+            isDash = true;
+            anime.SetTrigger("IsDash");
 
+            StartCoroutine(DashControl());
+        }
+        
         if (dashTime <= 0)
         {
             Speed = DefaultSpeed;
@@ -355,7 +384,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         gameObject.layer = 3;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         onDash = true;
     }
     private void RunSound()
@@ -367,7 +396,6 @@ public class Player : MonoBehaviour
     {
         originalAttackDamage = AttackDamage;
         originalAttackSpeed = AttackSpeed;
-        Debug.Log(originalAttackDamage);
     }
     // 변신 관련
     private void OnTransform()
@@ -439,6 +467,10 @@ public class Player : MonoBehaviour
             anime.SetTrigger("IsAttack");
         }
     }
+    public void AttackButton()
+    {
+        anime.SetTrigger("IsAttack");
+    }
     private void OnAttackCollision()
     {
         attackCollision.SetActive(true);
@@ -448,10 +480,10 @@ public class Player : MonoBehaviour
         if (SetHp <= 0)
             return;
 
+        Handheld.Vibrate();
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         SetHp -= damage;
-        isMove = false;
         Invoke("OffDamage", 0.5f);
 
         if (SetHp <= 0)
@@ -466,7 +498,6 @@ public class Player : MonoBehaviour
     private void OffDamage()
     {
         gameObject.layer = 3;
-        isMove = true;
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
     private void AttackSound(int num)
@@ -503,9 +534,19 @@ public class Player : MonoBehaviour
         targetEnemy = nearEnemy;
     }
     // 포션
-    public void UsePotion()
+    private void UsePotion()
     {
         if (Input.GetKeyDown(KeyCode.R) && Potions > 0 && SetHp != MaxHP)
+        {
+            SetHp = MaxHP;
+            Potions--;
+            potionsNum = potionsNum <= 0 ? 1 : potionsNum - 1;
+            ui.potions.PotionsImage();
+        }
+    }
+    public void PotionButton()
+    {
+        if(Potions > 0 && SetHp != MaxHP)
         {
             SetHp = MaxHP;
             Potions--;

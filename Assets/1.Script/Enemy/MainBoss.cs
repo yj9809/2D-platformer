@@ -12,11 +12,11 @@ public class MainBoss : Enemy
     }
     protected override void Init()
     {
-        speed = 5f;
-        hp = 50f;
+        speed = 6.5f;
+        hp = 75f;
         type = Type.Boss;
-        attackDis = 1.8f;
-        damage = 8;
+        attackDis = 2f;
+        damage = 13;
         main = true;
 
         base.Init();

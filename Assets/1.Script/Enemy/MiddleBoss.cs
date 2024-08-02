@@ -12,11 +12,11 @@ public class MiddleBoss : Enemy
     }
     protected override void Init()
     {
-        speed = 3;
-        hp = 30;
+        speed = 3.5f;
+        hp = 45;
         type = Type.Boss;
         attackDis = 2.5f;
-        damage = 4;
+        damage = 5;
         middle = true;
 
         base.Init();

@@ -16,6 +16,10 @@ public class Menu : MonoBehaviour
         ui.SetMenu(this);
         loadMenu = ui.OnLoadMenu(this.transform);
     }
+    public void OnMenuBordButton()
+    {
+        ui.OnMenuBordButton();
+    }
     public void OnSave()
     {
         loding.gameObject.SetActive(true);

@@ -23,6 +23,10 @@ public class PlayerData
     [SerializeField] private bool wingsShoes = false;
     [SerializeField] private bool skillBook = false;
     [SerializeField] private bool scroll = false;
+    [SerializeField] private bool mainBoss = true;
+    [SerializeField] private bool middleBoss = true;
+    [SerializeField] private bool mossyMainBoss = true;
+    [SerializeField] private bool mossyMiddleBoss = true;
     [SerializeField] private Vector2 lastPos = new Vector2(-24f, -9f);
     public string Name
     {
@@ -108,6 +112,26 @@ public class PlayerData
     {
         get { return scroll; }
         set { scroll = value; }
+    }
+    public bool MainBoss
+    {
+        get { return mainBoss; }
+        set { mainBoss = value; }
+    }
+    public bool MiddleBoss
+    {
+        get { return middleBoss; }
+        set { middleBoss = value; }
+    }
+    public bool MossyMainBoss
+    {
+        get { return mossyMainBoss; }
+        set { mossyMainBoss = value; }
+    }
+    public bool MossyMiddleBoss
+    {
+        get { return mossyMiddleBoss; }
+        set { mossyMiddleBoss = value; }
     }
     public Vector2 LastPos
     {

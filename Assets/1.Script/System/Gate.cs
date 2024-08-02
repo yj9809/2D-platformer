@@ -21,37 +21,72 @@ public class Gate : MonoBehaviour
     {
         if (entrance.gameObject.activeSelf)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            GateEnter();
+        }
+    }
+    private void GateEnter()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            switch (nextScene)
             {
-                switch (nextScene)
-                {
-                    case "BossRoom (Stage 1)":
-                        gm.OnBossSceneLode(nextScene);
-                        gm.Boss = boss;
-                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
-                        gm.P.Save();
-                        break;
+                case "BossRoom (Stage 1)":
+                    gm.OnBossSceneLode(nextScene);
+                    gm.BossPrefab = boss;
+                    gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                    gm.P.Save();
+                    break;
 
-                    case "Game (Stage 1)":
-                        gm.OnGameSceneLoad(nextScene);
-                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
-                        gm.P.Save();
-                        break;
+                case "Game (Stage 1)":
+                    gm.OnGameSceneLoad(nextScene);
+                    gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                    gm.P.Save();
+                    break;
 
-                    case "Game (Stage 2)":
-                        gm.OnGameSceneLoad(nextScene);
-                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
-                        gm.P.Save();
-                        break;
+                case "Game (Stage 2)":
+                    gm.OnGameSceneLoad(nextScene);
+                    gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                    gm.P.Save();
+                    break;
 
-                    case "BossRoom (Stage 2)":
-                        gm.OnBossSceneLode(nextScene);
-                        gm.Boss = boss;
-                        gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
-                        gm.P.Save();
-                        break;
-                }
+                case "BossRoom (Stage 2)":
+                    gm.OnBossSceneLode(nextScene);
+                    gm.BossPrefab = boss;
+                    gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                    gm.P.Save();
+                    break;
             }
+        }
+    }
+    public void GateEnterButton()
+    {
+        switch (nextScene)
+        {
+            case "BossRoom (Stage 1)":
+                gm.OnBossSceneLode(nextScene);
+                gm.BossPrefab = boss;
+                gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                gm.P.Save();
+                break;
+
+            case "Game (Stage 1)":
+                gm.OnGameSceneLoad(nextScene);
+                gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                gm.P.Save();
+                break;
+
+            case "Game (Stage 2)":
+                gm.OnGameSceneLoad(nextScene);
+                gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                gm.P.Save();
+                break;
+
+            case "BossRoom (Stage 2)":
+                gm.OnBossSceneLode(nextScene);
+                gm.BossPrefab = boss;
+                gm.pos = spawonPos != null ? spawonPos.localPosition : gm.P.LastPos;
+                gm.P.Save();
+                break;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
