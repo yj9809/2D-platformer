@@ -198,13 +198,14 @@ public class UiManager : Singleton<UiManager>
                 p.SetHp += 4;
                 break;
             case 1:
-                p.AttackDamage += 2;
+                p.MaxMp += 2;
+                p.SetMp += 2;
                 break;
             case 2:
-                p.AttackSpeed += 0.2f;
+                p.AttackDamage += 2;
                 break;
             case 3:
-                p.Speed += 0.5f;
+                p.AttackSpeed += 0.2f;
                 break;
         }
         p.OriginalStats();

@@ -60,7 +60,7 @@ public class State : MonoBehaviour
     }
     public void StateTxtSet()
     {
-       txt[0].text = $"{gm.P.MaxHP}\n{gm.P.AttackDamage}\n{gm.P.AttackSpeed}\n{gm.P.Speed}%";
+       txt[0].text = $"{gm.P.MaxHP}\n{gm.P.MaxMp}\n{gm.P.AttackDamage}\n{gm.P.AttackSpeed}";
        txt[1].text = gm.P.Coin >= cost ? $"<color=green>{gm.P.Coin}</color>": $"<color=red>{gm.P.Coin}</color>";
        txt[2].text = $"Cost : {cost}";
        txt[4].text = $"{gm.P.Level}";
