@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/4.Scenes/Game (Stage 1).unity
     guid: 510aa24a3aa3ca34187c5636dfcc6567
   - enabled: 1
+    path: Assets/4.Scenes/Clear.unity
+    guid: 81845c4da3cec5645a49ffe9cb6cc892
+  - enabled: 1
     path: Assets/4.Scenes/BossRoom (Stage 1).unity
     guid: 022f86f04af337542af72a3ccd7566ca
   - enabled: 1

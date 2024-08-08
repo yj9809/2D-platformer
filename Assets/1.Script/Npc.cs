@@ -13,21 +13,7 @@ public class Npc : MonoBehaviour
     [SerializeField] private float closeDelay = 3f;  // 대화 종료 후 대기 시간
     [SerializeField] private float delayBeforeRepeat = 5f; // 대화 반복 전 대기 시간
 
-    private GameObject end
-    {
-        get 
-        { 
-            if(end == null)
-            {
-                end = GameObject.Find("End Message");
-            }
-            return end;
-        }
-        set
-        {
-            end = value;
-        }
-    }
+    [SerializeField] private EndMessage end;
     private Transform player;
     private bool isTyping = false;  // 타이핑 중인지 여부
     private bool canStartDialogue = true; // 대화 시작 가능 여부
@@ -39,6 +25,8 @@ public class Npc : MonoBehaviour
     private void Start()
     {
         player = GameManager.Instance.P.transform;
+        end = FindObjectOfType<EndMessage>();
+        end.gameObject.SetActive(false);
         chatWindow.SetActive(false);
         FloatOn();
     }
@@ -57,8 +45,7 @@ public class Npc : MonoBehaviour
                 
                 if(!isEnd)
                 {
-                    end.SetActive(true);
-                    isEnd = true;
+                    end.EndWindow();
                 }
             }
         }
