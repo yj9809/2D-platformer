@@ -20,6 +20,7 @@ public class UiManager : Singleton<UiManager>
     [TabGroup("Game Scene Ui")] [SerializeField] private Image portrait;
     [TabGroup("Game Scene Ui")] [SerializeField] private Sprite[] portraitSprite;
     [TabGroup("Game Scene Ui")] public GameObject bossBar;
+    [TabGroup("Game Scene Ui"), SerializeField] private EndMessage end;
 
     [TabGroup("Potion")] public Sprite[] potionsImg;
     [TabGroup("Potion")] public Potions potions;
@@ -63,6 +64,10 @@ public class UiManager : Singleton<UiManager>
             SetBossHpImg();
         }
     }
+    public EndMessage EndMessage
+    {
+        get { return end; }
+    }
 
     void Start()
     {
@@ -96,7 +101,7 @@ public class UiManager : Singleton<UiManager>
         if (sceneName != "Main" && sceneName != "Loding")
         {
             SetHpBar();
-            if(!data.NowPlayer.NewGame)
+            if (!data.NowPlayer.NewGame)
                 SetPortrait();
         }
 
@@ -230,6 +235,10 @@ public class UiManager : Singleton<UiManager>
     {
         GameObject newLoadMebnu = Instantiate(loadMenu, pos);
         return newLoadMebnu;
+    }
+    public void SetEnd(EndMessage end)
+    {
+        this.end = end;
     }
     public void OnExit()
     {

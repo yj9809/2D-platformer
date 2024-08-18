@@ -13,20 +13,20 @@ public class Npc : MonoBehaviour
     [SerializeField] private float closeDelay = 3f;  // 대화 종료 후 대기 시간
     [SerializeField] private float delayBeforeRepeat = 5f; // 대화 반복 전 대기 시간
 
-    [SerializeField] private EndMessage end;
+    
     private Transform player;
     private bool isTyping = false;  // 타이핑 중인지 여부
     private bool canStartDialogue = true; // 대화 시작 가능 여부
     private Coroutine typingCoroutine;
     private Coroutine closeCoroutine;
     private Coroutine repeatDialogueCoroutine;
+    private EndMessage end;
 
     private bool isEnd = false;
     private void Start()
     {
         player = GameManager.Instance.P.transform;
-        end = FindObjectOfType<EndMessage>();
-        end.gameObject.SetActive(false);
+        end = UiManager.Instance.EndMessage;
         chatWindow.SetActive(false);
         FloatOn();
     }

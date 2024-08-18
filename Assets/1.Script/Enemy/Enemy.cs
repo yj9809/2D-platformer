@@ -217,8 +217,12 @@ public abstract class Enemy : MonoBehaviour
 
             if (type != Type.Boss)
             {
-                GameObject item = pool.GetItems();
-                item.transform.position = transform.position;
+                float random = Random.value;
+                if(random >= 0.5f)
+                {
+                    GameObject item = pool.GetItems();
+                    item.transform.position = transform.position;
+                }
             }
             else
             {
