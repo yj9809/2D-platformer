@@ -43,6 +43,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool middle = false;
     protected bool mossyMiddle = false;
     protected bool mossyMain = false;
+    protected bool isPhase = false;
     protected virtual void Init()
     {
         gm = GameManager.Instance;
@@ -75,8 +76,21 @@ public abstract class Enemy : MonoBehaviour
         else
             sprite.enabled = false;
 
+        if(type == Type.Boss && hp <= ui.BossMaxHp / 2 && !isPhase)
+        {
+            PhaseChange();
+            isPhase =true;
+        }
+
         Move();
         Ground();
+    }
+    private void PhaseChange()
+    {
+        Debug.Log("½ÇÇà");
+        speed *= 2;
+        damage *= 2;
+        anime.speed = 2;
     }
     private void Move()
     {
@@ -99,6 +113,7 @@ public abstract class Enemy : MonoBehaviour
         {
             float distance = Vector2.Distance(p.transform.position, transform.position);
             Vector2 dis = p.transform.position - transform.position;
+            attackCool -= Time.deltaTime;
             if (distance > attackDis && isMove)
             {
                 Vector3 dir = dis.normalized * Time.deltaTime * speed;
@@ -114,7 +129,6 @@ public abstract class Enemy : MonoBehaviour
             {
                 BossSpriteFilp(dis);
                 anime.SetFloat("Speed", 0);
-                attackCool -= Time.deltaTime;
                 if (attackCool < 0)
                 {
                     if(!mossyMiddle)
@@ -203,6 +217,7 @@ public abstract class Enemy : MonoBehaviour
             ui.BossHp -= p.AttackDamage;
             anime.SetTrigger("Hit");
         }
+
         gameObject.layer = 14;
         sprite.color = new Color(1, 1, 1, 0.4f);
 
@@ -281,15 +296,6 @@ public abstract class Enemy : MonoBehaviour
     {
         if (type == Type.Boss)
             attackCollison.SetActive(true);
-    }
-    private void SpwanEffect()
-    {
-        GameObject effect = pool.GetSpwanEffect();
-        if (effect != null)
-        {
-            effect.transform.position = transform.position;
-            effect.SetActive(true);
-        }
     }
     private bool CameraCheck()
     {

@@ -12,7 +12,7 @@ public class MainBoss : Enemy
     }
     protected override void Init()
     {
-        speed = 6.5f;
+        speed = 4f;
         hp = 75f;
         type = Type.Boss;
         attackDis = 2f;

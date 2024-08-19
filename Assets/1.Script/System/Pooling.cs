@@ -14,13 +14,11 @@ public class Pooling : Singleton<Pooling>
 
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject pHit;
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject eHit;
-    [FoldoutGroup("PoolObj")] [SerializeField] private GameObject spwanEffect;
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject item;
     [FoldoutGroup("PoolObj")] [SerializeField] private GameObject dashEffect;
 
     private Queue<GameObject> poolPHit = new Queue<GameObject>();
     private Queue<GameObject> poolEHit = new Queue<GameObject>();
-    private Queue<GameObject> poolSpawnEffect = new Queue<GameObject>();
     private Queue<GameObject> poolItem = new Queue<GameObject>();
     private Queue<GameObject> poolDashs = new Queue<GameObject>();
     protected override void Awake()
@@ -49,18 +47,6 @@ public class Pooling : Singleton<Pooling>
         GameObject newObj = Instantiate(prefab, transform);
         newObj.SetActive(false);
         return newObj;
-    }
-    public GameObject GetSpwanEffect()
-    {
-        GameObject effect;
-
-        if (poolSpawnEffect.Count > 0)
-            effect = poolSpawnEffect.Dequeue();
-        else
-            effect = CreateObj(spwanEffect);
-
-        effect.SetActive(true);
-        return effect;
     }
     public GameObject GetItems()
     {
@@ -168,9 +154,6 @@ public class Pooling : Singleton<Pooling>
                 break;
             case "Ehit":
                 poolEHit.Enqueue(obj);
-                break;
-            case "SpawnEffect":
-                poolSpawnEffect.Enqueue(obj);
                 break;
             case "Item":
                 poolItem.Enqueue(obj);

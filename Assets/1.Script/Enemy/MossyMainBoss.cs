@@ -15,7 +15,7 @@ public class MossyMainBoss : Enemy
         hp = 100f;
         type = Type.Boss;
         attackDis = 2f;
-        speed = 5f;
+        speed = 4f;
         mossyMain = true;
 
         base.Init();
