@@ -177,13 +177,13 @@ public class DataManager : Singleton<DataManager>
     }
     public void SaveData()
     {
-        string filePath = Path.Combine(savePath, $"slot_{nowSlot}.json");
+        string filePath = GetSaveFilePath(nowSlot);
         string jsonData = JsonUtility.ToJson(nowPlayer);
         File.WriteAllText(filePath, jsonData);
     }
     public void LoadData()
     {
-        string filePath = Path.Combine(savePath, $"slot_{nowSlot}.json");
+        string filePath = GetSaveFilePath(nowSlot);
         if (File.Exists(filePath))
         {
             string jsonData = File.ReadAllText(filePath);
@@ -197,7 +197,7 @@ public class DataManager : Singleton<DataManager>
     }
     public PlayerData LoadData(int slotIndex)
     {
-        string filePath = Path.Combine(savePath, $"slot_{slotIndex}.json");
+        string filePath = GetSaveFilePath(slotIndex);
         if (File.Exists(filePath))
         {
             string jsonData = File.ReadAllText(filePath);
@@ -212,5 +212,17 @@ public class DataManager : Singleton<DataManager>
     public string GetSaveFilePath(int slotIndex)
     {
         return Path.Combine(savePath, $"slot_{slotIndex}.json");
+    }
+    public void DeletSave(int slotIndex)
+    {
+        string filePath = GetSaveFilePath(slotIndex);
+        if(File.Exists(filePath))
+        {
+            File.Delete(filePath);
+        }
+        else
+        {
+            Debug.LogError($"{filePath} {savePath}해당 경로에 파일이 없습니다.");
+        }
     }
 }

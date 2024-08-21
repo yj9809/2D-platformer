@@ -10,6 +10,7 @@ public class Select : MonoBehaviour
     [SerializeField] private GameObject createPanel;
     [SerializeField] private TMP_Text[] slotTexts;
     [SerializeField] private TMP_Text newPlayerNameText;
+    [SerializeField] private Button[] slotDeletButto;
 
     private DataManager dataManager;
     private bool[] saveFileExists = new bool[3];
@@ -31,11 +32,13 @@ public class Select : MonoBehaviour
                 saveFileExists[i] = true;
                 PlayerData playerData = dataManager.LoadData(i);
                 slotTexts[i].text = playerData.Name;
+                slotDeletButto[i].gameObject.SetActive(true);
             }
             else
             {
                 saveFileExists[i] = false;
                 slotTexts[i].text = "New File";
+                slotDeletButto[i].gameObject.SetActive(false);
             }
         }
     }
@@ -81,5 +84,10 @@ public class Select : MonoBehaviour
         }
 
         GameManager.Instance.OnGameSceneLoad(dataManager.NowPlayer.CurrentScene);
+    }
+    public void DeletFile(int slotIndex)
+    {
+        dataManager.DeletSave(slotIndex);
+        UpdateSlotTexts();
     }
 }
