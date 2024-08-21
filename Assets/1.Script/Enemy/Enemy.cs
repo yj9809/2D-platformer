@@ -4,6 +4,10 @@ using UnityEngine;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 
+public interface IEnemyAttack
+{
+    protected void Attack();
+}
 public enum Type
 {
     Bat,
