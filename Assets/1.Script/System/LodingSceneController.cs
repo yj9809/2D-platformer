@@ -34,7 +34,8 @@ public class LodingSceneController : MonoBehaviour
             if (op.progress >= 0.9f)
             {
                 yield return new WaitForSeconds(0.5f);
-                SceneManager.LoadScene("Ui", LoadSceneMode.Additive);
+                if(nextScene != "Clear")
+                    SceneManager.LoadScene("Ui", LoadSceneMode.Additive);
                 op.allowSceneActivation = true;
             }
         }

@@ -26,7 +26,7 @@ public class Npc : MonoBehaviour
     private void Start()
     {
         player = GameManager.Instance.P.transform;
-        end = UiManager.Instance.EndMessage;
+        
         chatWindow.SetActive(false);
         FloatOn();
     }
@@ -45,6 +45,10 @@ public class Npc : MonoBehaviour
                 
                 if(!isEnd)
                 {
+                    if(end == null)
+                    {
+                        end = UiManager.Instance.EndMessage;
+                    }
                     end.EndWindow();
                 }
             }

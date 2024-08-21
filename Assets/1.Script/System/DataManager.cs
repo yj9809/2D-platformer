@@ -19,6 +19,7 @@ public class PlayerData
     [SerializeField] private float attackSpeed = 1.5f;
     [SerializeField] private float speed = 5f;
     [SerializeField] private bool newGame = true;
+    [SerializeField] private bool door = false;
     [SerializeField] private bool blackSoul = false;
     [SerializeField] private bool wingsShoes = false;
     [SerializeField] private bool skillBook = false;
@@ -92,6 +93,11 @@ public class PlayerData
     {
         get { return newGame; }
         set { newGame = value; }
+    }
+    public bool Door
+    {
+        get { return door; }
+        set { door = value; }
     }
     public bool BlackSoul
     {

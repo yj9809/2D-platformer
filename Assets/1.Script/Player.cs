@@ -182,6 +182,9 @@ public class Player : MonoBehaviour
         isJump = true;
         onDash = true;
         darkTransform = false;
+
+        if (data.BlackSoul && data.WingsShoes && !data.Door)
+            MainCamera.FindObjectOfType<MainCamera>().cT = CameraType.Door;
     }
     private void FixedUpdate()
     {

@@ -9,7 +9,8 @@ using Sirenix.OdinInspector;
 public enum GameType
 {
     Stop,
-    Start
+    Start,
+    Clear
 }
 public class GameManager : Singleton<GameManager>
 {
@@ -77,9 +78,9 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
         scene = SceneManager.GetActiveScene();
-        SceneManager.activeSceneChanged += UpdateActiveScene;
+        SceneManager.activeSceneChanged += OnSceneLoaded;
     }
-    private void UpdateActiveScene(Scene previousScene, Scene newScene)
+    private void OnSceneLoaded(Scene previousScene, Scene newScene)
     {
         scene = newScene;
         gate = GameObject.FindGameObjectsWithTag("Gate");

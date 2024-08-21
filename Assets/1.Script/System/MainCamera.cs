@@ -2,21 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
+public enum CameraType
+{
+    Nomal,
+    Door,
+    Non
+}
 public class MainCamera : MonoBehaviour
 {
-
     private Player p;
     private GameManager gm;
+    private Map map;
+    private PlayerData data;
+    public CameraType cT = CameraType.Nomal;
+
     private void Start()
     {
         p = GameManager.Instance.P;
         gm = GameManager.Instance;
+        map = FindObjectOfType<Map>();
+        data = DataManager.Instance.NowPlayer;
     }
     // Update is called once per frame
     void Update()
     {
-        CameraMove();
+        if (cT == CameraType.Nomal)
+            CameraMove();
+        else if(cT == CameraType.Door)
+            DoorOpenCamera();
     }
     private void CameraMove()
     {
@@ -55,5 +70,25 @@ public class MainCamera : MonoBehaviour
 
             transform.position = new Vector3(clampX, clampY, -10f);
         }
+    }
+
+    private void DoorOpenCamera()
+    {
+        gm.GameType = GameType.Stop;
+        transform.DOMove(new Vector3(-9, 9.8f, -10), 2f).OnComplete(() =>
+        {
+            map.DoorOpen();
+        }
+        );
+        cT = CameraType.Non;
+    }
+
+    public void EndDoorOpenCamera()
+    {
+        transform.DOMove(new Vector3(p.transform.position.x, p.transform.position.y, -10), 2f).OnComplete(() => 
+        {
+            cT = CameraType.Nomal;
+            gm.GameType = GameType.Start;
+        });
     }
 }

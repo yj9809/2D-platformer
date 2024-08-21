@@ -78,11 +78,7 @@ public class UiManager : Singleton<UiManager>
         {
             load.SetActive(CheckFile());
         }
-        SceneManager.activeSceneChanged += ActiveSceneChanged;
-    }
-    private void OnDisable()
-    {
-        SceneManager.activeSceneChanged -= ActiveSceneChanged;
+        SceneManager.activeSceneChanged += OnSceneLoaded;
     }
     private bool CheckFile()
     {
@@ -95,10 +91,13 @@ public class UiManager : Singleton<UiManager>
         }
         return false;
     }
-    private void ActiveSceneChanged(Scene current, Scene next)
+    private void OnSceneLoaded(Scene current, Scene next)
     {
+        if (gm.GameType == GameType.Clear)
+            return;
+
         string sceneName = gm.scene.name;
-        if (sceneName != "Main" && sceneName != "Loding")
+        if (sceneName != "Main" && sceneName != "Loding" && sceneName != "Clear")
         {
             SetHpBar();
             if (!data.NowPlayer.NewGame)
