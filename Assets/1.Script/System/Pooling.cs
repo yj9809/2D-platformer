@@ -21,6 +21,7 @@ public class Pooling : Singleton<Pooling>
     private Queue<GameObject> poolEHit = new Queue<GameObject>();
     private Queue<GameObject> poolItem = new Queue<GameObject>();
     private Queue<GameObject> poolDashs = new Queue<GameObject>();
+
     protected override void Awake()
     {
         base.Awake();
@@ -126,22 +127,22 @@ public class Pooling : Singleton<Pooling>
         return GetObjFromPool(isPHit ? poolPHit : poolEHit, isPHit ? pHit : eHit);
     }
     private GameObject GetObjFromPool(Queue<GameObject> pool, GameObject prefab)
-{
-    if (pool.Count > 0)
     {
-        GameObject obj = pool.Dequeue();
-        obj.transform.SetParent(null);
-        obj.SetActive(true);
-        return obj;
+        if (pool.Count > 0)
+        {
+            GameObject obj = pool.Dequeue();
+            obj.transform.SetParent(null);
+            obj.SetActive(true);
+            return obj;
+        }
+        else
+        {
+            GameObject newObj = CreateObj(prefab);
+            newObj.transform.SetParent(null);
+            newObj.SetActive(true);
+            return newObj;
+        }
     }
-    else
-    {
-        GameObject newObj = CreateObj(prefab);
-        newObj.transform.SetParent(null);
-        newObj.SetActive(true);
-        return newObj;
-    }
-}
     public void ReturnObj(GameObject obj)
     {
         obj.SetActive(false);

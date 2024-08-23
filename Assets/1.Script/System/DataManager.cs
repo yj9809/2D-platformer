@@ -29,121 +29,30 @@ public class PlayerData
     [SerializeField] private bool mossyMainBoss = true;
     [SerializeField] private bool mossyMiddleBoss = true;
     [SerializeField] private Vector2 lastPos = new Vector2(-24f, -9f);
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
-    }
-    public string CurrentScene
-    {
-        get { return currentScene; }
-        set { currentScene = value; }
-    }
-    public int Level
-    {
-        get { return level; }
-        set { level = value; }
-    }
-    public int AttackDamage
-    {
-        get { return attackDamage; }
-        set { attackDamage = value; }
-    }
-    public int Coin
-    {
-        get { return coin; }
-        set { coin = value; }
-    }
-    public int Potions
-    {
-        get { return potions; }
-        set { potions = value; }
-    }
-    public float MaxHp
-    {
-        get { return maxHp; }
-        set { maxHp = value; }
-    }
-    public float MaxMp
-    {
-        get { return maxMp; }
-        set { maxMp = value; }
-    }
-    public float Hp
-    {
-        get { return hp; }
-        set { hp = value; }
-    }
-    public float Mp
-    {
-        get { return mp; }
-        set { mp = value; }
-    }
-    public float AttackSpeed
-    {
-        get { return attackSpeed; }
-        set { attackSpeed = value; }
-    }
-    public float Speed
-    {
-        get { return speed; }
-        set { speed = value; }
-    }
-    public bool NewGame
-    {
-        get { return newGame; }
-        set { newGame = value; }
-    }
-    public bool Door
-    {
-        get { return door; }
-        set { door = value; }
-    }
-    public bool BlackSoul
-    {
-        get { return blackSoul; }
-        set { blackSoul = value; }
-    }
-    public bool WingsShoes
-    {
-        get { return wingsShoes; }
-        set { wingsShoes = value; }
-    }
-    public bool SkillBook
-    {
-        get { return skillBook; }
-        set { skillBook = value; }
-    }
-    public bool Scroll
-    {
-        get { return scroll; }
-        set { scroll = value; }
-    }
-    public bool MainBoss
-    {
-        get { return mainBoss; }
-        set { mainBoss = value; }
-    }
-    public bool MiddleBoss
-    {
-        get { return middleBoss; }
-        set { middleBoss = value; }
-    }
-    public bool MossyMainBoss
-    {
-        get { return mossyMainBoss; }
-        set { mossyMainBoss = value; }
-    }
-    public bool MossyMiddleBoss
-    {
-        get { return mossyMiddleBoss; }
-        set { mossyMiddleBoss = value; }
-    }
-    public Vector2 LastPos
-    {
-        get { return lastPos; }
-        set { lastPos = value; }
-    }
+    
+    public string Name { get => name; set => name = value; }
+    public string CurrentScene { get => currentScene; set => currentScene = value; }
+    public int Level { get => level; set => level = value; }
+    public int AttackDamage { get => attackDamage; set => attackDamage = value; }
+    public int Coin { get => coin; set => coin = value; }
+    public int Potions { get => potions; set => potions = value; }
+    public float MaxHp { get => maxHp; set => maxHp = value; }
+    public float MaxMp { get => maxMp; set => maxMp = value; }
+    public float Hp { get => hp; set => hp = value; }
+    public float Mp { get => mp; set => mp = value; }
+    public float AttackSpeed { get => attackSpeed; set => attackSpeed = value; }
+    public float Speed { get => speed; set => speed = value; }
+    public bool NewGame { get => newGame; set => newGame = value; }
+    public bool Door { get => door; set => door = value; }
+    public bool BlackSoul { get => blackSoul; set => blackSoul = value; }
+    public bool WingsShoes { get => wingsShoes; set => wingsShoes = value; }
+    public bool SkillBook { get => skillBook; set => skillBook = value; }
+    public bool Scroll { get => scroll; set => scroll = value; }
+    public bool MainBoss { get => mainBoss; set => mainBoss = value; }
+    public bool MiddleBoss { get => middleBoss; set => middleBoss = value; }
+    public bool MossyMainBoss { get => mossyMainBoss; set => mossyMainBoss = value; }
+    public bool MossyMiddleBoss { get => mossyMiddleBoss; set => mossyMiddleBoss = value; }
+    public Vector2 LastPos { get => lastPos; set => lastPos = value; }
 }
 
 public class DataManager : Singleton<DataManager>
@@ -222,7 +131,7 @@ public class DataManager : Singleton<DataManager>
         }
         else
         {
-            Debug.LogError($"{filePath} {savePath}ÇØ´ç °æ·Î¿¡ ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.");
+            Debug.LogError($"{filePath} {savePath}ï¿½Ø´ï¿½ ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
     }
 }

@@ -10086,7 +10086,7 @@ GameObject:
   - component: {fileID: 1533215509}
   - component: {fileID: 1533215510}
   m_Layer: 0
-  m_Name: Svae Collider (2)
+  m_Name: Save Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11450,7 +11450,7 @@ GameObject:
   - component: {fileID: 1686949889}
   - component: {fileID: 1686949890}
   m_Layer: 0
-  m_Name: Svae Collider (1)
+  m_Name: Save Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15023,7 +15023,7 @@ GameObject:
   - component: {fileID: 2146885909}
   - component: {fileID: 2146885910}
   m_Layer: 0
-  m_Name: Svae Collider
+  m_Name: Save Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
