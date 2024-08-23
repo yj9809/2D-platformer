@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 786411359}
   m_Layer: 0
   m_Name: BossSpwan
-  m_TagString: BossSpwan
+  m_TagString: BossSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
@@ -1017,6 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32604f4e4a3b734984ad332647a5834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cT: 0
 --- !u!4 &885089626
 Transform:
   m_ObjectHideFlags: 0

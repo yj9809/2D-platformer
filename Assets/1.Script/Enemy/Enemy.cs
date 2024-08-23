@@ -48,6 +48,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool mossyMiddle = false;
     protected bool mossyMain = false;
     protected bool isPhase = false;
+
     protected virtual void Init()
     {
         gm = GameManager.Instance;
@@ -91,27 +92,25 @@ public abstract class Enemy : MonoBehaviour
     }
     private void PhaseChange()
     {
-        Debug.Log("½ÇÇà");
         speed *= 2;
         damage *= 2;
         anime.speed = 2;
     }
     private void Move()
     {
-        if (type == Type.Bat)
-        {
-            sprite.flipX = direction < 0 ? true : false;
-            rigid.velocity = new Vector2(direction * speed, rigid.velocity.y);
-        }
-        else if (type == Type.Frog)
+        if (type != Type.Boss)
         {
             sprite.flipX = direction < 0 ? true : false;
             rigid.velocity = new Vector2(direction * speed, rigid.velocity.y);
 
-            if (rigid.velocity.x == 0)
-                anime.SetBool("Run", false);
-            else
-                anime.SetBool("Run", true);
+            if (type == Type.Frog)
+            {
+                if (rigid.velocity.x == 0)
+                    anime.SetBool("Run", false);
+                else
+                    anime.SetBool("Run", true);
+            }
+            
         }
         else if (type == Type.Boss)
         {

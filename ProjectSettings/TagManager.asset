@@ -20,6 +20,7 @@ TagManager:
   - Skill Book
   - Player Magic
   - Scroll
+  - BossSpawn
   layers:
   - Default
   - TransparentFX
