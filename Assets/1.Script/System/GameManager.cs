@@ -117,16 +117,16 @@ public class GameManager : Singleton<GameManager>
             switch(gate[i].name)
             {
                 case "MiddleBossGate":
-                    gate[i].SetActive(data.MiddleBoss ? true : false);
+                    gate[i].SetActive(data.MiddleBoss ? true : false && data.BlackSoul ? true : false);
                     break;
                 case "MainBossGate":
-                    gate[i].SetActive(data.MainBoss ? true : false);
+                    gate[i].SetActive(data.MainBoss ? true : false && data.WingsShoes ? true : false);
                     break;
                 case "MossyMiddleBossGate":
-                    gate[i].SetActive(data.MossyMiddleBoss ? true : false);
+                    gate[i].SetActive(data.MossyMiddleBoss ? true : false && data.SkillBook ? true : false);
                     break;
                 case "MossyMainBossGate":
-                    gate[i].SetActive(data.MossyMainBoss ? true : false);
+                    gate[i].SetActive(data.MossyMainBoss ? true : false && data.Scroll ? true : false);
                     break;
             }
         }

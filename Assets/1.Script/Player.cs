@@ -483,7 +483,6 @@ public class Player : MonoBehaviour
         if (SetHp <= 0)
             return;
 
-        Handheld.Vibrate();
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         SetHp -= damage;
@@ -591,7 +590,7 @@ public class Player : MonoBehaviour
     {
         if (OnBossRoomMove)
         {
-            GameObject collision = GameObject.Find("BossSpwan");
+            GameObject collision = GameObject.Find("BossSpawn");
             Vector2 currentPosition = transform.position;
             Vector2 targetPosition = collision.transform.position;
 
@@ -630,7 +629,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<BossSpwan>())
+        if(collision.gameObject.CompareTag("BossSpawn"))
         {
             transform.position = collision.transform.position;
             anime.SetBool("Run", false);

@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 786411360}
   - component: {fileID: 786411359}
   m_Layer: 0
-  m_Name: BossSpwan
+  m_Name: BossSpawn
   m_TagString: BossSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

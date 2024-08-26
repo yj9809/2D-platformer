@@ -33,6 +33,11 @@ public class Npc : MonoBehaviour
 
     private void Update()
     {
+        NpcChat();
+    }
+
+    private void NpcChat()
+    {
         float dis = Vector3.Distance(player.position, transform.position);
 
         if (dis <= distance && !isTyping && canStartDialogue)
@@ -42,10 +47,10 @@ public class Npc : MonoBehaviour
             else
             {
                 OpenDialogue("마법의 두루마리를 찾아왔구나! \n이제 너를 집으로 보내줄게!");
-                
-                if(!isEnd)
+
+                if (!isEnd)
                 {
-                    if(end == null)
+                    if (end == null)
                     {
                         end = UiManager.Instance.EndMessage;
                     }
@@ -61,7 +66,6 @@ public class Npc : MonoBehaviour
             }
         }
     }
-
     private void FloatOn()
     {
         if(transform != null)

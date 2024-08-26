@@ -6547,7 +6547,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1729736739
 RectTransform:
@@ -6676,6 +6676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32604f4e4a3b734984ad332647a5834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cT: 0
 --- !u!4 &1729784686
 Transform:
   m_ObjectHideFlags: 0
@@ -7214,6 +7215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Game (Stage 1)
   spwanPos: {fileID: 1005111677}
+  door: {fileID: 0}
 --- !u!4 &1839526939
 Transform:
   m_ObjectHideFlags: 0
